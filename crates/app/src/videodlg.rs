@@ -21,6 +21,9 @@ pub struct VideoAdd {
     pub dest: PathBuf,
     pub size: Option<u64>,
     pub start_now: bool,
+    /// What the browser's request for the page carried (its button), for yt-dlp to ask the
+    /// same; none for an address typed or edited here.
+    pub context: mdm_ipc::Command,
 }
 
 /// Which helper is being installed.
@@ -32,6 +35,9 @@ enum Tool {
 
 pub struct VideoDialog {
     page: String,
+    /// The browser's request context for `page` as it came (VideoAdd::context).
+    context: mdm_ipc::Command,
+    from_browser: String,
     folder: String,
     name: String,
     lookup: Option<Slot<Video>>,
@@ -100,6 +106,8 @@ impl VideoDialog {
             .unwrap_or_default();
         VideoDialog {
             page,
+            context: Default::default(),
+            from_browser: String::new(),
             folder: folder.display().to_string(),
             name: String::new(),
             lookup: None,
@@ -117,12 +125,24 @@ impl VideoDialog {
         }
     }
 
-    /// Opened for `page` (Add URL was given a video's page): looks it up at once.
-    pub fn for_page(folder: PathBuf, page: &str) -> Self {
+    /// Opened for `page` (Add URL was given a video's page, or the browser's button was
+    /// clicked with `context`): looks it up at once.
+    pub fn for_page(folder: PathBuf, page: &str, context: mdm_ipc::Command) -> Self {
         VideoDialog {
             page: page.to_owned(),
+            from_browser: page.to_owned(),
+            context,
             auto_look: true,
             ..Self::new(folder)
+        }
+    }
+
+    /// The browser's context, while the address is still the one it came with.
+    fn context(&self) -> mdm_ipc::Command {
+        if self.page.trim() == self.from_browser {
+            self.context.clone()
+        } else {
+            mdm_ipc::Command::default()
         }
     }
 
@@ -146,7 +166,7 @@ impl VideoDialog {
             self.lookup = None;
             match res {
                 Ok(v) => self.set_video(v),
-                Err(e) => self.error = Some(e),
+                Err(e) => self.error = Some(lookup_error(&e)),
             }
         }
         let installed = self
@@ -206,6 +226,7 @@ impl VideoDialog {
                     dest: PathBuf::from(self.folder.trim()).join(name),
                     size: c.size,
                     start_now: self.start_now.unwrap_or(true),
+                    context: self.context(),
                 })
             }
         }
@@ -298,8 +319,10 @@ impl VideoDialog {
                 self.page.trim().to_owned(),
                 ui.ctx().clone(),
             );
+            let browser = from_browser(&self.context());
             std::thread::spawn(move || {
-                let res = mdm_tools::resolve::resolve(&exe, &page).map_err(|e| e.to_string());
+                let res =
+                    mdm_tools::resolve::resolve(&exe, &page, &browser).map_err(|e| e.to_string());
                 *out.lock().unwrap() = Some(res);
                 ctx.request_repaint();
             });
@@ -415,7 +438,7 @@ impl VideoDialog {
             |_, clip, i, row, look| {
                 let c = &choices[i];
                 // A format ("1080p mp4, 60 fps") reads left to right; its size at the trailing edge.
-                let label = crate::i18n::ltr(&c.label);
+                let label = choice_label(&c.label);
                 text(clip, row.left() + 6.0, row.top() + 12.0, &label, look.ink);
                 let size = c
                     .size
@@ -539,5 +562,48 @@ impl VideoDialog {
             return Outcome::Done(());
         }
         Outcome::Open
+    }
+}
+
+/// yt-dlp's view of the browser's request context.
+pub fn from_browser(c: &mdm_ipc::Command) -> mdm_tools::proc::FromBrowser {
+    mdm_tools::proc::FromBrowser {
+        referer: c.referer.clone(),
+        user_agent: c.user_agent.clone(),
+        cookies: c.cookies.clone(),
+    }
+}
+
+/// yt-dlp's reason in plain words where it is one users meet often; otherwise its own text.
+fn lookup_error(e: &str) -> String {
+    let lower = e.to_ascii_lowercase();
+    let plain = if lower.contains("drm") {
+        // i18n: the Download video window: the page's video is copy-protected
+        "This video is protected (DRM): no tool can save it."
+    } else if lower.contains("unsupported url") {
+        // i18n: the Download video window: yt-dlp found no video on the page
+        "No video found on this page. Play the video, then use the Download video button over it."
+    } else if lower.contains("sign in")
+        || lower.contains("login")
+        || lower.contains("private video")
+    {
+        // i18n: the Download video window: the video needs the user to be signed in
+        "This video needs you to be signed in. Use the Download video button over it in your browser, which passes your sign-in on."
+    } else {
+        return e.to_owned();
+    };
+    crate::i18n::t(plain).to_owned()
+}
+
+/// A choice's label in the user's language: the audio choice's words translated, the rest (a
+/// resolution, a type) as they are, kept left to right.
+fn choice_label(label: &str) -> String {
+    match label.strip_prefix(mdm_tools::resolve::AUDIO_ONLY) {
+        Some(kind) => crate::i18n::fmt(
+            // i18n: a choice in the Download video window: only the sound; {type} is MP3, M4A…
+            crate::i18n::t("Audio only {type}"),
+            &[("type", &crate::i18n::ltr(kind.trim()))],
+        ),
+        None => crate::i18n::ltr(label),
     }
 }

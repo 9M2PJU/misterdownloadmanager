@@ -38,6 +38,7 @@ windows-sys = { version = "0.61.2", features = [
     "Win32_Globalization",
     "Win32_Graphics_Dwm",
     "Win32_Media_Audio",
+    "Win32_Security_Cryptography",
     "Win32_Graphics_Gdi",
     "Win32_Storage_FileSystem",
     "Win32_System_Com",
@@ -61,7 +62,6 @@ anyhow = "1.0.104"
 axum = "0.8.9"
 bytes = "1.12.1"
 clap = { version = "4.6.7", features = ["derive"] }
-content_disposition = "0.4.0"
 futures = "0.3.34"
 hex = "0.4.3"
 http-range-header = "0.4.2"

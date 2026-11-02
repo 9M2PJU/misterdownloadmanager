@@ -25,6 +25,12 @@ pub struct CaptureRules {
     pub video_panel: bool,
     /// The sites it stays off (space-separated, `*.example.com` takes subdomains too).
     pub video_panel_sites: String,
+    /// Options → General: also take the listed types the browser would open itself (a PDF in
+    /// its viewer, an MP3 in its player), not only what it downloads.
+    pub capture_opened: bool,
+    /// Options → File types: files smaller than this (KB) stay with the browser (a receipt, an
+    /// icon); 0 takes any size. Only when the browser knows the size.
+    pub capture_min_kb: u64,
 }
 
 impl Default for CaptureRules {
@@ -37,6 +43,8 @@ impl Default for CaptureRules {
             excluded_addresses: Vec::new(),
             video_panel: true,
             video_panel_sites: String::new(),
+            capture_opened: true,
+            capture_min_kb: 0,
         }
     }
 }
@@ -49,6 +57,7 @@ pub enum Declined {
     FileType,
     Site,
     Address,
+    Small,
 }
 
 impl CaptureRules {
@@ -66,18 +75,27 @@ impl CaptureRules {
             .unwrap_or_default()
     }
 
+    /// Is a file of `size` bytes (the browser's figure, when it has one) too small to take?
+    pub fn too_small(&self, size: Option<u64>) -> bool {
+        size.is_some_and(|s| s > 0 && s < self.capture_min_kb.saturating_mul(1024))
+    }
+
     /// Does the file name's extension appear in File types (`R0*` patterns too)?
     pub fn auto_type(&self, name: &str) -> bool {
         type_listed(&self.auto_types, name)
     }
 
-    /// May the browser hand `url` (saved as `file_name`) over? `user_agent` tells which browser.
-    pub fn accepts(&self, url: &str, file_name: &str, user_agent: &str) -> Result<(), Declined> {
+    /// Are downloads from `browser` (a name `browser_named` gives) taken at all?
+    pub fn captures(&self, browser: &str) -> bool {
+        self.advanced_integration && !self.browsers.iter().any(|(b, on)| b == browser && !on)
+    }
+
+    /// May `browser` hand `url` (saved as `file_name`) over?
+    pub fn accepts(&self, url: &str, file_name: &str, browser: &str) -> Result<(), Declined> {
         if !self.advanced_integration {
             return Err(Declined::IntegrationOff);
         }
-        let browser = browser_of(user_agent);
-        if self.browsers.iter().any(|(b, on)| b == browser && !on) {
+        if !self.captures(browser) {
             return Err(Declined::Browser);
         }
         if !self.auto_type(file_name) {
@@ -94,7 +112,7 @@ impl CaptureRules {
         if self
             .excluded_addresses
             .iter()
-            .any(|p| wildcard(&p.to_ascii_lowercase(), &url.to_ascii_lowercase()))
+            .any(|p| address_matches(p, url))
         {
             return Err(Declined::Address);
         }
@@ -103,15 +121,10 @@ impl CaptureRules {
 }
 
 impl CaptureRules {
-    /// May the download button show over videos on `page` (its address) in the browser of
-    /// `user_agent`? Integration on, that browser captured, the button on and the site not one
-    /// it stays off.
-    pub fn panel_on(&self, page: &str, user_agent: &str) -> bool {
-        let browser = browser_of(user_agent);
-        self.advanced_integration
-            && self.video_panel
-            && !self.browsers.iter().any(|(b, on)| b == browser && !on)
-            && !self.panel_hidden_on(page)
+    /// May the download button show over videos on `page` (its address) in `browser`?
+    /// Integration on, that browser captured, the button on and the site not one it stays off.
+    pub fn panel_on(&self, page: &str, browser: &str) -> bool {
+        self.captures(browser) && self.video_panel && !self.panel_hidden_on(page)
     }
 
     /// Is `page` (an address) on a site the button stays off?
@@ -123,10 +136,15 @@ impl CaptureRules {
     }
 }
 
-/// `sites` (space-separated) with `host` added, unless a pattern already covers it.
+/// `sites` (space-separated) with `host` added, unless a pattern already covers it or it isn't
+/// one host name (a space would add several patterns, `*` all sites).
 pub fn add_site(sites: &str, host: &str) -> String {
     let host = host.trim().to_ascii_lowercase();
-    if host.is_empty() || sites.split_whitespace().any(|p| host_matches(&host, p)) {
+    let one_host = !host.is_empty()
+        && host
+            .chars()
+            .all(|c| c.is_alphanumeric() || matches!(c, '.' | '-' | '_' | ':' | '[' | ']'));
+    if !one_host || sites.split_whitespace().any(|p| host_matches(&host, p)) {
         return sites.to_owned();
     }
     let mut out = sites.trim().to_owned();
@@ -150,6 +168,21 @@ pub fn type_listed(types: &str, name: &str) -> bool {
             None => ext == t,
         }
     })
+}
+
+/// The browser by the names Options lists, from its User-Agent and, for those that say who
+/// they are only there, its `navigator.userAgentData` brands (Brave, Opera).
+pub fn browser_named(user_agent: &str, brands: &[String]) -> &'static str {
+    let brand = |b: &str| brands.iter().any(|x| x == b);
+    if brand("Brave") {
+        "Brave Browser"
+    } else if brand("Opera") || brand("Opera GX") {
+        "Opera"
+    } else if brand("Microsoft Edge") {
+        "Microsoft Edge"
+    } else {
+        browser_of(user_agent)
+    }
 }
 
 /// The browser a User-Agent belongs to, by the names Options lists. Brave says it is Chrome.
@@ -195,6 +228,25 @@ pub fn host_matches(host: &str, pattern: &str) -> bool {
     }
 }
 
+/// An address pattern (Options → File types) against `url`, case-insensitive: written with a
+/// scheme (`https://example.com/private/*`) it is the whole address; without one
+/// (`example.com/private/*`), the address after its `scheme://`.
+pub fn address_matches(pattern: &str, url: &str) -> bool {
+    let (pattern, url) = (
+        pattern.trim().to_ascii_lowercase(),
+        url.to_ascii_lowercase(),
+    );
+    if pattern.is_empty() {
+        return false;
+    }
+    let text = if pattern.contains("://") {
+        url.as_str()
+    } else {
+        url.split_once("://").map_or(url.as_str(), |(_, rest)| rest)
+    };
+    wildcard(&pattern, text)
+}
+
 /// `*` matches any run of characters (IDM's address patterns).
 fn wildcard(pattern: &str, text: &str) -> bool {
     let parts: Vec<&str> = pattern.split('*').collect();
@@ -224,10 +276,30 @@ fn wildcard(pattern: &str, text: &str) -> bool {
 mod tests {
     use super::*;
 
-    const CHROME: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36";
-    const EDGE: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0";
-    const FIREFOX: &str =
+    const CHROME_UA: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36";
+    const EDGE_UA: &str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0";
+    const FIREFOX_UA: &str =
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0";
+    const CHROME: &str = "Google Chrome";
+    const EDGE: &str = "Microsoft Edge";
+    const FIREFOX: &str = "Mozilla Firefox";
+
+    #[test]
+    fn browsers_by_name() {
+        assert_eq!(browser_named(CHROME_UA, &[]), CHROME);
+        assert_eq!(browser_named(EDGE_UA, &[]), EDGE);
+        assert_eq!(browser_named(FIREFOX_UA, &[]), FIREFOX);
+        let brands = |b: &[&str]| b.iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        assert_eq!(
+            browser_named(CHROME_UA, &brands(&["Not.A/Brand", "Chromium", "Brave"])),
+            "Brave Browser"
+        );
+        assert_eq!(
+            browser_named(CHROME_UA, &brands(&["Chromium", "Google Chrome"])),
+            CHROME
+        );
+        assert_eq!(browser_named(CHROME_UA, &brands(&["Opera"])), "Opera");
+    }
 
     #[test]
     fn the_video_button_follows_its_options() {
@@ -259,6 +331,15 @@ mod tests {
     }
 
     #[test]
+    fn small_files_by_options() {
+        let mut r = CaptureRules::default();
+        assert!(!r.too_small(Some(10)), "any size by default");
+        r.capture_min_kb = 100;
+        assert!(r.too_small(Some(15 * 1024)));
+        assert!(!r.too_small(Some(100 * 1024)) && !r.too_small(None) && !r.too_small(Some(0)));
+    }
+
+    #[test]
     fn a_site_is_added_once() {
         assert_eq!(add_site("", "Video.Site"), "video.site");
         assert_eq!(add_site("a.test", "b.test"), "a.test b.test");
@@ -268,6 +349,8 @@ mod tests {
             "already covered"
         );
         assert_eq!(add_site("a.test", " "), "a.test");
+        assert_eq!(add_site("a.test", "b.test *"), "a.test", "one host only");
+        assert_eq!(add_site("a.test", "*"), "a.test");
     }
 
     #[test]
@@ -337,6 +420,19 @@ mod tests {
         assert!(host_matches("example.com", "*.example.com"));
         assert!(!host_matches("badexample.com", "*.example.com"));
         assert!(wildcard("*/files/*.zip", "https://x.org/files/a.zip"));
+        assert!(address_matches(
+            "example.com/private/*",
+            "https://Example.com/private/a.zip"
+        ));
+        assert!(address_matches(
+            "https://example.com/private/*",
+            "https://example.com/private/a"
+        ));
+        assert!(!address_matches(
+            "https://example.com/private/*",
+            "http://example.com/private/a"
+        ));
+        assert!(!address_matches(" ", "https://x.org/"));
         assert!(!wildcard("*/files/*.zip", "https://x.org/files/a.rar"));
     }
 }

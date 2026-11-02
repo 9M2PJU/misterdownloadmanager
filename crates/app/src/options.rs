@@ -39,6 +39,13 @@ enum Sub {
     Exception(Option<usize>, String, String),
     /// General → Download panels → Edit...: (the button over videos on, the sites it stays off).
     Panels(bool, String),
+    /// General → Keys...: (also take the files the browser would open).
+    Keys(bool),
+    /// General → Test browser integration...: the checks, as found when it opened.
+    Test(Vec<crate::extension::Check>),
+    /// File types → "Don't start downloading automatically from the following addresses" →
+    /// Edit list...: one address pattern per line.
+    Addresses(String),
 }
 
 pub struct OptionsDialog {
@@ -53,6 +60,8 @@ pub struct OptionsDialog {
     /// Connection → "Default max. conn. number", as typed.
     conns: String,
     mb: String,
+    /// File types → "Don't take files smaller than", as typed (KB).
+    min_kb: String,
     hours: String,
     /// The exceptions' and site logins' lists: scroll and selection.
     exc_rows: winui::RowList,
@@ -95,6 +104,7 @@ impl OptionsDialog {
             cat_dir: display_dir(&s.category_dir(Category::General, downloads)),
             conns: s.max_connections.clamp(1, s.connection_limit()).to_string(),
             mb: s.limits_mb.to_string(),
+            min_kb: s.capture_min_kb.to_string(),
             hours: s.limits_hours.to_string(),
             s,
             page: 0,
@@ -195,6 +205,7 @@ impl OptionsDialog {
                     .unwrap_or(8)
                     .clamp(1, s.connection_limit());
                 s.limits_mb = self.mb.parse().unwrap_or(200).max(1);
+                s.capture_min_kb = self.min_kb.parse().unwrap_or(0);
                 s.limits_hours = self.hours.parse().unwrap_or(5).max(1);
                 Outcome::Done(s)
             }
@@ -297,8 +308,8 @@ impl OptionsDialog {
             self.browser_rows
                 .type_to(ui, "browsers", browsers.len(), |i| browsers[i].0.clone());
         }
-        // Adding browsers, keys, and the browser menu / panel editors are the extension's
-        // settings (M8): shown as IDM has them, not yet available.
+        // Adding browsers and the browser menu editor are the extension's settings (M8): shown as
+        // IDM has them, not yet available.
         let off = |ui: &mut Ui, rc: Rect, label: &str| {
             winui::button_light(ui, rc, label, ButtonKind::Disabled, false);
         };
@@ -307,6 +318,18 @@ impl OptionsDialog {
             r(o, 286.0, 328.0, 106.0, 21.0),
             crate::i18n::mark("Add browser..."),
         );
+        // MDM's: what stands between a browser and MDM, checked in order.
+        if winui::button_light(
+            ui,
+            r(o, 30.0, 328.0, 180.0, 21.0),
+            "Test browser integration...",
+            ButtonKind::Normal,
+            false,
+        )
+        .clicked()
+        {
+            self.sub = Some(Sub::Test(crate::extension::checks(&self.s)));
+        }
         winui::etched_h(&p, o.x + 34.0, o.y + 356.0, 357.0);
         let label = crate::i18n::t("Customize keys to prevent or force downloading with MDM");
         // Inside the browsers' group box: it starts no further out than the group's frame.
@@ -315,17 +338,23 @@ impl OptionsDialog {
             o.x + 313.0,
             o.y + 379.0,
             label,
-            LIGHT_DISABLED(),
+            LIGHT_TEXT(),
             o.x + 22.0,
         );
         if cut {
             winui::full_on_hover(ui, rect, ("general-right", 379), label);
         }
-        off(
+        if winui::button_light(
             ui,
             r(o, 319.0, 365.0, 73.0, 21.0),
-            crate::i18n::mark("Keys..."),
-        );
+            "Keys...",
+            ButtonKind::Normal,
+            false,
+        )
+        .clicked()
+        {
+            self.sub = Some(Sub::Keys(self.s.capture_opened));
+        }
         let label = crate::i18n::t("Customize MDM menu items in context menu of browsers");
         let (rect, cut) = winui::text_right(&p, o.x + 313.0, o.y + 419.0, label, LIGHT_DISABLED());
         if cut {
@@ -434,13 +463,40 @@ impl OptionsDialog {
             crate::i18n::t("Don't start downloading automatically from the following addresses:"),
             LIGHT_TEXT(),
         );
-        // The address list editor belongs to browser capture (M8).
-        winui::button_light(
+        if winui::button_light(
             ui,
             r(o, 22.0, 334.0, 135.0, 21.0),
             "Edit list ...",
-            ButtonKind::Disabled,
+            ButtonKind::Normal,
             false,
+        )
+        .clicked()
+        {
+            self.sub = Some(Sub::Addresses(self.s.excluded_addresses.join("\n")));
+        }
+        // MDM's: a receipt or an icon isn't worth a download window.
+        let label = crate::i18n::t("Don't take files smaller than (KB, 0 = any size):");
+        // Before its box: a longer translation is cut with "..." and shown whole on hover.
+        let (rect, cut) = winui::label_into(
+            &p,
+            o.x + 21.0,
+            o.y + 383.0,
+            label,
+            LIGHT_TEXT(),
+            o.x + 316.0,
+            o.x + 21.0,
+        );
+        if cut {
+            winui::full_on_hover(ui, rect, ("types-min", 383), label);
+        }
+        winui::number_field(
+            ui,
+            r(o, 316.0, 370.0, 73.0, 21.0),
+            &mut self.min_kb,
+            0,
+            10_000_000,
+            true,
+            LIGHT_PAGE(),
         );
     }
 
@@ -1678,6 +1734,166 @@ impl OptionsDialog {
                             sites.split_whitespace().collect::<Vec<_>>().join(" ");
                     }
                     Outcome::Closed => {}
+                }
+            }
+            Sub::Addresses(mut list) => {
+                let out = window(
+                    ctx,
+                    "opt-addresses",
+                    // i18n: window title: the addresses whose downloads stay with the browser
+                    "Addresses left to the browser",
+                    [420.0, 230.0],
+                    false,
+                    LIGHT_BG(),
+                    |ui, o| {
+                        let p = ui.painter().clone();
+                        winui::paragraph(
+                            &p,
+                            o.x + 14.0,
+                            o.y + 20.0,
+                            crate::i18n::t(
+                                "One address per line; * stands for any text: example.com/private/*",
+                            ),
+                            LIGHT_TEXT(),
+                            o.x + 406.0,
+                            14.0,
+                        );
+                        multiline(
+                            ui,
+                            r(o, 14.0, 44.0, 392.0, 130.0),
+                            &mut list,
+                            "addresses",
+                            true,
+                        );
+                        ok_cancel(ui, o, 252.0, 192.0, true)
+                    },
+                );
+                match out {
+                    Outcome::Open => self.sub = Some(Sub::Addresses(list)),
+                    Outcome::Done(()) => {
+                        self.s.excluded_addresses = list
+                            .lines()
+                            .map(str::trim)
+                            .filter(|l| !l.is_empty())
+                            .map(str::to_owned)
+                            .collect();
+                    }
+                    Outcome::Closed => {}
+                }
+            }
+            Sub::Keys(mut opened) => {
+                let out = window(
+                    ctx,
+                    "opt-keys",
+                    // i18n: window title: the keys that force or prevent downloading with MDM
+                    "Keys",
+                    [400.0, 160.0],
+                    false,
+                    LIGHT_BG(),
+                    |ui, o| {
+                        let p = ui.painter().clone();
+                        winui::paragraph(
+                            &p,
+                            o.x + 14.0,
+                            o.y + 22.0,
+                            crate::i18n::t(
+                                "Hold Alt while clicking a link to let the browser download it instead of Mister Download Manager.",
+                            ),
+                            LIGHT_TEXT(),
+                            o.x + 386.0,
+                            14.0,
+                        );
+                        winui::checkbox_light(
+                            ui,
+                            o + vec2(14.0, 70.0),
+                            &mut opened,
+                            "Also take files the browser would open (PDF, music, video)",
+                            true,
+                        );
+                        ok_cancel(ui, o, 232.0, 127.0, true)
+                    },
+                );
+                match out {
+                    Outcome::Open => self.sub = Some(Sub::Keys(opened)),
+                    Outcome::Done(()) => self.s.capture_opened = opened,
+                    Outcome::Closed => {}
+                }
+            }
+            Sub::Test(mut checks) => {
+                let h = 120.0 + checks.len() as f32 * 22.0;
+                let mut set_up = false;
+                let out = window(
+                    ctx,
+                    "opt-test",
+                    // i18n: window title: Options → General → Test browser integration
+                    "Test browser integration",
+                    [440.0, h],
+                    false,
+                    LIGHT_BG(),
+                    |ui, o| {
+                        let p = ui.painter().clone();
+                        for (k, c) in checks.iter().enumerate() {
+                            let y = o.y + 22.0 + k as f32 * 22.0;
+                            let (mark, color) = if c.ok {
+                                ("\u{2714}", winui::SUCCESS())
+                            } else {
+                                ("\u{2716}", winui::ERROR())
+                            };
+                            winui::text_in_window(ui, &p, o.x + 14.0, y, mark, color);
+                            winui::text_in_window(ui, &p, o.x + 34.0, y, &c.text, LIGHT_TEXT());
+                        }
+                        let first = checks.iter().find(|c| !c.ok);
+                        let y = h - 46.0;
+                        if let Some(c) = first {
+                            if let Some(why) = c.why
+                                && winui::button_light(
+                                    ui,
+                                    r(o, 14.0, y, 110.0, 25.0),
+                                    // i18n: button in Test browser integration: open the help page's section for the problem
+                                    "How to fix it",
+                                    ButtonKind::Normal,
+                                    false,
+                                )
+                                .clicked()
+                            {
+                                let _ = open::that_detached(mdm_ipc::extension::help_page(why));
+                            }
+                            if c.why == Some("not-installed")
+                                && mdm_ipc::portable_dir().is_none()
+                                && winui::button_light(
+                                    ui,
+                                    r(o, 132.0, y, 110.0, 25.0),
+                                    // i18n: button in Test browser integration: register MDM's helper with the browsers
+                                    "Set it up",
+                                    ButtonKind::Normal,
+                                    false,
+                                )
+                                .clicked()
+                            {
+                                set_up = true;
+                            }
+                        }
+                        let close = winui::button_light(
+                            ui,
+                            r(o, 440.0 - 14.0 - 73.0, y, 73.0, 25.0),
+                            "Close",
+                            ButtonKind::Default,
+                            false,
+                        );
+                        if close.clicked() || winui::enter_pressed(ui) || winui::escape_pressed(ui)
+                        {
+                            Outcome::<()>::Closed
+                        } else {
+                            Outcome::Open
+                        }
+                    },
+                );
+                if set_up {
+                    crate::extension::set_up();
+                    checks = crate::extension::checks(&self.s);
+                }
+                if matches!(out, Outcome::Open) {
+                    self.sub = Some(Sub::Test(checks));
                 }
             }
         }

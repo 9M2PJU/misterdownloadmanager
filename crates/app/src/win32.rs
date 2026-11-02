@@ -1463,3 +1463,142 @@ pub fn crash_now() {
     // SAFETY: none: a write through a null pointer, on purpose, to test the crash reports.
     unsafe { std::ptr::write_volatile(std::ptr::null_mut::<u32>(), 1) };
 }
+
+/// The browsers installed, by name, with their program: each registers it under the shell's
+/// App Paths (for this user or for everyone). The browser extension's offer (extension.rs)
+/// opens its page in each.
+pub fn browsers() -> Vec<(&'static str, std::path::PathBuf)> {
+    use windows_sys::Win32::System::Registry::{HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE};
+    const APP_PATHS: &str = r"Software\Microsoft\Windows\CurrentVersion\App Paths";
+    [
+        ("Google Chrome", "chrome.exe"),
+        ("Microsoft Edge", "msedge.exe"),
+        ("Brave", "brave.exe"),
+        ("Vivaldi", "vivaldi.exe"),
+        ("Opera", "opera.exe"),
+        ("Mozilla Firefox", "firefox.exe"),
+    ]
+    .into_iter()
+    .filter_map(|(name, exe)| {
+        let key = format!(r"{APP_PATHS}\{exe}");
+        let path = reg_string_in(HKEY_CURRENT_USER, &key, "")
+            .or_else(|| reg_string_in(HKEY_LOCAL_MACHINE, &key, ""))?;
+        let path = std::path::PathBuf::from(path.trim().trim_matches('"'));
+        path.is_file().then_some((name, path))
+    })
+    .collect()
+}
+
+/// Open `url` in the browser whose program is `program` (from `browsers`).
+pub fn open_in(program: &std::path::Path, url: &str) {
+    let _ = std::process::Command::new(program).arg(url).spawn();
+}
+
+/// Mark-of-the-Web on a file being downloaded from `url` (`referrer`'s page): the zone stream
+/// browsers write, so SmartScreen checks a program, Office opens a document in Protected View and
+/// archive tools pass the mark on, as for the browser's own download. Written on the part file
+/// as it is created (the engine renames it, the stream going along).
+pub fn mark_downloaded(path: &std::path::Path, url: &str, referrer: Option<&str>) {
+    // Only addresses from the web: never a login's password (the engine has none in `url`).
+    let clean = |u: &str| u.split(['\r', '\n']).next().unwrap_or("").to_owned();
+    let mut text = String::from("[ZoneTransfer]\r\nZoneId=3\r\n");
+    if let Some(r) = referrer.filter(|r| r.starts_with("http")) {
+        text.push_str(&format!("ReferrerUrl={}\r\n", clean(r)));
+    }
+    text.push_str(&format!("HostUrl={}\r\n", clean(url)));
+    let mut stream = path.as_os_str().to_owned();
+    stream.push(":Zone.Identifier");
+    let _ = std::fs::write(stream, text);
+}
+
+/// Browser integration is registered: a browser looking for the native host (Chrome's key,
+/// which Chromium browsers read; Firefox's) finds a manifest that exists, for this user or for
+/// everyone (Options → General → Test browser integration).
+pub fn host_registered() -> bool {
+    use windows_sys::Win32::System::Registry::{HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE};
+    [
+        r"Software\Google\Chrome\NativeMessagingHosts\com.misterdownloadmanager.host",
+        r"Software\Mozilla\NativeMessagingHosts\com.misterdownloadmanager.host",
+    ]
+    .iter()
+    .any(|key| {
+        [HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE]
+            .into_iter()
+            .any(|root| {
+                reg_string_in(root, key, "")
+                    .is_some_and(|p| std::path::Path::new(p.trim().trim_matches('"')).is_file())
+            })
+    })
+}
+
+/// Options → Sites Logins' passwords, encrypted for this Windows account (DPAPI) before the list
+/// is written: another account, or a copy of the file, can't read them.
+#[allow(unsafe_code)]
+pub fn protect(plain: &str) -> Option<Vec<u8>> {
+    use windows_sys::Win32::Security::Cryptography::{CRYPT_INTEGER_BLOB, CryptProtectData};
+    let input = CRYPT_INTEGER_BLOB {
+        cbData: u32::try_from(plain.len()).ok()?,
+        pbData: plain.as_ptr().cast_mut(),
+    };
+    let mut output = CRYPT_INTEGER_BLOB {
+        cbData: 0,
+        pbData: std::ptr::null_mut(),
+    };
+    // SAFETY: `input` points at `plain` for the call (only read); `output` is filled by the
+    // system with a buffer we copy and then free with LocalFree, as CryptProtectData requires.
+    let ok = unsafe {
+        CryptProtectData(
+            &input,
+            std::ptr::null(),
+            std::ptr::null_mut(),
+            std::ptr::null_mut(),
+            std::ptr::null_mut(),
+            0,
+            &mut output,
+        )
+    };
+    blob_bytes(ok, output)
+}
+
+/// The password `protect` encrypted, for this account.
+#[allow(unsafe_code)]
+pub fn unprotect(sealed: &[u8]) -> Option<String> {
+    use windows_sys::Win32::Security::Cryptography::{CRYPT_INTEGER_BLOB, CryptUnprotectData};
+    let input = CRYPT_INTEGER_BLOB {
+        cbData: u32::try_from(sealed.len()).ok()?,
+        pbData: sealed.as_ptr().cast_mut(),
+    };
+    let mut output = CRYPT_INTEGER_BLOB {
+        cbData: 0,
+        pbData: std::ptr::null_mut(),
+    };
+    // SAFETY: as in `protect`.
+    let ok = unsafe {
+        CryptUnprotectData(
+            &input,
+            std::ptr::null_mut(),
+            std::ptr::null_mut(),
+            std::ptr::null_mut(),
+            std::ptr::null_mut(),
+            0,
+            &mut output,
+        )
+    };
+    String::from_utf8(blob_bytes(ok, output)?).ok()
+}
+
+/// A DPAPI result's bytes, its buffer freed.
+#[allow(unsafe_code)]
+fn blob_bytes(
+    ok: i32,
+    blob: windows_sys::Win32::Security::Cryptography::CRYPT_INTEGER_BLOB,
+) -> Option<Vec<u8>> {
+    if ok == 0 || blob.pbData.is_null() {
+        return None;
+    }
+    // SAFETY: the system gave `cbData` bytes at `pbData`, ours until LocalFree.
+    let bytes = unsafe { std::slice::from_raw_parts(blob.pbData, blob.cbData as usize) }.to_vec();
+    // SAFETY: the buffer came from DPAPI, which allocates with LocalAlloc.
+    unsafe { windows_sys::Win32::Foundation::LocalFree(blob.pbData.cast()) };
+    Some(bytes)
+}
