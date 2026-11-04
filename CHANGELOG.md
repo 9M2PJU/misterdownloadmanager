@@ -155,6 +155,8 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **The browser extension's Download video menu: an item's highlight ran past the menu's
+  edge** ([#81](https://github.com/anefzaoui/misterdownloadmanager/issues/81)).
 - **A long file name ran out of the progress window** ([#62](https://github.com/anefzaoui/misterdownloadmanager/issues/62)):
   on the **Options on completion** tab, a longer translation of "Save To:" (Turkish, German…)
   ran into the path, and the path ran past the window's edge. The label now takes the room its

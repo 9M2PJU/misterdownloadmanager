@@ -35,6 +35,8 @@ Everything below ships together, in one release.
   desktops without a tray, such as MangoWC ([#59](https://github.com/anefzaoui/misterdownloadmanager/issues/59))
 - ✅ Downloads that hand out one-time links no longer fail with 403
   ([#28](https://github.com/anefzaoui/misterdownloadmanager/issues/28))
+- ✅ The extension's Download video menu keeps its highlight inside its edge
+  ([#81](https://github.com/anefzaoui/misterdownloadmanager/issues/81))
 - ✅ No crash when a window opens while MDM is minimized
   ([#22](https://github.com/anefzaoui/misterdownloadmanager/issues/22))
 - ✅ Long file names stay inside the progress window: the Save to path is shortened in the
