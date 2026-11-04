@@ -111,6 +111,11 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **ffmpeg could fail to install** with "the release has no an LGPL Windows build": BtbN, whose
+  builds MDM installs, publishes a dated build each day and then remakes its `latest` release,
+  and meanwhile GitHub's "latest" is the dated one, whose files are named differently. MDM now
+  reads BtbN's newest releases, either naming, and takes the newest complete build. Errors while
+  installing yt-dlp or ffmpeg are also worded in the interface language now.
 - **Links that work only once** (or hosts that allow one download at a time) failed with "403
   Forbidden" after Download File Info had looked them up
   ([#28](https://github.com/anefzaoui/misterdownloadmanager/issues/28)): the window's look and the
