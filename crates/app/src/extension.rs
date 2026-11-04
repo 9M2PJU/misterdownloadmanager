@@ -28,7 +28,7 @@ pub fn worth_asking(settings: &crate::settings::Settings) -> bool {
 
 pub struct Extension {
     /// The browsers installed: name and program. Empty: one row for the system's browser.
-    browsers: Vec<(&'static str, Option<PathBuf>)>,
+    browsers: Vec<(String, Option<PathBuf>)>,
     /// A browser's extension has reached the app since the window opened.
     connected: bool,
     /// The browsers whose extension has (Options' names, mdm_ipc::extension::seen_browsers).
@@ -40,15 +40,22 @@ pub struct Extension {
 }
 
 /// Whether `row` (a browser as the window lists it) is among the browsers seen (as Options
-/// names them). Vivaldi and Chromium say they are Chrome (no brand of their own): they share
-/// Chrome's status.
+/// names them). Vivaldi, Chromium, Helium, Thorium and Arc say they are Chrome (no brand of
+/// their own, or Chrome's on purpose): they share Chrome's status. Firefox's forks give their
+/// own name (`capture::browser_named`).
 fn is_seen(seen: &[String], row: &str) -> bool {
     let named = match row {
         "Brave" => "Brave Browser",
-        "Vivaldi" | "Chromium" => "Google Chrome",
+        "Vivaldi" | "Chromium" | "Helium" | "Thorium" | "Arc" => "Google Chrome",
         other => other,
     };
     seen.iter().any(|b| b == named)
+}
+
+/// A row for a browser of Firefox's family (Firefox, Zen, LibreWolf …): it gets the tutorial,
+/// not the Chrome Web Store.
+fn is_gecko(row: &str) -> bool {
+    mdm_ipc::browsers::named(row).is_some_and(|b| b.family == mdm_ipc::browsers::Family::Gecko)
 }
 
 impl Extension {
@@ -58,8 +65,15 @@ impl Extension {
         #[cfg(unix)]
         let found = crate::unix::browsers();
         let mut browsers: Vec<_> = found.into_iter().map(|(n, p)| (n, Some(p))).collect();
+        // The table's order (Chrome first, its button the accent one), others after.
+        browsers.sort_by_key(|(n, _)| {
+            mdm_ipc::browsers::BROWSERS
+                .iter()
+                .position(|b| b.name == n.as_str())
+                .unwrap_or(usize::MAX)
+        });
         if browsers.is_empty() {
-            browsers.push(("", None));
+            browsers.push((String::new(), None));
         }
         Extension {
             browsers,
@@ -145,7 +159,7 @@ impl Extension {
         let store = mdm_ipc::extension::store_page();
         for (k, (name, program)) in self.browsers.iter().enumerate() {
             let y = BANNER + 16.0 + k as f32 * ROW;
-            let firefox = name.contains("Firefox") || store.is_none();
+            let firefox = is_gecko(name) || store.is_none();
             winui::text_font(
                 &p,
                 winui::tahoma_bold(),
@@ -155,7 +169,7 @@ impl Extension {
                     // i18n: a row of the browser extension's window when no browser was found by name
                     crate::i18n::t("Your browser")
                 } else {
-                    name
+                    name.as_str()
                 },
                 ink,
             );
@@ -387,4 +401,36 @@ pub fn checks(settings: &crate::settings::Settings) -> Vec<Check> {
         });
     }
     out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// #41: Helium says it is Chrome; Zen gives its own name; each row reads its own status.
+    #[test]
+    fn rows_match_the_names_browsers_report() {
+        let seen = vec!["Google Chrome".to_owned(), "Zen Browser".to_owned()];
+        assert!(is_seen(&seen, "Helium") && is_seen(&seen, "Google Chrome"));
+        assert!(is_seen(&seen, "Zen Browser"));
+        assert!(!is_seen(&seen, "Mozilla Firefox") && !is_seen(&seen, "Brave"));
+        assert!(is_seen(&["Brave Browser".to_owned()], "Brave"));
+    }
+
+    /// Firefox's family gets the tutorial, whatever the store has.
+    #[test]
+    fn gecko_rows_are_firefoxs_family() {
+        for b in [
+            "Mozilla Firefox",
+            "Zen Browser",
+            "LibreWolf",
+            "Floorp",
+            "Waterfox",
+        ] {
+            assert!(is_gecko(b), "{b}");
+        }
+        for b in ["Google Chrome", "Helium", "Brave", "Your browser", ""] {
+            assert!(!is_gecko(b), "{b}");
+        }
+    }
 }

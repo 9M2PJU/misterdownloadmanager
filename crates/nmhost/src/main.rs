@@ -26,10 +26,12 @@ use serde::{Deserialize, Serialize};
 const HOST_NAME: &str = "com.misterdownloadmanager.host";
 use mdm_ipc::extension::{FIREFOX_ID, STORE_ID, STORE_UPDATE_URL, chromium_ids, store_id};
 /// Where each Chromium browser looks for native messaging hosts on Windows, under HKCU (one
-/// user) or HKLM (everyone).
+/// user) or HKLM (everyone). Chromium-branded builds (Chromium, Helium, Thorium) read
+/// Chromium's first, then Chrome's, as most other forks do (Chromium's launch_context_win.cc).
 #[cfg(windows)]
-const REGISTRY_KEYS: [&str; 3] = [
+const REGISTRY_KEYS: [&str; 4] = [
     r"Software\Google\Chrome\NativeMessagingHosts",
+    r"Software\Chromium\NativeMessagingHosts",
     r"Software\Microsoft\Edge\NativeMessagingHosts",
     r"Software\BraveSoftware\Brave-Browser\NativeMessagingHosts",
 ];
@@ -57,7 +59,7 @@ struct Message {
     cookies: Option<String>,
     user_agent: Option<String>,
     /// `navigator.userAgentData` brands: Brave and Opera name themselves there, not in the
-    /// User-Agent.
+    /// User-Agent; Firefox's forks add the name `runtime.getBrowserInfo` gives ("Zen").
     brands: Vec<String>,
     filename: Option<String>,
     /// Where the browser's redirects from `url` ended.
@@ -596,7 +598,8 @@ fn register(all_users: bool) -> Result<(), String> {
         ])?;
     }
     println!(
-        "registered {HOST_NAME} for Chrome, Edge, Brave ({}) and Firefox ({})",
+        "registered {HOST_NAME} for Chrome, Edge, Brave, Helium and the other Chromium browsers \
+         ({}), and for Firefox, Zen and its other forks ({})",
         path.display(),
         ff_path.display()
     );
@@ -634,74 +637,19 @@ fn reg(args: &[&str]) -> Result<(), String> {
     }
 }
 
-/// Linux and macOS: the folders each browser reads host manifests from, for one user (in the
-/// home folder) or for everyone, each with whether it is Firefox's. Only browsers that are there
-/// (the folder above it exists) get one.
+/// Linux and macOS: the folders the browsers there read host manifests from, for one user (in
+/// the home folder) or for everyone, each with whether it is Firefox's (`mdm_ipc::browsers`).
 #[cfg(not(windows))]
 fn host_dirs(all_users: bool) -> Vec<(PathBuf, bool)> {
     let home = PathBuf::from(std::env::var_os("HOME").unwrap_or_default());
-    let mut dirs: Vec<(PathBuf, bool)> = Vec::new();
-    if cfg!(target_os = "macos") {
-        let support = home.join("Library/Application Support");
-        if all_users {
-            for d in [
-                "/Library/Google/Chrome/NativeMessagingHosts",
-                "/Library/Application Support/Chromium/NativeMessagingHosts",
-                "/Library/Microsoft/Edge/NativeMessagingHosts",
-            ] {
-                dirs.push((PathBuf::from(d), false));
-            }
-            dirs.push((
-                PathBuf::from("/Library/Application Support/Mozilla/NativeMessagingHosts"),
-                true,
-            ));
-        } else {
-            for d in [
-                "Google/Chrome",
-                "Chromium",
-                "Microsoft Edge",
-                "BraveSoftware/Brave-Browser",
-                "Vivaldi",
-            ] {
-                dirs.push((support.join(d).join("NativeMessagingHosts"), false));
-            }
-            dirs.push((support.join("Mozilla/NativeMessagingHosts"), true));
-        }
-    } else if all_users {
-        for d in [
-            "/etc/opt/chrome/native-messaging-hosts",
-            "/etc/chromium/native-messaging-hosts",
-            "/etc/opt/edge/native-messaging-hosts",
-        ] {
-            dirs.push((PathBuf::from(d), false));
-        }
-        // Firefox reads lib64's on 64-bit Fedora and openSUSE (MDN, "Native manifests").
-        for d in [
-            "/usr/lib/mozilla/native-messaging-hosts",
-            "/usr/lib64/mozilla/native-messaging-hosts",
-        ] {
-            dirs.push((PathBuf::from(d), true));
-        }
-    } else {
-        let config = std::env::var_os("XDG_CONFIG_HOME")
-            .map(PathBuf::from)
-            .filter(|p| p.is_absolute())
-            .unwrap_or_else(|| home.join(".config"));
-        for d in [
-            "google-chrome",
-            "google-chrome-beta",
-            "google-chrome-unstable",
-            "chromium",
-            "microsoft-edge",
-            "BraveSoftware/Brave-Browser",
-            "vivaldi",
-        ] {
-            dirs.push((config.join(d).join("NativeMessagingHosts"), false));
-        }
-        dirs.push((home.join(".mozilla/native-messaging-hosts"), true));
-    }
-    dirs.retain(|(d, _)| d.parent().is_some_and(|p| p.is_dir()));
-    dirs
+    let config = std::env::var_os("XDG_CONFIG_HOME")
+        .map(PathBuf::from)
+        .filter(|p| p.is_absolute())
+        .unwrap_or_else(|| home.join(".config"));
+    mdm_ipc::browsers::host_dirs(&home, &config, cfg!(target_os = "macos"), all_users)
+        .into_iter()
+        .map(|(d, f)| (d, f == mdm_ipc::browsers::Family::Gecko))
+        .collect()
 }
 
 /// Linux and macOS: the folder Chrome reads external extensions from (an `<id>.json` naming
