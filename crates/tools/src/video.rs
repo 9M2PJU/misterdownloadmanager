@@ -86,9 +86,16 @@ fn supervise(
         match attempt(exe, url, ours, progress, child, expected) {
             Attempt::Stopped => return,
             Attempt::Done(f) => {
+                // The saved file's own size: a merged video or a converted MP3 isn't the size
+                // of what came down.
+                let saved = std::fs::metadata(&f).ok().map(|m| m.len());
                 let mut p = progress.lock().unwrap();
                 if p.state != State::Stopped {
                     p.speed = 0.0;
+                    if let Some(len) = saved {
+                        p.total = Some(len);
+                        p.downloaded = len;
+                    }
                     p.state = State::Done(f);
                 }
                 return;
@@ -308,9 +315,15 @@ impl VideoJob {
     ) -> Result<VideoJob, ProcError> {
         proc::safe(url)?;
         let output = dir.join(format!("{}.%(ext)s", template_text(stem)));
+        // An MP3 choice (`resolve::MP3`): the best sound, converted by ffmpeg (#32).
+        let mp3 = crate::resolve::mp3_quality(selector);
+        let format = if mp3.is_some() { "ba/b" } else { selector };
+        // What comes down is the sound as the site has it, not the MP3 the choice's size
+        // estimated: the progress follows yt-dlp's own total.
+        let expected = if mp3.is_some() { None } else { expected };
         let mut ours: Vec<String> = vec![
             "-f".into(),
-            selector.into(),
+            format.into(),
             "-o".into(),
             output.to_string_lossy().into_owned(),
             "--no-playlist".into(),
@@ -326,6 +339,15 @@ impl VideoJob {
         ];
         if let Some(r) = rate {
             ours.extend(["--limit-rate".into(), r.to_string()]);
+        }
+        if let Some(q) = mp3 {
+            ours.extend([
+                "-x".into(),
+                "--audio-format".into(),
+                "mp3".into(),
+                "--audio-quality".into(),
+                q,
+            ]);
         }
         let (theirs, cookies) = browser.args(url)?;
         ours.extend(theirs);

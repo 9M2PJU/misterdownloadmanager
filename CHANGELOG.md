@@ -17,6 +17,12 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Added
 
+- **A video's sound as MP3, at the quality you pick** ([#32](https://github.com/anefzaoui/misterdownloadmanager/issues/32)):
+  **Download video** lists **Audio only MP3** at its best variable bitrate (VBR) and at 320, 256,
+  192 and 128 kbps, after the sound in the site's own format. ffmpeg converts it (on Windows MDM
+  offers to install it, as for the best video qualities; on Linux and macOS it uses the system's),
+  and the browser's **Download video** button offers the same. The command line takes
+  `video-get --format mp3:192` (`mp3:0` for VBR).
 - **The Linux AppImage updates through AppImage tools too** ([#24](https://github.com/anefzaoui/misterdownloadmanager/issues/24)):
   it carries the address of its updates, and each release has its `.AppImage.zsync`, so
   AppImageLauncher, Gear Lever and AppImageUpdate download only the parts that changed.
