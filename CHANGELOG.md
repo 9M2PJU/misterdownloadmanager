@@ -128,6 +128,10 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **Linux: menus opened in the middle of the screen** in a Wayland session
+  ([#50](https://github.com/anefzaoui/misterdownloadmanager/issues/50)): Wayland lets no program
+  place its windows, and MDM's menus and drop-down lists are windows it places. MDM now runs
+  through XWayland when it is there (`MDM_WAYLAND=1` keeps Wayland).
 - **ffmpeg could fail to install** with "the release has no an LGPL Windows build": BtbN, whose
   builds MDM installs, publishes a dated build each day and then remakes its `latest` release,
   and meanwhile GitHub's "latest" is the dated one, whose files are named differently. MDM now
