@@ -131,6 +131,11 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **Stopping a video download left yt-dlp downloading in the background** on Windows
+  ([#61](https://github.com/anefzaoui/misterdownloadmanager/issues/61)): `yt-dlp.exe` starts a
+  second process that does the work, and only the first was ended. Resuming then failed ("yt-dlp
+  did not provide information") and a new try crawled, sharing the line with the old one. Each
+  helper now runs in a job of its own that Stop ends whole.
 - **Linux: menus opened in the middle of the screen** in a Wayland session
   ([#50](https://github.com/anefzaoui/misterdownloadmanager/issues/50)): Wayland lets no program
   place its windows, and MDM's menus and drop-down lists are windows it places. MDM now runs
