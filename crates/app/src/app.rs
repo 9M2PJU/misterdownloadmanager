@@ -317,6 +317,10 @@ pub struct App {
     video_dlg: Option<crate::videodlg::VideoDialog>,
     torrent_dlg: Option<crate::torrentdlg::TorrentDialog>,
     torrent_settings: Option<crate::torrentdlg::TorrentSettings>,
+    /// Since when no torrent has needed the torrent engine (`torrent_tick`).
+    torrent_idle_since: Option<Instant>,
+    /// A blocklist is being fetched (torrents::refresh_blocklist).
+    blocklist_busy: std::sync::Arc<std::sync::atomic::AtomicBool>,
     /// Startup work for torrents done (associations refreshed, sharing resumed).
     torrents_started: bool,
     /// The torrent session, started on first use (D-014).
@@ -682,6 +686,8 @@ impl App {
             video_dlg: None,
             torrent_dlg: None,
             torrent_settings: None,
+            torrent_idle_since: None,
+            blocklist_busy: Default::default(),
             torrents_started: false,
             torrent_host: crate::torrents::Host::new(),
             find: None,
@@ -1198,6 +1204,41 @@ impl App {
         }
     }
 
+    /// Every 2 s (#40): Torrent settings for the next torrent session, and the running one stopped
+    /// once no torrent has needed it for a minute (none running or sharing, no Add torrent open),
+    /// when Torrent settings say so or their network settings changed.
+    fn torrent_tick(&mut self) {
+        let cfg = crate::torrents::state_dir().and_then(|d| self.settings.torrent_config(d));
+        self.torrent_host.set_config(cfg);
+        if !self.settings.torrent_blocklist.trim().is_empty() {
+            crate::torrents::refresh_blocklist(
+                &self.rt,
+                &self.settings.torrent_blocklist,
+                &self.blocklist_busy,
+            );
+        }
+        let sharing = self.settings.torrent_keep_sharing
+            && self
+                .items
+                .iter()
+                .any(|i| i.torrent.is_some() && i.status == Status::Complete);
+        let busy = sharing
+            || self.torrent_dlg.is_some()
+            || self
+                .items
+                .iter()
+                .any(|i| i.torrent.is_some() && i.live.is_some());
+        if busy {
+            self.torrent_idle_since = None;
+            return;
+        }
+        let since = *self.torrent_idle_since.get_or_insert_with(Instant::now);
+        if since.elapsed() >= Duration::from_secs(60) {
+            self.torrent_host
+                .stop_if_idle(&self.rt, true, self.settings.torrent_stop_idle);
+        }
+    }
+
     /// `/show <window>` (mdm_ipc::Command::show): open one of the windows by name, as its menu
     /// command does. Unknown names do nothing.
     fn show_named(&mut self, name: &str, ctx: &egui::Context) {
@@ -1214,6 +1255,7 @@ impl App {
             "scheduler" => self.run(Cmd::Scheduler, None, ctx),
             "about" => self.run(Cmd::About, None, ctx),
             "helpers" => self.helpers = Some(crate::helpers::Helpers::new()),
+            "torrent-settings" => self.run(Cmd::TorrentSettings, None, ctx),
             "video-page" => self.run(Cmd::VideoPage, None, ctx),
             // Download video from a page → Helpers... (#51).
             "video-helpers" => {
@@ -5101,8 +5143,10 @@ impl App {
             match t.show(ctx) {
                 Outcome::Open => {}
                 Outcome::Closed => self.torrent_settings = None,
-                Outcome::Done((share, assoc)) => {
+                Outcome::Done(crate::torrentdlg::TorrentChoice { share, assoc, net }) => {
                     self.torrent_settings = None;
+                    // The network: the next torrent session takes it (torrent_tick).
+                    net.apply(&mut self.settings);
                     if share != self.settings.torrent_keep_sharing {
                         self.settings.torrent_keep_sharing = share;
                         self.torrent_host.set_sharing(
@@ -5358,6 +5402,7 @@ impl eframe::App for App {
                 self.queues.len(),
                 ctx.pixels_per_point(),
             );
+            self.torrent_tick();
         }
         ctx.request_repaint_after(Duration::from_secs(2));
         egui::CentralPanel::no_frame()
