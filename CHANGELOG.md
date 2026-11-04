@@ -131,6 +131,10 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **Linux: the window couldn't be closed** on desktops without a tray, such as MangoWC
+  ([#59](https://github.com/anefzaoui/misterdownloadmanager/issues/59)): closing hid it to a tray
+  that wasn't there. Closing now hides to the tray only when a tray shows MDM's icon, and quits
+  otherwise. (The menus and dark mode there: see #50 and #60.)
 - **Stopping a video download left yt-dlp downloading in the background** on Windows
   ([#61](https://github.com/anefzaoui/misterdownloadmanager/issues/61)): `yt-dlp.exe` starts a
   second process that does the work, and only the first was ended. Resuming then failed ("yt-dlp
