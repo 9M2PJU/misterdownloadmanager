@@ -94,12 +94,18 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
   quality the site's lossy sound doesn't have, the file is only bigger). The site's own sound is
   now named **Audio only, original**. The command line's `video-get` takes `-f opus:` and
   `-f flac:`.
-- **A file-type icon before every file name**: the download list, Download File Info, Properties,
-  Add torrent's tree and a torrent's Files tab (folders too), and the Scheduler's files. Video,
-  audio, pictures, archives, documents, subtitles, code, and the programs and installers of every
-  system (exe, msi, dmg, pkg, deb, rpm, AppImage, apk, iso…) each have their own, from Material
-  Icon Theme (MIT), the same on Windows, macOS and Linux; a .torrent shows MDM's magnet. Windows'
-  own icons were used before, on Windows only.
+- **A file-type icon before every file name or folder**
+  ([#122](https://github.com/anefzaoui/misterdownloadmanager/issues/122)): the download list,
+  Download File Info, Properties, Download complete (its open folder), Add torrent (the torrent and
+  its tree), a torrent's Files tab, the progress window's Save To, the Scheduler's files, Batch
+  download's preview, and Download video's qualities and a playlist's videos (the file each one
+  gives). Each is your
+  system's own icon for that type, the one its file manager shows: Windows Explorer's, macOS
+  Finder's, or your Linux desktop's icon theme (KDE's, GNOME's or GTK's choice, then the themes it
+  builds on). It is sharp at every display scale (125, 150, 200 %), taken at the size the screen
+  needs. Each type is looked up once, in the background, so a long list never waits for it. Where
+  the system has no icon for a type (a Linux desktop without an icon theme), MDM draws one of its
+  own, from the Tango icons (public domain).
 - **Video subtitles** ([#68](https://github.com/anefzaoui/misterdownloadmanager/issues/68)):
   Download video from a page lists the video's subtitle languages, the uploader's first, then the
   site's automatic captions (in the language spoken, English and yours). They're saved beside the

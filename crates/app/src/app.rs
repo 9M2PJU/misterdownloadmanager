@@ -550,11 +550,11 @@ fn seconds_now() -> u32 {
     chrono::Local::now().num_seconds_from_midnight()
 }
 
-/// The shell icon for a file name's extension.
+/// The icon for a file name's extension (empty: none).
 fn file_icon(name: &str) -> IconKey {
     match name.rsplit_once('.') {
         Some((_, ext)) if !ext.is_empty() => IconKey::Ext(ext.to_ascii_lowercase()),
-        _ => IconKey::Ext("unknown".into()),
+        _ => IconKey::Ext(String::new()),
     }
 }
 
@@ -808,7 +808,7 @@ impl App {
             theme_checked: None,
             caption_set: false,
             list,
-            icons: ShellIcons::default(),
+            icons: ShellIcons,
             open_menu: None,
             alt_down: false,
             alt_alone: false,
@@ -1510,8 +1510,20 @@ impl App {
                     }
                 }
             }
+            // A sample playlist (#69), its quality by its place in the list: `video-playlist:7`.
+            "video-playlist" => {
+                self.run(Cmd::VideoPage, None, ctx);
+                if let Some(v) = &mut self.video_dlg {
+                    v.show_sample_list(tab);
+                }
+            }
             "existing-files" => {
-                let dir = self.downloads.join("Big Buck Bunny");
+                // In General's folder (a test's own, set in its data folder), not the system's
+                // Downloads, whose path names the user.
+                let dir = self
+                    .settings
+                    .category_dir(Category::General, &self.downloads)
+                    .join("Big Buck Bunny");
                 self.shown_existing = Some(crate::dialogs::ExistingFiles::new(&[
                     dir.join("big_buck_bunny_1080p.mkv"),
                     dir.join("subtitles.srt"),
@@ -6029,7 +6041,7 @@ impl App {
         }
         let mut keep = Vec::new();
         for mut c in std::mem::take(&mut self.complete) {
-            match c.show(ctx, &mut self.icons) {
+            match c.show(ctx) {
                 Outcome::Open => keep.push(c),
                 Outcome::Done(()) | Outcome::Closed => {
                     if c.dont_show {
