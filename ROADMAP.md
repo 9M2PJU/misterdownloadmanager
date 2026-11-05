@@ -13,6 +13,8 @@ Everything below ships together, in one release.
 
 ### Done
 
+- ✅ Screen readers see a window's contents the first time they read it, not only its title bar
+  ([#131](https://github.com/anefzaoui/misterdownloadmanager/issues/131))
 - ✅ Magnet links get their file list in seconds again: the DHT keeps going after a computer it
   asked is gone, and Add torrent shows the wait (peers found, from where, what may be in the
   way) ([#92](https://github.com/anefzaoui/misterdownloadmanager/issues/92))
