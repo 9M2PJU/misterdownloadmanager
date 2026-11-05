@@ -13,6 +13,9 @@ Everything below ships together, in one release.
 
 ### Done
 
+- ✅ Translators: a reviewed translation is never replaced by machine translation, and CI checks it;
+  Italian is the first catalog reviewed by a native speaker
+  ([#150](https://github.com/anefzaoui/misterdownloadmanager/pull/150))
 - ✅ Screen readers reach every row of a list, in view or not (300 around the view in long lists)
   ([#111](https://github.com/anefzaoui/misterdownloadmanager/issues/111))
 - ✅ Less memory in the notification area after Minimize too, and again 2 minutes after hiding
