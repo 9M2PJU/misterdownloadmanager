@@ -846,6 +846,10 @@
    "source": "Find a download in a long list",
    "text": "Uzun bir listede bir indirmeyi bulun"
   },
+  "16cc6550e7f6316d": {
+   "source": "In the <g1>Categories</g1> pane: the selected category's menu (<g2>Properties</g2>, <g3>Add category</g3>, <g4>Delete</g4>)",
+   "text": "<g1>Kategoriler</g1> bölmesinde: seçili kategorinin menüsü (<g2>Özellikler</g2>, <g3>Kategori ekle</g3>, <g4>Sil</g4>)"
+  },
   "16d498a3a477d64c": {
    "source": "<g1>Dark mode has day mode's sizes and places</g1>: the menu bar, the toolbar, the panes, the list's lines and selection, buttons and the progress window's table measure the same in both modes. Only the colours change.",
    "text": "<g1>Karanlık mod, gündüz modunun boyutlarına ve yerlerine sahip</g1>: menü çubuğu, araç çubuğu, bölmeler, listenin satırları ve seçimi, düğmeler ve ilerleme penceresinin tablosu her iki modda da aynı boyuttadır. Yalnızca renkler değişir."
@@ -2530,6 +2534,10 @@
    "source": "F3",
    "text": "F3"
   },
+  "447cc2a2f0918427": {
+   "source": "Tab",
+   "text": "Sekme"
+  },
   "44970b9b25afe28d": {
    "source": "These are the checks CI runs; each works on a clean clone:",
    "text": "Bunlar CI'nin çalıştırdığı kontrollerdir; her biri temiz bir klon üzerinde çalışır:"
@@ -4054,6 +4062,10 @@
    "source": "MDM can be driven without its window in three ways:",
    "text": "MDM, penceresi olmadan üç şekilde çalıştırılabilir:"
   },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "MDM'nin Ara Sunucu / Socks ayarları web ve FTP indirmeleri içindir. Torrentler de bir SOCKS5 kullanabilir: <g2>Seçenekler → Ara Sunucu / Socks</g2> bölümünde bir <x1/> ara sunucu ayarlayın ve Torrent ayarlarında <g3>Ara sunucuyu kullan</g3> seçeneğini açın. Ara sunucu yalnızca eşlere ve web izleyicilerine olan bağlantıları kapsar, bu nedenle MDM bununla DHT'yi, yerel eş keşfini, gelen bağlantıları ve UDP izleyicilerini kapatır. Bu anahtar açıkken ara sunucu Ara Sunucu / Socks bölümünden kaybolursa, torrentler onu atlamak yerine başlamaz."
+  },
   "710f3b53af09b6d8": {
    "source": "A video's progress window",
    "text": "Bir videonun ilerleme penceresi"
@@ -4133,6 +4145,10 @@
   "72eeb67b1fb2c1c3": {
    "source": "<g1><g2></g2>1.0 s</g1><g3></g3>",
    "text": "<g1><g2></g2>1.0 s</g1><g3></g3>"
+  },
+  "72f3284ff6dd83fc": {
+   "source": "<g1>Up</g1> / <g2>Down</g2>, <g3>Left</g3> / <g4>Right</g4>",
+   "text": "<g1>Yukarı</g1> / <g2>Aşağı</g2>, <g3>Sol</g3> / <g4>Sağ</g4>"
   },
   "72f381013a320442": {
    "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. With <g2>No proxy/socks</g2>, it makes MDM use Windows' proxy settings, as browsers do.",
@@ -4281,6 +4297,10 @@
   "7795e2b94936333b": {
    "source": "your user name, which shows as <x1/> in folder paths.",
    "text": "klasör yollarında <x1/> olarak görünen kullanıcı adınız."
+  },
+  "77a30c9b7d2a6105": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size. The <g1>Categories</g1> pane reads as a tree (each category with its count, open or shut, selected or not), and the menu bar and every right-click menu as menus whose items can be run from there.",
+   "text": "Her şey klavyeden yapılabilir ve MDM ekran okuyucularla (Windows'taki Narrator ve NVDA gibi) çalışır: pencereleri, iletişim kutuları ve menüleri, her bir kontrolün ne olduğunu ve durumunu onlara bildirir ve indirme listesi her indirmenin adını, durumunu ve boyutunu okur. <g1>Kategoriler</g1> bölmesi bir ağaç gibi okunur (her kategori sayısıyla birlikte, açık veya kapalı, seçili veya değil) ve menü çubuğu ile her sağ tıklama menüsü, öğeleri oradan çalıştırılabilen menüler gibi okunur."
   },
   "77bd0523361e1992": {
    "source": "Next, MDM offers its two free video helpers: <g1>yt-dlp</g1>, which finds the video on a page, and <g2>ffmpeg</g2>, which joins its picture and sound. Click <g3>Yes, download them (recommended)</g3> and they download in the background, about 100 MB, once. <g4>Not now</g4> leaves them for later: the video window offers them when you first need them. More in <g5>Videos</g5>.",
@@ -5654,6 +5674,10 @@
    "source": "IDM 6.42 vs Mister Download Manager download benchmark",
    "text": "IDM 6.42 ile Mister Download Manager indirme karşılaştırması"
   },
+  "9e30a9dbdaf7e2cf": {
+   "source": "<g1>Shift+F10</g1> or the <g2>Menu</g2> key",
+   "text": "<g1>Shift+F10</g1> veya <g2>Menü</g2> tuşu"
+  },
   "9e343096f9189eb2": {
    "source": "Seven downloads, each run at least seven times by both apps. The bar is the middle half of the runs, the line the median.",
    "text": "Her iki uygulama da her biri en az yedi kez çalıştırılan yedi indirme. Çubuk, çalıştırmaların orta yarısını, çizgi ise medyanı gösterir."
@@ -6069,6 +6093,10 @@
   "a9e931861de964cf": {
    "source": "Catch downloads from your browser",
    "text": "Tarayıcınızdan indirmeleri yakalayın"
+  },
+  "a9efaabb8e76e3a1": {
+   "source": "Move between the <g1>Categories</g1> pane and the download list",
+   "text": "<g1>Kategoriler</g1> bölmesi ile indirme listesi arasında geçiş yap"
   },
   "a9f05b8a13e881a4": {
    "source": "<g1>Mac and Linux too.</g1> As experimental builds, if you use more than Windows.",
@@ -7093,6 +7121,10 @@
   "c6a2b86a33c71c9e": {
    "source": "Paid licence after a 30-day free trial<g1><g2>1</g2></g1>",
    "text": "30 günlük ücretsiz deneme sonrası ücretli lisans<g1><g2>1</g2></g1>"
+  },
+  "c6e9110f9e7fa8a3": {
+   "source": "In the <g1>Categories</g1> pane: the next category; close or open a branch",
+   "text": "<g1>Kategoriler</g1> bölmesinde: sonraki kategori; bir dalı kapat veya aç"
   },
   "c6fd6136f623cd9a": {
    "source": "Yes, from web players<g1><g2>3</g2></g1>",

@@ -846,6 +846,10 @@
    "source": "Find a download in a long list",
    "text": "Buscar una descarga en una lista larga"
   },
+  "16cc6550e7f6316d": {
+   "source": "In the <g1>Categories</g1> pane: the selected category's menu (<g2>Properties</g2>, <g3>Add category</g3>, <g4>Delete</g4>)",
+   "text": "En el panel <g1>Categorías</g1>: el menú de la categoría seleccionada (<g2>Propiedades</g2>, <g3>Añadir categoría</g3>, <g4>Eliminar</g4>)"
+  },
   "16d498a3a477d64c": {
    "source": "<g1>Dark mode has day mode's sizes and places</g1>: the menu bar, the toolbar, the panes, the list's lines and selection, buttons and the progress window's table measure the same in both modes. Only the colours change.",
    "text": "<g1>El modo oscuro tiene los tamaños y ubicaciones del modo diurno</g1>: la barra de menú, la barra de herramientas, los paneles, las líneas y la selección de la lista, los botones y la tabla de la ventana de progreso miden lo mismo en ambos modos. Solo cambian los colores."
@@ -2530,6 +2534,10 @@
    "source": "F3",
    "text": "F3"
   },
+  "447cc2a2f0918427": {
+   "source": "Tab",
+   "text": "Tabulador"
+  },
   "44970b9b25afe28d": {
    "source": "These are the checks CI runs; each works on a clean clone:",
    "text": "Estas son las comprobaciones que ejecuta CI; cada una funciona en un clon limpio:"
@@ -4054,6 +4062,10 @@
    "source": "MDM can be driven without its window in three ways:",
    "text": "MDM se puede controlar sin su ventana de tres maneras:"
   },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "La configuración de Proxy/Socks de MDM es para descargas web y FTP. Los torrents también pueden usar uno SOCKS5: configura un proxy <x1/> en <g2>Opciones → Proxy/Socks</g2> y activa <g3>Usar el proxy</g3> en Configuración de torrents. El proxy cubre solo las conexiones a pares y rastreadores web, por lo que con él MDM desactiva la DHT, el descubrimiento de pares locales, las conexiones entrantes y los rastreadores UDP. Si el proxy desaparece de Proxy/Socks mientras ese interruptor está activado, los torrents no se inician en lugar de evitarlo."
+  },
   "710f3b53af09b6d8": {
    "source": "A video's progress window",
    "text": "Ventana de progreso de un vídeo"
@@ -4133,6 +4145,10 @@
   "72eeb67b1fb2c1c3": {
    "source": "<g1><g2></g2>1.0 s</g1><g3></g3>",
    "text": "<g1><g2></g2>1,0 s</g1><g3></g3>"
+  },
+  "72f3284ff6dd83fc": {
+   "source": "<g1>Up</g1> / <g2>Down</g2>, <g3>Left</g3> / <g4>Right</g4>",
+   "text": "<g1>Arriba</g1> / <g2>Abajo</g2>, <g3>Izquierda</g3> / <g4>Derecha</g4>"
   },
   "72f381013a320442": {
    "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. With <g2>No proxy/socks</g2>, it makes MDM use Windows' proxy settings, as browsers do.",
@@ -4281,6 +4297,10 @@
   "7795e2b94936333b": {
    "source": "your user name, which shows as <x1/> in folder paths.",
    "text": "su nombre de usuario, que se muestra como <x1/> en las rutas de las carpetas."
+  },
+  "77a30c9b7d2a6105": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size. The <g1>Categories</g1> pane reads as a tree (each category with its count, open or shut, selected or not), and the menu bar and every right-click menu as menus whose items can be run from there.",
+   "text": "Todo se puede hacer desde el teclado, y MDM funciona con lectores de pantalla (como Narrador y NVDA en Windows): sus ventanas, diálogos y menús les indican qué es cada control y su estado, y la lista de descargas lee el nombre, estado y tamaño de cada descarga. El panel <g1>Categorías</g1> se lee como un árbol (cada categoría con su recuento, abierta o cerrada, seleccionada o no), y la barra de menú y cada menú contextual como menús cuyos elementos se pueden ejecutar desde allí."
   },
   "77bd0523361e1992": {
    "source": "Next, MDM offers its two free video helpers: <g1>yt-dlp</g1>, which finds the video on a page, and <g2>ffmpeg</g2>, which joins its picture and sound. Click <g3>Yes, download them (recommended)</g3> and they download in the background, about 100 MB, once. <g4>Not now</g4> leaves them for later: the video window offers them when you first need them. More in <g5>Videos</g5>.",
@@ -5654,6 +5674,10 @@
    "source": "IDM 6.42 vs Mister Download Manager download benchmark",
    "text": "Comparativa de descarga: IDM 6.42 vs. Mister Download Manager"
   },
+  "9e30a9dbdaf7e2cf": {
+   "source": "<g1>Shift+F10</g1> or the <g2>Menu</g2> key",
+   "text": "<g1>Mayús+F10</g1> o la tecla <g2>Menú</g2>"
+  },
   "9e343096f9189eb2": {
    "source": "Seven downloads, each run at least seven times by both apps. The bar is the middle half of the runs, the line the median.",
    "text": "Siete descargas, cada una ejecutada al menos siete veces por ambas aplicaciones. La barra es la mitad central de las ejecuciones, la línea la mediana."
@@ -6069,6 +6093,10 @@
   "a9e931861de964cf": {
    "source": "Catch downloads from your browser",
    "text": "Capturar descargas del navegador"
+  },
+  "a9efaabb8e76e3a1": {
+   "source": "Move between the <g1>Categories</g1> pane and the download list",
+   "text": "Moverse entre el panel <g1>Categorías</g1> y la lista de descargas"
   },
   "a9f05b8a13e881a4": {
    "source": "<g1>Mac and Linux too.</g1> As experimental builds, if you use more than Windows.",
@@ -7093,6 +7121,10 @@
   "c6a2b86a33c71c9e": {
    "source": "Paid licence after a 30-day free trial<g1><g2>1</g2></g1>",
    "text": "Licencia de pago tras una prueba gratuita de 30 días<g1><g2>1</g2></g1>"
+  },
+  "c6e9110f9e7fa8a3": {
+   "source": "In the <g1>Categories</g1> pane: the next category; close or open a branch",
+   "text": "En el panel <g1>Categorías</g1>: la siguiente categoría; cerrar o abrir una rama"
   },
   "c6fd6136f623cd9a": {
    "source": "Yes, from web players<g1><g2>3</g2></g1>",

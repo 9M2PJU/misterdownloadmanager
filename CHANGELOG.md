@@ -218,6 +218,11 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **Screen readers can reach the Categories pane and the menus** ([#113](https://github.com/anefzaoui/misterdownloadmanager/issues/113)):
+  the pane reads as a tree (each category named with its count, open or shut, selected), the menu
+  bar and every right-click menu as menus whose items can be run, and **Shift+F10** or the
+  **Menu** key opens the selected category's menu. A menu opened from the keyboard no longer stays
+  invisible until the mouse moves.
 - **A download's progress file could be written again just after it stopped**
   ([#106](https://github.com/anefzaoui/misterdownloadmanager/issues/106)). MDM saves a
   download's progress every few seconds, in a file beside it. A download paused or finished
