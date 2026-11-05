@@ -13,6 +13,8 @@ Everything below ships together, in one release.
 
 ### Done
 
+- ✅ Two engine tests that failed now and then on busy machines are reliable
+  ([#123](https://github.com/anefzaoui/misterdownloadmanager/issues/123))
 - ✅ Numbers are grouped and pointed the interface language's way (German `10.200`, `1,50 MB`)
   ([#128](https://github.com/anefzaoui/misterdownloadmanager/issues/128))
 - ✅ The extension's button lists the media the tab has loaded (HLS and DASH streams, video and
