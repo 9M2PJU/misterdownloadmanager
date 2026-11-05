@@ -4052,3 +4052,274 @@ unit	{n} MB	{n} MB
 #. {n} = a number (keep the braces as they are)
 #, machine
 unit	{n} MB/sec	{n} MB/ວິນາທີ
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {n} is a number of files, {folder} where they went
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	ແຍກໄຟລ໌ {n} ອັນໄປທີ່ {folder}
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	{n} ລາຍການຖືກປະຖິ້ມໄວ້ (ລິ້ງ, ຫຼືຊື່ທີ່ນໍາໄປສູ່ນອກໂຟນເດີ)
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	{n} ໄຟລ໌ມີຊື່ໄຟລ໌ທີ່ມີຢູ່ແລ້ວ ແລະຖືກໃສ່ໝາຍເລກ
+#. window title in extracting archives (a download's log, the Archive password window)
+#. window title: 7-Zip (a program's name) must be installed
+#, machine
+	7-Zip needed	ຕ້ອງມີ 7-Zip
+#. text in the Options window
+#. Options → Archives: {path} is where 7-Zip's program is
+#, machine
+	7z and RAR archives are extracted by 7-Zip ({path}).	7z ແລະ RAR ໄຟລ໌ເກັບຖືກແຍກໂດຍ 7-Zip ({path}).
+#. text in the Options window
+#. Options → Archives, when 7-Zip isn't installed
+#, machine
+	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	7z ແລະ RAR ໄຟລ໌ເກັບຕ້ອງການ 7-Zip (7-zip.org), ເຊິ່ງບໍ່ໄດ້ຕິດຕັ້ງ.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	7z and RAR archives need 7-Zip, which isn't installed	7z ແລະ RAR ໄຟລ໌ເກັບຕ້ອງການ 7-Zip, ເຊິ່ງບໍ່ໄດ້ຕິດຕັ້ງ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	a volume of it is missing	ປະລິມານຂອງມັນຫາຍໄປ
+#. text in the Link grabber window
+#. Link grabber: the package of links the download list has already
+#, machine
+	Already in the list	ມີຢູ່ໃນລາຍການແລ້ວ
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Always into a folder named after it	ໃສ່ໃນໂຟນເດີທີ່ມີຊື່ຕາມມັນສະເໝີ
+#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
+#. what a screen reader calls the Archive password window's box
+#. what a screen reader calls Link grabber's password box
+#, machine
+	Archive password	ລະຫັດຜ່ານຂອງໄຟລ໌ເກັບ
+#. group box title in the Options window; text in the Options window
+#. Options → Archives: group box title
+#. tab title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives	ໄຟລ໌ເກັບ
+#. text in the Options window
+#. Options page title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives and Link grabber	ບ່ອນເກັບຂໍ້ມູນ ແລະ ຕົວຈັບລິ້ງ
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server asked to try later (429, 503)
+#, machine
+	Busy, try later	ບໍ່ຫວ່າງ, ລອງໃໝ່ພາຍຫຼັງ
+#. message or event log entry in the main window
+#, machine
+	by Link grabber	ໂດຍ Link grabber
+#. text in the Link grabber window
+#. Link grabber button (IDM's): tick every link
+#, machine
+	Check all	ກວດສອບທັງໝົດ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {name} is the archive's file name, {why} the reason
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Couldn't extract {name}: {why}	ບໍ່ສາມາດແຍກ {name}: {why}
+#. checkbox in the Link grabber window
+#. Link grabber check box: after extracting, the archives go to the Recycle Bin
+#, machine
+	Delete archives after extracting	ລຶບໄຟລ໌ເກັບຫຼັງຈາກແຍກ
+#. text in the Link grabber window
+#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
+#, machine
+	Each file's category folder	ໂຟນເດີປະເພດຂອງແຕ່ລະໄຟລ໌
+#. button in extracting archives (a download's log, the Archive password window)
+#. button: extract the archive with the password typed
+#, machine
+	Extract	ແຍກ
+#. checkbox in the Options window
+#. Options → Archives check box (a Link grabber package has its own "Extract when done")
+#, machine
+	Extract archives when their download completes	ແຍກໄຟລ໌ເກັບເມື່ອດາວໂຫຼດສຳເລັດ
+#. text in the Link grabber window
+#. Link grabber check box: extract the package's archives once they are downloaded
+#, machine
+	Extract when done	ແຍກເມື່ອສຳເລັດ
+#. text in extracting archives (a download's log, the Archive password window)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting the archive...	ກຳລັງແຍກໄຟລ໌ເກັບ...
+#. message or event log entry in the main window
+#. a download's status: its archive is being extracted (#37)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting...	ກຳລັງແຍກໄຟລ໌...
+#. text in extracting archives (a download's log, the Archive password window)
+#. button: opens 7-Zip's website (7-Zip is a program's name)
+#, machine
+	Get 7-Zip	ເອົາ 7-Zip
+#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
+#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
+#, machine
+	Hide web pages	ເຊື່ອງໜ້າເວັບ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window, under why
+#, machine
+	Install 7-Zip (free), then right-click the download and choose Extract.	ຕິດຕັ້ງ 7-Zip (ຟຣີ), ຈາກນັ້ນຄລິກຂວາໃສ່ການດາວໂຫຼດ ແລະເລືອກ ແຍກ.
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Into a folder named after it, when it holds several things	ໃສ່ໃນໂຟນເດີທີ່ມີຊື່ຕາມມັນ, ເມື່ອມັນມີຫຼາຍສິ່ງ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it holds too many files or folders	ມັນມີໄຟລ໌ ຫຼື ໂຟນເດີຫຼາຍເກີນໄປ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is damaged, or not the archive its name says	ມັນເສຍຫາຍ, ຫຼືບໍ່ແມ່ນໄຟລ໌ເກັບຕາມຊື່ທີ່ບອກ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is not an archive MDM extracts	ມັນບໍ່ແມ່ນໄຟລ໌ເກັບທີ່ MDM ແຍກໄດ້
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it needs a password	ມັນຕ້ອງການລະຫັດຜ່ານ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it was stopped	ມັນຖືກຢຸດ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	it would write {size}, more than the {limit} there is room or reason for	ມັນຈະຂຽນ {size}, ຫຼາຍກວ່າ {limit} ທີ່ມີພື້ນທີ່ ຫຼື ເຫດຜົນ
+#. window title in the Link grabber window; group box title in the Options window
+#. Options → Archives: group box title
+#, machine
+	Link grabber	ຕົວດຶງລິ້ງ
+#. text in the Link grabber window
+#. what a screen reader calls Link grabber's list
+#, machine
+	Links	ລິ້ງ
+#. checkbox in the Options window
+#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
+#, machine
+	Look links up when they arrive (name, size, online)	ຊອກຫາລິ້ງເມື່ອພວກມັນມາຮອດ (ຊື່, ຂະໜາດ, ອອນລາຍ)
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server wants a login (401, 403)
+#, machine
+	Needs a login	ຕ້ອງການເຂົ້າສູ່ລະບົບ
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
+#, machine
+	Offline ({status})	ອອບລາຍ ({status})
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server has the file
+#, machine
+	Online	ອອນລາຍ
+#. text in the Link grabber window
+#. Link grabber: the box that edits the selected package
+#, machine
+	Package	ແພັກເກັດ
+#. text in the Link grabber window
+#. Link grabber, while it is empty
+#, machine
+	Paste links here (Ctrl+V), or send a page's links from the browser.	ວາງລິ້ງໃສ່ບ່ອນນີ້ (Ctrl+V), ຫຼືສົ່ງລິ້ງຂອງໜ້າຈາກບຣາວເຊີ.
+#. text in the Link grabber window
+#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
+#, machine
+	Pasted	ວາງແລ້ວ
+#. text in the Link grabber window
+#. Link grabber: the folder the package's files go to (a label before its box)
+#, machine
+	Save to:	ບັນທຶກໄປທີ່:
+#. text in the Link grabber window
+#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
+#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
+#, machine
+	Source: {source}	ແຫຼ່ງ: {source}
+#. text in the Link grabber window
+#. Link grabber button: download the ticked links now
+#, machine
+	Start	ເລີ່ມ
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Straight into the archive's folder	ໃສ່ໃນໂຟນເດີຂອງໄຟລ໌ເກັບມ້ຽນໂດຍກົງ
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	ໜ້າວຽກ → ຕົວດຶງລິ້ງ, ຫຼື “ດາວໂຫຼດທຸກລິ້ງ” ຂອງບຣາວເຊີ: ໄຟລ໌ເກັບມ້ຽນທີ່ແຍກ\nອອກເປັນຫຼາຍສ່ວນແມ່ນໜຶ່ງຊຸດ, ສ່ວນລິ້ງອື່ນໆຂອງໜ້າແມ່ນອີກຊຸດໜຶ່ງ.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Recycle Bin: it was kept	ບໍ່ສາມາດຍ້າຍໄຟລ໌ເກັບມ້ຽນໄປທີ່ຖັງຂີ້ເຫຍື້ອໄດ້: ມັນຖືກເກັບໄວ້
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Trash: it was kept	ບໍ່ສາມາດຍ້າຍໄຟລ໌ເກັບມ້ຽນໄປທີ່ຖັງຂີ້ເຫຍື້ອໄດ້: ມັນຖືກເກັບໄວ້
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Recycle Bin	ໄຟລ໌ເກັບມ້ຽນຖືກຍ້າຍໄປທີ່ຖັງຂີ້ເຫຍື້ອ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Trash	ໄຟລ໌ເກັບມ້ຽນຖືກຍ້າຍໄປທີ່ຖັງຂີ້ເຫຍື້ອ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	the password is wrong	ລະຫັດຜ່ານຜິດ
+#. text in the Options window
+#. Options → Archives check box
+#, machine
+	Then move the archives to the Recycle Bin	ຈາກນັ້ນຍ້າຍໄຟລ໌ເກັບມ້ຽນໄປທີ່ຖັງຂີ້ເຫຍື້ອ
+#. text in the Options window
+#. Options → Archives check box (Linux and macOS)
+#, machine
+	Then move the archives to the Trash	ຈາກນັ້ນຍ້າຍໄຟລ໌ເກັບມ້ຽນໄປທີ່ຖັງຂີ້ເຫຍື້ອ
+#. text in the Link grabber window
+#. Link grabber button (IDM's): untick every link
+#, machine
+	Uncheck all	ຍົກເລີກການເລືອກທັງໝົດ
+#. text in the Link grabber window
+#. Link grabber: the package of links that belong to no other
+#, machine
+	Various files	ໄຟລ໌ຕ່າງໆ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
+#. {n} = a number (keep the braces as they are)
+#, machine
+	volume {n} of it is missing	ສ່ວນ {n} ຂອງມັນຫາຍໄປ
+#. text in the Options window
+#. Options → Archives: a label before the list of where extracted files go
+#, machine
+	What an archive holds goes:	ສິ່ງທີ່ໄຟລ໌ເກັບມ້ຽນບັນຈຸຢູ່:
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Wrong password for {name}. Type it again:	ລະຫັດຜ່ານຜິດສຳລັບ {name}. ພິມໃໝ່ອີກຄັ້ງ:
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP, 7Z, RAR, TAR, GZ ແລະ XZ; ໄຟລ໌ເກັບມ້ຽນທີ່ແຍກອອກ (.part1.rar, .7z.001) ເມື່ອ\nທຸກສ່ວນຢູ່ຄົບ. ໄຟລ໌ທີ່ມີຢູ່ແລ້ວຈະຖືກເກັບໄວ້: ໄຟລ໌ໃໝ່ຈະຖືກໃສ່ໝາຍເລກ.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} ແມ່ນ 7z ຫຼື RAR ໄຟລ໌ເກັບ. MDM ແຍກໄຟລ໌ເຫຼົ່ານັ້ນດ້ວຍ 7-Zip, ເຊິ່ງບໍ່ໄດ້ຕິດຕັ້ງ.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is protected by a password:	{name} ຖືກປ້ອງກັນດ້ວຍລະຫັດຜ່ານ:
+#. menu command in the main window
+#. Tasks menu: open Link grabber (links in packages, to tick before adding)
+#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	&Link grabber...	ຕົວດຶງ&ລິ້ງ...
+#. menu command in the main window
+#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
+#, machine
+menu	Extract	ແຍກ

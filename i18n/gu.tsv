@@ -4052,3 +4052,274 @@ unit	{n} MB	{n} MB
 #. {n} = a number (keep the braces as they are)
 #, machine
 unit	{n} MB/sec	{n} MB/સેકન્ડ
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {n} is a number of files, {folder} where they went
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	{folder} માં {n} ફાઇલ એક્સટ્રેક્ટ કરી|{folder} માં {n} ફાઇલો એક્સટ્રેક્ટ કરી
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	{n} એન્ટ્રી છોડી દેવામાં આવી હતી (એક લિંક, અથવા ફોલ્ડરની બહાર લઈ જતું નામ)|{n} એન્ટ્રીઓ છોડી દેવામાં આવી હતી (લિંક્સ, અથવા ફોલ્ડરની બહાર લઈ જતા નામો)
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	{n} ફાઇલનું નામ ત્યાં પહેલેથી જ એક ફાઇલના નામ જેવું હતું અને તેને નંબર આપવામાં આવ્યો હતો|{n} ફાઇલોના નામ ત્યાં પહેલેથી જ ફાઇલોના નામ જેવા હતા અને તેમને નંબર આપવામાં આવ્યા હતા
+#. window title in extracting archives (a download's log, the Archive password window)
+#. window title: 7-Zip (a program's name) must be installed
+#, machine
+	7-Zip needed	7-Zip જરૂરી છે
+#. text in the Options window
+#. Options → Archives: {path} is where 7-Zip's program is
+#, machine
+	7z and RAR archives are extracted by 7-Zip ({path}).	7z અને RAR આર્કાઇવ્સ 7-Zip ({path}) દ્વારા એક્સટ્રેક્ટ કરવામાં આવે છે.
+#. text in the Options window
+#. Options → Archives, when 7-Zip isn't installed
+#, machine
+	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	7z અને RAR આર્કાઇવ્સને 7-Zip (7-zip.org) ની જરૂર છે, જે ઇન્સ્ટોલ કરેલ નથી.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	7z and RAR archives need 7-Zip, which isn't installed	7z અને RAR આર્કાઇવ્સને 7-Zip ની જરૂર છે, જે ઇન્સ્ટોલ કરેલ નથી
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	a volume of it is missing	તેનો એક વોલ્યુમ ખૂટે છે
+#. text in the Link grabber window
+#. Link grabber: the package of links the download list has already
+#, machine
+	Already in the list	પહેલેથી જ સૂચિમાં છે
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Always into a folder named after it	હંમેશા તેના નામ પરથી ફોલ્ડરમાં
+#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
+#. what a screen reader calls the Archive password window's box
+#. what a screen reader calls Link grabber's password box
+#, machine
+	Archive password	આર્કાઇવ પાસવર્ડ
+#. group box title in the Options window; text in the Options window
+#. Options → Archives: group box title
+#. tab title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives	આર્કાઇવ્સ
+#. text in the Options window
+#. Options page title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives and Link grabber	આર્કાઇવ્સ અને લિંક ગ્રેબર
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server asked to try later (429, 503)
+#, machine
+	Busy, try later	વ્યસ્ત છે, પછીથી પ્રયાસ કરો
+#. message or event log entry in the main window
+#, machine
+	by Link grabber	લિંક ગ્રેબર દ્વારા
+#. text in the Link grabber window
+#. Link grabber button (IDM's): tick every link
+#, machine
+	Check all	બધાને ચેક કરો
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {name} is the archive's file name, {why} the reason
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Couldn't extract {name}: {why}	{name} એક્સટ્રેક્ટ કરી શકાયું નથી: {why}
+#. checkbox in the Link grabber window
+#. Link grabber check box: after extracting, the archives go to the Recycle Bin
+#, machine
+	Delete archives after extracting	એક્સટ્રેક્ટ કર્યા પછી આર્કાઇવ્સ કાઢી નાખો
+#. text in the Link grabber window
+#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
+#, machine
+	Each file's category folder	દરેક ફાઇલનું કેટેગરી ફોલ્ડર
+#. button in extracting archives (a download's log, the Archive password window)
+#. button: extract the archive with the password typed
+#, machine
+	Extract	એક્સટ્રેક્ટ કરો
+#. checkbox in the Options window
+#. Options → Archives check box (a Link grabber package has its own "Extract when done")
+#, machine
+	Extract archives when their download completes	જ્યારે તેમનું ડાઉનલોડ પૂર્ણ થાય ત્યારે આર્કાઇવ્સ એક્સટ્રેક્ટ કરો
+#. text in the Link grabber window
+#. Link grabber check box: extract the package's archives once they are downloaded
+#, machine
+	Extract when done	પૂર્ણ થયા પછી એક્સટ્રેક્ટ કરો
+#. text in extracting archives (a download's log, the Archive password window)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting the archive...	આર્કાઇવ એક્સટ્રેક્ટ કરી રહ્યું છે...
+#. message or event log entry in the main window
+#. a download's status: its archive is being extracted (#37)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting...	એક્સટ્રેક્ટ કરી રહ્યું છે...
+#. text in extracting archives (a download's log, the Archive password window)
+#. button: opens 7-Zip's website (7-Zip is a program's name)
+#, machine
+	Get 7-Zip	7-Zip મેળવો
+#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
+#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
+#, machine
+	Hide web pages	વેબ પૃષ્ઠો છુપાવો
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window, under why
+#, machine
+	Install 7-Zip (free), then right-click the download and choose Extract.	7-Zip (મફત) ઇન્સ્ટોલ કરો, પછી ડાઉનલોડ પર રાઇટ-ક્લિક કરો અને એક્સટ્રેક્ટ પસંદ કરો.
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Into a folder named after it, when it holds several things	તેના નામ પરથી ફોલ્ડરમાં, જ્યારે તેમાં ઘણી વસ્તુઓ હોય
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it holds too many files or folders	તેમાં ઘણી બધી ફાઇલો અથવા ફોલ્ડર્સ છે
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is damaged, or not the archive its name says	તે ક્ષતિગ્રસ્ત છે, અથવા તેના નામ પરથી આર્કાઇવ નથી
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is not an archive MDM extracts	તે MDM એક્સટ્રેક્ટ કરતું આર્કાઇવ નથી
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it needs a password	તેને પાસવર્ડની જરૂર છે
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it was stopped	તે બંધ કરવામાં આવ્યું હતું
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	it would write {size}, more than the {limit} there is room or reason for	તે {size} લખશે, જે {limit} જગ્યા અથવા કારણ કરતાં વધુ છે
+#. window title in the Link grabber window; group box title in the Options window
+#. Options → Archives: group box title
+#, machine
+	Link grabber	લિંક ગ્રેબર
+#. text in the Link grabber window
+#. what a screen reader calls Link grabber's list
+#, machine
+	Links	લિંક્સ
+#. checkbox in the Options window
+#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
+#, machine
+	Look links up when they arrive (name, size, online)	જ્યારે લિંક્સ આવે ત્યારે તેમને જુઓ (નામ, કદ, ઑનલાઇન)
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server wants a login (401, 403)
+#, machine
+	Needs a login	લોગિનની જરૂર છે
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
+#, machine
+	Offline ({status})	ઑફલાઇન ({status})
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server has the file
+#, machine
+	Online	ઑનલાઇન
+#. text in the Link grabber window
+#. Link grabber: the box that edits the selected package
+#, machine
+	Package	પેકેજ
+#. text in the Link grabber window
+#. Link grabber, while it is empty
+#, machine
+	Paste links here (Ctrl+V), or send a page's links from the browser.	અહીં લિંક્સ પેસ્ટ કરો (Ctrl+V), અથવા બ્રાઉઝરમાંથી પૃષ્ઠની લિંક્સ મોકલો.
+#. text in the Link grabber window
+#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
+#, machine
+	Pasted	પેસ્ટ કરેલ
+#. text in the Link grabber window
+#. Link grabber: the folder the package's files go to (a label before its box)
+#, machine
+	Save to:	આમાં સાચવો:
+#. text in the Link grabber window
+#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
+#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
+#, machine
+	Source: {source}	સ્રોત: {source}
+#. text in the Link grabber window
+#. Link grabber button: download the ticked links now
+#, machine
+	Start	શરૂ કરો
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Straight into the archive's folder	સીધા આર્કાઇવના ફોલ્ડરમાં
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	કાર્યો → લિંક ગ્રેબર, અથવા બ્રાઉઝરનું "બધી લિંક્સ ડાઉનલોડ કરો": વિભાજિત\nઆર્કાઇવના વોલ્યુમો એક પેકેજ છે, પૃષ્ઠની અન્ય લિંક્સ બીજી છે.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Recycle Bin: it was kept	આર્કાઇવને રીસાઇકલ બિનમાં ખસેડી શકાયો નથી: તેને રાખવામાં આવ્યો હતો
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Trash: it was kept	આર્કાઇવને ટ્રેશમાં ખસેડી શકાયો નથી: તેને રાખવામાં આવ્યો હતો
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Recycle Bin	આર્કાઇવને રીસાઇકલ બિનમાં ખસેડવામાં આવ્યો હતો
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Trash	આર્કાઇવને ટ્રેશમાં ખસેડવામાં આવ્યો હતો
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	the password is wrong	પાસવર્ડ ખોટો છે
+#. text in the Options window
+#. Options → Archives check box
+#, machine
+	Then move the archives to the Recycle Bin	પછી આર્કાઇવ્સને રીસાઇકલ બિનમાં ખસેડો
+#. text in the Options window
+#. Options → Archives check box (Linux and macOS)
+#, machine
+	Then move the archives to the Trash	પછી આર્કાઇવ્સને ટ્રેશમાં ખસેડો
+#. text in the Link grabber window
+#. Link grabber button (IDM's): untick every link
+#, machine
+	Uncheck all	બધાને અનચેક કરો
+#. text in the Link grabber window
+#. Link grabber: the package of links that belong to no other
+#, machine
+	Various files	વિવિધ ફાઇલો
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
+#. {n} = a number (keep the braces as they are)
+#, machine
+	volume {n} of it is missing	તેનું વોલ્યુમ {n} ખૂટે છે
+#. text in the Options window
+#. Options → Archives: a label before the list of where extracted files go
+#, machine
+	What an archive holds goes:	આર્કાઇવમાં શું છે તે અહીં જાય છે:
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Wrong password for {name}. Type it again:	{name} માટે ખોટો પાસવર્ડ. તેને ફરીથી ટાઇપ કરો:
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP, 7Z, RAR, TAR, GZ અને XZ; એક વિભાજિત આર્કાઇવ (.part1.rar, .7z.001) એકવાર\nદરેક વોલ્યુમ અંદર હોય. ત્યાં પહેલેથી જ એક ફાઇલ રાખવામાં આવે છે: નવીને નંબર આપવામાં આવે છે.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} એ 7z અથવા RAR આર્કાઇવ છે. MDM તેને 7-Zip વડે એક્સટ્રેક્ટ કરે છે, જે ઇન્સ્ટોલ કરેલ નથી.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is protected by a password:	{name} પાસવર્ડ દ્વારા સુરક્ષિત છે:
+#. menu command in the main window
+#. Tasks menu: open Link grabber (links in packages, to tick before adding)
+#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	&Link grabber...	લિંક &ગ્રેબર...
+#. menu command in the main window
+#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
+#, machine
+menu	Extract	એક્સટ્રેક્ટ કરો

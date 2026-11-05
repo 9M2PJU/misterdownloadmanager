@@ -13,6 +13,10 @@ Everything below ships together, in one release.
 
 ### Done
 
+- ✅ Link grabber: links in packages, looked up for name and size; archives (zip and tar
+  built in; 7z and RAR need 7-Zip) extracted when they are downloaded
+  ([#37](https://github.com/anefzaoui/misterdownloadmanager/issues/37)); collecting copied links
+  comes later
 - ✅ Image galleries with gallery-dl: Wikimedia Commons, Flickr, DeviantArt and many more,
   verified like yt-dlp, or your own copy ([#58](https://github.com/anefzaoui/misterdownloadmanager/issues/58))
 - ✅ Torrents: seeding limits (a share ratio, or a time), off by default, and a finished torrent's
@@ -118,6 +122,7 @@ Everything below ships together, in one release.
 
 ### Downloads and windows
 
+- 📋 Debrid services: Real-Debrid, AllDebrid, Premiumize
 - 📋 A link grabber with packages, and auto-extract of archives
   ([#37](https://github.com/anefzaoui/misterdownloadmanager/issues/37))
 - 📋 Debrid services, the rest: AllDebrid and Premiumize, torrents through the service, the system

@@ -4052,3 +4052,274 @@ unit	{n} MB	{n} ሜባ
 #. {n} = a number (keep the braces as they are)
 #, machine
 unit	{n} MB/sec	{n} ሜባ/ሰከንድ
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {n} is a number of files, {folder} where they went
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	{n} ፋይል ወደ {folder} ተወጥቷል|{n} ፋይሎች ወደ {folder} ተወጥተዋል
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	{n} ግቤት ተትቷል (አገናኝ ወይም ከአቃፊው ውጭ የሚመራ ስም)|{n} ግቤቶች ተትተዋል (አገናኞች ወይም ከአቃፊው ውጭ የሚመሩ ስሞች)
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	{n} ፋይል እዚያ ያለ ፋይል ስም ነበረው እና ተቆጥሯል|{n} ፋይሎች እዚያ ያለ ፋይል ስም ነበራቸው እና ተቆጥረዋል
+#. window title in extracting archives (a download's log, the Archive password window)
+#. window title: 7-Zip (a program's name) must be installed
+#, machine
+	7-Zip needed	7-ዚፕ ያስፈልጋል
+#. text in the Options window
+#. Options → Archives: {path} is where 7-Zip's program is
+#, machine
+	7z and RAR archives are extracted by 7-Zip ({path}).	7z እና RAR ማህደሮች በ7-ዚፕ ({path}) ይወጣሉ።
+#. text in the Options window
+#. Options → Archives, when 7-Zip isn't installed
+#, machine
+	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	7z እና RAR ማህደሮች 7-ዚፕ (7-zip.org) ያስፈልጋቸዋል፣ እሱም አልተጫነም።
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	7z and RAR archives need 7-Zip, which isn't installed	7z እና RAR ማህደሮች 7-ዚፕ ያስፈልጋቸዋል፣ እሱም አልተጫነም።
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	a volume of it is missing	አንድ ጥራዝ ጠፍቷል
+#. text in the Link grabber window
+#. Link grabber: the package of links the download list has already
+#, machine
+	Already in the list	በዝርዝሩ ውስጥ አለ
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Always into a folder named after it	ሁልጊዜ በራሱ ስም ወደተሰየመ አቃፊ
+#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
+#. what a screen reader calls the Archive password window's box
+#. what a screen reader calls Link grabber's password box
+#, machine
+	Archive password	የማህደር የይለፍ ቃል
+#. group box title in the Options window; text in the Options window
+#. Options → Archives: group box title
+#. tab title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives	ማህደሮች
+#. text in the Options window
+#. Options page title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives and Link grabber	ማህደሮች እና ማገናኛ ያዥ
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server asked to try later (429, 503)
+#, machine
+	Busy, try later	ተጠምዷል፣ ቆይተው ይሞክሩ
+#. message or event log entry in the main window
+#, machine
+	by Link grabber	በአገናኝ ግራበር
+#. text in the Link grabber window
+#. Link grabber button (IDM's): tick every link
+#, machine
+	Check all	ሁሉንም ይምረጡ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {name} is the archive's file name, {why} the reason
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Couldn't extract {name}: {why}	{name} ማውጣት አልተቻለም፦ {why}
+#. checkbox in the Link grabber window
+#. Link grabber check box: after extracting, the archives go to the Recycle Bin
+#, machine
+	Delete archives after extracting	ካወጡ በኋላ ማህደሮችን ይሰርዙ
+#. text in the Link grabber window
+#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
+#, machine
+	Each file's category folder	የእያንዳንዱ ፋይል ምድብ አቃፊ
+#. button in extracting archives (a download's log, the Archive password window)
+#. button: extract the archive with the password typed
+#, machine
+	Extract	አውጣ
+#. checkbox in the Options window
+#. Options → Archives check box (a Link grabber package has its own "Extract when done")
+#, machine
+	Extract archives when their download completes	ማውረዳቸው ሲጠናቀቅ ማህደሮችን ያውጡ
+#. text in the Link grabber window
+#. Link grabber check box: extract the package's archives once they are downloaded
+#, machine
+	Extract when done	ሲጠናቀቅ ያውጡ
+#. text in extracting archives (a download's log, the Archive password window)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting the archive...	ማህደሩን በማውጣት ላይ...
+#. message or event log entry in the main window
+#. a download's status: its archive is being extracted (#37)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting...	በመፍታት ላይ...
+#. text in extracting archives (a download's log, the Archive password window)
+#. button: opens 7-Zip's website (7-Zip is a program's name)
+#, machine
+	Get 7-Zip	7-ዚፕ ያግኙ
+#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
+#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
+#, machine
+	Hide web pages	የድር ገጾችን ደብቅ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window, under why
+#, machine
+	Install 7-Zip (free), then right-click the download and choose Extract.	7-ዚፕን (ነጻ) ይጫኑ፣ ከዚያ ማውረዱን በቀኝ ጠቅ ያድርጉ እና ማውጣት የሚለውን ይምረጡ።
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Into a folder named after it, when it holds several things	ብዙ ነገሮችን ሲይዝ በራሱ ስም ወደተሰየመ አቃፊ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it holds too many files or folders	ብዙ ፋይሎችን ወይም አቃፊዎችን ይዟል
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is damaged, or not the archive its name says	ተጎድቷል፣ ወይም ስሙ የሚለው ማህደር አይደለም
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is not an archive MDM extracts	MDM የማያወጣው ማህደር አይደለም
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it needs a password	የይለፍ ቃል ያስፈልገዋል
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it was stopped	ቆሟል
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	it would write {size}, more than the {limit} there is room or reason for	{size} ይጽፋል፣ ካለው {limit} ቦታ ወይም ምክንያት ይበልጣል
+#. window title in the Link grabber window; group box title in the Options window
+#. Options → Archives: group box title
+#, machine
+	Link grabber	አገናኝ ግራበር
+#. text in the Link grabber window
+#. what a screen reader calls Link grabber's list
+#, machine
+	Links	አገናኞች
+#. checkbox in the Options window
+#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
+#, machine
+	Look links up when they arrive (name, size, online)	አገናኞች ሲደርሱ ይፈልጉ (ስም፣ መጠን፣ በመስመር ላይ)
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server wants a login (401, 403)
+#, machine
+	Needs a login	መግቢያ ያስፈልገዋል
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
+#, machine
+	Offline ({status})	ከመስመር ውጪ ({status})
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server has the file
+#, machine
+	Online	በመስመር ላይ
+#. text in the Link grabber window
+#. Link grabber: the box that edits the selected package
+#, machine
+	Package	ጥቅል
+#. text in the Link grabber window
+#. Link grabber, while it is empty
+#, machine
+	Paste links here (Ctrl+V), or send a page's links from the browser.	አገናኞችን እዚህ ይለጥፉ (Ctrl+V)፣ ወይም የአንድ ገጽ አገናኞችን ከብሮውዘር ይላኩ።
+#. text in the Link grabber window
+#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
+#, machine
+	Pasted	ተለጥፏል
+#. text in the Link grabber window
+#. Link grabber: the folder the package's files go to (a label before its box)
+#, machine
+	Save to:	ወደዚህ አስቀምጥ፦
+#. text in the Link grabber window
+#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
+#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
+#, machine
+	Source: {source}	ምንጭ፦ {source}
+#. text in the Link grabber window
+#. Link grabber button: download the ticked links now
+#, machine
+	Start	ጀምር
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Straight into the archive's folder	ቀጥታ ወደ ማህደሩ አቃፊ
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	ተግባራት → አገናኝ ያዥ፣ ወይም የብሮውዘሩ "ሁሉንም አገናኞች አውርድ"፦ የተከፈለ\nማህደር ጥራዞች አንድ ጥቅል ናቸው፣ የአንድ ገጽ ሌሎች አገናኞች ደግሞ ሌላ።
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Recycle Bin: it was kept	ማህደሩ ወደ ሪሳይክል ቢን ሊንቀሳቀስ አልቻለም፦ ተቀምጧል
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Trash: it was kept	ማህደሩ ወደ መጣያ ሊንቀሳቀስ አልቻለም፦ ተቀምጧል
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Recycle Bin	ማህደሩ ወደ ሪሳይክል ቢን ተወስዷል
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Trash	ማህደሩ ወደ መጣያ ተወስዷል
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	the password is wrong	የይለፍ ቃሉ የተሳሳተ ነው
+#. text in the Options window
+#. Options → Archives check box
+#, machine
+	Then move the archives to the Recycle Bin	ከዚያ ማህደሮችን ወደ ሪሳይክል ቢን ያንቀሳቅሱ
+#. text in the Options window
+#. Options → Archives check box (Linux and macOS)
+#, machine
+	Then move the archives to the Trash	ከዚያ ማህደሮችን ወደ መጣያ ያንቀሳቅሱ
+#. text in the Link grabber window
+#. Link grabber button (IDM's): untick every link
+#, machine
+	Uncheck all	ሁሉንም ምልክት አንሳ
+#. text in the Link grabber window
+#. Link grabber: the package of links that belong to no other
+#, machine
+	Various files	የተለያዩ ፋይሎች
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
+#. {n} = a number (keep the braces as they are)
+#, machine
+	volume {n} of it is missing	የእሱ ጥራዝ {n} ጠፍቷል
+#. text in the Options window
+#. Options → Archives: a label before the list of where extracted files go
+#, machine
+	What an archive holds goes:	አንድ ማህደር የያዘው ይሄዳል፦
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Wrong password for {name}. Type it again:	ለ{name} የተሳሳተ የይለፍ ቃል ነው። እንደገና ይተይቡ፦
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP፣ 7Z፣ RAR፣ TAR፣ GZ እና XZ፤ የተከፈለ ማህደር (.part1.rar, .7z.001) እያንዳንዱ\nጥራዝ ሲገባ። እዚያ ያለ ፋይል ይቀመጣል፦ አዲሱ ቁጥር ይሰጠዋል።
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} የ7z ወይም RAR ማህደር ነው። MDM እነዚያን በ7-ዚፕ ያወጣል፣ እሱም አልተጫነም።
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is protected by a password:	{name} በይለፍ ቃል የተጠበቀ ነው፦
+#. menu command in the main window
+#. Tasks menu: open Link grabber (links in packages, to tick before adding)
+#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	&Link grabber...	አገናኝ &ያዥ...
+#. menu command in the main window
+#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
+#, machine
+menu	Extract	አውጣ

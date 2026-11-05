@@ -4052,3 +4052,274 @@ unit	{n} MB	{n} MB
 #. {n} = a number (keep the braces as they are)
 #, machine
 unit	{n} MB/sec	{n} ᎷᏴ/ᎠᏍᏆᎶᎢ
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {n} is a number of files, {folder} where they went
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	ᎠᏍᏚᎢᏍᏔᏅ {n} ᎢᏗᎦᎴᏴᏔᏅᎯ {folder} ᏗᏟᎶᏍᏔᏅᎯ|ᎠᏍᏚᎢᏍᏔᏅ {n} ᎢᏗᎦᎴᏴᏔᏅᎯ {folder} ᏗᏟᎶᏍᏔᏅᎯ
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	{n} ᏗᎪᏪᎶotha ᎤᏓᏑᏴᎢ (ᎤᎾᏚᏓᎸᎢ, ᎠᎴ ᏚᏙᎥ ᎦᏄᎪᎢᏍᏗ ᎦᏁᏍᏓᏅᎢ)|{n} ᏗᎪᏪᎶotha ᎤᏓᏑᏴᎢ (ᎤᎾᏚᏓᎸᎢ, ᎠᎴ ᏚᏙᎥ ᎦᏄᎪᎢᏍᏗ ᎦᏁᏍᏓᏅᎢ)
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	{n} ᎢᏗᎦᎴᏴᏔᏅᎯ ᏚᏙᎥ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎾᎿ ᎠᎴ ᏚᎾᏎᏍᏔᏅᎢ|{n} ᎢᏗᎦᎴᏴᏔᏅᎯ ᏚᏙᎥ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎾᎿ ᎠᎴ ᏚᎾᏎᏍᏔᏅᎢ
+#. window title in extracting archives (a download's log, the Archive password window)
+#. window title: 7-Zip (a program's name) must be installed
+#, machine
+	7-Zip needed	7-Zip ᎤᏚᎵᎭ
+#. text in the Options window
+#. Options → Archives: {path} is where 7-Zip's program is
+#, machine
+	7z and RAR archives are extracted by 7-Zip ({path}).	7z ᎠᎴ RAR ᏗᎪᏪᎵ ᏚᏓᏟᎶᏔᏅᎢ 7-Zip ({path}) ᎤᏅᏗᏍᎪᎢ.
+#. text in the Options window
+#. Options → Archives, when 7-Zip isn't installed
+#, machine
+	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	7z ᎠᎴ RAR ᏗᎪᏪᎵ ᏚᏓᏟᎶᏔᏅᎢ 7-Zip (7-zip.org) ᎤᏚᎵᎭ, ᎾᏍᎩᏃ ᎥᏝ ᏱᏚᏔᏅ.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	7z and RAR archives need 7-Zip, which isn't installed	7z ᎠᎴ RAR ᏗᎪᏪᎵ ᏚᏓᏟᎶᏔᏅᎢ 7-Zip ᎤᏚᎵᎭ, ᎾᏍᎩᏃ ᎥᏝ ᏱᏚᏔᏅ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	a volume of it is missing	ᎤᏓᎦᎵᏍᏔᏅᎯ ᎤᏓᎷᎸᎢ
+#. text in the Link grabber window
+#. Link grabber: the package of links the download list has already
+#, machine
+	Already in the list	ᎢᏳᏰᎸᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Always into a folder named after it	ᏂᎪᎯᎸᎢ ᎢᏗᎦᎴᏴᏔᏅᎯ ᏚᏙᎥ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
+#. what a screen reader calls the Archive password window's box
+#. what a screen reader calls Link grabber's password box
+#, machine
+	Archive password	ᎠᏍᏚᎢᏍᏔᏅᎯ ᎤᎾᏕᎳᎰᏒ
+#. group box title in the Options window; text in the Options window
+#. Options → Archives: group box title
+#. tab title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives	ᎠᏍᏚᎢᏍᏔᏅᎯ
+#. text in the Options window
+#. Options page title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives and Link grabber	ᎠᏍᏆᎳᎢᏍᏔᏅᎯ ᎠᎴ ᏗᏕᎬᏔᏅᎯ ᏗᎪᏍᏓᏱ
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server asked to try later (429, 503)
+#, machine
+	Busy, try later	ᎤᎾᏕᎳᎰᏒ, ᎣᏂᏱ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. message or event log entry in the main window
+#, machine
+	by Link grabber	ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber button (IDM's): tick every link
+#, machine
+	Check all	ᏂᎦᏛ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {name} is the archive's file name, {why} the reason
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Couldn't extract {name}: {why}	ᎥᏝ ᎢᏗᎦᎴᏴᏔᏅᎯ {name}: {why}
+#. checkbox in the Link grabber window
+#. Link grabber check box: after extracting, the archives go to the Recycle Bin
+#, machine
+	Delete archives after extracting	ᎠᏍᏚᎢᏍᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎣᏂᏱ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
+#, machine
+	Each file's category folder	ᏂᎦᏛ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎤᎾᏕᎳᎰᏒ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. button in extracting archives (a download's log, the Archive password window)
+#. button: extract the archive with the password typed
+#, machine
+	Extract	ᎠᏍᏚᎢᏍᏔᏅᎯ
+#. checkbox in the Options window
+#. Options → Archives check box (a Link grabber package has its own "Extract when done")
+#, machine
+	Extract archives when their download completes	ᎠᏍᏚᎢᏍᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎣᏂᏱ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber check box: extract the package's archives once they are downloaded
+#, machine
+	Extract when done	ᎠᏍᏚᎢᏍᏔᏅᎯ ᎣᏂᏱ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting the archive...	ᎠᏍᏚᎢᏍᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ...
+#. message or event log entry in the main window
+#. a download's status: its archive is being extracted (#37)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting...	ᎠᏍᎪᎸᏗᏍᎬ...
+#. text in extracting archives (a download's log, the Archive password window)
+#. button: opens 7-Zip's website (7-Zip is a program's name)
+#, machine
+	Get 7-Zip	7-Zip ᎭᏩᏛᎦ
+#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
+#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
+#, machine
+	Hide web pages	ᎠᏍᏚᎢᏍᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window, under why
+#, machine
+	Install 7-Zip (free), then right-click the download and choose Extract.	7-Zip (ᎠᏕᎳ ᏂᎨᏒᎾ) ᎭᏓᏁᏟᏴᏏ, ᎿᏉᏃ ᎦᏁᎦ-ᎦᎶᎯᏍᏗ ᎭᏓᏁᏟᏴᏏ ᎠᎴ ᎭᏑᏰᏍᏓ ᎦᏄᎪᏫᏍᏗ.
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Into a folder named after it, when it holds several things	ᎢᏗᎦᎴᏴᏔᏅᎯ ᏚᏙᎥ ᎢᏗᎦᎴᏴᏔᏅᎯ, ᎢᏳᏃ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it holds too many files or folders	ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎠᎴ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is damaged, or not the archive its name says	ᎢᏗᎦᎴᏴᏔᏅᎯ, ᎠᎴ ᎥᏝ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is not an archive MDM extracts	ᎥᏝ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ MDM ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it needs a password	ᎢᏗᎦᎴᏴᏔᏅᎯ ᎤᎾᏕᎳᎰᏒ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it was stopped	ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	it would write {size}, more than the {limit} there is room or reason for	ᎢᏗᎦᎴᏴᏔᏅᎯ {size}, ᎢᏗᎦᎴᏴᏔᏅᎯ {limit} ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. window title in the Link grabber window; group box title in the Options window
+#. Options → Archives: group box title
+#, machine
+	Link grabber	ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. what a screen reader calls Link grabber's list
+#, machine
+	Links	ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. checkbox in the Options window
+#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
+#, machine
+	Look links up when they arrive (name, size, online)	ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏳᏃ ᎢᏗᎦᎴᏴᏔᏅᎯ (ᏚᏙᎥ, ᎢᏗᎦᎴᏴᏔᏅᎯ, ᎢᏗᎦᎴᏴᏔᏅᎯ)
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server wants a login (401, 403)
+#, machine
+	Needs a login	ᎤᎾᏕᎳᎰᏒ ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
+#, machine
+	Offline ({status})	ᎥᏝ ᎢᏗᎦᎴᏴᏔᏅᎯ ({status})
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server has the file
+#, machine
+	Online	ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber: the box that edits the selected package
+#, machine
+	Package	ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber, while it is empty
+#, machine
+	Paste links here (Ctrl+V), or send a page's links from the browser.	ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ (Ctrl+V), ᎠᎴ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ.
+#. text in the Link grabber window
+#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
+#, machine
+	Pasted	ᎢᏗᎦᎴᏴᏔᏅᎯ
+#. text in the Link grabber window
+#. Link grabber: the folder the package's files go to (a label before its box)
+#, machine
+	Save to:	ᎢᏗᎦᎴᏴᏔᏅᎯ:
+#. text in the Link grabber window
+#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
+#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
+#, machine
+	Source: {source}	ᎢᏗᎦᎴᏴᏔᏅᎯ: {source}
+#. text in the Link grabber window
+#. Link grabber button: download the ticked links now
+#, machine
+	Start	ᎤᎴᏅᏗ
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Straight into the archive's folder	ᎤᏓᎨᏛ ᏗᎪᏢᏒᎢ ᎤᏤᎵᎦ ᏗᏟᎶᏍᏔᏅᎢ
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	ᏗᎦᎸᏫᏍᏓᏁᏗ → ᏗᏕᎬᏔᏅᎯ, ᎠᎴ ᎤᎾᏕᎳᎰᎯᏍᏗ ᏗᏕᎬᏔᏅᎯ "ᏂᎦᏗᏳ ᏗᏕᎬᏔᏅᎯ ᏗᎦᎸᏫᏍᏓᏁᏗ": ᎢᎸᏍᎩ ᎢᏗᎦᎴᏴᏔᏅᎯ ᏗᎦᎴᏴᏔᏅᎯ ᏌᏉ ᏗᎦᎴᏴᏔᏅᎯ, ᎠᎴ ᏅᏩᏓᎴ ᏗᏕᎬᏔᏅᎯ ᏌᏉ ᎤᎾᏕᎳᎰᎯᏍᏗ ᏗᎦᎴᏴᏔᏅᎯ.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Recycle Bin: it was kept	ᎤᏓᎨᏛ ᏗᎪᏢᏒᎢ ᎥᏝ ᏰᎵ ᎤᎾᏗᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ ᏗᎪᏢᏒᎢ ᏗᎦᎶᏗᏱ: ᎤᏕᎳᎰᏒᎢ
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Trash: it was kept	ᎤᏓᎨᏛ ᏗᎪᏢᏒᎢ ᎥᏝ ᏰᎵ ᎤᎾᏗᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ ᏗᎦᎶᏗᏱ: ᎤᏕᎳᎰᏒᎢ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Recycle Bin	ᎤᏓᎨᏛ ᏗᎪᏢᏒᎢ ᎤᎾᏗᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ ᏗᎪᏢᏒᎢ ᏗᎦᎶᏗᏱ
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Trash	ᎤᏓᎨᏛ ᏗᎪᏢᏒᎢ ᎤᎾᏗᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ ᏗᎦᎶᏗᏱ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	the password is wrong	ᎤᎾᏙᏢᏒᎢ ᎤᎵᎪᏒᎢ
+#. text in the Options window
+#. Options → Archives check box
+#, machine
+	Then move the archives to the Recycle Bin	ᎿᏉᏃ ᏗᎪᏢᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ ᏗᎪᏢᏒᎢ ᏗᎦᎶᏗᏱ
+#. text in the Options window
+#. Options → Archives check box (Linux and macOS)
+#, machine
+	Then move the archives to the Trash	ᎿᏉᏃ ᏗᎪᏢᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ ᏗᎦᎶᏗᏱ
+#. text in the Link grabber window
+#. Link grabber button (IDM's): untick every link
+#, machine
+	Uncheck all	ᏂᎦᏗᏳ ᏕᎭᎴᎯ
+#. text in the Link grabber window
+#. Link grabber: the package of links that belong to no other
+#, machine
+	Various files	ᏧᏓᎴᏅᏛ ᏗᎦᎴᏴᏔᏅᎯ
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
+#. {n} = a number (keep the braces as they are)
+#, machine
+	volume {n} of it is missing	ᎤᎾᏗᏒᎢ {n} ᎤᎵᎪᏒᎢ
+#. text in the Options window
+#. Options → Archives: a label before the list of where extracted files go
+#, machine
+	What an archive holds goes:	ᎤᏓᎨᏛ ᏗᎪᏢᏒᎢ ᎤᎾᏗᏒᎢ ᏗᎦᎴᏴᏔᏅᎢ:
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Wrong password for {name}. Type it again:	ᎤᎾᏙᏢᏒᎢ ᎤᎵᎪᏒᎢ {name} ᎢᏳᏍᏗ. ᏔᎵᏁ ᎪᏪᎸᎢ:
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP, 7Z, RAR, TAR, GZ, XZ; ᎢᎸᏍᎩ ᎢᏗᎦᎴᏴᏔᏅᎯ ᏗᎦᎴᏴᏔᏅᎯ (.part1.rar, .7z.001) ᎢᎸᏍᎩ ᎢᏗᎦᎴᏴᏔᏅᎯ ᏂᎦᏗᏳ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ. ᏗᎦᎴᏴᏔᏅᎯ ᎾᎿᏂ ᎢᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ: ᎢᏤ ᏗᎦᎴᏴᏔᏅᎯ ᎢᏗᎦᎴᏴᏔᏅᎯ.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} 7z ᎠᎴ RAR ᏗᎪᏪᎵ ᏚᏓᏟᎶᏔᏅᎢ. MDM ᎾᏍᎩ ᎦᏄᎪᏫᏍᎪᎢ 7-Zip ᎤᏅᏗᏍᎬᎢ, ᎾᏍᎩᏃ ᎥᏝ ᏱᏚᏔᏅ.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is protected by a password:	{name} ᎤᎾᏙᏢᏒᎢ ᎤᎵᎪᏒᎢ ᎤᏕᎳᎰᏒᎢ:
+#. menu command in the main window
+#. Tasks menu: open Link grabber (links in packages, to tick before adding)
+#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	&Link grabber...	ᏗᏕ&ᏛᏗ ᏗᎦᏁᏍᏓᏅᎢ...
+#. menu command in the main window
+#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
+#, machine
+menu	Extract	ᏗᎦᎴᏴᏔᏅᎯ

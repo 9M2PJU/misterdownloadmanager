@@ -4052,3 +4052,274 @@ unit	{n} MB	{n} ميغابايت
 #. {n} = a number (keep the braces as they are)
 #, machine
 unit	{n} MB/sec	{n} ميغابايت/ثانية
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {n} is a number of files, {folder} where they went
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	تم استخراج {n} ملف إلى {folder}|تم استخراج {n} ملف إلى {folder}|تم استخراج {n} ملفات إلى {folder}|تم استخراج {n} ملفات إلى {folder}|تم استخراج {n} ملفا إلى {folder}|تم استخراج {n} ملفا إلى {folder}
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	تم حذف {n} إدخال (ارتباط، أو اسم يؤدي إلى خارج المجلد)|تم حذف {n} إدخال (ارتباط، أو اسم يؤدي إلى خارج المجلد)|تم حذف {n} إدخالات (ارتباطات، أو أسماء تؤدي إلى خارج المجلد)|تم حذف {n} إدخالات (ارتباطات، أو أسماء تؤدي إلى خارج المجلد)|تم حذف {n} إدخالا (ارتباطات، أو أسماء تؤدي إلى خارج المجلد)|تم حذف {n} إدخالا (ارتباطات، أو أسماء تؤدي إلى خارج المجلد)
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	كان لـ {n} ملف نفس اسم ملف موجود بالفعل وتم ترقيمه|كان لـ {n} ملف نفس اسم ملف موجود بالفعل وتم ترقيمه|كان لـ {n} ملفات نفس اسم ملف موجود بالفعل وتم ترقيمها|كان لـ {n} ملفات نفس اسم ملف موجود بالفعل وتم ترقيمها|كان لـ {n} ملفا نفس اسم ملف موجود بالفعل وتم ترقيمها|كان لـ {n} ملفا نفس اسم ملف موجود بالفعل وتم ترقيمها
+#. window title in extracting archives (a download's log, the Archive password window)
+#. window title: 7-Zip (a program's name) must be installed
+#, machine
+	7-Zip needed	يلزم 7-Zip
+#. text in the Options window
+#. Options → Archives: {path} is where 7-Zip's program is
+#, machine
+	7z and RAR archives are extracted by 7-Zip ({path}).	يتم استخراج أرشيفات 7z وRAR بواسطة 7-Zip ({path}).
+#. text in the Options window
+#. Options → Archives, when 7-Zip isn't installed
+#, machine
+	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	تحتاج أرشيفات 7z وRAR إلى 7-Zip (7-zip.org)، وهو غير مثبت.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	7z and RAR archives need 7-Zip, which isn't installed	تحتاج أرشيفات 7z وRAR إلى 7-Zip، وهو غير مثبت
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	a volume of it is missing	أحد مجلداته مفقود
+#. text in the Link grabber window
+#. Link grabber: the package of links the download list has already
+#, machine
+	Already in the list	موجود بالفعل في القائمة
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Always into a folder named after it	دائما في مجلد يحمل اسمه
+#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
+#. what a screen reader calls the Archive password window's box
+#. what a screen reader calls Link grabber's password box
+#, machine
+	Archive password	كلمة مرور الأرشيف
+#. group box title in the Options window; text in the Options window
+#. Options → Archives: group box title
+#. tab title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives	الأرشيفات
+#. text in the Options window
+#. Options page title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives and Link grabber	الأرشيفات ومستخرج الروابط
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server asked to try later (429, 503)
+#, machine
+	Busy, try later	مشغول، حاول لاحقا
+#. message or event log entry in the main window
+#, machine
+	by Link grabber	بواسطة أداة التقاط الروابط
+#. text in the Link grabber window
+#. Link grabber button (IDM's): tick every link
+#, machine
+	Check all	تحديد الكل
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {name} is the archive's file name, {why} the reason
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Couldn't extract {name}: {why}	تعذر استخراج {name}: {why}
+#. checkbox in the Link grabber window
+#. Link grabber check box: after extracting, the archives go to the Recycle Bin
+#, machine
+	Delete archives after extracting	حذف الأرشيفات بعد الاستخراج
+#. text in the Link grabber window
+#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
+#, machine
+	Each file's category folder	مجلد فئة كل ملف
+#. button in extracting archives (a download's log, the Archive password window)
+#. button: extract the archive with the password typed
+#, machine
+	Extract	استخراج
+#. checkbox in the Options window
+#. Options → Archives check box (a Link grabber package has its own "Extract when done")
+#, machine
+	Extract archives when their download completes	استخراج الأرشيفات عند اكتمال تنزيلها
+#. text in the Link grabber window
+#. Link grabber check box: extract the package's archives once they are downloaded
+#, machine
+	Extract when done	استخراج عند الانتهاء
+#. text in extracting archives (a download's log, the Archive password window)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting the archive...	جار استخراج الأرشيف...
+#. message or event log entry in the main window
+#. a download's status: its archive is being extracted (#37)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting...	جار الاستخراج...
+#. text in extracting archives (a download's log, the Archive password window)
+#. button: opens 7-Zip's website (7-Zip is a program's name)
+#, machine
+	Get 7-Zip	الحصول على 7-Zip
+#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
+#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
+#, machine
+	Hide web pages	إخفاء صفحات الويب
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window, under why
+#, machine
+	Install 7-Zip (free), then right-click the download and choose Extract.	ثبت 7-Zip (مجاني)، ثم انقر بزر الماوس الأيمن فوق التنزيل واختر استخراج.
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Into a folder named after it, when it holds several things	في مجلد يحمل اسمه، عندما يحتوي على عدة أشياء
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it holds too many files or folders	يحتوي على عدد كبير جدا من الملفات أو المجلدات
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is damaged, or not the archive its name says	تالف، أو ليس الأرشيف الذي يشير إليه اسمه
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is not an archive MDM extracts	ليس أرشيفا يستخرجه MDM
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it needs a password	يحتاج إلى كلمة مرور
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it was stopped	تم إيقافه
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	it would write {size}, more than the {limit} there is room or reason for	سيكتب {size}، وهو أكثر من {limit} المتوفر أو المسموح به
+#. window title in the Link grabber window; group box title in the Options window
+#. Options → Archives: group box title
+#, machine
+	Link grabber	أداة التقاط الروابط
+#. text in the Link grabber window
+#. what a screen reader calls Link grabber's list
+#, machine
+	Links	الروابط
+#. checkbox in the Options window
+#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
+#, machine
+	Look links up when they arrive (name, size, online)	البحث عن الروابط عند وصولها (الاسم، الحجم، عبر الإنترنت)
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server wants a login (401, 403)
+#, machine
+	Needs a login	يحتاج إلى تسجيل دخول
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
+#, machine
+	Offline ({status})	غير متصل ({status})
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server has the file
+#, machine
+	Online	متصل
+#. text in the Link grabber window
+#. Link grabber: the box that edits the selected package
+#, machine
+	Package	الحزمة
+#. text in the Link grabber window
+#. Link grabber, while it is empty
+#, machine
+	Paste links here (Ctrl+V), or send a page's links from the browser.	الصق الروابط هنا (Ctrl+V)، أو أرسل روابط صفحة من المتصفح.
+#. text in the Link grabber window
+#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
+#, machine
+	Pasted	ملصق
+#. text in the Link grabber window
+#. Link grabber: the folder the package's files go to (a label before its box)
+#, machine
+	Save to:	حفظ في:
+#. text in the Link grabber window
+#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
+#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
+#, machine
+	Source: {source}	المصدر: {source}
+#. text in the Link grabber window
+#. Link grabber button: download the ticked links now
+#, machine
+	Start	بدء
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Straight into the archive's folder	مباشرة إلى مجلد الأرشيف
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	المهام ← أداة التقاط الروابط، أو "تنزيل كل الروابط" في المتصفح: مجلدات الأرشيف المقسمة هي حزمة واحدة، والروابط الأخرى في الصفحة هي حزمة أخرى.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Recycle Bin: it was kept	تعذر نقل الأرشيف إلى سلة المحذوفات: تم الاحتفاظ به
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Trash: it was kept	تعذر نقل الأرشيف إلى سلة المهملات: تم الاحتفاظ به
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Recycle Bin	تم نقل الأرشيف إلى سلة المحذوفات
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Trash	تم نقل الأرشيف إلى سلة المهملات
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	the password is wrong	كلمة المرور خاطئة
+#. text in the Options window
+#. Options → Archives check box
+#, machine
+	Then move the archives to the Recycle Bin	ثم انقل الأرشيفات إلى سلة المحذوفات
+#. text in the Options window
+#. Options → Archives check box (Linux and macOS)
+#, machine
+	Then move the archives to the Trash	ثم انقل الأرشيفات إلى سلة المهملات
+#. text in the Link grabber window
+#. Link grabber button (IDM's): untick every link
+#, machine
+	Uncheck all	إلغاء تحديد الكل
+#. text in the Link grabber window
+#. Link grabber: the package of links that belong to no other
+#, machine
+	Various files	ملفات متنوعة
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
+#. {n} = a number (keep the braces as they are)
+#, machine
+	volume {n} of it is missing	المجلد {n} منه مفقود
+#. text in the Options window
+#. Options → Archives: a label before the list of where extracted files go
+#, machine
+	What an archive holds goes:	محتويات الأرشيف تذهب إلى:
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Wrong password for {name}. Type it again:	كلمة المرور خاطئة لـ {name}. اكتبها مرة أخرى:
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP و7Z وRAR وTAR وGZ وXZ؛ أرشيف مقسم (part1.rar.، 7z.001.) بمجرد اكتمال كل مجلد. يتم الاحتفاظ بالملف الموجود بالفعل: يتم ترقيم الملف الجديد.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} هو أرشيف 7z أو RAR. يستخرج MDM هذه الملفات باستخدام 7-Zip، وهو غير مثبت.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is protected by a password:	{name} محمي بكلمة مرور:
+#. menu command in the main window
+#. Tasks menu: open Link grabber (links in packages, to tick before adding)
+#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	&Link grabber...	أداة التقاط الروابط(&L)...
+#. menu command in the main window
+#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
+#, machine
+menu	Extract	استخراج
