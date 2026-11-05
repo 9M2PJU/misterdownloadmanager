@@ -55,6 +55,8 @@ Everything below ships together, in one release.
   ([#44](https://github.com/anefzaoui/misterdownloadmanager/issues/44))
 - ✅ Downloads through one network adapter (a VPN's), with a kill switch: nothing goes out
   another way when it disconnects ([#35](https://github.com/anefzaoui/misterdownloadmanager/issues/35))
+- ✅ Torrents on Windows through the chosen network adapter, with the same kill switch
+  ([#143](https://github.com/anefzaoui/misterdownloadmanager/issues/143))
 - ✅ Downloads from a browser behind a VPN or proxy extension go through the same proxy
   ([#42](https://github.com/anefzaoui/misterdownloadmanager/issues/42))
 - ✅ Hide to the notification area: a download's progress window (its own button, or Minimize)
@@ -136,8 +138,6 @@ Everything below ships together, in one release.
 - 🔄 Themes: today's look stays the default, with a few more built in; colours, sizes, spacing and
   icons all come from the chosen theme, and Base16 and pywal schemes can be imported
   ([#45](https://github.com/anefzaoui/misterdownloadmanager/issues/45))
-- 🔄 Torrents on Windows through a chosen network adapter (a VPN's), with the kill switch
-  ([#143](https://github.com/anefzaoui/misterdownloadmanager/issues/143))
 - 🔄 A crash when a magnet link comes from Firefox ([#145](https://github.com/anefzaoui/misterdownloadmanager/issues/145))
 - 🔄 A server that can't resume a download no longer gets the file downloaded twice
   ([#136](https://github.com/anefzaoui/misterdownloadmanager/issues/136))
