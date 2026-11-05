@@ -22,6 +22,12 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Added
 
+- **The built-in categories are yours to change** ([#93](https://github.com/anefzaoui/misterdownloadmanager/issues/93)):
+  Compressed, Documents, Music, Programs and Video can be renamed, given other file types and
+  deleted, like your own categories (right-click → Properties or Delete). A renamed category keeps
+  its folder. Deleting one asks what happens to its downloads: move them to General, or take them
+  off the list; their files stay either way. **Options → Save to → Restore the built-in
+  categories** brings them back as they came. General and Torrents still change only their folder.
 - **Hide to the notification area** ([#63](https://github.com/anefzaoui/misterdownloadmanager/issues/63)):
   a download's progress window has a button that hides it in the tray while the download goes
   on: on Windows in its title bar, left of Minimize (the progress window draws its own Windows 11
