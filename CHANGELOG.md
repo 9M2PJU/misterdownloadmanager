@@ -305,6 +305,13 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **A magnet link could wait minutes for its file list** ([#92](https://github.com/anefzaoui/misterdownloadmanager/issues/92)):
+  in 0.2.4 on Windows, the DHT (how MDM finds peers without trackers) could stop for the rest
+  of the session once a computer it asked was gone, so a magnet its trackers didn't serve never
+  got its file list. The updated torrent library keeps going, and a test keeps it that way.
+  **Add torrent** now shows the wait: the peers found, from the trackers, the DHT or the local
+  network, and how many answered. After 30 seconds without an answer, it says what may be in
+  the way.
 - **Numbers are written the interface language's way** ([#128](https://github.com/anefzaoui/misterdownloadmanager/issues/128)):
   counts, sizes, speeds, percentages and the list's columns group and point their digits as the
   chosen language does (German `10.200` and `1,50 MB`, French `10 200`, Hindi `1,00,000`),
