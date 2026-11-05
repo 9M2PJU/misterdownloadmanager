@@ -514,6 +514,10 @@
    "source": "Change which file types MDM takes →",
    "text": "Thay đổi loại tệp MDM sẽ tải xuống →"
   },
+  "0b8bc8a6db629a4c": {
+   "source": "Select part of a page and right-click it for <g1>Download selected links with Mister Download Manager</g1>, or right-click the page for <g2>Download all links with Mister Download Manager</g2>: the links open in <g3>Import</g3>, where you tick the ones you want.",
+   "text": "Chọn một phần của trang và nhấp chuột phải vào đó để chọn <g1>Tải xuống các liên kết đã chọn bằng Mister Download Manager</g1>, hoặc nhấp chuột phải vào trang để chọn <g2>Tải xuống tất cả liên kết bằng Mister Download Manager</g2>: các liên kết sẽ mở trong <g3>Nhập</g3>, nơi bạn chọn những liên kết bạn muốn."
+  },
   "0ba1ab7afd650160": {
    "source": "Getting started — Mister Download Manager help",
    "text": "Bắt đầu — Trợ giúp Mister Download Manager"
@@ -910,6 +914,10 @@
    "source": "Leave MDM running. Closing the main window is fine: MDM keeps going in the tray. Don't use <g1>Tasks → Exit</g1>.",
    "text": "Để MDM chạy. Đóng cửa sổ chính không sao cả: MDM vẫn tiếp tục chạy trong khay hệ thống. Không sử dụng <g1>Tác vụ → Thoát</g1>."
   },
+  "17c258da3c18b1a9": {
+   "source": "A <x1/> file fetched from a web address goes through the same checks as one opened from disk, and MDM reads at most 10 MB of it.",
+   "text": "Một tệp <x1/> được tìm nạp từ địa chỉ web sẽ trải qua các kiểm tra tương tự như tệp được mở từ đĩa và MDM đọc tối đa 10 MB của tệp đó."
+  },
   "17eecf94501281e0": {
    "source": "For Fedora, openSUSE and RHEL: <x1/>.",
    "text": "Đối với Fedora, openSUSE và RHEL: <x1/>."
@@ -1117,6 +1125,10 @@
   "1bad738cb3cea90f": {
    "source": "Select or unselect the download with the dotted outline",
    "text": "Chọn hoặc bỏ chọn bản tải xuống có đường viền chấm chấm"
+  },
+  "1bdc6a06e3384bd1": {
+   "source": "<g1>Tasks</g1> — add downloads, torrents, batch downloads and videos; show the drop target; import and export the list; exit.",
+   "text": "<g1>Tác vụ</g1> — thêm các bản tải xuống, torrent, tải xuống hàng loạt và video; hiển thị mục tiêu kéo thả; nhập và xuất danh sách; thoát."
   },
   "1be93bd020009908": {
    "source": "<g1>The keyboard focus got lost</g1> when a button greyed itself or Escape closed a drop-down: Tab started over at the top of the window. It now moves on, or comes back, as in Windows.",
@@ -1561,6 +1573,10 @@
   "26ae5fbaf85f0fa2": {
    "source": "The portable copy of MDM runs from any folder, including a USB stick, without installing anything.",
    "text": "Bản MDM di động chạy từ bất kỳ thư mục nào, kể cả USB, mà không cần cài đặt gì."
+  },
+  "26b803c1a0aa9d3e": {
+   "source": "Untick the addresses you don't want (<g1>Select all</g1> and <g2>Select none</g2> help), then click <g3>OK</g3>.",
+   "text": "Bỏ chọn các địa chỉ bạn không muốn (<g1>Chọn tất cả</g1> và <g2>Bỏ chọn tất cả</g2> sẽ giúp ích), sau đó nhấp <g3>OK</g3>."
   },
   "26ee23631d3f7d09": {
    "source": "If an error message quotes something you typed, that text is in the report, so read it before sending.",
@@ -2234,6 +2250,10 @@
    "source": "Delete the selected downloads (asks first)",
    "text": "Xóa các bản tải xuống đã chọn (hỏi trước)"
   },
+  "38c2835e2c5124e2": {
+   "source": "<g1>Files</g1> — each file, its size and how much of it is done. Files you unticked show <g2>Skipped</g2>. Tick or untick a file's box to change what is downloaded, even while the torrent runs. At least one file stays ticked. If you untick everything still missing, the torrent finishes. If a finished torrent that isn't running gets a file back, it waits as stopped until you resume it, so nothing downloads unseen.",
+   "text": "<g1>Tệp</g1> — mỗi tệp, kích thước và mức độ hoàn thành của nó. Các tệp bạn đã bỏ chọn sẽ hiển thị <g2>Đã bỏ qua</g2>. Đánh dấu hoặc bỏ đánh dấu hộp của một tệp để thay đổi những gì được tải xuống, ngay cả khi torrent đang chạy. Ít nhất một tệp vẫn được đánh dấu. Nếu bạn bỏ đánh dấu tất cả những gì còn thiếu, torrent sẽ hoàn tất. Nếu một torrent đã hoàn tất nhưng không chạy được khôi phục một tệp, nó sẽ ở trạng thái dừng cho đến khi bạn tiếp tục, để không có gì được tải xuống mà không được nhìn thấy."
+  },
   "38d4b8570c497ca6": {
    "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers; it opens no UDP socket toward the network at all. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
    "text": "Cài đặt Proxy / Socks của MDM dành cho tải xuống web và FTP. Torrent cũng có thể dùng SOCKS5: hãy đặt proxy <x1/> trong <g2>Tùy chọn → Proxy / Socks</g2> và bật <g3>Sử dụng proxy</g3> trong Cài đặt torrent. Proxy chỉ bao gồm các kết nối đến các peer và trình theo dõi web, vì vậy với nó, MDM sẽ tắt DHT, khám phá peer cục bộ, các kết nối đến và trình theo dõi UDP; nó không mở bất kỳ socket UDP nào ra mạng. Nếu proxy bị xóa khỏi Proxy / Socks trong khi công tắc đó đang bật, torrent sẽ không bắt đầu thay vì bỏ qua nó."
@@ -2770,6 +2790,10 @@
    "source": "<g1>Downloads</g1>: the Windows installer, a portable zip and a plain zip, the browser extension on its own (a zip for Chromium browsers, an <x2/> for Firefox, always the app's version), and <g3>macOS and Linux to try</g3>: a universal <x4/> and an AppImage, <x5/>, <x6/> and <x7/>, marked <x8/> because they are untested by us. There, MDM connects itself to Chrome, Edge, Brave, Vivaldi and Firefox, has its tray icon, follows the system's light or dark look and uses the system's fonts and ffmpeg. Tell us how they work for you.",
    "text": "<g1>Tải xuống</g1>: trình cài đặt Windows, một tệp zip di động và một tệp zip thông thường, tiện ích mở rộng trình duyệt riêng (một tệp zip cho các trình duyệt Chromium, một <x2/> cho Firefox, luôn là phiên bản của ứng dụng), và <g3>macOS và Linux để thử</g3>: một <x4/> phổ quát và một AppImage, <x5/>, <x6/> và <x7/>, được đánh dấu <x8/> vì chúng chưa được chúng tôi kiểm tra. Ở đó, MDM tự kết nối với Chrome, Edge, Brave, Vivaldi và Firefox, có biểu tượng khay của nó, tuân theo giao diện sáng hoặc tối của hệ thống và sử dụng phông chữ và ffmpeg của hệ thống. Hãy cho chúng tôi biết chúng hoạt động như thế nào đối với bạn."
   },
+  "465d49cb6ee5a2c9": {
+   "source": "Torrent commands",
+   "text": "Lệnh torrent"
+  },
   "4693601d27da4c66": {
    "source": "<g1>DNS over HTTPS</g1> (the default) or <g2>DNS over TLS</g2>: encrypted, so nobody on the way sees or changes the names you look up.",
    "text": "<g1>DNS qua HTTPS</g1> (mặc định) hoặc <g2>DNS qua TLS</g2>: được mã hóa, vì vậy không ai trên đường truyền có thể thấy hoặc thay đổi các tên bạn tra cứu."
@@ -2877,6 +2901,10 @@
   "49cf385ddabeea71": {
    "source": "<g1>PAC</g1><g2>proxy scripts</g2>",
    "text": "<g1>PAC</g1><g2>proxy scripts</g2>"
+  },
+  "49e22ffa819f63a8": {
+   "source": "Right-click a torrent in the list and open <g1>Torrent</g1>:",
+   "text": "Nhấp chuột phải vào một torrent trong danh sách và mở <g1>Torrent</g1>:"
   },
   "4a07096e6a9abc54": {
    "source": "The download list in detail →",
@@ -3501,6 +3529,10 @@
   "5c4282dcd31a167d": {
    "source": "Why IDM users switch",
    "text": "Tại sao người dùng IDM chuyển đổi"
+  },
+  "5c676fc93de738f4": {
+   "source": "<g1>Copy magnet link</g1> — copies a magnet link for the torrent, with its trackers.",
+   "text": "<g1>Sao chép liên kết magnet</g1> — sao chép một liên kết magnet cho torrent, kèm theo các trình theo dõi của nó."
   },
   "5cb4c44654c9c90d": {
    "source": "<g1>Pick an issue</g1><g2>See what's open and lend a hand.</g2>",
@@ -4533,6 +4565,10 @@
   "75d11e79303ec689": {
    "source": "A network adapter",
    "text": "Bộ điều hợp mạng"
+  },
+  "75f7cfcbf2ebf842": {
+   "source": "A <x1/> file's web address works too: paste it into <g2>Add URL</g2> or <g3>Torrent</g3>, or let the browser hand the download over. MDM fetches the file, with the browser's cookies when the browser sent it, and <g4>Add torrent</g4> shows what it holds. The browser hands <x5/> downloads over because <x6/> is in <g7>Options → File types</g7>. It's there by default; a list you had before this version keeps what it had, so add <x8/> to it yourself. <g9>Download with Mister Download Manager</g9> on a link always hands it over. A command line with <x10/> (silent) saves the <x11/> file itself, like any file. MDM fetches at most 10 MB: anything bigger isn't a <x12/> file.",
+   "text": "Địa chỉ web của tệp <x1/> cũng hoạt động: dán nó vào <g2>Thêm URL</g2> hoặc <g3>Torrent</g3>, hoặc để trình duyệt chuyển giao quá trình tải xuống. MDM sẽ tìm nạp tệp, cùng với cookie của trình duyệt khi trình duyệt gửi nó, và <g4>Thêm torrent</g4> sẽ hiển thị nội dung của nó. Trình duyệt chuyển giao các lượt tải xuống <x5/> vì <x6/> nằm trong <g7>Tùy chọn → Loại tệp</g7>. Nó có sẵn theo mặc định; một danh sách bạn đã có trước phiên bản này sẽ giữ nguyên những gì nó có, vì vậy hãy tự thêm <x8/> vào đó. <g9>Tải xuống bằng Mister Download Manager</g9> trên một liên kết luôn chuyển giao nó. Một dòng lệnh với <x10/> (im lặng) sẽ lưu tệp <x11/> đó, giống như bất kỳ tệp nào. MDM tìm nạp tối đa 10 MB: bất kỳ thứ gì lớn hơn không phải là tệp <x12/>."
   },
   "76215a248670b754": {
    "source": "<g1><g2>Troubleshooting</g2></g1> — what to check when a download fails, the browser doesn't hand over a download, or a schedule doesn't start.",
@@ -6234,6 +6270,10 @@
    "source": "Run <x1/> with MDM running.",
    "text": "Chạy <x1/> khi MDM đang chạy."
   },
+  "a43f559b321cf278": {
+   "source": "A torrent names the trackers MDM asks for peers. MDM doesn't contact a tracker on your own computer or your local network (<x1/>, <x2/>, <x3/> and the like), so a torrent can't make MDM send requests into the network it sits in. <g4>Add trackers...</g4> follows the same rule: it refuses such an address and tells you why, rather than keeping one that would never be asked.",
+   "text": "Torrent sẽ đặt tên các trình theo dõi mà MDM yêu cầu để tìm máy ngang hàng. MDM không liên hệ với trình theo dõi trên máy tính của bạn hoặc mạng cục bộ của bạn (<x1/>, <x2/>, <x3/> và những thứ tương tự), vì vậy torrent không thể khiến MDM gửi yêu cầu vào mạng mà nó đang ở. <g4>Thêm trình theo dõi...</g4> tuân theo quy tắc tương tự: nó từ chối địa chỉ như vậy và cho bạn biết lý do, thay vì giữ một địa chỉ sẽ không bao giờ được yêu cầu."
+  },
   "a4573dce0e5e5aa1": {
    "source": "Continue a paused or broken download from the <x1/> file next to it.",
    "text": "Tiếp tục một lượt tải xuống bị tạm dừng hoặc bị hỏng từ tệp <x1/> bên cạnh nó."
@@ -6313,6 +6353,10 @@
   "a65e3187925f9f37": {
    "source": "256 KiB file over a fast local link",
    "text": "Tệp 256 KiB qua liên kết cục bộ nhanh"
+  },
+  "a66ea1a086f2705b": {
+   "source": "<g1>Add trackers...</g1> — adds trackers, one address a line (<x2/>, <x3/> or <x4/>). They are kept with the torrent, after the ones it has, and the <g5>Trackers</g5> tab shows them. A tracker on your computer or your local network is refused: MDM never contacts those (<g6>why</g6>).",
+   "text": "<g1>Thêm trình theo dõi...</g1> — thêm các trình theo dõi, mỗi địa chỉ một dòng (<x2/>, <x3/> hoặc <x4/>). Chúng được giữ cùng với torrent, sau những trình theo dõi mà nó có, và tab <g5>Trình theo dõi</g5> sẽ hiển thị chúng. Một trình theo dõi trên máy tính của bạn hoặc mạng cục bộ của bạn sẽ bị từ chối: MDM không bao giờ liên hệ với những trình theo dõi đó (<g6>tại sao</g6>)."
   },
   "a67015ec28a9f976": {
    "source": "Yes. MDM writes its progress as it goes, so after a lost connection, a crash or a restart it carries on where it stopped. Before resuming it checks that the…",
@@ -6397,6 +6441,10 @@
   "a839d0f1595e9f40": {
    "source": "<g1>Resume</g1>, <g2>Stop</g2>, <g3>Remove</g3> and the queue commands then act on all the selected downloads. The other commands need one download. The full list of keys is in <g4>Keyboard shortcuts</g4>.",
    "text": "Các lệnh <g1>Tiếp tục</g1>, <g2>Dừng</g2>, <g3>Xóa</g3> và các lệnh hàng đợi sau đó sẽ tác động lên tất cả các bản tải xuống đã chọn. Các lệnh khác cần một bản tải xuống. Danh sách đầy đủ các phím có trong <g4>Phím tắt</g4>."
+  },
+  "a857d379729447f1": {
+   "source": "Open Downloads → Options, or click Options on the toolbar. The window has eight pages on two rows of tabs. OK saves your changes; closing the window or…",
+   "text": "Mở Tải xuống → Tùy chọn, hoặc nhấp vào Tùy chọn trên thanh công cụ. Cửa sổ có tám trang trên hai hàng tab. OK lưu các thay đổi của bạn; đóng cửa sổ hoặc…"
   },
   "a86bb434620d319d": {
    "source": "Yes, built in: open a .torrent file or paste a magnet link, tick the files you want in the folder tree, and the torrent downloads in the same list as…",
@@ -7026,6 +7074,10 @@
    "source": "Install with the setup",
    "text": "Cài đặt bằng trình cài đặt"
   },
+  "b88bda5a82ad2252": {
+   "source": "Each command's outcome goes into the torrent's event log; hover its <g1>Status</g1> cell in the list to read it.",
+   "text": "Kết quả của mỗi lệnh sẽ được ghi vào nhật ký sự kiện của torrent; di chuột qua ô <g1>Trạng thái</g1> của nó trong danh sách để đọc."
+  },
   "b89df2939f6581e5": {
    "source": "Properties",
    "text": "Thuộc tính"
@@ -7209,6 +7261,10 @@
   "bddff41f922f3579": {
    "source": "<g1>Number of retries for each file if downloading failed</g1> — how often a failed download is tried again before the queue gives up on it. Without it, MDM keeps trying.",
    "text": "<g1>Số lần thử lại cho mỗi tệp nếu tải xuống thất bại</g1> — số lần một lượt tải xuống thất bại được thử lại trước khi hàng đợi từ bỏ nó. Nếu không có tùy chọn này, MDM sẽ tiếp tục thử."
+  },
+  "bde4e642fb008c91": {
+   "source": "Drag a link from a browser (or a page's text with links in it) onto the list to add it: one link opens <g1>Download File Info</g1>, several open <g2>Import</g2> to choose which to add. Drop a <x3/> file to add the torrent, or a list of addresses (<x4/>, <x5/>) to import it. The list is outlined while something you can drop is over it. On macOS and Linux, files can be dropped (links from a browser only on Windows).",
+   "text": "Kéo một liên kết từ trình duyệt (hoặc văn bản của một trang có chứa liên kết) vào danh sách để thêm nó: một liên kết sẽ mở <g1>Thông tin tệp tải xuống</g1>, nhiều liên kết sẽ mở <g2>Nhập</g2> để chọn những liên kết nào sẽ thêm. Kéo thả một tệp <x3/> để thêm torrent, hoặc một danh sách địa chỉ (<x4/>, <x5/>) để nhập nó. Danh sách sẽ được viền khi có thứ gì đó bạn có thể kéo thả nằm trên đó. Trên macOS và Linux, các tệp có thể được kéo thả (liên kết từ trình duyệt chỉ trên Windows)."
   },
   "bdee109ce7ca5da7": {
    "source": "There are several ways to give MDM something to download. Most of them end in the same window, <g1>Download File Info</g1>, where you choose where the file goes.",
@@ -7618,6 +7674,10 @@
    "source": "MDM reads the torrent and shows its files as a folder tree. A <x1/> file is read at once. A magnet link first has to get the file list from other peers, which can take a minute or two.",
    "text": "MDM đọc torrent và hiển thị các tệp của nó dưới dạng cây thư mục. Một tệp <x1/> được đọc ngay lập tức. Một liên kết magnet trước tiên phải lấy danh sách tệp từ các người ngang hàng khác, việc này có thể mất một hoặc hai phút."
   },
+  "c991e64b857c5509": {
+   "source": "<g1>Reannounce</g1> — asks the torrent's trackers for peers again now, instead of waiting for their next round. It works while the torrent runs or is shared.",
+   "text": "<g1>Thông báo lại</g1> — yêu cầu các trình theo dõi của torrent tìm kiếm các peer một lần nữa ngay bây giờ, thay vì chờ đến lượt tiếp theo của chúng. Nó hoạt động khi torrent đang chạy hoặc đang được chia sẻ."
+  },
   "c9d39512b1b393af": {
    "source": "Google Chrome, Microsoft Edge, Brave, Opera and Vivaldi, through the MDM browser extension, and browsers built on them such as Helium. Firefox support, which also covers Zen and LibreWolf, is written and in testing. The extension hands downloads to MDM with their cookies and referrer, so files behind a sign-in still work, and it adds <g1>Download with Mister Download Manager</g1> to the right-click menu and a <g2>Download video</g2> button over videos. See <g3>Browser integration</g3>.",
    "text": "Google Chrome, Microsoft Edge, Brave, Opera và Vivaldi, thông qua tiện ích mở rộng trình duyệt của MDM, cùng các trình duyệt được xây dựng trên nền tảng đó như Helium. Hỗ trợ Firefox, bao gồm cả Zen và LibreWolf, đã được viết và đang trong quá trình thử nghiệm. Tiện ích mở rộng sẽ chuyển các lượt tải xuống sang MDM cùng với cookie và referrer của chúng, nhờ đó các tệp yêu cầu đăng nhập vẫn hoạt động. Tiện ích này cũng thêm <g1>Tải xuống bằng Mister Download Manager</g1> vào menu chuột phải và nút <g2>Tải xuống video</g2> trên các video. Xem <g3>Tích hợp trình duyệt</g3>."
@@ -7813,6 +7873,10 @@
   "cf5e8ed8c0381b7f": {
    "source": "Browsers built on them work too: Chromium and Helium take the extension as Chrome does, Zen and LibreWolf as Firefox does. On Windows, Zen has a bug of its own (see <g1>The browser and MDM aren't connected</g1>).",
    "text": "Các trình duyệt được xây dựng dựa trên chúng cũng hoạt động: Chromium và Helium sử dụng tiện ích mở rộng như Chrome, Zen và LibreWolf như Firefox. Trên Windows, Zen có một lỗi riêng (xem <g1>Trình duyệt và MDM không kết nối</g1>)."
+  },
+  "cf86019a0378cdea": {
+   "source": "The downloads join the <g1>Main download queue</g1>, ready to start. <g2>Tasks → Import → From IDM export file</g2> reads an <x3/> file, with each download's referrer and cookies.",
+   "text": "Các bản tải xuống sẽ tham gia <g1>Hàng đợi tải xuống chính</g1>, sẵn sàng để bắt đầu. <g2>Tác vụ → Nhập → Từ tệp xuất IDM</g2> đọc một tệp <x3/>, với referrer và cookie của mỗi bản tải xuống."
   },
   "cf98a5beeacc1f82": {
    "source": "Report what's broken, ask for what's missing, fix a translation or send a pull request. The maintainer reads every issue.",
@@ -8910,6 +8974,10 @@
    "source": "<g1>What happened:</g1> the error and the place in MDM's code where it happened.",
    "text": "<g1>Điều gì đã xảy ra:</g1> lỗi và vị trí trong mã của MDM nơi nó xảy ra."
   },
+  "ee9034f4bfe810cf": {
+   "source": "<g1>Recheck files</g1> — reads every piece of the torrent's files and checks it, for example after you moved files in or a disk had errors. A running torrent goes on afterwards and fetches what is missing. A stopped one stays stopped. Its event log says how much was found: a finished torrent with a damaged piece becomes stopped, and resuming it fetches the piece again.",
+   "text": "<g1>Kiểm tra lại tệp</g1> — đọc và kiểm tra từng phần của các tệp torrent, ví dụ sau khi bạn di chuyển tệp vào hoặc đĩa có lỗi. Một torrent đang chạy sẽ tiếp tục sau đó và tìm nạp những gì còn thiếu. Một torrent đã dừng sẽ vẫn dừng. Nhật ký sự kiện của nó cho biết đã tìm thấy bao nhiêu: một torrent đã hoàn tất với một phần bị hỏng sẽ trở thành dừng, và tiếp tục nó sẽ tìm nạp lại phần đó."
+  },
   "eea0683af36fb9e8": {
    "source": "Something not working? We'd like to know.",
    "text": "Có gì đó không hoạt động? Chúng tôi muốn biết."
@@ -9094,6 +9162,10 @@
    "source": "<g1>Peers</g1> — the computers you are downloading from, with how much you received from and sent to each.",
    "text": "<g1>Người ngang hàng</g1> — các máy tính bạn đang tải xuống, với số lượng bạn đã nhận và gửi cho mỗi máy."
   },
+  "f326e0e0a7971afa": {
+   "source": "Open <g1>Downloads → Options</g1>, or click <g2>Options</g2> on the toolbar. The window has eight pages on two rows of tabs. <g3>OK</g3> saves your changes; closing the window or pressing <g4>Esc</g4> throws them away.",
+   "text": "Mở <g1>Tải xuống → Tùy chọn</g1>, hoặc nhấp <g2>Tùy chọn</g2> trên thanh công cụ. Cửa sổ có tám trang trên hai hàng tab. <g3>OK</g3> lưu các thay đổi của bạn; đóng cửa sổ hoặc nhấn <g4>Esc</g4> sẽ hủy bỏ chúng."
+  },
   "f344e5dfcec067d9": {
    "source": "The downloads go to a queue. As with Download Later, MDM asks which queue unless you turn off <g1>Options → Downloads → Show queue selection panel on closing batch download dialogs</g1>.",
    "text": "Các bản tải xuống sẽ được đưa vào một hàng đợi. Giống như Tải xuống sau, MDM sẽ hỏi bạn muốn đưa vào hàng đợi nào trừ khi bạn tắt <g1>Tùy chọn → Tải xuống → Hiển thị bảng chọn hàng đợi khi đóng hộp thoại tải xuống hàng loạt</g1>."
@@ -9169,6 +9241,10 @@
   "f575c52354f70221": {
    "source": "Free forever, no ads, no trial",
    "text": "Miễn phí vĩnh viễn, không quảng cáo, không dùng thử"
+  },
+  "f59f701cec440f8e": {
+   "source": "Pick the file. <g1>Import downloads</g1> lists every web address MDM found in it.",
+   "text": "Chọn tệp. <g1>Nhập bản tải xuống</g1> sẽ liệt kê mọi địa chỉ web mà MDM tìm thấy trong đó."
   },
   "f5d0db4c9a23ece3": {
    "source": "<g1><g2>Adding downloads</g2></g1> — Add URL, the clipboard, the drop target, batch downloads and lists of links, and Start Download versus Download Later.",

@@ -12,6 +12,11 @@
 #. {n} = a number (keep the braces as they are)
 #, machine
 @plural	Are you sure you want to delete {n} download from Mister Download Manager list of downloads?|Are you sure you want to delete these {n} downloads from Mister Download Manager list of downloads?	Er du sikker på at du vil slette {n} nedlasting fra Mister Download Managers nedlastingsliste?|Er du sikker på at du vil slette disse {n} nedlastingene fra Mister Download Managers nedlastingsliste?
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {n} is a number of files, {folder} where they went
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	Pakket ut {n} fil til {folder}|Pakket ut {n} filer til {folder}
 #. count in a dialog box
 #. "files already there" question, under the first path: {n} = how many more
 #. {n} = a number (keep the braces as they are)
@@ -34,15 +39,36 @@
 #. {n} = a number (keep the braces as they are)
 #, machine
 @plural	{n} downloading|{n} downloading	{n} laster ned|{n} laster ned
-#. count in the Batch download window; count in the Add torrent window
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	{n} oppføring ble utelatt (en kobling, eller et navn som førte utenfor mappen)|{n} oppføringer ble utelatt (koblinger, eller navn som førte utenfor mappen)
+#. count in the Batch download window; count in the Link grabber window; count in the Add torrent window
 #. how many files the pattern gives in all
+#. Link grabber: a package's row: {n} is its number of links
 #. {n} = a number (keep the braces as they are)
 #, machine
 @plural	{n} file|{n} files	{n} fil|{n} filer
 #. count in the main window
+#. event log entry: the files ticked in a torrent's Files tab changed; {n} of them are ticked now
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file chosen to download|{n} files chosen to download	{n} fil valgt for nedlasting|{n} filer valgt for nedlasting
+#. count in extracting archives (a download's log, the Archive password window)
+#. in a download's log, after extracting
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	{n} fil hadde navnet til en fil som allerede var der og ble nummerert|{n} filer hadde navnet til en fil som allerede var der og ble nummerert
+#. count in the main window
 #. {n} = a number (keep the braces as they are)
 #, machine
 @plural	{n} selected|{n} selected	{n} valgt|{n} valgt
+#. count in the main window
+#. event log entry: trackers were added to the torrent
+#. {n} = a number (keep the braces as they are)
+#, machine
+@plural	{n} tracker added|{n} trackers added	{n} sporer lagt til|{n} sporere lagt til
 #. count in playlistdlg.rs
 #. in Download video: a playlist title then how many videos it has ({count})
 #. {count} = a number (keep the braces as they are)
@@ -95,6 +121,21 @@
 #. a 24-hour clock, with an example
 #, machine
 	24-hour (21:41)	24-timers (21:41)
+#. window title in extracting archives (a download's log, the Archive password window)
+#. window title: 7-Zip (a program's name) must be installed
+#, machine
+	7-Zip needed	7-Zip er nødvendig
+#. text in the Options window
+#. Options → Archives: {path} is where 7-Zip's program is
+#, machine
+	7z and RAR archives are extracted by 7-Zip ({path}).	7z- og RAR-arkiver pakkes ut av 7-Zip ({path}).
+#. text in the Options window
+#. Options → Archives, when 7-Zip isn't installed
+#, machine
+	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	7z- og RAR-arkiver krever 7-Zip (7-zip.org), som ikke er installert.
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	7z and RAR archives need 7-Zip, which isn't installed	7z- og RAR-arkiver krever 7-Zip, som ikke er installert
 #. text in a download's progress window
 #, machine
 	<< Hide details	<< Skjul detaljer
@@ -114,6 +155,14 @@
 #. an error: a server on this computer redirected the download to the internet, which would not go through the chosen network adapter; {adapter} its name
 #, machine
 	a server on this computer sent the download elsewhere, which would not go through {adapter}	en server på denne datamaskinen sendte nedlastingen et annet sted, som ikke ville gå gjennom {adapter}
+#. text in the Add torrent window
+#. Add trackers: MDM never contacts a tracker on this computer or the local network
+#, machine
+	A tracker on this computer or the local network is never contacted: {line}	En sporer på denne datamaskinen eller det lokale nettverket blir aldri kontaktet: {line}
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	a volume of it is missing	et volum mangler
 #. window title in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	About Mister Download Manager	Om Mister Download Manager
@@ -171,7 +220,8 @@
 #. text in extension.rs
 #, machine
 	Add the free extension: files you download in your browser come here, and videos get a Download button.	Legg til den gratis utvidelsen: filer du laster ned i nettleseren din, kommer hit, og videoer får en Last ned-knapp.
-#. message or event log entry in the main window
+#. message or event log entry in the main window; text in the Link grabber window
+#. Link grabber button: add the ticked links to the download queue without starting them (IDM's OK)
 #, machine
 	Add to queue	Legg til i kø
 #. text in a dialog box
@@ -180,6 +230,9 @@
 #. message or event log entry in the main window; window title in the Add torrent window
 #, machine
 	Add torrent	Legg til torrent
+#. window title in the Add torrent window
+#, machine
+	Add trackers	Legg til sporere
 #. text in playlistdlg.rs
 #. asked before a playlist adds many downloads at once; {n} is how many
 #. {n} = a number (keep the braces as they are)
@@ -240,6 +293,10 @@
 #. text in errors.rs
 #, machine
 	already being downloaded: {path}	lastes allerede ned: {path}
+#. text in the Link grabber window
+#. Link grabber: the package of links the download list has already
+#, machine
+	Already in the list	Allerede i listen
 #. text in crashui.rs
 #. crash report window: the same problem has an issue on GitHub already; {number} and {title} are the issue's
 #, machine
@@ -258,6 +315,10 @@
 #. View menu: a check item; dark mode on, whatever the system's setting
 #, machine
 	Always dark	Alltid mørk
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Always into a folder named after it	Alltid i en mappe oppkalt etter den
 #. checkbox in a dialog box
 #, machine
 	Always turn on Speed Limiter on Mister Download Manager startup	Slå alltid på hastighetsbegrenser ved oppstart av Mister Download Manager
@@ -281,6 +342,20 @@
 #. text in the Scheduler window
 #, machine
 	April	April
+#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
+#. what a screen reader calls the Archive password window's box
+#. what a screen reader calls Link grabber's password box
+#, machine
+	Archive password	Arkivpassord
+#. group box title in the Options window; text in the Options window
+#. Options → Archives: group box title
+#. tab title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives	Arkiver
+#. text in the Options window
+#. Options page title: extracting downloaded archives, and Link grabber
+#, machine
+	Archives and Link grabber	Arkiver og koblingsfanger
 #. text in a dialog box
 #. {name} = a file name (keep the braces as they are)
 #, machine
@@ -291,6 +366,10 @@
 #. text in the Options window
 #, machine
 	Ask it with:	Spør den med:
+#. message or event log entry in the main window
+#. event log entry: the torrent's trackers were asked for peers again (Reannounce)
+#, machine
+	Asked the trackers for peers again	Ba sporerne om likepersoner igjen
 #. text in the Add torrent window
 #, machine
 	Asking peers for the file list. Magnet links can take a minute or two.	Spør peers om fillisten. Magnetlenker kan ta et minutt eller to.
@@ -343,7 +422,7 @@
 #. text in the Options window
 #, machine
 	Bring back {names} as they were shipped: their names, file types and folders? Your own categories, General and Torrents stay as they are. Downloads already moved to General stay there.	Gjenopprette {names} slik de ble levert: navn, filtyper og mapper? Dine egne kategorier, Generelt og Torrenter, forblir som de er. Nedlastinger som allerede er flyttet til Generelt, blir der.
-#. button in the Options window
+#. text in the Link grabber window; button in the Link grabber window; button in the Options window
 #. verb: choose a folder
 #, machine
 	Browse	Bla gjennom
@@ -357,13 +436,17 @@
 #. page title in the Options window
 #, machine
 	Browser/System Integration	Nettleser-/systemintegrasjon
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server asked to try later (429, 503)
+#, machine
+	Busy, try later	Opptatt, prøv senere
 #. message or event log entry in the main window
 #, machine
 	by batch download	etter gruppenedlasting
 #. message or event log entry in the main window
 #, machine
-	by import	etter import
-#. button in the Batch download window; button in categories.rs; text in the Checksum window; button in a dialog box; button in the Find window; button in gallerydlg.rs; text in the Help menu's windows (About, updates, shortcuts, Tell a friend); button in langpick.rs; button in the Options window; button in a download's progress window; button in the Scheduler window; button in the Add torrent window; button in transfer.rs; button in the Download video window
+	by Link grabber	av Link grabber
+#. button in the Batch download window; button in categories.rs; text in the Checksum window; button in a dialog box; button in extracting archives (a download's log, the Archive password window); button in the Find window; button in gallerydlg.rs; text in the Link grabber window; text in the Help menu's windows (About, updates, shortcuts, Tell a friend); button in langpick.rs; button in the Options window; button in a download's progress window; button in the Scheduler window; button in the Add torrent window; button in the Download video window
 #. button: stop downloading the update
 #, machine
 	Cancel	Avbryt
@@ -416,6 +499,10 @@
 #. {category} = a category name such as "Music" (keep the braces as they are)
 #, machine
 	Change folder for "{category}" category on last selected	Endre mappe for kategorien «{category}» ved sist valgte
+#. text in the Link grabber window
+#. Link grabber button (IDM's): tick every link
+#, machine
+	Check all	Merk alle
 #. window title in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	Check for updates	Se etter oppdateringer
@@ -426,6 +513,14 @@
 #. text in helpers.rs
 #, machine
 	Check your connection, then try again, or get them later from the video window.	Kontroller tilkoblingen, og prøv deretter på nytt, eller hent dem senere fra videovinduet.
+#. message or event log entry in the main window
+#. event log entry after Recheck: {have} and {total} are sizes ("1.2 GB of 4 GB there")
+#, machine
+	Checked: {have} of {total} there	Kontrollert: {have} av {total} der
+#. message or event log entry in the main window
+#. event log entry: a torrent's files are being read and checked again (Recheck)
+#, machine
+	Checking every piece again	Kontrollerer hver del på nytt
 #. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #. the trailing ... means it is still going on: keep it
 #, machine
@@ -451,7 +546,7 @@
 #. the trailing ... means it is still going on: keep it
 #, machine
 	Checking {name} ({n} of {total})...	Kontrollerer {name} ({n} av {total})...
-#. text in the Checksum window
+#. text in the Checksum window; text in the Link grabber window
 #. the trailing ... means it is still going on: keep it
 #, machine
 	Checking...	Kontrollerer...
@@ -541,6 +636,11 @@
 #. crash report window button: copy the report's text
 #, machine
 	Copy report	Kopier rapport
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: {name} is the archive's file name, {why} the reason
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Couldn't extract {name}: {why}	Kunne ikke pakke ut {name}: {why}
 #. window title in a dialog box
 #, machine
 	Create folder	Opprett mappe
@@ -599,6 +699,10 @@
 #. verb: delete the item
 #, machine
 	Delete	Slett
+#. checkbox in the Link grabber window
+#. Link grabber check box: after extracting, the archives go to the Recycle Bin
+#, machine
+	Delete archives after extracting	Slett arkiver etter utpakking
 #. window title in a dialog box
 #, machine
 	Delete category	Slett kategori
@@ -819,6 +923,10 @@
 #. Options → Network adapter: what "Any" means
 #, machine
 	Each connection takes the system's route.	Hver tilkobling tar systemets rute.
+#. text in the Link grabber window
+#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
+#, machine
+	Each file's category folder	Hver fils kategorimappe
 #. button in the Options window
 #. verb: edit the item
 #, machine
@@ -855,6 +963,10 @@
 #. text in the Scheduler window
 #, machine
 	Enter a name for the new queue that will be	Angi et navn for den nye køen som vil være
+#. text in the Add torrent window
+#. Add trackers: OK with an empty box
+#, machine
+	Enter a tracker's address, one a line	Skriv inn en sporers adresse, én per linje
 #. window title in a dialog box
 #, machine
 	Enter new address to download	Angi ny adresse for nedlasting
@@ -914,6 +1026,27 @@
 #. text in categories.rs
 #, machine
 	Extensions separated by spaces, for example MP4 MKV R0*	Filtyper atskilt med mellomrom, for eksempel MP4 MKV R0*
+#. button in extracting archives (a download's log, the Archive password window)
+#. button: extract the archive with the password typed
+#, machine
+	Extract	Pakk ut
+#. checkbox in the Options window
+#. Options → Archives check box (a Link grabber package has its own "Extract when done")
+#, machine
+	Extract archives when their download completes	Pakk ut arkiver når nedlastingen er fullført
+#. text in the Link grabber window
+#. Link grabber check box: extract the package's archives once they are downloaded
+#, machine
+	Extract when done	Pakk ut når ferdig
+#. text in extracting archives (a download's log, the Archive password window)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting the archive...	Pakker ut arkivet...
+#. message or event log entry in the main window
+#. a download's status: its archive is being extracted (#37)
+#. the trailing ... means it is still going on: keep it
+#, machine
+	Extracting...	Pakker ut...
 #. text in the Scheduler window
 #, machine
 	February	Februar
@@ -1100,6 +1233,10 @@
 #. tab title: general information
 #, machine
 	General	Generelt
+#. text in extracting archives (a download's log, the Archive password window)
+#. button: opens 7-Zip's website (7-Zip is a program's name)
+#, machine
+	Get 7-Zip	Skaff 7-Zip
 #. window title in helpers.rs
 #. title of the first start's window that offers yt-dlp and ffmpeg
 #, machine
@@ -1155,6 +1292,10 @@
 #. tooltip of a button in a download's progress window: hides the window to the notification area (system tray); the download goes on
 #, machine
 	Hide to the notification area	Skjul til varslingsområdet
+#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
+#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
+#, machine
+	Hide web pages	Skjul nettsider
 #. text in the Options window
 #, machine
 	Hold Alt while clicking a link to let the browser download it instead of Mister Download Manager.	Hold Alt mens du klikker en kobling for å la nettleseren laste den ned i stedet for Mister Download Manager.
@@ -1190,19 +1331,12 @@
 #. message or event log entry in the main window
 #, machine
 	Import	Importer
-#. window title in transfer.rs
-#, machine
-	Import downloads	Importer nedlastinger
 #. value in a column's filter list in the download list
 #, machine
 	In a queue	I en kø
 #. what a keyboard shortcut does in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	In the categories: the selected category's menu	I kategoriene: menyen for den valgte kategorien
-#. text in transfer.rs
-#. in Import, after an address the download list has already
-#, machine
-	in the list	i listen
 #. text in standard windows
 #. a spin box's arrow, for screen readers: one more
 #, machine
@@ -1215,6 +1349,10 @@
 #. the torrent's identifier
 #, machine
 	Info hash	Info-hash
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window, under why
+#, machine
+	Install 7-Zip (free), then right-click the download and choose Extract.	Installer 7-Zip (gratis), høyreklikk deretter nedlastingen og velg Pakk ut.
 #. text in the Download video window
 #. button: download and install the ffmpeg program
 #, machine
@@ -1227,6 +1365,10 @@
 #. button: download and install the yt-dlp program
 #, machine
 	Install yt-dlp	Installer yt-dlp
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Into a folder named after it, when it holds several things	I en mappe oppkalt etter den, når den inneholder flere ting
 #. text in a dialog box
 #, machine
 	Invalid address	Ugyldig adresse
@@ -1234,10 +1376,35 @@
 #. Options → DNS over HTTPS: label before the server's IP addresses, which may be left empty
 #, machine
 	IP addresses (optional):	IP-adresser (valgfritt):
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it holds too many files or folders	den inneholder for mange filer eller mapper
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is damaged, or not the archive its name says	den er skadet, eller ikke det arkivet navnet sier
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it is not an archive MDM extracts	det er ikke et arkiv MDM pakker ut
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it needs a password	den trenger et passord
 #. text in the Add torrent window
 #. Torrent settings, under "Find peers on the local network"
 #, machine
 	It tells the computers on your network which torrents you have.	Den forteller datamaskinene på nettverket ditt hvilke torrenter du har.
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	it was stopped	den ble stoppet
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
+#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
+#, machine
+	it would write {size}, more than the {limit} there is room or reason for	den ville skrive {size}, mer enn {limit} det er plass eller grunn til
 #. text in the Batch download window
 #. \\n starts a new line: break lines where they fit the translation
 #, machine
@@ -1267,6 +1434,10 @@
 #. checkbox in the Add torrent window
 #, machine
 	Keep sharing torrents after they finish	Fortsett å dele torrenter etter at de er ferdige
+#. text in the Add torrent window
+#. Add trackers: under the box
+#, machine
+	Kept with the torrent, after the trackers it has.	Beholdes med torrenten, etter sporerne den har.
 #. window title in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	Keyboard shortcuts	Hurtigtaster
@@ -1315,8 +1486,17 @@
 #. Torrent settings: an upload speed limit for all torrents together, followed by a box with the speed and "KBytes/sec"
 #, machine
 	Limit uploading for all torrents to	Begrens opplasting for alle torrenter til
-#. message or event log entry in the main window
+#. window title in the Link grabber window; group box title in the Options window
+#. Options → Archives: group box title
+#, machine
+	Link grabber	Link grabber
+#. text in the Link grabber window
+#. what a screen reader calls Link grabber's list
+#, machine
+	Links	Koblinger
+#. message or event log entry in the main window; text in the Link grabber window
 #. in Import, where the addresses came from: a page in the browser
+#. in Link grabber, where the addresses came from: a page in the browser
 #, machine
 	Links from the browser	Koblinger fra nettleseren
 #. text in playlistdlg.rs
@@ -1351,6 +1531,10 @@
 #. noun: the user name and password section
 #, machine
 	Login	Pålogging
+#. checkbox in the Options window
+#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
+#, machine
+	Look links up when they arrive (name, size, online)	Slå opp koblinger når de kommer (navn, størrelse, online)
 #. text in the Add torrent window; button in the Download video window
 #, machine
 	Look up	Slå opp
@@ -1531,17 +1715,22 @@
 #. column title: connection number (abbreviation of Number)
 #, machine
 	N.	Nr.
-#. text in the Add torrent window
+#. text in the Link grabber window; text in the Add torrent window
 #. column title: file name
 #, machine
 	Name	Navn
-#. text in categories.rs
+#. text in categories.rs; text in the Link grabber window
+#. Link grabber: the package's name (a label before its box)
 #, machine
 	Name:	Navn:
 #. text in the Options window
 #. Options → DNS settings: what the DNS choice covers and what it doesn't
 #, machine
 	Names in your hosts file and local names (single words, .local, .lan) stay with the system's DNS. Video pages and torrent trackers use the system's DNS for now.	Navn i vertsfilen og lokale navn (enkeltord, .local, .lan) forblir med systemets DNS. Videosider og torrent-trackere bruker systemets DNS foreløpig.
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server wants a login (401, 403)
+#, machine
+	Needs a login	Trenger en pålogging
 #. text in the Options window
 #, machine
 	Network adapter:	Nettverksadapter:
@@ -1621,6 +1810,10 @@
 #. text in the Options window
 #, machine
 	No proxy/socks	Ingen proxy/SOCKS
+#. message or event log entry in the main window
+#. event log entry: Add trackers changed nothing, the torrent had them all
+#, machine
+	No tracker added: it has them already	Ingen sporer lagt til: den har dem allerede
 #. text in the Download video window
 #. the Download video window: yt-dlp found no video on the page
 #, machine
@@ -1645,6 +1838,10 @@
 #. text in the Checksum window
 #, machine
 	Not a checksum this can read	Ikke en kontrollsum som kan leses
+#. text in the Add torrent window
+#. Add trackers: a line that isn't a tracker's address (http, https or udp)
+#, machine
+	Not a tracker address: {line}	Ikke en sporeradresse: {line}
 #. text in errors.rs
 #, machine
 	not enough disk space: {needed} needed, {free} free	ikke nok diskplass: {needed} trengs, {free} ledig
@@ -1700,7 +1897,11 @@
 #. text in the Options window
 #, machine
 	Offer to download links copied to the clipboard	Tilby å laste ned koblinger som er kopiert til utklippstavlen
-#. button in the Batch download window; button in categories.rs; text in the Checksum window; button in a dialog box; text in the Help menu's windows (About, updates, shortcuts, Tell a friend); button in the Help menu's windows (About, updates, shortcuts, Tell a friend); button in langpick.rs; button in the Options window; button in a download's Properties window; button in the Scheduler window; button in the Add torrent window; button in transfer.rs
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
+#, machine
+	Offline ({status})	Frakoblet ({status})
+#. button in the Batch download window; button in categories.rs; text in the Checksum window; button in a dialog box; text in extracting archives (a download's log, the Archive password window); text in the Help menu's windows (About, updates, shortcuts, Tell a friend); button in the Help menu's windows (About, updates, shortcuts, Tell a friend); button in langpick.rs; button in the Options window; button in a download's Properties window; button in the Scheduler window; button in the Add torrent window
 #, machine
 	OK	OK
 #. text in a download's progress window
@@ -1718,6 +1919,10 @@
 #. option (radio button) in the Scheduler window
 #, machine
 	One-time downloading	Engangs nedlasting
+#. text in the Link grabber window
+#. Link grabber, a link's status: the server has the file
+#, machine
+	Online	Tilkoblet
 #. text in a download's Properties window
 #. tooltip of the greyed Move button in File Properties
 #, machine
@@ -1791,22 +1996,35 @@
 #. text in the Options window
 #, machine
 	Or paste your API token:	Eller lim inn din API-token:
+#. text in the Link grabber window
+#. Link grabber: the box that edits the selected package
+#, machine
+	Package	Pakke
 #. text in gallerydlg.rs; text in the Download video window
 #, machine
 	Page address	Sideadresse
 #. text in the Batch download window; text in a dialog box; label in the Options window; text in the Options window; text in a download's Properties window
 #, machine
 	Password	Passord
-#. text in the Options window
+#. text in the Link grabber window; text in the Options window
+#. Link grabber: the package's archives' password (a label before its box)
 #, machine
 	Password:	Passord:
 #. text in the Add torrent window
 #, machine
 	Paste a magnet link or choose a .torrent file, then Look up.	Lim inn en magnetlenke eller velg en .torrent-fil, og klikk deretter Slå opp.
+#. text in the Link grabber window
+#. Link grabber, while it is empty
+#, machine
+	Paste links here (Ctrl+V), or send a page's links from the browser.	Lim inn koblinger her (Ctrl+V), eller send en sides koblinger fra nettleseren.
 #. text in the Checksum window
 #. why Verify / OK is greyed in Verify checksum
 #, machine
 	Paste the checksum the download's page gives	Lim inn kontrollsummen nedlastingssiden oppgir
+#. text in the Link grabber window
+#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
+#, machine
+	Pasted	Limt inn
 #. text in a download's progress window
 #. verb: pause the download
 #, machine
@@ -1932,6 +2150,11 @@
 #. the helpers are downloaded, checked and ready; {list} = names and versions, e.g. "yt-dlp 2026.10.26, ffmpeg 9.0"
 #, machine
 	Ready: {list}	Klar: {list}
+#. message or event log entry in the main window
+#. event log entry: Reannounce failed, with the reason
+#. {error} = an error message (keep the braces as they are)
+#, machine
+	Reannounce failed: {error}	Kunne ikke kunngjøre på nytt: {error}
 #. text in a download's progress window
 #. column title: how much came from the peer
 #, machine
@@ -1940,6 +2163,11 @@
 #. the trailing ... means it is still going on: keep it
 #, machine
 	Receiving data...	Mottar data ...
+#. message or event log entry in the main window
+#. event log entry: Recheck failed, with the reason
+#. {error} = an error message (keep the braces as they are)
+#, machine
+	Recheck failed: {error}	Kunne ikke kontrollere på nytt: {error}
 #. message or event log entry in the main window
 #. window title, verb: download the file again from the start
 #, machine
@@ -2031,6 +2259,10 @@
 #. text in a download's progress window; text in a download's Properties window
 #, machine
 	Save To:	Lagre i:
+#. text in the Link grabber window
+#. Link grabber: the folder the package's files go to (a label before its box)
+#, machine
+	Save to:	Lagre til:
 #. text in a download's progress window
 #. label before the folder the torrent is saved in
 #, machine
@@ -2054,7 +2286,7 @@
 #. title of the folder picker
 #, machine
 	Select a folder	Velg en mappe
-#. button in playlistdlg.rs; button in the Add torrent window; button in transfer.rs
+#. button in playlistdlg.rs; button in the Add torrent window
 #. button in Download video for a playlist: tick every video
 #, machine
 	Select all	Merk alle
@@ -2064,7 +2296,7 @@
 #. what a keyboard shortcut does in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	Select every download up to this one	Merk alle nedlastinger opp til denne
-#. button in playlistdlg.rs; button in the Add torrent window; button in transfer.rs
+#. button in playlistdlg.rs; button in the Add torrent window
 #. button in Download video for a playlist: untick every video
 #, machine
 	Select none	Fjern merking av alle
@@ -2242,7 +2474,7 @@
 #. text in helpers.rs
 #, machine
 	Sites send their best quality as separate video and audio. ffmpeg puts them together into one file that plays anywhere.	Nettsteder sender sin beste kvalitet som separate video- og lydfiler. ffmpeg setter dem sammen til én fil som kan spilles av hvor som helst.
-#. text in a download's progress window; text in the Scheduler window; text in the Add torrent window
+#. text in the Link grabber window; text in a download's progress window; text in the Scheduler window; text in the Add torrent window
 #. column title: the file's size
 #. column title: file size
 #, machine
@@ -2282,6 +2514,11 @@
 #. link (opens a web page) in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	Source code	Kildekode
+#. text in the Link grabber window
+#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
+#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
+#, machine
+	Source: {source}	Kilde: {source}
 #. text in a download's progress window; text in the tray icon's menu
 #. tab title: the tool that limits the download speed
 #, machine
@@ -2289,6 +2526,10 @@
 #. window title in a dialog box
 #, machine
 	Speed Limiter settings	Innstillinger for hastighetsbegrenser
+#. text in the Link grabber window
+#. Link grabber button: download the ticked links now
+#, machine
+	Start	Start
 #. button in a dialog box
 #, machine
 	Start Download	Start nedlasting
@@ -2335,7 +2576,7 @@
 #. column title: the account's state (premium, days left)
 #, machine
 	State	Status
-#. text in a download's progress window; text in the Scheduler window
+#. text in the Link grabber window; text in a download's progress window; text in the Scheduler window
 #. noun: label before the download's state
 #. column title: the download's state
 #, machine
@@ -2389,6 +2630,10 @@
 #. text in a download's progress window
 #, machine
 	Stops when the download finishes	Stopper når nedlastingen er fullført
+#. text in the Options window
+#. Options → Archives: where extracted files go
+#, machine
+	Straight into the archive's folder	Rett inn i arkivets mappe
 #. text in the Scheduler window
 #. Sunday, as short as a calendar's column head (two letters in English)
 #, machine
@@ -2416,6 +2661,10 @@
 #. message or event log entry in the main window
 #, machine
 	Synchronization queue	Synkroniseringskø
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	Oppgaver → Lenkegriper, eller nettleserens «Last ned alle lenker»:\nvolumene til et delt arkiv er én pakke, de andre lenkene på en side en annen.
 #. window title in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #, machine
 	Tell a friend	Fortell en venn
@@ -2449,6 +2698,20 @@
 #. text in a download's Properties window
 #, machine
 	The address must be an http(s) or ftp(s) address	Adressen må være en http(s)- eller ftp(s)-adresse
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Recycle Bin: it was kept	Arkivet kunne ikke flyttes til papirkurven: det ble beholdt
+#. text in extracting archives (a download's log, the Archive password window)
+#, machine
+	The archive could not be moved to the Trash: it was kept	Arkivet kunne ikke flyttes til søppelbøtten: det ble beholdt
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log: the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Recycle Bin	Arkivet ble flyttet til papirkurven
+#. text in extracting archives (a download's log, the Archive password window)
+#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
+#, machine
+	The archive was moved to the Trash	Arkivet ble flyttet til søppelbøtten
 #. text in the Download video window
 #, machine
 	The best qualities, MP3, Opus and FLAC need ffmpeg (about 80 MB).	De beste kvalitetene, MP3, Opus og FLAC, krever ffmpeg (ca. 80 MB).
@@ -2568,6 +2831,10 @@
 #. {algorithm} = a checksum algorithm such as "SHA-256" (keep the braces as they are)
 #, machine
 	the file's {algorithm} checksum doesn't match (the data is kept; redownload it)	filens {algorithm}-kontrollsum stemmer ikke overens (dataene beholdes; last ned på nytt)
+#. message or event log entry in the main window
+#. {error} = an error message (keep the braces as they are)
+#, machine
+	The files could not be chosen: {error}	Filene kunne ikke velges: {error}
 #. text in a dialog box
 #. {error} = an error message (keep the braces as they are)
 #, machine
@@ -2591,6 +2858,10 @@
 #. an error: the network adapter chosen in Options (a VPN's, usually) is off or gone; {adapter} its name
 #, machine
 	the network adapter {adapter} is not connected	nettverksadapteret {adapter} er ikke tilkoblet
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
+#, machine
+	the password is wrong	passordet er feil
 #. text in errors.rs
 #, machine
 	the path is too long for Windows: {path}	banen er for lang for Windows: {path}
@@ -2661,6 +2932,10 @@
 #. an error: the torrent is gone from the torrent session
 #, machine
 	the torrent is no longer there	torrenten er ikke lenger der
+#. message or event log entry in the main window
+#. {error} = an error message (keep the braces as they are)
+#, machine
+	The trackers could not be added: {error}	Sporerne kunne ikke legges til: {error}
 #. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
 #. {error} = an error message (keep the braces as they are)
 #, machine
@@ -2671,6 +2946,14 @@
 #. text in a download's Properties window
 #, machine
 	The web page from which this file was obtained:	Nettsiden denne filen ble hentet fra:
+#. text in the Options window
+#. Options → Archives check box
+#, machine
+	Then move the archives to the Recycle Bin	Flytt deretter arkivene til papirkurven
+#. text in the Options window
+#. Options → Archives check box (Linux and macOS)
+#, machine
+	Then move the archives to the Trash	Flytt deretter arkivene til søppelbøtten
 #. text in categories.rs
 #, machine
 	There is already a category with this name	Det finnes allerede en kategori med dette navnet
@@ -2802,6 +3085,11 @@
 #. tab title: the servers that list the peers
 #, machine
 	Trackers	Sporere
+#. text in the Add torrent window
+#. Add trackers: above the box; {name} is the torrent's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Trackers to add to {name}, one address a line:	Sporere som skal legges til {name}, én adresse per linje:
 #. text in a download's progress window
 #, machine
 	Transfer rate	Overføringshastighet
@@ -2876,6 +3164,10 @@
 #. text in a download's Properties window
 #, machine
 	Type:	Type:
+#. text in the Link grabber window
+#. Link grabber button (IDM's): untick every link
+#, machine
+	Uncheck all	Fjern merking av alle
 #. item in the Categories tree in the main window
 #. adjective: the downloads that are not complete yet
 #, machine
@@ -2977,6 +3269,10 @@
 #. text in a download's progress window
 #, machine
 	Value	Verdi
+#. text in the Link grabber window
+#. Link grabber: the package of links that belong to no other
+#, machine
+	Various files	Diverse filer
 #. text in the Checksum window
 #. both verbs: Verify = check the file now; Close = close the window
 #, machine
@@ -3014,6 +3310,11 @@
 #. text in the Options window
 #, machine
 	Virus checking settings	Innstillinger for virussjekk
+#. text in extracting archives (a download's log, the Archive password window)
+#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
+#. {n} = a number (keep the braces as they are)
+#, machine
+	volume {n} of it is missing	volum {n} av det mangler
 #. tooltip (why a control is greyed) in the Download video window
 #. why Download Now is greyed: a playlist's videos are still being listed
 #, machine
@@ -3035,12 +3336,13 @@
 #. where a download comes from: Web (web or FTP server) or Torrent (BitTorrent)
 #, machine
 	Web	Nett
-#. text in transfer.rs
-#, machine
-	Web addresses found in {file}:	Nettadresser funnet i {file}:
 #. text in the Scheduler window
 #, machine
 	Wednesday	Onsdag
+#. text in the Options window
+#. Options → Archives: a label before the list of where extracted files go
+#, machine
+	What an archive holds goes:	Innholdet i et arkiv går:
 #. text in crashui.rs
 #. crash report window: label of the box where the user describes what they did
 #, machine
@@ -3071,6 +3373,11 @@
 #. group box title in the Options window
 #, machine
 	Write dates and times	Skriv datoer og klokkeslett
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	Wrong password for {name}. Type it again:	Feil passord for {name}. Skriv det inn på nytt:
 #. text in the main window (menus, toolbar, Categories pane)
 #, machine
 	x	x
@@ -3121,6 +3428,10 @@
 #. helper name and what it does (yt-dlp is a program's name)
 #, machine
 	yt-dlp: finds the video	yt-dlp: finner videoen
+#. text in the Options window
+#. \\n starts a new line: break lines where they fit the translation
+#, machine
+	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP, 7Z, RAR, TAR, GZ og XZ; et delt arkiv (.part1.rar, .7z.001) når\nhvert volum er på plass. En fil som allerede finnes, beholdes: den nye nummereres.
 #. text in the Options window
 #. Options → Network adapter: an adapter with no address now (a VPN switched off, a cable out); {adapter} its name
 #, machine
@@ -3225,6 +3536,16 @@
 #. {name} = a file name; {error} = an error message (keep the braces as they are)
 #, machine
 	{name} could not be downloaded: {error}	{name} kunne ikke lastes ned: {error}
+#. text in extracting archives (a download's log, the Archive password window)
+#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} er et 7z- eller RAR-arkiv. MDM pakker ut disse med 7-Zip, som ikke er installert.
+#. text in extracting archives (a download's log, the Archive password window)
+#. in Archive password: {name} is the archive's file name
+#. {name} = a file name (keep the braces as they are)
+#, machine
+	{name} is protected by a password:	{name} er passordbeskyttet:
 #. text in the settings
 #. Options → DNS: this service can't be asked this way; {how} is e.g. "plain DNS"
 #. {name} = a file name (keep the braces as they are)
@@ -3240,7 +3561,7 @@
 #. {n} = a number (keep the braces as they are)
 #, machine
 	{n} of {total} chosen	{n} av {total} valgt
-#. text in transfer.rs
+#. text in the Link grabber window
 #. {n} = a number (keep the braces as they are)
 #, machine
 	{n} of {total} selected	{n} av {total} valgt
@@ -3636,6 +3957,12 @@ menu	&Keyboard shortcuts	&Hurtigtaster
 #, machine
 menu	&Language...	S&pråk...
 #. menu command in the main window
+#. Tasks menu: open Link grabber (links in packages, to tick before adding)
+#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	&Link grabber...	&Lenkegriper...
+#. menu command in the main window
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
 #, machine
 menu	&Options	&Alternativer
@@ -3705,6 +4032,10 @@ menu	Add batch download from &clipboard	Legg til gruppedownload fra utklipps&tav
 #. menu command in the main window
 #, machine
 menu	Add category	Legg til kategori
+#. menu command in the main window
+#. the trailing ... means it opens a window: keep it
+#, machine
+menu	Add trackers...	Legg til sporere...
 #. menu command in the main window
 #, machine
 menu	Arrange files	Ordne filer
@@ -3776,6 +4107,9 @@ menu	Check for &updates...	Se etter &oppdateringer...
 menu	Clear all &filters	Fjern alle &filtre
 #. menu command in the main window
 #, machine
+menu	Copy magnet link	Kopier magnetlenke
+#. menu command in the main window
+#, machine
 menu	Create new queue	Opprett ny kø
 #. menu command in standard windows
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
@@ -3805,6 +4139,10 @@ menu	E&xport	&Eksporter
 #. menu command in the main window
 #, machine
 menu	Edit queue	Rediger kø
+#. menu command in the main window
+#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
+#, machine
+menu	Extract	Pakk ut
 #. menu command in the main window
 #, machine
 menu	Find (Ctrl-F)	Søk (Ctrl+F)
@@ -3870,6 +4208,14 @@ menu	Properties	Egenskaper
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
 #, machine
 menu	R&edownload	Last &ned på nytt
+#. menu command in the main window
+#. right-click → Torrent: ask the torrent's trackers for peers again now
+#, machine
+menu	Reannounce	Kunngjør på nytt
+#. menu command in the main window
+#. right-click → Torrent: read every piece of the torrent's files again and check it
+#, machine
+menu	Recheck files	Kontroller filer på nytt
 #. menu command in the main window
 #. verb: download the file again from the start
 #, machine
@@ -3957,6 +4303,10 @@ menu	To &text file...	Til &tekstfil...
 #. noun: the toolbar (submenu of View with its settings)
 #, machine
 menu	Toolbar	Verktøylinje
+#. menu command in the main window
+#. right-click menu: the submenu of a torrent's own commands
+#, machine
+menu	Torrent	Torrent
 #. menu command in the main window
 #. & marks the keyboard shortcut letter: keep one & before a letter of the translation
 #. the trailing ... means it opens a window: keep it
@@ -4052,274 +4402,3 @@ unit	{n} MB	{n} MB
 #. {n} = a number (keep the braces as they are)
 #, machine
 unit	{n} MB/sec	{n} MB/sek
-#. count in extracting archives (a download's log, the Archive password window)
-#. in a download's log: {n} is a number of files, {folder} where they went
-#. {n} = a number (keep the braces as they are)
-#, machine
-@plural	Extracted {n} file to {folder}|Extracted {n} files to {folder}	Pakket ut {n} fil til {folder}|Pakket ut {n} filer til {folder}
-#. count in extracting archives (a download's log, the Archive password window)
-#. in a download's log, after extracting: entries of the archive not written (links, names that would leave the folder)
-#. {n} = a number (keep the braces as they are)
-#, machine
-@plural	{n} entry was left out (a link, or a name leading outside the folder)|{n} entries were left out (links, or names leading outside the folder)	{n} oppføring ble utelatt (en kobling, eller et navn som førte utenfor mappen)|{n} oppføringer ble utelatt (koblinger, eller navn som førte utenfor mappen)
-#. count in extracting archives (a download's log, the Archive password window)
-#. in a download's log, after extracting
-#. {n} = a number (keep the braces as they are)
-#, machine
-@plural	{n} file had the name of a file there already and was numbered|{n} files had the name of a file there already and were numbered	{n} fil hadde navnet til en fil som allerede var der og ble nummerert|{n} filer hadde navnet til en fil som allerede var der og ble nummerert
-#. window title in extracting archives (a download's log, the Archive password window)
-#. window title: 7-Zip (a program's name) must be installed
-#, machine
-	7-Zip needed	7-Zip er nødvendig
-#. text in the Options window
-#. Options → Archives: {path} is where 7-Zip's program is
-#, machine
-	7z and RAR archives are extracted by 7-Zip ({path}).	7z- og RAR-arkiver pakkes ut av 7-Zip ({path}).
-#. text in the Options window
-#. Options → Archives, when 7-Zip isn't installed
-#, machine
-	7z and RAR archives need 7-Zip (7-zip.org), which isn't installed.	7z- og RAR-arkiver krever 7-Zip (7-zip.org), som ikke er installert.
-#. text in extracting archives (a download's log, the Archive password window)
-#, machine
-	7z and RAR archives need 7-Zip, which isn't installed	7z- og RAR-arkiver krever 7-Zip, som ikke er installert
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	a volume of it is missing	et volum mangler
-#. text in the Link grabber window
-#. Link grabber: the package of links the download list has already
-#, machine
-	Already in the list	Allerede i listen
-#. text in the Options window
-#. Options → Archives: where extracted files go
-#, machine
-	Always into a folder named after it	Alltid i en mappe oppkalt etter den
-#. window title in extracting archives (a download's log, the Archive password window); text in extracting archives (a download's log, the Archive password window); text in the Link grabber window
-#. what a screen reader calls the Archive password window's box
-#. what a screen reader calls Link grabber's password box
-#, machine
-	Archive password	Arkivpassord
-#. group box title in the Options window; text in the Options window
-#. Options → Archives: group box title
-#. tab title: extracting downloaded archives, and Link grabber
-#, machine
-	Archives	Arkiver
-#. text in the Options window
-#. Options page title: extracting downloaded archives, and Link grabber
-#, machine
-	Archives and Link grabber	Arkiver og koblingsfanger
-#. text in the Link grabber window
-#. Link grabber, a link's status: the server asked to try later (429, 503)
-#, machine
-	Busy, try later	Opptatt, prøv senere
-#. message or event log entry in the main window
-#, machine
-	by Link grabber	av Link grabber
-#. text in the Link grabber window
-#. Link grabber button (IDM's): tick every link
-#, machine
-	Check all	Merk alle
-#. text in extracting archives (a download's log, the Archive password window)
-#. in a download's log: {name} is the archive's file name, {why} the reason
-#. {name} = a file name (keep the braces as they are)
-#, machine
-	Couldn't extract {name}: {why}	Kunne ikke pakke ut {name}: {why}
-#. checkbox in the Link grabber window
-#. Link grabber check box: after extracting, the archives go to the Recycle Bin
-#, machine
-	Delete archives after extracting	Slett arkiver etter utpakking
-#. text in the Link grabber window
-#. Link grabber, in the empty "Save to" box: each file goes to its category's folder (Options → Save to)
-#, machine
-	Each file's category folder	Hver fils kategorimappe
-#. button in extracting archives (a download's log, the Archive password window)
-#. button: extract the archive with the password typed
-#, machine
-	Extract	Pakk ut
-#. checkbox in the Options window
-#. Options → Archives check box (a Link grabber package has its own "Extract when done")
-#, machine
-	Extract archives when their download completes	Pakk ut arkiver når nedlastingen er fullført
-#. text in the Link grabber window
-#. Link grabber check box: extract the package's archives once they are downloaded
-#, machine
-	Extract when done	Pakk ut når ferdig
-#. text in extracting archives (a download's log, the Archive password window)
-#. the trailing ... means it is still going on: keep it
-#, machine
-	Extracting the archive...	Pakker ut arkivet...
-#. message or event log entry in the main window
-#. a download's status: its archive is being extracted (#37)
-#. the trailing ... means it is still going on: keep it
-#, machine
-	Extracting...	Pakker ut...
-#. text in extracting archives (a download's log, the Archive password window)
-#. button: opens 7-Zip's website (7-Zip is a program's name)
-#, machine
-	Get 7-Zip	Skaff 7-Zip
-#. checkbox in the Link grabber window; text in the Link grabber window; checkbox in the Options window
-#. Link grabber check box (IDM's "Hide HTML files"): links to web pages are not shown
-#, machine
-	Hide web pages	Skjul nettsider
-#. text in extracting archives (a download's log, the Archive password window)
-#. in the "7-Zip needed" window, under why
-#, machine
-	Install 7-Zip (free), then right-click the download and choose Extract.	Installer 7-Zip (gratis), høyreklikk deretter nedlastingen og velg Pakk ut.
-#. text in the Options window
-#. Options → Archives: where extracted files go
-#, machine
-	Into a folder named after it, when it holds several things	I en mappe oppkalt etter den, når den inneholder flere ting
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	it holds too many files or folders	den inneholder for mange filer eller mapper
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	it is damaged, or not the archive its name says	den er skadet, eller ikke det arkivet navnet sier
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	it is not an archive MDM extracts	det er ikke et arkiv MDM pakker ut
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	it needs a password	den trenger et passord
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	it was stopped	den ble stoppet
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: "); sizes like "4.00 GB"
-#. {size} = a file size such as "4.2 MB" (keep the braces as they are)
-#, machine
-	it would write {size}, more than the {limit} there is room or reason for	den ville skrive {size}, mer enn {limit} det er plass eller grunn til
-#. window title in the Link grabber window; group box title in the Options window
-#. Options → Archives: group box title
-#, machine
-	Link grabber	Link grabber
-#. text in the Link grabber window
-#. what a screen reader calls Link grabber's list
-#, machine
-	Links	Koblinger
-#. checkbox in the Options window
-#. Options → Archives → Link grabber check box (IDM's Download all links looks every link up)
-#, machine
-	Look links up when they arrive (name, size, online)	Slå opp koblinger når de kommer (navn, størrelse, online)
-#. text in the Link grabber window
-#. Link grabber, a link's status: the server wants a login (401, 403)
-#, machine
-	Needs a login	Trenger en pålogging
-#. text in the Link grabber window
-#. Link grabber, a link's status: the server hasn't the file; {status} is the HTTP code (404)
-#, machine
-	Offline ({status})	Frakoblet ({status})
-#. text in the Link grabber window
-#. Link grabber, a link's status: the server has the file
-#, machine
-	Online	Tilkoblet
-#. text in the Link grabber window
-#. Link grabber: the box that edits the selected package
-#, machine
-	Package	Pakke
-#. text in the Link grabber window
-#. Link grabber, while it is empty
-#, machine
-	Paste links here (Ctrl+V), or send a page's links from the browser.	Lim inn koblinger her (Ctrl+V), eller send en sides koblinger fra nettleseren.
-#. text in the Link grabber window
-#. Link grabber: where links came from: the clipboard (pasted with Ctrl+V)
-#, machine
-	Pasted	Limt inn
-#. text in the Link grabber window
-#. Link grabber: the folder the package's files go to (a label before its box)
-#, machine
-	Save to:	Lagre til:
-#. text in the Link grabber window
-#. Link grabber: {source} is where the links came from ("Links from the browser", a file's name, "Pasted")
-#. {source} = how the download was added, e.g. "from the browser" (keep the braces as they are)
-#, machine
-	Source: {source}	Kilde: {source}
-#. text in the Link grabber window
-#. Link grabber button: download the ticked links now
-#, machine
-	Start	Start
-#. text in the Options window
-#. Options → Archives: where extracted files go
-#, machine
-	Straight into the archive's folder	Rett inn i arkivets mappe
-#. text in the Options window
-#. \\n starts a new line: break lines where they fit the translation
-#, machine
-	Tasks → Link grabber, or the browser's "Download all links": a split\narchive's volumes are one package, the other links of a page another.	Oppgaver → Lenkegriper, eller nettleserens «Last ned alle lenker»:\nvolumene til et delt arkiv er én pakke, de andre lenkene på en side en annen.
-#. text in extracting archives (a download's log, the Archive password window)
-#, machine
-	The archive could not be moved to the Recycle Bin: it was kept	Arkivet kunne ikke flyttes til papirkurven: det ble beholdt
-#. text in extracting archives (a download's log, the Archive password window)
-#, machine
-	The archive could not be moved to the Trash: it was kept	Arkivet kunne ikke flyttes til søppelbøtten: det ble beholdt
-#. text in extracting archives (a download's log, the Archive password window)
-#. in a download's log: the downloaded archive, after it was extracted
-#, machine
-	The archive was moved to the Recycle Bin	Arkivet ble flyttet til papirkurven
-#. text in extracting archives (a download's log, the Archive password window)
-#. in a download's log (Linux and macOS): the downloaded archive, after it was extracted
-#, machine
-	The archive was moved to the Trash	Arkivet ble flyttet til søppelbøtten
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: ")
-#, machine
-	the password is wrong	passordet er feil
-#. text in the Options window
-#. Options → Archives check box
-#, machine
-	Then move the archives to the Recycle Bin	Flytt deretter arkivene til papirkurven
-#. text in the Options window
-#. Options → Archives check box (Linux and macOS)
-#, machine
-	Then move the archives to the Trash	Flytt deretter arkivene til søppelbøtten
-#. text in the Link grabber window
-#. Link grabber button (IDM's): untick every link
-#, machine
-	Uncheck all	Fjern merking av alle
-#. text in the Link grabber window
-#. Link grabber: the package of links that belong to no other
-#, machine
-	Various files	Diverse filer
-#. text in extracting archives (a download's log, the Archive password window)
-#. why an archive wasn't extracted (after "Couldn't extract {name}: "); {n} is the volume's number
-#. {n} = a number (keep the braces as they are)
-#, machine
-	volume {n} of it is missing	volum {n} av det mangler
-#. text in the Options window
-#. Options → Archives: a label before the list of where extracted files go
-#, machine
-	What an archive holds goes:	Innholdet i et arkiv går:
-#. text in extracting archives (a download's log, the Archive password window)
-#. in Archive password: {name} is the archive's file name
-#. {name} = a file name (keep the braces as they are)
-#, machine
-	Wrong password for {name}. Type it again:	Feil passord for {name}. Skriv det inn på nytt:
-#. text in the Options window
-#. \\n starts a new line: break lines where they fit the translation
-#, machine
-	ZIP, 7Z, RAR, TAR, GZ and XZ; a split archive (.part1.rar, .7z.001) once\nevery volume is in. A file there already is kept: the new one is numbered.	ZIP, 7Z, RAR, TAR, GZ og XZ; et delt arkiv (.part1.rar, .7z.001) når\nhvert volum er på plass. En fil som allerede finnes, beholdes: den nye nummereres.
-#. text in extracting archives (a download's log, the Archive password window)
-#. in the "7-Zip needed" window: {name} is the archive's file name; 7-Zip is a program's name
-#. {name} = a file name (keep the braces as they are)
-#, machine
-	{name} is a 7z or RAR archive. MDM extracts those with 7-Zip, which isn't installed.	{name} er et 7z- eller RAR-arkiv. MDM pakker ut disse med 7-Zip, som ikke er installert.
-#. text in extracting archives (a download's log, the Archive password window)
-#. in Archive password: {name} is the archive's file name
-#. {name} = a file name (keep the braces as they are)
-#, machine
-	{name} is protected by a password:	{name} er passordbeskyttet:
-#. menu command in the main window
-#. Tasks menu: open Link grabber (links in packages, to tick before adding)
-#. & marks the keyboard shortcut letter: keep one & before a letter of the translation
-#. the trailing ... means it opens a window: keep it
-#, machine
-menu	&Link grabber...	&Lenkegriper...
-#. menu command in the main window
-#. verb: unpack the downloaded archive (zip, 7z, rar) into its folder
-#, machine
-menu	Extract	Pakk ut

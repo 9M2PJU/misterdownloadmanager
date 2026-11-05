@@ -514,6 +514,10 @@
    "source": "Change which file types MDM takes →",
    "text": "MDM が取得するファイルの種類を変更する →"
   },
+  "0b8bc8a6db629a4c": {
+   "source": "Select part of a page and right-click it for <g1>Download selected links with Mister Download Manager</g1>, or right-click the page for <g2>Download all links with Mister Download Manager</g2>: the links open in <g3>Import</g3>, where you tick the ones you want.",
+   "text": "ページの一部を選択して右クリックし、<g1>Mister Download Manager で選択したリンクをダウンロード</g1>を選択するか、ページを右クリックして<g2>Mister Download Manager で全リンクをダウンロード</g2>を選択します。リンクは<g3>インポート</g3>で開き、必要なものをチェックします。"
+  },
   "0ba1ab7afd650160": {
    "source": "Getting started — Mister Download Manager help",
    "text": "Mister Download Manager ヘルプ — はじめに"
@@ -910,6 +914,10 @@
    "source": "Leave MDM running. Closing the main window is fine: MDM keeps going in the tray. Don't use <g1>Tasks → Exit</g1>.",
    "text": "MDMを実行したままにします。メインウィンドウを閉じても問題ありません。MDMはトレイで実行を続けます。<g1>タスク → 終了</g1>は使用しないでください。"
   },
+  "17c258da3c18b1a9": {
+   "source": "A <x1/> file fetched from a web address goes through the same checks as one opened from disk, and MDM reads at most 10 MB of it.",
+   "text": "ウェブアドレスから取得した<x1/>ファイルは、ディスクから開いたファイルと同じチェックを受け、MDMは最大10MBまで読み取ります。"
+  },
   "17eecf94501281e0": {
    "source": "For Fedora, openSUSE and RHEL: <x1/>.",
    "text": "Fedora、openSUSE、RHELの場合：<x1/>。"
@@ -1117,6 +1125,10 @@
   "1bad738cb3cea90f": {
    "source": "Select or unselect the download with the dotted outline",
    "text": "点線の枠線でダウンロードを選択または選択解除します"
+  },
+  "1bdc6a06e3384bd1": {
+   "source": "<g1>Tasks</g1> — add downloads, torrents, batch downloads and videos; show the drop target; import and export the list; exit.",
+   "text": "<g1>タスク</g1> — ダウンロード、トレント、バッチダウンロード、動画を追加します。ドロップターゲットを表示します。リストをインポートおよびエクスポートします。終了します。"
   },
   "1be93bd020009908": {
    "source": "<g1>The keyboard focus got lost</g1> when a button greyed itself or Escape closed a drop-down: Tab started over at the top of the window. It now moves on, or comes back, as in Windows.",
@@ -1561,6 +1573,10 @@
   "26ae5fbaf85f0fa2": {
    "source": "The portable copy of MDM runs from any folder, including a USB stick, without installing anything.",
    "text": "MDM のポータブル版は、USB スティックを含む任意のフォルダーから、何もインストールせずに実行できます。"
+  },
+  "26b803c1a0aa9d3e": {
+   "source": "Untick the addresses you don't want (<g1>Select all</g1> and <g2>Select none</g2> help), then click <g3>OK</g3>.",
+   "text": "不要なアドレスのチェックを外し（<g1>すべて選択</g1>と<g2>選択解除</g2>が役立ちます）、<g3>OK</g3>をクリックします。"
   },
   "26ee23631d3f7d09": {
    "source": "If an error message quotes something you typed, that text is in the report, so read it before sending.",
@@ -2234,6 +2250,10 @@
    "source": "Delete the selected downloads (asks first)",
    "text": "選択したダウンロードを削除 (最初に確認)"
   },
+  "38c2835e2c5124e2": {
+   "source": "<g1>Files</g1> — each file, its size and how much of it is done. Files you unticked show <g2>Skipped</g2>. Tick or untick a file's box to change what is downloaded, even while the torrent runs. At least one file stays ticked. If you untick everything still missing, the torrent finishes. If a finished torrent that isn't running gets a file back, it waits as stopped until you resume it, so nothing downloads unseen.",
+   "text": "<g1>ファイル</g1> — 各ファイル、そのサイズ、完了した割合。チェックを外したファイルは<g2>スキップ済み</g2>と表示されます。トレントの実行中でも、ファイルのボックスにチェックを入れたり外したりして、ダウンロードする内容を変更できます。少なくとも1つのファイルはチェックされたままになります。まだ不足しているすべてのファイルのチェックを外すと、トレントは完了します。実行中でない完了したトレントにファイルが戻された場合、再開するまで停止したままになり、何も見えないままダウンロードされることはありません。"
+  },
   "38d4b8570c497ca6": {
    "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers; it opens no UDP socket toward the network at all. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
    "text": "MDMのプロキシ / SOCKS設定は、ウェブおよびFTPダウンロード用です。トレントもSOCKS5プロキシを使用できます。<g2>オプション → プロキシ / SOCKS</g2>で<x1/>プロキシを設定し、トレント設定で<g3>プロキシを使用する</g3>をオンにしてください。このプロキシはピアとウェブトラッカーへの接続のみをカバーするため、MDMはDHT、ローカルピア探索、受信接続、UDPトラッカーをオフにします。ネットワークに対してUDPソケットを一切開きません。このスイッチがオンの状態でプロキシ / SOCKSからプロキシがなくなると、トレントはプロキシを迂回せずに開始されません。"
@@ -2770,6 +2790,10 @@
    "source": "<g1>Downloads</g1>: the Windows installer, a portable zip and a plain zip, the browser extension on its own (a zip for Chromium browsers, an <x2/> for Firefox, always the app's version), and <g3>macOS and Linux to try</g3>: a universal <x4/> and an AppImage, <x5/>, <x6/> and <x7/>, marked <x8/> because they are untested by us. There, MDM connects itself to Chrome, Edge, Brave, Vivaldi and Firefox, has its tray icon, follows the system's light or dark look and uses the system's fonts and ffmpeg. Tell us how they work for you.",
    "text": "<g1>ダウンロード</g1>: Windowsインストーラー、ポータブルzip、プレーンzip、ブラウザ拡張機能単体（Chromiumブラウザ用zip、Firefox用<x2/>、常にアプリのバージョン）、および<g3>試用版macOSとLinux</g3>: ユニバーサル<x4/>とAppImage、<x5/>、<x6/>、<x7/>。これらは当社でテストされていないため<x8/>とマークされています。これらでは、MDMはChrome、Edge、Brave、Vivaldi、Firefoxに接続し、トレイアイコンを持ち、システムのライトまたはダークの外観に従い、システムのフォントとffmpegを使用します。これらの動作についてご意見をお聞かせください。"
   },
+  "465d49cb6ee5a2c9": {
+   "source": "Torrent commands",
+   "text": "トレントコマンド"
+  },
   "4693601d27da4c66": {
    "source": "<g1>DNS over HTTPS</g1> (the default) or <g2>DNS over TLS</g2>: encrypted, so nobody on the way sees or changes the names you look up.",
    "text": "<g1>DNS over HTTPS</g1>（デフォルト）または <g2>DNS over TLS</g2>：暗号化されているため、途中で誰も検索した名前を見たり変更したりできません。"
@@ -2877,6 +2901,10 @@
   "49cf385ddabeea71": {
    "source": "<g1>PAC</g1><g2>proxy scripts</g2>",
    "text": "<g1>PAC</g1><g2>プロキシスクリプト</g2>"
+  },
+  "49e22ffa819f63a8": {
+   "source": "Right-click a torrent in the list and open <g1>Torrent</g1>:",
+   "text": "リスト内のトレントを右クリックし、<g1>トレント</g1>を開きます。"
   },
   "4a07096e6a9abc54": {
    "source": "The download list in detail →",
@@ -3501,6 +3529,10 @@
   "5c4282dcd31a167d": {
    "source": "Why IDM users switch",
    "text": "IDMユーザーが乗り換える理由"
+  },
+  "5c676fc93de738f4": {
+   "source": "<g1>Copy magnet link</g1> — copies a magnet link for the torrent, with its trackers.",
+   "text": "<g1>マグネットリンクをコピー</g1> — トレントのマグネットリンクを、そのトラッカーと共にコピーします。"
   },
   "5cb4c44654c9c90d": {
    "source": "<g1>Pick an issue</g1><g2>See what's open and lend a hand.</g2>",
@@ -4533,6 +4565,10 @@
   "75d11e79303ec689": {
    "source": "A network adapter",
    "text": "ネットワークアダプター"
+  },
+  "75f7cfcbf2ebf842": {
+   "source": "A <x1/> file's web address works too: paste it into <g2>Add URL</g2> or <g3>Torrent</g3>, or let the browser hand the download over. MDM fetches the file, with the browser's cookies when the browser sent it, and <g4>Add torrent</g4> shows what it holds. The browser hands <x5/> downloads over because <x6/> is in <g7>Options → File types</g7>. It's there by default; a list you had before this version keeps what it had, so add <x8/> to it yourself. <g9>Download with Mister Download Manager</g9> on a link always hands it over. A command line with <x10/> (silent) saves the <x11/> file itself, like any file. MDM fetches at most 10 MB: anything bigger isn't a <x12/> file.",
+   "text": "<x1/> ファイルのウェブアドレスも使えます。<g2>URL を追加</g2>または<g3>トレント</g3>に貼り付けるか、ブラウザにダウンロードを渡させます。MDM は、ブラウザが送信した場合はブラウザのクッキーと共にファイルをフェッチし、<g4>トレントを追加</g4>にその内容を表示します。ブラウザが<x5/>ダウンロードを渡すのは、<x6/>が<g7>オプション → ファイルの種類</g7>にあるためです。これはデフォルトで設定されていますが、このバージョン以前のリストをお持ちの場合は、ご自身で<x8/>を追加してください。リンク上の<g9>Mister Download Manager でダウンロード</g9>は常にダウンロードを渡します。<x10/>（サイレント）付きのコマンドラインは、他のファイルと同様に<x11/>ファイル自体を保存します。MDM は最大 10 MB をフェッチします。それより大きいものは<x12/>ファイルではありません。"
   },
   "76215a248670b754": {
    "source": "<g1><g2>Troubleshooting</g2></g1> — what to check when a download fails, the browser doesn't hand over a download, or a schedule doesn't start.",
@@ -6234,6 +6270,10 @@
    "source": "Run <x1/> with MDM running.",
    "text": "MDMが実行されている状態で<x1/>を実行してください。"
   },
+  "a43f559b321cf278": {
+   "source": "A torrent names the trackers MDM asks for peers. MDM doesn't contact a tracker on your own computer or your local network (<x1/>, <x2/>, <x3/> and the like), so a torrent can't make MDM send requests into the network it sits in. <g4>Add trackers...</g4> follows the same rule: it refuses such an address and tells you why, rather than keeping one that would never be asked.",
+   "text": "トレントは、MDMがピアを要求するトラッカーの名前です。MDMは、お使いのコンピューターやローカルネットワーク（<x1/>、<x2/>、<x3/>など）上のトラッカーには接続しないため、トレントによってMDMがそのネットワークにリクエストを送信することはありません。<g4>トラッカーの追加...</g4>も同じルールに従います。そのようなアドレスは拒否され、その理由が通知されます。これは、決して要求されないアドレスを保持するよりも良いからです。"
+  },
   "a4573dce0e5e5aa1": {
    "source": "Continue a paused or broken download from the <x1/> file next to it.",
    "text": "一時停止または中断されたダウンロードを、隣にある<x1/>ファイルから再開します。"
@@ -6313,6 +6353,10 @@
   "a65e3187925f9f37": {
    "source": "256 KiB file over a fast local link",
    "text": "高速ローカルリンク経由の256 KiBファイル"
+  },
+  "a66ea1a086f2705b": {
+   "source": "<g1>Add trackers...</g1> — adds trackers, one address a line (<x2/>, <x3/> or <x4/>). They are kept with the torrent, after the ones it has, and the <g5>Trackers</g5> tab shows them. A tracker on your computer or your local network is refused: MDM never contacts those (<g6>why</g6>).",
+   "text": "<g1>トラッカーの追加...</g1> — トラッカーを追加します（1行に1アドレス、<x2/>、<x3/>、または<x4/>）。それらはトレントと共に、既存のものの後に保持され、<g5>トラッカー</g5>タブに表示されます。お使いのコンピュータまたはローカルネットワーク上のトラッカーは拒否されます。MDMはそれらに連絡することはありません（<g6>理由</g6>）。"
   },
   "a67015ec28a9f976": {
    "source": "Yes. MDM writes its progress as it goes, so after a lost connection, a crash or a restart it carries on where it stopped. Before resuming it checks that the…",
@@ -6397,6 +6441,10 @@
   "a839d0f1595e9f40": {
    "source": "<g1>Resume</g1>, <g2>Stop</g2>, <g3>Remove</g3> and the queue commands then act on all the selected downloads. The other commands need one download. The full list of keys is in <g4>Keyboard shortcuts</g4>.",
    "text": "<g1>再開</g1>、<g2>停止</g2>、<g3>削除</g3>、およびキューコマンドは、選択されたすべてのダウンロードに作用します。その他のコマンドは1つのダウンロードが必要です。キーの完全なリストは<g4>キーボード ショートカット</g4>にあります。"
+  },
+  "a857d379729447f1": {
+   "source": "Open Downloads → Options, or click Options on the toolbar. The window has eight pages on two rows of tabs. OK saves your changes; closing the window or…",
+   "text": "ダウンロード → オプションを開くか、ツールバーのオプションをクリックします。ウィンドウには、2列のタブに8つのページがあります。OKで変更を保存し、ウィンドウを閉じるか…"
   },
   "a86bb434620d319d": {
    "source": "Yes, built in: open a .torrent file or paste a magnet link, tick the files you want in the folder tree, and the torrent downloads in the same list as…",
@@ -7026,6 +7074,10 @@
    "source": "Install with the setup",
    "text": "セットアップによるインストール"
   },
+  "b88bda5a82ad2252": {
+   "source": "Each command's outcome goes into the torrent's event log; hover its <g1>Status</g1> cell in the list to read it.",
+   "text": "各コマンドの結果はトレントのイベントログに入ります。リストの<g1>状態</g1>セルにカーソルを合わせると読むことができます。"
+  },
   "b89df2939f6581e5": {
    "source": "Properties",
    "text": "プロパティ"
@@ -7209,6 +7261,10 @@
   "bddff41f922f3579": {
    "source": "<g1>Number of retries for each file if downloading failed</g1> — how often a failed download is tried again before the queue gives up on it. Without it, MDM keeps trying.",
    "text": "<g1>ダウンロードに失敗した場合の各ファイルの再試行回数</g1> — 失敗したダウンロードをキューがあきらめるまでに何回再試行するか。これがない場合、MDMは試行し続けます。"
+  },
+  "bde4e642fb008c91": {
+   "source": "Drag a link from a browser (or a page's text with links in it) onto the list to add it: one link opens <g1>Download File Info</g1>, several open <g2>Import</g2> to choose which to add. Drop a <x3/> file to add the torrent, or a list of addresses (<x4/>, <x5/>) to import it. The list is outlined while something you can drop is over it. On macOS and Linux, files can be dropped (links from a browser only on Windows).",
+   "text": "ブラウザからリンク（またはリンクを含むページのテキスト）をリストにドラッグすると、追加されます。1つのリンクは<g1>ダウンロード ファイル情報</g1>を開き、複数ある場合は<g2>インポート</g2>を開いて追加するものを選択します。<x3/>ファイルをドロップするとトレントが追加され、アドレスのリスト（<x4/>、<x5/>）をドロップするとインポートされます。ドロップ可能なものがリストの上にある間は、リストがアウトライン表示されます。macOSとLinuxではファイルをドロップできます（ブラウザからのリンクはWindowsのみ）。"
   },
   "bdee109ce7ca5da7": {
    "source": "There are several ways to give MDM something to download. Most of them end in the same window, <g1>Download File Info</g1>, where you choose where the file goes.",
@@ -7618,6 +7674,10 @@
    "source": "MDM reads the torrent and shows its files as a folder tree. A <x1/> file is read at once. A magnet link first has to get the file list from other peers, which can take a minute or two.",
    "text": "MDM はトレントを読み取り、そのファイルをフォルダーツリーとして表示します。<x1/> ファイルは一度に読み取られます。マグネットリンクは、まず他のピアからファイルリストを取得する必要があり、これには1〜2分かかる場合があります。"
   },
+  "c991e64b857c5509": {
+   "source": "<g1>Reannounce</g1> — asks the torrent's trackers for peers again now, instead of waiting for their next round. It works while the torrent runs or is shared.",
+   "text": "<g1>再アナウンス</g1> — 次のラウンドを待つ代わりに、今すぐトレントのトラッカーにピアを再度要求します。トレントが実行中または共有中に機能します。"
+  },
   "c9d39512b1b393af": {
    "source": "Google Chrome, Microsoft Edge, Brave, Opera and Vivaldi, through the MDM browser extension, and browsers built on them such as Helium. Firefox support, which also covers Zen and LibreWolf, is written and in testing. The extension hands downloads to MDM with their cookies and referrer, so files behind a sign-in still work, and it adds <g1>Download with Mister Download Manager</g1> to the right-click menu and a <g2>Download video</g2> button over videos. See <g3>Browser integration</g3>.",
    "text": "Google Chrome、Microsoft Edge、Brave、Opera、Vivaldi、およびHeliumなどのそれらをベースにしたブラウザは、MDMブラウザ拡張機能を通じて動作します。ZenやLibreWolfも含むFirefoxのサポートは、現在開発中でテスト中です。この拡張機能は、ダウンロードをクッキーとリファラーと共にMDMに渡し、サインインが必要なファイルもダウンロードできるようにします。また、右クリックメニューに<g1>Mister Download Manager でダウンロード</g1>を追加し、動画の上に<g2>動画をダウンロード</g2>ボタンを表示します。<g3>ブラウザ統合</g3>をご覧ください。"
@@ -7813,6 +7873,10 @@
   "cf5e8ed8c0381b7f": {
    "source": "Browsers built on them work too: Chromium and Helium take the extension as Chrome does, Zen and LibreWolf as Firefox does. On Windows, Zen has a bug of its own (see <g1>The browser and MDM aren't connected</g1>).",
    "text": "これらをベースにしたブラウザでも動作します。ChromiumとHeliumはChromeと同様に拡張機能を使用し、ZenとLibreWolfはFirefoxと同様に拡張機能を使用します。Windowsでは、Zen独自のバグがあります（<g1>ブラウザとMDMが接続されていません</g1>を参照）。"
+  },
+  "cf86019a0378cdea": {
+   "source": "The downloads join the <g1>Main download queue</g1>, ready to start. <g2>Tasks → Import → From IDM export file</g2> reads an <x3/> file, with each download's referrer and cookies.",
+   "text": "ダウンロードは<g1>メインダウンロードキュー</g1>に追加され、開始準備が整います。<g2>タスク → インポート → IDM エクスポート ファイルから</g2>は、各ダウンロードのリファラーとCookieを含む<x3/>ファイルを読み取ります。"
   },
   "cf98a5beeacc1f82": {
    "source": "Report what's broken, ask for what's missing, fix a translation or send a pull request. The maintainer reads every issue.",
@@ -8910,6 +8974,10 @@
    "source": "<g1>What happened:</g1> the error and the place in MDM's code where it happened.",
    "text": "<g1>何が起こったか:</g1> エラーと、MDM のコード内でそれが起こった場所。"
   },
+  "ee9034f4bfe810cf": {
+   "source": "<g1>Recheck files</g1> — reads every piece of the torrent's files and checks it, for example after you moved files in or a disk had errors. A running torrent goes on afterwards and fetches what is missing. A stopped one stays stopped. Its event log says how much was found: a finished torrent with a damaged piece becomes stopped, and resuming it fetches the piece again.",
+   "text": "<g1>ファイルの再確認</g1> — トレントのファイルのすべてのピースを読み取り、チェックします。例えば、ファイルを移動した後やディスクにエラーがあった場合などです。実行中のトレントはその後も続行し、不足しているものをフェッチします。停止中のトレントは停止したままです。イベントログには見つかった量が示されます。破損したピースを持つ完了したトレントは停止状態になり、再開するとそのピースが再度フェッチされます。"
+  },
   "eea0683af36fb9e8": {
    "source": "Something not working? We'd like to know.",
    "text": "何か問題がありますか？ぜひお知らせください。"
@@ -9094,6 +9162,10 @@
    "source": "<g1>Peers</g1> — the computers you are downloading from, with how much you received from and sent to each.",
    "text": "<g1>ピア</g1> — ダウンロード元のコンピューターと、それぞれから受信および送信した量。"
   },
+  "f326e0e0a7971afa": {
+   "source": "Open <g1>Downloads → Options</g1>, or click <g2>Options</g2> on the toolbar. The window has eight pages on two rows of tabs. <g3>OK</g3> saves your changes; closing the window or pressing <g4>Esc</g4> throws them away.",
+   "text": "<g1>ダウンロード → オプション</g1>を開くか、ツールバーの<g2>オプション</g2>をクリックします。ウィンドウには、2列のタブに8つのページがあります。<g3>OK</g3>で変更が保存され、ウィンドウを閉じるか<g4>Esc</g4>を押すと変更は破棄されます。"
+  },
   "f344e5dfcec067d9": {
    "source": "The downloads go to a queue. As with Download Later, MDM asks which queue unless you turn off <g1>Options → Downloads → Show queue selection panel on closing batch download dialogs</g1>.",
    "text": "ダウンロードはキューに入ります。「後でダウンロード」と同様に、<g1>オプション → ダウンロード → 一括ダウンロード ダイアログを閉じるときにキュー選択パネルを表示</g1>をオフにしない限り、MDMはどのキューに入れるか尋ねます。"
@@ -9169,6 +9241,10 @@
   "f575c52354f70221": {
    "source": "Free forever, no ads, no trial",
    "text": "永久無料、広告なし、試用期間なし"
+  },
+  "f59f701cec440f8e": {
+   "source": "Pick the file. <g1>Import downloads</g1> lists every web address MDM found in it.",
+   "text": "ファイルを選択します。<g1>ダウンロードをインポート</g1>には、MDMがそのファイル内で見つけたすべてのウェブアドレスがリストされます。"
   },
   "f5d0db4c9a23ece3": {
    "source": "<g1><g2>Adding downloads</g2></g1> — Add URL, the clipboard, the drop target, batch downloads and lists of links, and Start Download versus Download Later.",

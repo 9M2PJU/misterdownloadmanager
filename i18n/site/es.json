@@ -514,6 +514,10 @@
    "source": "Change which file types MDM takes →",
    "text": "Cambiar qué tipos de archivo gestiona MDM →"
   },
+  "0b8bc8a6db629a4c": {
+   "source": "Select part of a page and right-click it for <g1>Download selected links with Mister Download Manager</g1>, or right-click the page for <g2>Download all links with Mister Download Manager</g2>: the links open in <g3>Import</g3>, where you tick the ones you want.",
+   "text": "Seleccione parte de una página y haga clic derecho en ella para <g1>Descargar enlaces seleccionados con Mister Download Manager</g1>, o haga clic derecho en la página para <g2>Descargar todos los enlaces con Mister Download Manager</g2>: los enlaces se abren en <g3>Importar</g3>, donde marca los que desea."
+  },
   "0ba1ab7afd650160": {
    "source": "Getting started — Mister Download Manager help",
    "text": "Primeros pasos — Ayuda de Mister Download Manager"
@@ -910,6 +914,10 @@
    "source": "Leave MDM running. Closing the main window is fine: MDM keeps going in the tray. Don't use <g1>Tasks → Exit</g1>.",
    "text": "Deja MDM en ejecución. Cerrar la ventana principal está bien: MDM sigue funcionando en la bandeja. No uses <g1>Tareas → Salir</g1>."
   },
+  "17c258da3c18b1a9": {
+   "source": "A <x1/> file fetched from a web address goes through the same checks as one opened from disk, and MDM reads at most 10 MB of it.",
+   "text": "Un archivo <x1/> obtenido de una dirección web pasa por las mismas comprobaciones que uno abierto desde el disco, y MDM lee como máximo 10 MB de él."
+  },
   "17eecf94501281e0": {
    "source": "For Fedora, openSUSE and RHEL: <x1/>.",
    "text": "Para Fedora, openSUSE y RHEL: <x1/>."
@@ -1117,6 +1125,10 @@
   "1bad738cb3cea90f": {
    "source": "Select or unselect the download with the dotted outline",
    "text": "Seleccionar o anular la selección de la descarga con el contorno punteado"
+  },
+  "1bdc6a06e3384bd1": {
+   "source": "<g1>Tasks</g1> — add downloads, torrents, batch downloads and videos; show the drop target; import and export the list; exit.",
+   "text": "<g1>Tareas</g1> — añadir descargas, torrents, descargas por lotes y vídeos; mostrar el destino de arrastre; importar y exportar la lista; salir."
   },
   "1be93bd020009908": {
    "source": "<g1>The keyboard focus got lost</g1> when a button greyed itself or Escape closed a drop-down: Tab started over at the top of the window. It now moves on, or comes back, as in Windows.",
@@ -1561,6 +1573,10 @@
   "26ae5fbaf85f0fa2": {
    "source": "The portable copy of MDM runs from any folder, including a USB stick, without installing anything.",
    "text": "La copia portátil de MDM se ejecuta desde cualquier carpeta, incluida una memoria USB, sin necesidad de instalar nada."
+  },
+  "26b803c1a0aa9d3e": {
+   "source": "Untick the addresses you don't want (<g1>Select all</g1> and <g2>Select none</g2> help), then click <g3>OK</g3>.",
+   "text": "Desmarque las direcciones que no desee (<g1>Seleccionar todo</g1> y <g2>No seleccionar ninguno</g2> le ayudarán), luego haga clic en <g3>Aceptar</g3>."
   },
   "26ee23631d3f7d09": {
    "source": "If an error message quotes something you typed, that text is in the report, so read it before sending.",
@@ -2234,6 +2250,10 @@
    "source": "Delete the selected downloads (asks first)",
    "text": "Eliminar las descargas seleccionadas (pregunta primero)"
   },
+  "38c2835e2c5124e2": {
+   "source": "<g1>Files</g1> — each file, its size and how much of it is done. Files you unticked show <g2>Skipped</g2>. Tick or untick a file's box to change what is downloaded, even while the torrent runs. At least one file stays ticked. If you untick everything still missing, the torrent finishes. If a finished torrent that isn't running gets a file back, it waits as stopped until you resume it, so nothing downloads unseen.",
+   "text": "<g1>Archivos</g1>: cada archivo, su tamaño y cuánto se ha completado. Los archivos que desmarcó muestran <g2>Omitido</g2>. Marque o desmarque la casilla de un archivo para cambiar lo que se descarga, incluso mientras el torrent está en ejecución. Al menos un archivo permanece marcado. Si desmarca todo lo que aún falta, el torrent finaliza. Si un torrent finalizado que no está en ejecución recupera un archivo, espera detenido hasta que lo reanude, para que nada se descargue sin ser visto."
+  },
   "38d4b8570c497ca6": {
    "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers; it opens no UDP socket toward the network at all. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
    "text": "La configuración de Proxy/Socks de MDM es para descargas web y FTP. Los torrents también pueden usar un SOCKS5: configure un <x1/> proxy en <g2>Opciones → Proxy/Socks</g2> y active <g3>Usar el proxy</g3> en Configuración de torrents. El proxy solo cubre las conexiones a pares y rastreadores web, por lo que con él MDM desactiva DHT, el descubrimiento local de pares, las conexiones entrantes y los rastreadores UDP; no abre ningún socket UDP hacia la red. Si el proxy desaparece de Proxy/Socks mientras ese interruptor está activado, los torrents no se inician en lugar de omitirlo."
@@ -2770,6 +2790,10 @@
    "source": "<g1>Downloads</g1>: the Windows installer, a portable zip and a plain zip, the browser extension on its own (a zip for Chromium browsers, an <x2/> for Firefox, always the app's version), and <g3>macOS and Linux to try</g3>: a universal <x4/> and an AppImage, <x5/>, <x6/> and <x7/>, marked <x8/> because they are untested by us. There, MDM connects itself to Chrome, Edge, Brave, Vivaldi and Firefox, has its tray icon, follows the system's light or dark look and uses the system's fonts and ffmpeg. Tell us how they work for you.",
    "text": "<g1>Descargas</g1>: el instalador de Windows, un zip portable y un zip simple, la extensión del navegador por sí sola (un zip para navegadores Chromium, un <x2/> para Firefox, siempre la versión de la aplicación), y <g3>macOS y Linux para probar</g3>: un <x4/> universal y un AppImage, <x5/>, <x6/> y <x7/>, marcados <x8/> porque no han sido probados por nosotros. Allí, MDM se conecta a Chrome, Edge, Brave, Vivaldi y Firefox, tiene su icono en la bandeja, sigue el aspecto claro u oscuro del sistema y utiliza las fuentes y ffmpeg del sistema. Cuéntanos cómo te funcionan."
   },
+  "465d49cb6ee5a2c9": {
+   "source": "Torrent commands",
+   "text": "Comandos de torrent"
+  },
   "4693601d27da4c66": {
    "source": "<g1>DNS over HTTPS</g1> (the default) or <g2>DNS over TLS</g2>: encrypted, so nobody on the way sees or changes the names you look up.",
    "text": "<g1>DNS sobre HTTPS</g1> (el predeterminado) o <g2>DNS sobre TLS</g2>: cifrado, para que nadie en el camino vea o cambie los nombres que busca."
@@ -2877,6 +2901,10 @@
   "49cf385ddabeea71": {
    "source": "<g1>PAC</g1><g2>proxy scripts</g2>",
    "text": "<g1>Scripts de proxy</g1><g2> PAC</g2>"
+  },
+  "49e22ffa819f63a8": {
+   "source": "Right-click a torrent in the list and open <g1>Torrent</g1>:",
+   "text": "Haga clic derecho en un torrent de la lista y abra <g1>Torrent</g1>:"
   },
   "4a07096e6a9abc54": {
    "source": "The download list in detail →",
@@ -3501,6 +3529,10 @@
   "5c4282dcd31a167d": {
    "source": "Why IDM users switch",
    "text": "Por qué los usuarios de IDM cambian"
+  },
+  "5c676fc93de738f4": {
+   "source": "<g1>Copy magnet link</g1> — copies a magnet link for the torrent, with its trackers.",
+   "text": "<g1>Copiar enlace magnet</g1>: copia un enlace magnet para el torrent, con sus rastreadores."
   },
   "5cb4c44654c9c90d": {
    "source": "<g1>Pick an issue</g1><g2>See what's open and lend a hand.</g2>",
@@ -4533,6 +4565,10 @@
   "75d11e79303ec689": {
    "source": "A network adapter",
    "text": "Un adaptador de red"
+  },
+  "75f7cfcbf2ebf842": {
+   "source": "A <x1/> file's web address works too: paste it into <g2>Add URL</g2> or <g3>Torrent</g3>, or let the browser hand the download over. MDM fetches the file, with the browser's cookies when the browser sent it, and <g4>Add torrent</g4> shows what it holds. The browser hands <x5/> downloads over because <x6/> is in <g7>Options → File types</g7>. It's there by default; a list you had before this version keeps what it had, so add <x8/> to it yourself. <g9>Download with Mister Download Manager</g9> on a link always hands it over. A command line with <x10/> (silent) saves the <x11/> file itself, like any file. MDM fetches at most 10 MB: anything bigger isn't a <x12/> file.",
+   "text": "La dirección web de un archivo <x1/> también funciona: péguela en <g2>Añadir URL</g2> o <g3>Torrent</g3>, o deje que el navegador entregue la descarga. MDM obtiene el archivo, con las cookies del navegador si este lo envió, y <g4>Añadir torrent</g4> muestra lo que contiene. El navegador entrega las descargas <x5/> porque <x6/> está en <g7>Opciones → Tipos de archivo</g7>. Está ahí por defecto; una lista que tuviera antes de esta versión mantiene lo que tenía, así que añada <x8/> usted mismo. <g9>Descargar con Mister Download Manager</g9> en un enlace siempre lo entrega. Una línea de comandos con <x10/> (silencioso) guarda el propio archivo <x11/>, como cualquier archivo. MDM obtiene como máximo 10 MB: cualquier cosa más grande no es un archivo <x12/>."
   },
   "76215a248670b754": {
    "source": "<g1><g2>Troubleshooting</g2></g1> — what to check when a download fails, the browser doesn't hand over a download, or a schedule doesn't start.",
@@ -6234,6 +6270,10 @@
    "source": "Run <x1/> with MDM running.",
    "text": "Ejecute <x1/> con MDM en ejecución."
   },
+  "a43f559b321cf278": {
+   "source": "A torrent names the trackers MDM asks for peers. MDM doesn't contact a tracker on your own computer or your local network (<x1/>, <x2/>, <x3/> and the like), so a torrent can't make MDM send requests into the network it sits in. <g4>Add trackers...</g4> follows the same rule: it refuses such an address and tells you why, rather than keeping one that would never be asked.",
+   "text": "Un torrent nombra los rastreadores a los que MDM pide pares. MDM no contacta con un rastreador en su propio ordenador o en su red local (<x1/>, <x2/>, <x3/> y similares), por lo que un torrent no puede hacer que MDM envíe solicitudes a la red en la que se encuentra. <g4>Añadir rastreadores...</g4> sigue la misma regla: rechaza dicha dirección y le explica por qué, en lugar de mantener una que nunca se solicitaría."
+  },
   "a4573dce0e5e5aa1": {
    "source": "Continue a paused or broken download from the <x1/> file next to it.",
    "text": "Continuar una descarga pausada o rota desde el archivo <x1/> que está junto a ella."
@@ -6313,6 +6353,10 @@
   "a65e3187925f9f37": {
    "source": "256 KiB file over a fast local link",
    "text": "Archivo de 256 KiB a través de un enlace local rápido"
+  },
+  "a66ea1a086f2705b": {
+   "source": "<g1>Add trackers...</g1> — adds trackers, one address a line (<x2/>, <x3/> or <x4/>). They are kept with the torrent, after the ones it has, and the <g5>Trackers</g5> tab shows them. A tracker on your computer or your local network is refused: MDM never contacts those (<g6>why</g6>).",
+   "text": "<g1>Añadir rastreadores...</g1>: añade rastreadores, una dirección por línea (<x2/>, <x3/> o <x4/>). Se guardan con el torrent, después de los que ya tiene, y la pestaña <g5>Rastreadores</g5> los muestra. Se rechaza un rastreador en su ordenador o en su red local: MDM nunca contacta con ellos (<g6>por qué</g6>)."
   },
   "a67015ec28a9f976": {
    "source": "Yes. MDM writes its progress as it goes, so after a lost connection, a crash or a restart it carries on where it stopped. Before resuming it checks that the…",
@@ -6397,6 +6441,10 @@
   "a839d0f1595e9f40": {
    "source": "<g1>Resume</g1>, <g2>Stop</g2>, <g3>Remove</g3> and the queue commands then act on all the selected downloads. The other commands need one download. The full list of keys is in <g4>Keyboard shortcuts</g4>.",
    "text": "<g1>Reanudar</g1>, <g2>Detener</g2>, <g3>Quitar</g3> y los comandos de cola actúan entonces sobre todas las descargas seleccionadas. Los demás comandos necesitan una descarga. La lista completa de teclas está en <g4>Métodos abreviados de teclado</g4>."
+  },
+  "a857d379729447f1": {
+   "source": "Open Downloads → Options, or click Options on the toolbar. The window has eight pages on two rows of tabs. OK saves your changes; closing the window or…",
+   "text": "Abra Descargas → Opciones, o haga clic en Opciones en la barra de herramientas. La ventana tiene ocho páginas en dos filas de pestañas. Aceptar guarda los cambios; cerrar la ventana o…"
   },
   "a86bb434620d319d": {
    "source": "Yes, built in: open a .torrent file or paste a magnet link, tick the files you want in the folder tree, and the torrent downloads in the same list as…",
@@ -7026,6 +7074,10 @@
    "source": "Install with the setup",
    "text": "Instalar con el programa de instalación"
   },
+  "b88bda5a82ad2252": {
+   "source": "Each command's outcome goes into the torrent's event log; hover its <g1>Status</g1> cell in the list to read it.",
+   "text": "El resultado de cada comando se guarda en el registro de eventos del torrent; pase el ratón por su celda <g1>Estado</g1> en la lista para leerlo."
+  },
   "b89df2939f6581e5": {
    "source": "Properties",
    "text": "Propiedades"
@@ -7209,6 +7261,10 @@
   "bddff41f922f3579": {
    "source": "<g1>Number of retries for each file if downloading failed</g1> — how often a failed download is tried again before the queue gives up on it. Without it, MDM keeps trying.",
    "text": "<g1>Número de reintentos para cada archivo si la descarga falló</g1>: cuántas veces se intenta de nuevo una descarga fallida antes de que la cola la abandone. Sin esto, MDM sigue intentándolo."
+  },
+  "bde4e642fb008c91": {
+   "source": "Drag a link from a browser (or a page's text with links in it) onto the list to add it: one link opens <g1>Download File Info</g1>, several open <g2>Import</g2> to choose which to add. Drop a <x3/> file to add the torrent, or a list of addresses (<x4/>, <x5/>) to import it. The list is outlined while something you can drop is over it. On macOS and Linux, files can be dropped (links from a browser only on Windows).",
+   "text": "Arrastre un enlace de un navegador (o el texto de una página con enlaces) a la lista para añadirlo: un enlace abre <g1>Información del archivo de descarga</g1>, varios abren <g2>Importar</g2> para elegir cuáles añadir. Suelte un archivo <x3/> para añadir el torrent, o una lista de direcciones (<x4/>, <x5/>) para importarla. La lista se resalta mientras algo que puede soltar está sobre ella. En macOS y Linux, se pueden soltar archivos (enlaces de un navegador solo en Windows)."
   },
   "bdee109ce7ca5da7": {
    "source": "There are several ways to give MDM something to download. Most of them end in the same window, <g1>Download File Info</g1>, where you choose where the file goes.",
@@ -7618,6 +7674,10 @@
    "source": "MDM reads the torrent and shows its files as a folder tree. A <x1/> file is read at once. A magnet link first has to get the file list from other peers, which can take a minute or two.",
    "text": "MDM lee el torrent y muestra sus archivos como un árbol de carpetas. Un archivo <x1/> se lee al instante. Un enlace magnet primero tiene que obtener la lista de archivos de otros pares, lo que puede tardar uno o dos minutos."
   },
+  "c991e64b857c5509": {
+   "source": "<g1>Reannounce</g1> — asks the torrent's trackers for peers again now, instead of waiting for their next round. It works while the torrent runs or is shared.",
+   "text": "<g1>Volver a anunciar</g1>: pide a los rastreadores del torrent que busquen pares de nuevo ahora, en lugar de esperar a su siguiente ronda. Funciona mientras el torrent está en ejecución o se comparte."
+  },
   "c9d39512b1b393af": {
    "source": "Google Chrome, Microsoft Edge, Brave, Opera and Vivaldi, through the MDM browser extension, and browsers built on them such as Helium. Firefox support, which also covers Zen and LibreWolf, is written and in testing. The extension hands downloads to MDM with their cookies and referrer, so files behind a sign-in still work, and it adds <g1>Download with Mister Download Manager</g1> to the right-click menu and a <g2>Download video</g2> button over videos. See <g3>Browser integration</g3>.",
    "text": "Google Chrome, Microsoft Edge, Brave, Opera y Vivaldi, a través de la extensión de navegador de MDM, y navegadores basados en ellos como Helium. El soporte para Firefox, que también cubre Zen y LibreWolf, está escrito y en fase de pruebas. La extensión transfiere las descargas a MDM con sus cookies y referente, para que los archivos detrás de un inicio de sesión sigan funcionando, y añade <g1>Descargar con Mister Download Manager</g1> al menú contextual y un botón <g2>Descargar vídeo</g2> sobre los vídeos. Véase <g3>Integración con el navegador</g3>."
@@ -7813,6 +7873,10 @@
   "cf5e8ed8c0381b7f": {
    "source": "Browsers built on them work too: Chromium and Helium take the extension as Chrome does, Zen and LibreWolf as Firefox does. On Windows, Zen has a bug of its own (see <g1>The browser and MDM aren't connected</g1>).",
    "text": "Los navegadores basados en ellos también funcionan: Chromium y Helium usan la extensión como Chrome, y Zen y LibreWolf como Firefox. En Windows, Zen tiene un error propio (consulte <g1>El navegador y MDM no están conectados</g1>)."
+  },
+  "cf86019a0378cdea": {
+   "source": "The downloads join the <g1>Main download queue</g1>, ready to start. <g2>Tasks → Import → From IDM export file</g2> reads an <x3/> file, with each download's referrer and cookies.",
+   "text": "Las descargas se unen a la <g1>Cola de descarga principal</g1>, listas para comenzar. <g2>Tareas → Importar → Desde archivo de exportación de IDM</g2> lee un archivo <x3/>, con el referente y las cookies de cada descarga."
   },
   "cf98a5beeacc1f82": {
    "source": "Report what's broken, ask for what's missing, fix a translation or send a pull request. The maintainer reads every issue.",
@@ -8910,6 +8974,10 @@
    "source": "<g1>What happened:</g1> the error and the place in MDM's code where it happened.",
    "text": "<g1>Qué ocurrió:</g1> el error y el lugar en el código de MDM donde ocurrió."
   },
+  "ee9034f4bfe810cf": {
+   "source": "<g1>Recheck files</g1> — reads every piece of the torrent's files and checks it, for example after you moved files in or a disk had errors. A running torrent goes on afterwards and fetches what is missing. A stopped one stays stopped. Its event log says how much was found: a finished torrent with a damaged piece becomes stopped, and resuming it fetches the piece again.",
+   "text": "<g1>Volver a comprobar archivos</g1>: lee y comprueba cada pieza de los archivos del torrent, por ejemplo, después de haber movido archivos o de que un disco tuviera errores. Un torrent en ejecución continúa después y obtiene lo que falta. Uno detenido permanece detenido. Su registro de eventos indica cuánto se encontró: un torrent finalizado con una pieza dañada pasa a estar detenido, y al reanudarlo se vuelve a obtener la pieza."
+  },
   "eea0683af36fb9e8": {
    "source": "Something not working? We'd like to know.",
    "text": "¿Algo no funciona? Nos gustaría saberlo."
@@ -9094,6 +9162,10 @@
    "source": "<g1>Peers</g1> — the computers you are downloading from, with how much you received from and sent to each.",
    "text": "<g1>Pares</g1> — los ordenadores desde los que está descargando, con cuánto ha recibido y enviado a cada uno."
   },
+  "f326e0e0a7971afa": {
+   "source": "Open <g1>Downloads → Options</g1>, or click <g2>Options</g2> on the toolbar. The window has eight pages on two rows of tabs. <g3>OK</g3> saves your changes; closing the window or pressing <g4>Esc</g4> throws them away.",
+   "text": "Abra <g1>Descargas → Opciones</g1>, o haga clic en <g2>Opciones</g2> en la barra de herramientas. La ventana tiene ocho páginas en dos filas de pestañas. <g3>Aceptar</g3> guarda los cambios; cerrar la ventana o pulsar <g4>Esc</g4> los descarta."
+  },
   "f344e5dfcec067d9": {
    "source": "The downloads go to a queue. As with Download Later, MDM asks which queue unless you turn off <g1>Options → Downloads → Show queue selection panel on closing batch download dialogs</g1>.",
    "text": "Las descargas van a una cola. Al igual que con Descargar más tarde, MDM pregunta a qué cola, a menos que desactive <g1>Opciones → Descargas → Mostrar panel de selección de cola al cerrar los diálogos de descarga por lotes</g1>."
@@ -9169,6 +9241,10 @@
   "f575c52354f70221": {
    "source": "Free forever, no ads, no trial",
    "text": "Gratis para siempre, sin anuncios, sin prueba"
+  },
+  "f59f701cec440f8e": {
+   "source": "Pick the file. <g1>Import downloads</g1> lists every web address MDM found in it.",
+   "text": "Seleccione el archivo. <g1>Importar descargas</g1> enumera cada dirección web que MDM encontró en él."
   },
   "f5d0db4c9a23ece3": {
    "source": "<g1><g2>Adding downloads</g2></g1> — Add URL, the clipboard, the drop target, batch downloads and lists of links, and Start Download versus Download Later.",
