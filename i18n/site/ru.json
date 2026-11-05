@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "ваши адреса загрузки или имена файлов;"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "В Firefox MDM видит прокси, который использовал собственный запрос браузера для файла, включая те, которые расширение VPN выбирает для каждого запроса. В Chrome, Edge, Brave, Opera и Vivaldi он видит настройки прокси браузера."
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "Если браузер не использовал прокси и выбрано <g1>Без прокси/SOCKS</g1>, MDM использует настройки прокси Windows, как это делают браузеры."
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "Его разрешения и причины: <g1>downloads</g1> для просмотра и передачи загрузок; <g2>cookies</g2>, чтобы загрузки с авторизацией работали в MDM; <g3>nativeMessaging</g3> для связи с MDM; <g4>contextMenus</g4> для элементов контекстного меню; <g5>storage</g5> для его настроек; <g6>webRequest</g6> для просмотра отправленных форм и загруженных видеопотоков (ничего не меняет); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge и другие браузеры на Chromium) для загрузки файлов, которые браузер открыл бы (PDF), вместо этого, для типов, которые MDM принимает; в Firefox <g8>webRequestBlocking</g8> делает это; <g9>scripting</g9> для чтения ссылок страницы по вашему запросу и для добавления кнопки видео на уже открытые страницы при установке расширения; <g10>proxy</g10> для чтения того, какой прокси использует браузер, чтобы загрузки, взятые из браузера за VPN или прокси-расширением, также проходили через него (никогда не меняет прокси браузера); доступ ко всем сайтам, потому что загрузки и видео могут поступать с любого сайта."
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "Всё можно сделать с клавиатуры, и MDM работает со скринридерами (такими как Narrator и NVDA в Windows): его окна, диалоги и меню сообщают им, что представляет собой каждый элемент управления и его состояние, а список загрузок читает название, статус и размер каждой загрузки."
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>Использовать прокси/SOCKS из запроса браузера…</g1> — включено по умолчанию. Загрузка, которую MDM получает от браузера, проходит через прокси, который браузер использовал для неё. Это тот прокси, который установлен расширением VPN или прокси, собственный ручной прокси браузера или его скрипт автонастройки прокси. Без него загрузка пошла бы с вашего собственного адреса, и контент, ограниченный страной VPN или его адресом, не загрузился бы. Расширение браузера считывает этот прокси и передаёт его MDM с каждой загрузкой."
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "Настройки Прокси / Socks в MDM предназначены для загрузок из интернета и FTP. Торренты также могут использовать SOCKS5: установите <x1/> прокси в <g2>Параметры → Прокси / Socks</g2> и включите <g3>Использовать прокси</g3> в Настройках торрента. Прокси охватывает только соединения с пирами и веб-трекерами, поэтому при его использовании MDM отключает DHT, обнаружение локальных пиров, входящие соединения и UDP-трекеры. Если прокси исчезает из Прокси / Socks, пока этот переключатель включён, торренты не запускаются, а не обходят его."
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "Чтобы маршрутизировать <g1>всё</g1> через другую сеть, используйте VPN для всего компьютера. MDM не может привязать торренты к одному сетевому адаптеру в Windows."
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "Когда браузер использует прокси для загрузки (установленный VPN или расширением прокси, либо в его настройках), расширение передает <g1>адрес прокси</g1> или его <g2>скрипт автонастройки прокси</g2>, чтобы MDM загружал через тот же прокси. Оно никогда не читает и не передает логин прокси. Оно лишь отмечает, что прокси запросил его, чтобы MDM мог сообщить вам, что не может использовать этот прокси."
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "Плейлисты и миксы"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "Прокси, который запрашивает логин, предоставляемый самим расширением VPN, не может быть общим: ни у одной другой программы нет этого логина. Загрузка тогда останавливается и сообщает об этом, вместо того чтобы идти без прокси. Используйте собственное приложение VPN или выберите его адаптер в разделе <g1>Сетевой адаптер</g1>."
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "Загрузить файл, используя до 8 соединений (<x1/>, от 1 до 128), с отображением прогресса. <x2/> приостанавливает загрузку; <x3/> продолжает. <x4/> проверяет готовый файл: шестнадцатеричный MD5, SHA-1, SHA-256, SHA-512 или CRC32, с возможностью указания имени (<x5/>). <x6/> выбирает DNS: <x7/> (по умолчанию); сервис и способ запроса, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; адреса DNS-серверов, <x13/>; или адрес DNS-over-HTTPS. Он никогда не возвращается к системному DNS."
   }
  }
 }

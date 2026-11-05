@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "ダウンロードアドレスまたはファイル名。"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "Firefoxでは、MDMはブラウザ自身のファイルリクエストが使用したプロキシ（VPN拡張機能が各リクエストに選択するものを含む）を認識します。Chrome、Edge、Brave、Opera、Vivaldiでは、ブラウザのプロキシ設定を認識します。"
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "ブラウザがプロキシを使用せず、<g1>プロキシ/SOCKS なし</g1>が選択されている場合、MDMはブラウザと同様にWindowsのプロキシ設定を使用します。"
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "その権限と理由：ダウンロードを表示してMDMに渡すための<g1>downloads</g1>；MDMでサインインしたダウンロードが機能するための<g2>cookies</g2>；MDMと通信するための<g3>nativeMessaging</g3>；右クリック項目用の<g4>contextMenus</g4>；設定用の<g5>storage</g5>；送信されたフォームと読み込まれたビデオストリームを見るための<g6>webRequest</g6>（何も変更しません）；ブラウザが開くファイル（PDFなど）をMDMが処理するタイプの場合に代わりにダウンロードさせるための<g7>declarativeNetRequestWithHostAccess</g7>（Chrome、Edge、その他のChromiumブラウザ）；Firefoxでは<g8>webRequestBlocking</g8>がそれを行います；要求されたときにページのリンクを読み取り、拡張機能がインストールされたときにすでに開いているページにビデオボタンを追加するための<g9>scripting</g9>；ブラウザが使用するプロキシを読み取り、VPNまたはプロキシ拡張機能の背後にあるブラウザからのダウンロードもそれを通るようにするための<g10>proxy</g10>（ブラウザのプロキシを変更することはありません）；ダウンロードやビデオはどのサイトからでも来る可能性があるため、すべてのサイトへのアクセス。"
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "すべての操作はキーボードから実行でき、MDMはスクリーンリーダー（WindowsのナレーターやNVDAなど）に対応しています。ウィンドウ、ダイアログ、メニューは、各コントロールとその状態をスクリーンリーダーに伝え、ダウンロードリストは各ダウンロードの名前、ステータス、サイズを読み上げます。"
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>ブラウザのリクエストからのプロキシ/SOCKSを使用…</g1> — デフォルトでオン。MDMがブラウザから取得するダウンロードは、ブラウザがそのために使用したプロキシを経由します。これは、VPNまたはプロキシ拡張機能が設定したもの、ブラウザ自身の手動プロキシ、またはそのプロキシ自動設定スクリプトです。これがないと、ダウンロードはユーザー自身のIPアドレスから行われ、VPNの国またはそのIPアドレスに限定されたコンテンツは失敗します。ブラウザ拡張機能はそのプロキシを読み取り、各ダウンロードとともにMDMに渡します。"
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "MDMのプロキシ / SOCKS設定は、ウェブおよびFTPダウンロード用です。トレントもSOCKS5を使用できます。<g2>オプション → プロキシ / SOCKS</g2>で<x1/>プロキシを設定し、トレント設定で<g3>プロキシを使用する</g3>をオンにします。プロキシはピアとウェブトラッカーへの接続のみをカバーするため、MDMはDHT、ローカルピア検出、受信接続、UDPトラッカーをオフにします。そのスイッチがオンの間にプロキシがプロキシ / SOCKSからなくなると、トレントはそれを回避するのではなく、開始されません。"
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "<g1>すべて</g1>を別のネットワーク経由でルーティングするには、コンピューター全体でVPNを使用してください。MDMは、Windowsでトレントを1つのネットワークアダプターに結び付けることはできません。"
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "ブラウザがそのダウンロードにプロキシを使用している場合（VPNまたはプロキシ拡張機能、あるいはブラウザの設定で設定されている場合）、拡張機能は<g1>プロキシのアドレス</g1>、または<g2>プロキシ自動設定スクリプト</g2>を渡すため、MDMは同じプロキシを介してダウンロードします。プロキシのログイン情報を読み取ったり渡したりすることは決してありません。プロキシがログイン情報を要求したことのみを記録し、MDMがそのプロキシを使用できないことを通知できるようにします。"
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "プレイリストとミックス"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "VPN拡張機能が自身に与えるログインを要求するプロキシは共有できません。他のプログラムはそのログインを持たないためです。その場合、ダウンロードはプロキシなしで進行するのではなく、停止してその旨を伝えます。VPN自身のアプリを使用するか、<g1>ネットワークアダプター</g1>でそのアダプターを選択してください。"
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "最大8接続（<x1/>、1～128）でファイルをダウンロードし、進捗を表示します。<x2/>で一時停止、<x3/>で再開します。<x4/>は完了したファイルをチェックします。オプションで名前を指定して（<x5/>）Hex MD5、SHA-1、SHA-256、SHA-512、またはCRC32をチェックします。<x6/>はDNSを選択します。<x7/>（デフォルト）、サービスと問い合わせ方法（<x8/>、<x9/>、<x10/>、<x11/>、<x12/>）、DNSサーバーのアドレス（<x13/>）、またはDNS-over-HTTPSアドレスです。システムのDNSには決してフォールバックしません。"
   }
  }
 }

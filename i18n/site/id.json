@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "alamat unduhan atau nama file Anda;"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "Di Firefox, MDM melihat proksi yang digunakan oleh permintaan peramban itu sendiri untuk berkas, termasuk yang dipilih oleh ekstensi VPN untuk setiap permintaan. Di Chrome, Edge, Brave, Opera, dan Vivaldi, MDM melihat pengaturan proksi peramban."
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "Ketika peramban tidak menggunakan proksi, dan <g1>Tanpa proksi/socks</g1> dipilih, MDM menggunakan pengaturan proksi Windows, seperti yang dilakukan peramban."
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "Izinnya, dan alasannya: <g1>downloads</g1> untuk melihat dan menyerahkan unduhan; <g2>cookies</g2> agar unduhan yang masuk berfungsi di MDM; <g3>nativeMessaging</g3> untuk berkomunikasi dengan MDM; <g4>contextMenus</g4> untuk item klik kanan; <g5>storage</g5> untuk pengaturannya; <g6>webRequest</g6> untuk melihat formulir yang dikirimkan dan aliran video yang dimuat (tidak mengubah apa pun); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge, dan peramban Chromium lainnya) agar berkas yang akan dibuka peramban (PDF) diunduh sebagai gantinya, untuk jenis yang diambil MDM; di Firefox, <g8>webRequestBlocking</g8> melakukan hal itu; <g9>scripting</g9> untuk membaca tautan halaman saat Anda meminta, dan untuk menambahkan tombol video ke halaman yang sudah terbuka saat ekstensi diinstal; <g10>proxy</g10> untuk membaca proksi yang digunakan peramban, sehingga unduhan yang diambil dari peramban di balik VPN atau ekstensi proksi juga melewatinya (tidak pernah mengubah proksi peramban); akses ke semua situs karena unduhan dan video dapat berasal dari situs mana pun."
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "Semuanya dapat dilakukan dari keyboard, dan MDM bekerja dengan pembaca layar (seperti Narrator dan NVDA di Windows): jendela, dialog, dan menunya memberi tahu mereka apa setiap kontrol dan statusnya, serta daftar unduhan membaca nama, status, dan ukuran setiap unduhan."
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>Gunakan proksi/socks dari permintaan peramban…</g1> — aktif secara baku. Unduhan yang MDM ambil dari peramban akan melalui proksi yang digunakan peramban untuk unduhan tersebut. Itu adalah proksi yang diatur oleh ekstensi VPN atau proksi, proksi manual peramban itu sendiri, atau skrip konfigurasi otomatis proksi. Tanpa itu, unduhan akan berasal dari alamat Anda sendiri, dan konten yang terbatas pada negara VPN, atau alamatnya, akan gagal. Ekstensi peramban membaca proksi tersebut dan menyerahkannya ke MDM dengan setiap unduhan."
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "Pengaturan Proksi / Socks MDM adalah untuk unduhan web dan FTP. Torrent juga dapat menggunakan SOCKS5: atur proksi <x1/> di <g2>Opsi → Proksi / Socks</g2> dan aktifkan <g3>Gunakan proksi</g3> di Pengaturan torrent. Proksi hanya mencakup koneksi ke rekan dan pelacak web, jadi dengan itu MDM mematikan DHT, penemuan rekan lokal, koneksi masuk, dan pelacak UDP. Jika proksi hilang dari Proksi / Socks saat pengaturan itu aktif, torrent tidak akan dimulai daripada melewatinya."
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "Untuk merutekan <g1>semuanya</g1> melalui jaringan lain, gunakan VPN untuk seluruh komputer. MDM tidak dapat mengikat torrent ke satu adaptor jaringan di Windows."
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "Ketika peramban menggunakan proksi untuk unduhan tersebut (diatur oleh VPN atau ekstensi proksi, atau di pengaturannya), ekstensi meneruskan <g1>alamat proksi</g1>, atau <g2>skrip konfigurasi otomatis proksi</g2>, sehingga MDM mengunduh melalui proksi yang sama. Ekstensi tidak pernah membaca atau meneruskan login proksi. Ekstensi hanya mencatat bahwa proksi meminta login, sehingga MDM dapat memberi tahu Anda bahwa ia tidak dapat menggunakan proksi tersebut."
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "Daftar putar dan campuran"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "Proksi yang meminta login yang diberikan oleh ekstensi VPN itu sendiri tidak dapat dibagikan: tidak ada program lain yang memiliki login tersebut. Unduhan kemudian berhenti dan memberitahukannya, daripada berjalan tanpa proksi. Gunakan aplikasi VPN itu sendiri, atau pilih adaptornya di bawah <g1>Adaptor jaringan</g1>."
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "Mengunduh file dengan hingga 8 koneksi (<x1/>, 1 hingga 128), menampilkan progres. <x2/> menjeda; <x3/> melanjutkan. <x4/> memeriksa file yang sudah selesai: hex MD5, SHA-1, SHA-256, SHA-512, atau CRC32, dengan nama opsional (<x5/>). <x6/> memilih DNS: <x7/> (default); layanan dan cara memintanya, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; alamat server DNS, <x13/>; atau alamat DNS-over-HTTPS. Ini tidak pernah kembali ke DNS sistem."
   }
  }
 }

@@ -23,6 +23,8 @@ Everything below ships together, in one release.
 - ✅ Tests and test tools stay on 127.0.0.1: no Windows Firewall questions while developing
 - ✅ Downloads through one network adapter (a VPN's), with a kill switch: nothing goes out
   another way when it disconnects ([#35](https://github.com/anefzaoui/misterdownloadmanager/issues/35))
+- ✅ Downloads from a browser behind a VPN or proxy extension go through the same proxy
+  ([#42](https://github.com/anefzaoui/misterdownloadmanager/issues/42))
 - ✅ Hide to the notification area: a download's progress window (its own button, or Minimize)
   and the main window's Minimize, with the tray's "Downloads in progress"
   ([#63](https://github.com/anefzaoui/misterdownloadmanager/issues/63))
@@ -117,8 +119,6 @@ Everything below ships together, in one release.
 
 - 📋 Video pages, and torrents on Windows, through a chosen network adapter
   ([#35](https://github.com/anefzaoui/misterdownloadmanager/issues/35))
-- 📋 Downloads follow a browser's VPN or proxy extension
-  ([#42](https://github.com/anefzaoui/misterdownloadmanager/issues/42))
 
 ### Browser extension
 

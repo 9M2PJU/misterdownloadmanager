@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "您的下载地址或文件名；"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "在 Firefox 中，MDM 会看到浏览器自身对文件请求所使用的代理，包括 VPN 扩展为每个请求选择的代理。在 Chrome、Edge、Brave、Opera 和 Vivaldi 中，它会看到浏览器的代理设置。"
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "当浏览器未使用代理，并且选择了<g1>无代理/SOCKS</g1>时，MDM 会像浏览器一样使用 Windows 的代理设置。"
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "其权限及原因：<g1>下载</g1>用于查看和移交下载；<g2>Cookie</g2>用于使已登录的下载在 MDM 中工作；<g3>nativeMessaging</g3>用于与 MDM 通信；<g4>contextMenus</g4>用于右键菜单项；<g5>存储</g5>用于其设置；<g6>webRequest</g6>用于查看提交的表单和加载的视频流（它不更改任何内容）；<g7>declarativeNetRequestWithHostAccess</g7>（Chrome、Edge 和其他 Chromium 浏览器）用于将浏览器将打开的文件（PDF）下载，而不是打开，适用于 MDM 支持的类型；在 Firefox 中，<g8>webRequestBlocking</g8>执行此操作；<g9>scripting</g9>用于在您请求时读取页面链接，并在安装扩展程序时将视频按钮添加到已打开的页面；<g10>proxy</g10>用于读取浏览器使用的代理，以便从 VPN 或代理扩展程序后面的浏览器获取的下载也通过它（它从不更改浏览器的代理）；访问所有站点，因为下载和视频可以来自任何站点。"
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "所有操作都可以通过键盘完成，MDM 支持屏幕阅读器（例如 Windows 上的讲述人 (Narrator) 和 NVDA）：其窗口、对话框和菜单会告知屏幕阅读器每个控件的名称和状态，下载列表会朗读每个下载的名称、状态和大小。"
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>使用浏览器请求中的代理/SOCKS…</g1> — 默认开启。MDM 从浏览器获取的下载会通过浏览器用于该下载的代理。这包括 VPN 或代理扩展设置的代理、浏览器自己的手动代理或其代理自动配置脚本。如果没有它，下载将从您自己的地址发出，并且受限于 VPN 国家或其地址的内容将失败。浏览器扩展会读取该代理并将其与每个下载一起交给 MDM。"
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "MDM 的代理/Socks 设置适用于网页和 FTP 下载。种子也可以使用 SOCKS5 代理：在<g2>选项 → 代理/Socks</g2>中设置<x1/>代理，并在“种子设置”中打开<g3>使用代理</g3>。代理仅覆盖与对等点和网页跟踪器的连接，因此 MDM 会关闭 DHT、本地对等点发现、传入连接和 UDP 跟踪器。如果该开关打开时代理从“代理/Socks”中消失，则种子不会启动，而不是绕过它。"
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "要通过另一个网络路由<g1>所有内容</g1>，请为整个计算机使用 VPN。MDM 无法将种子绑定到 Windows 上的一个网络适配器。"
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "当浏览器对该下载使用代理时（由 VPN 或代理扩展程序或在其设置中设置），该扩展程序会传递<g1>代理地址</g1>或其<g2>代理自动配置脚本</g2>，以便 MDM 通过同一代理下载。它从不读取或传递代理的登录信息。它只记录代理请求了一个，因此 MDM 可以告诉您它无法使用该代理。"
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "播放列表和混音"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "需要 VPN 扩展自身提供登录信息的代理无法共享：没有其他程序拥有该登录信息。下载将停止并显示此信息，而不是在没有代理的情况下进行。请使用 VPN 自己的应用程序，或在<g1>网络适配器</g1>下选择其适配器。"
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "下载文件，最多可使用 8 个连接（<x1/>，1 到 128），并显示进度。<x2/> 暂停；<x3/> 继续。<x4/> 检查完成的文件：十六进制 MD5、SHA-1、SHA-256、SHA-512 或 CRC32，可选择命名（<x5/>）。<x6/> 选择 DNS：<x7/>（默认）；服务及其查询方式，<x8/>、<x9/>、<x10/>、<x11/>、<x12/>；DNS 服务器地址，<x13/>；或 DNS-over-HTTPS 地址。它从不回退到系统 DNS。"
   }
  }
 }

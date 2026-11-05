@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "आपके डाउनलोड पते या फ़ाइल नाम;"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "Firefox में, MDM उस प्रॉक्सी को देखता है जिसे फ़ाइल के लिए ब्राउज़र के अपने अनुरोध ने लिया था, जिसमें वे भी शामिल हैं जिन्हें एक VPN एक्सटेंशन प्रत्येक अनुरोध के लिए चुनता है। Chrome, Edge, Brave, Opera और Vivaldi में यह ब्राउज़र की प्रॉक्सी सेटिंग्स को देखता है।"
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "जब ब्राउज़र ने किसी प्रॉक्सी का उपयोग नहीं किया, और <g1>कोई प्रॉक्सी/SOCKS नहीं</g1> चुना गया है, तो MDM Windows की प्रॉक्सी सेटिंग्स का उपयोग करता है, जैसा कि ब्राउज़र करते हैं।"
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "इसकी अनुमतियाँ, और क्यों: डाउनलोड देखने और MDM को सौंपने के लिए <g1>downloads</g1>; MDM में साइन-इन किए गए डाउनलोड काम करें, इसके लिए <g2>cookies</g2>; MDM से बात करने के लिए <g3>nativeMessaging</g3>; राइट-क्लिक आइटम के लिए <g4>contextMenus</g4>; इसकी सेटिंग्स के लिए <g5>storage</g5>; सबमिट किए गए फ़ॉर्म और लोड किए गए वीडियो स्ट्रीम देखने के लिए <g6>webRequest</g6> (यह कुछ भी नहीं बदलता); ब्राउज़र जिन फ़ाइलों को खोलेगा (एक PDF) उन्हें MDM द्वारा लिए जाने वाले प्रकारों के लिए डाउनलोड करने के बजाय, <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge और अन्य Chromium ब्राउज़र) का उपयोग करता है; Firefox में, <g8>webRequestBlocking</g8> यह करता है; जब आप पूछते हैं तो पेज के लिंक पढ़ने के लिए <g9>scripting</g9>, और एक्सटेंशन इंस्टॉल होने पर पहले से खुले पेजों में वीडियो बटन जोड़ने के लिए; ब्राउज़र किस प्रॉक्सी का उपयोग करता है यह पढ़ने के लिए <g10>proxy</g10>, ताकि VPN या प्रॉक्सी एक्सटेंशन के पीछे के ब्राउज़र से लिए गए डाउनलोड भी उसी के माध्यम से जाएं (यह ब्राउज़र के प्रॉक्सी को कभी नहीं बदलता); सभी साइटों तक पहुंच क्योंकि डाउनलोड और वीडियो किसी भी साइट से आ सकते हैं।"
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "सब कुछ कीबोर्ड से किया जा सकता है, और MDM स्क्रीन रीडर (जैसे Windows पर Narrator और NVDA) के साथ काम करता है: इसकी विंडो, डायलॉग और मेनू उन्हें बताते हैं कि प्रत्येक कंट्रोल क्या है और उसकी स्थिति क्या है, और डाउनलोड सूची प्रत्येक डाउनलोड का नाम, स्थिति और आकार पढ़ती है।"
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>ब्राउज़र के अनुरोध से प्रॉक्सी/SOCKS का उपयोग करें…</g1> — डिफ़ॉल्ट रूप से चालू। MDM ब्राउज़र से जो डाउनलोड लेता है, वह उसी प्रॉक्सी से होकर जाता है जिसका उपयोग ब्राउज़र ने उसके लिए किया था। यह वह प्रॉक्सी है जिसे VPN या प्रॉक्सी एक्सटेंशन ने सेट किया है, ब्राउज़र का अपना मैन्युअल प्रॉक्सी, या उसकी प्रॉक्सी ऑटो-कॉन्फ़िग स्क्रिप्ट। इसके बिना, डाउनलोड आपके अपने पते से होगा, और VPN के देश, या उसके पते तक सीमित सामग्री विफल हो जाएगी। ब्राउज़र एक्सटेंशन उस प्रॉक्सी को पढ़ता है और प्रत्येक डाउनलोड के साथ उसे MDM को सौंपता है।"
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "MDM की प्रॉक्सी / SOCKS सेटिंग्स वेब और FTP डाउनलोड के लिए हैं। टॉरेंट SOCKS5 का भी उपयोग कर सकते हैं: <g2>विकल्प → प्रॉक्सी / SOCKS</g2> में एक <x1/> प्रॉक्सी सेट करें और टॉरेंट सेटिंग्स में <g3>प्रॉक्सी का उपयोग करें</g3> चालू करें। प्रॉक्सी केवल पीयर और वेब ट्रैकर्स से कनेक्शन को कवर करती है, इसलिए इसके साथ MDM DHT, स्थानीय पीयर खोज, आने वाले कनेक्शन और UDP ट्रैकर्स को बंद कर देता है। यदि वह स्विच चालू होने पर प्रॉक्सी प्रॉक्सी / SOCKS से चला जाता है, तो टॉरेंट इसके चारों ओर जाने के बजाय शुरू नहीं होते हैं।"
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "<g1>सब कुछ</g1> दूसरे नेटवर्क के माध्यम से रूट करने के लिए, पूरे कंप्यूटर के लिए VPN का उपयोग करें। MDM Windows पर टॉरेंट को एक नेटवर्क एडाप्टर से नहीं जोड़ सकता है।"
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "जब ब्राउज़र उस डाउनलोड के लिए प्रॉक्सी का उपयोग करता है (जो VPN या प्रॉक्सी एक्सटेंशन द्वारा, या उसकी सेटिंग्स में सेट किया गया हो), तो एक्सटेंशन <g1>प्रॉक्सी का पता</g1>, या उसकी <g2>प्रॉक्सी ऑटो-कॉन्फ़िग स्क्रिप्ट</g2> पास करता है, ताकि MDM उसी प्रॉक्सी के माध्यम से डाउनलोड करे। यह प्रॉक्सी के लॉगिन को कभी नहीं पढ़ता या पास नहीं करता। यह केवल यह नोट करता है कि एक प्रॉक्सी ने इसकी मांग की थी, ताकि MDM आपको बता सके कि वह उस प्रॉक्सी का उपयोग नहीं कर सकता।"
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "प्लेलिस्ट और मिक्स"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "एक प्रॉक्सी जो लॉगिन मांगता है जिसे VPN एक्सटेंशन खुद देता है, उसे साझा नहीं किया जा सकता: किसी अन्य प्रोग्राम के पास वह लॉगिन नहीं होता है। डाउनलोड तब रुक जाता है और ऐसा बताता है, बजाय प्रॉक्सी के बिना जाने के। VPN के अपने ऐप का उपयोग करें, या <g1>नेटवर्क एडाप्टर</g1> के तहत उसके एडाप्टर को चुनें।"
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "प्रगति दिखाते हुए, 8 कनेक्शन (<x1/>, 1 से 128) तक के साथ एक फ़ाइल डाउनलोड करें। <x2/> इसे रोकता है; <x3/> जारी रखता है। <x4/> समाप्त फ़ाइल की जाँच करता है: हेक्स MD5, SHA-1, SHA-256, SHA-512 या CRC32, वैकल्पिक रूप से नामित (<x5/>)। <x6/> DNS चुनता है: <x7/> (डिफ़ॉल्ट); एक सेवा और उससे कैसे पूछें, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS सर्वर के पते, <x13/>; या एक DNS-ओवर-HTTPS पता। यह कभी भी सिस्टम के DNS पर वापस नहीं आता है।"
   }
  }
 }

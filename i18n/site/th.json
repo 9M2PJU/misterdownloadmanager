@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "ที่อยู่ดาวน์โหลดหรือชื่อไฟล์ของคุณ;"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "ใน Firefox, MDM จะเห็นพร็อกซีที่คำขอของเบราว์เซอร์สำหรับไฟล์ใช้ รวมถึงพร็อกซีที่ส่วนขยาย VPN เลือกสำหรับแต่ละคำขอ ใน Chrome, Edge, Brave, Opera และ Vivaldi จะเห็นการตั้งค่าพร็อกซีของเบราว์เซอร์"
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "เมื่อเบราว์เซอร์ไม่ได้ใช้พร็อกซี และเลือก <g1>ไม่มีพร็อกซี/SOCKS</g1> ไว้ MDM จะใช้การตั้งค่าพร็อกซีของ Windows เช่นเดียวกับที่เบราว์เซอร์ทำ"
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "สิทธิ์การอนุญาตและเหตุผล: <g1>downloads</g1> เพื่อดูและส่งต่อการดาวน์โหลด; <g2>cookies</g2> เพื่อให้การดาวน์โหลดที่ลงชื่อเข้าใช้ทำงานใน MDM; <g3>nativeMessaging</g3> เพื่อสื่อสารกับ MDM; <g4>contextMenus</g4> สำหรับรายการคลิกขวา; <g5>storage</g5> สำหรับการตั้งค่า; <g6>webRequest</g6> เพื่อดูแบบฟอร์มที่ส่งและสตรีมวิดีโอที่โหลด (ไม่มีการเปลี่ยนแปลงใดๆ); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge และเบราว์เซอร์ Chromium อื่นๆ) เพื่อให้ไฟล์ที่เบราว์เซอร์จะเปิด (เช่น PDF) ถูกดาวน์โหลดแทน สำหรับประเภทที่ MDM รองรับ; ใน Firefox, <g8>webRequestBlocking</g8> ทำหน้าที่นั้น; <g9>scripting</g9> เพื่ออ่านลิงก์ของหน้าเมื่อคุณร้องขอ และเพื่อเพิ่มปุ่มวิดีโอไปยังหน้าที่เปิดอยู่แล้วเมื่อติดตั้งส่วนขยาย; <g10>proxy</g10> เพื่ออ่านว่าเบราว์เซอร์ใช้พร็อกซีใด เพื่อให้การดาวน์โหลดที่มาจากเบราว์เซอร์ที่อยู่เบื้องหลัง VPN หรือส่วนขยายพร็อกซีผ่านพร็อกซีนั้นด้วย (ไม่มีการเปลี่ยนแปลงพร็อกซีของเบราว์เซอร์); การเข้าถึงทุกเว็บไซต์เนื่องจากการดาวน์โหลดและวิดีโอสามารถมาจากเว็บไซต์ใดก็ได้"
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "ทุกอย่างสามารถทำได้จากแป้นพิมพ์ และ MDM ทำงานร่วมกับโปรแกรมอ่านหน้าจอได้ (เช่น Narrator และ NVDA บน Windows): หน้าต่าง, กล่องโต้ตอบ และเมนูจะบอกโปรแกรมอ่านหน้าจอว่าส่วนควบคุมแต่ละส่วนคืออะไรและสถานะเป็นอย่างไร และรายการดาวน์โหลดจะอ่านชื่อ, สถานะ และขนาดของการดาวน์โหลดแต่ละรายการ"
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>ใช้พร็อกซี/SOCKS จากคำขอของเบราว์เซอร์…</g1> — เปิดใช้งานโดยค่าเริ่มต้น การดาวน์โหลดที่ MDM รับมาจากเบราว์เซอร์จะผ่านพร็อกซีที่เบราว์เซอร์ใช้สำหรับสิ่งนั้น นั่นคือพร็อกซีที่ส่วนขยาย VPN หรือพร็อกซีตั้งค่าไว้ พร็อกซีที่ตั้งค่าด้วยตนเองของเบราว์เซอร์ หรือสคริปต์การกำหนดค่าพร็อกซีอัตโนมัติ หากไม่มีสิ่งนี้ การดาวน์โหลดจะออกจากที่อยู่ของคุณเอง และเนื้อหาที่จำกัดเฉพาะประเทศของ VPN หรือที่อยู่ของ VPN จะล้มเหลว ส่วนขยายเบราว์เซอร์จะอ่านพร็อกซีนั้นและส่งให้ MDM พร้อมกับการดาวน์โหลดแต่ละครั้ง"
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "การตั้งค่าพร็อกซี / SOCKS ของ MDM ใช้สำหรับการดาวน์โหลดเว็บและ FTP ทอร์เรนต์สามารถใช้ SOCKS5 ได้เช่นกัน: ตั้งค่าพร็อกซี <x1/> ใน <g2>ตัวเลือก → พร็อกซี / SOCKS</g2> และเปิด <g3>ใช้พร็อกซี</g3> ในการตั้งค่าทอร์เรนต์ พร็อกซีจะครอบคลุมการเชื่อมต่อไปยังเพียร์และตัวติดตามเว็บเท่านั้น ดังนั้น MDM จะปิด DHT, การค้นหาเพียร์ในเครื่อง, การเชื่อมต่อขาเข้า และตัวติดตาม UDP หากพร็อกซีหายไปจากพร็อกซี / SOCKS ในขณะที่สวิตช์นั้นเปิดอยู่ ทอร์เรนต์จะไม่เริ่มทำงานแทนที่จะข้ามไป"
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "หากต้องการส่ง <g1>ทุกอย่าง</g1> ผ่านเครือข่ายอื่น ให้ใช้ VPN สำหรับคอมพิวเตอร์ทั้งเครื่อง MDM ไม่สามารถผูกทอร์เรนต์กับอะแดปเตอร์เครือข่ายเดียวบน Windows ได้"
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "เมื่อเบราว์เซอร์ใช้พร็อกซีสำหรับการดาวน์โหลดนั้น (ตั้งค่าโดย VPN หรือส่วนขยายพร็อกซี หรือในการตั้งค่า) ส่วนขยายจะส่ง<g1>ที่อยู่ของพร็อกซี</g1> หรือ<g2>สคริปต์การกำหนดค่าพร็อกซีอัตโนมัติ</g2> เพื่อให้ MDM ดาวน์โหลดผ่านพร็อกซีเดียวกัน จะไม่มีการอ่านหรือส่งข้อมูลการเข้าสู่ระบบของพร็อกซี จะบันทึกเฉพาะว่าพร็อกซีร้องขอข้อมูลดังกล่าว เพื่อให้ MDM สามารถแจ้งคุณได้ว่าไม่สามารถใช้พร็อกซีนั้นได้"
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "เพลย์ลิสต์และมิกซ์"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "พร็อกซีที่ขอการเข้าสู่ระบบที่ส่วนขยาย VPN ให้ตัวเองไม่สามารถแชร์ได้: ไม่มีโปรแกรมอื่นใดที่มีการเข้าสู่ระบบนั้น การดาวน์โหลดจะหยุดและแจ้งให้ทราบ แทนที่จะดำเนินการโดยไม่มีพร็อกซี ใช้แอปของ VPN เอง หรือเลือกอะแดปเตอร์ภายใต้ <g1>อะแดปเตอร์เครือข่าย</g1>"
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "ดาวน์โหลดไฟล์ด้วยการเชื่อมต่อสูงสุด 8 การเชื่อมต่อ (<x1/>, 1 ถึง 128) พร้อมแสดงความคืบหน้า <x2/> หยุดชั่วคราว; <x3/> ดำเนินการต่อ <x4/> ตรวจสอบไฟล์ที่เสร็จสมบูรณ์: hex MD5, SHA-1, SHA-256, SHA-512 หรือ CRC32 โดยเลือกตั้งชื่อได้ (<x5/>) <x6/> เลือก DNS: <x7/> (ค่าเริ่มต้น); บริการและวิธีการสอบถาม, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; ที่อยู่เซิร์ฟเวอร์ DNS, <x13/>; หรือที่อยู่ DNS-over-HTTPS จะไม่กลับไปใช้ DNS ของระบบ"
   }
  }
 }

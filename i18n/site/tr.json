@@ -9205,6 +9205,54 @@
   "fffd298a8c5fc91a": {
    "source": "your download addresses or file names;",
    "text": "indirme adresleriniz veya dosya adlarınız;"
+  },
+  "045b50361ed710f2": {
+   "source": "In Firefox, MDM sees the proxy the browser's own request for the file took, including the ones a VPN extension picks for each request. In Chrome, Edge, Brave, Opera and Vivaldi it sees the browser's proxy settings.",
+   "text": "Firefox'ta MDM, tarayıcının dosya için yaptığı kendi isteğinin kullandığı proxy'yi görür; buna bir VPN eklentisinin her istek için seçtiği proxy'ler de dahildir. Chrome, Edge, Brave, Opera ve Vivaldi'de ise tarayıcının proxy ayarlarını görür."
+  },
+  "05bd7f3cbec0de04": {
+   "source": "When the browser used no proxy, and <g1>No proxy/socks</g1> is chosen, MDM uses Windows' proxy settings, as browsers do.",
+   "text": "Tarayıcı proxy kullanmadığında ve <g1>Proxy/SOCKS yok</g1> seçildiğinde, MDM, tarayıcıların yaptığı gibi Windows'un proxy ayarlarını kullanır."
+  },
+  "19bbae838750029a": {
+   "source": "Its permissions, and why: <g1>downloads</g1> to see and hand over downloads; <g2>cookies</g2> so signed-in downloads work in MDM; <g3>nativeMessaging</g3> to talk to MDM; <g4>contextMenus</g4> for the right-click items; <g5>storage</g5> for its settings; <g6>webRequest</g6> to see forms submitted and video streams loaded (it changes nothing); <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge and other Chromium browsers) to have the files the browser would open (a PDF) downloaded instead, for the types MDM takes; in Firefox, <g8>webRequestBlocking</g8> does that; <g9>scripting</g9> to read a page's links when you ask, and to add the video button to pages already open when the extension is installed; <g10>proxy</g10> to read which proxy the browser uses, so downloads taken from a browser behind a VPN or proxy extension go through it too (it never changes the browser's proxy); access to all sites because downloads and videos can come from any site.",
+   "text": "İzinleri ve nedenleri: indirmeleri görmek ve MDM'ye aktarmak için <g1>indirmeler</g1>; oturum açılmış indirmelerin MDM'de çalışması için <g2>çerezler</g2>; MDM ile iletişim kurmak için <g3>nativeMessaging</g3>; sağ tıklama öğeleri için <g4>contextMenus</g4>; ayarları için <g5>depolama</g5>; gönderilen formları ve yüklenen video akışlarını görmek için <g6>webRequest</g6> (hiçbir şeyi değiştirmez); tarayıcının açacağı dosyaların (bir PDF) MDM'nin aldığı türler için indirilmesini sağlamak üzere <g7>declarativeNetRequestWithHostAccess</g7> (Chrome, Edge ve diğer Chromium tarayıcıları); Firefox'ta bunu <g8>webRequestBlocking</g8> yapar; siz istediğinizde bir sayfanın bağlantılarını okumak ve eklenti yüklendiğinde zaten açık olan sayfalara video düğmesini eklemek için <g9>scripting</g9>; tarayıcının hangi proxy'yi kullandığını okumak için <g10>proxy</g10>, böylece bir VPN veya proxy eklentisinin arkasındaki bir tarayıcıdan alınan indirmeler de onun üzerinden geçer (tarayıcının proxy'sini asla değiştirmez); indirmeler ve videolar herhangi bir siteden gelebileceği için tüm sitelere erişim."
+  },
+  "4f4c098768b05078": {
+   "source": "Everything can be done from the keyboard, and MDM works with screen readers (such as Narrator and NVDA on Windows): its windows, dialogs and menus tell them what each control is and its state, and the download list reads each download's name, status and size.",
+   "text": "Her şey klavyeden yapılabilir ve MDM ekran okuyucularla (Windows'ta Narrator ve NVDA gibi) çalışır: pencereleri, iletişim kutuları ve menüleri, her kontrolün ne olduğunu ve durumunu onlara bildirir ve indirme listesi her indirmenin adını, durumunu ve boyutunu okur."
+  },
+  "66e4fe28b447c606": {
+   "source": "Shift+F10",
+   "text": "Shift+F10"
+  },
+  "690e87be87eb0c8f": {
+   "source": "<g1>Use proxy/socks from a browser's request…</g1> — on by default. A download MDM takes from the browser goes through the proxy the browser used for it. That's the one a VPN or proxy extension set, the browser's own manual proxy, or its proxy auto-config script. Without it, the download would leave from your own address, and content limited to the VPN's country, or to its address, would fail. The browser extension reads that proxy and hands it to MDM with each download.",
+   "text": "<g1>Tarayıcı isteğindeki proxy/SOCKS'u kullan…</g1> — varsayılan olarak açık. MDM'nin tarayıcıdan aldığı bir indirme, tarayıcının bunun için kullandığı proxy üzerinden gerçekleşir. Bu, bir VPN veya proxy eklentisinin ayarladığı, tarayıcının kendi manuel proxy'si veya proxy otomatik yapılandırma betiğidir. Bu olmadan, indirme kendi adresinizden başlar ve VPN'in ülkesiyle veya adresiyle sınırlı içerik başarısız olur. Tarayıcı eklentisi bu proxy'yi okur ve her indirmede MDM'ye iletir."
+  },
+  "70ea8a9bf5e19416": {
+   "source": "MDM's Proxy / Socks settings are for web and FTP downloads. Torrents can use a SOCKS5 one too: set a <x1/> proxy in <g2>Options → Proxy / Socks</g2> and turn on <g3>Use the proxy</g3> in Torrent settings. The proxy covers connections to peers and web trackers only, so with it MDM turns off the DHT, local peer discovery, incoming connections and UDP trackers. If the proxy is gone from Proxy / Socks while that switch is on, torrents don't start rather than go around it.",
+   "text": "MDM'nin Ara Sunucu / Socks ayarları web ve FTP indirmeleri içindir. Torrentler de bir SOCKS5 kullanabilir: <g2>Seçenekler → Ara Sunucu / Socks</g2> bölümünde bir <x1/> ara sunucu ayarlayın ve Torrent ayarlarında <g3>Ara sunucuyu kullan</g3> seçeneğini açın. Ara sunucu yalnızca eşlere ve web izleyicilerine olan bağlantıları kapsar, bu nedenle MDM bununla DHT'yi, yerel eş keşfini, gelen bağlantıları ve UDP izleyicilerini kapatır. Bu anahtar açıkken ara sunucu Ara Sunucu / Socks bölümünden kaybolursa, torrentler onu atlamak yerine başlamaz."
+  },
+  "84334f5c25448dd7": {
+   "source": "To route <g1>everything</g1> through another network, use a VPN for the whole computer. MDM can't tie torrents to one network adapter on Windows.",
+   "text": "<g1>Her şeyi</g1> başka bir ağ üzerinden yönlendirmek için tüm bilgisayar için bir VPN kullanın. MDM, Windows'ta torrentleri tek bir ağ bağdaştırıcısına bağlayamaz."
+  },
+  "a1280a73f600eb05": {
+   "source": "When the browser uses a proxy for that download (set by a VPN or proxy extension, or in its settings), the extension passes <g1>the proxy's address</g1>, or its <g2>proxy auto-config script</g2>, so MDM downloads through the same proxy. It never reads or passes the proxy's login. It notes only that a proxy asked for one, so MDM can tell you it can't use that proxy.",
+   "text": "Tarayıcı, o indirme için bir proxy kullandığında (bir VPN veya proxy eklentisi tarafından ya da kendi ayarlarında belirlenmişse), eklenti <g1>proxy'nin adresini</g1> veya <g2>proxy otomatik yapılandırma betiğini</g2> iletir, böylece MDM aynı proxy üzerinden indirir. Proxy'nin giriş bilgilerini asla okumaz veya iletmez. Sadece bir proxy'nin talep edildiğini not eder, böylece MDM size o proxy'yi kullanamayacağını bildirebilir."
+  },
+  "a4263adda2169cf6": {
+   "source": "Playlists and mixes",
+   "text": "Oynatma listeleri ve karışımlar"
+  },
+  "db74b9137912e0a2": {
+   "source": "A proxy that asks for a login the VPN extension gives itself can't be shared: no other program has that login. The download then stops and says so, rather than going without the proxy. Use the VPN's own app, or choose its adapter under <g1>Network adapter</g1>.",
+   "text": "VPN eklentisinin kendi kendine verdiği bir oturum açma bilgisi isteyen bir proxy paylaşılamaz: başka hiçbir programda bu oturum açma bilgisi yoktur. İndirme o zaman proxy olmadan devam etmek yerine durur ve bunu belirtir. VPN'in kendi uygulamasını kullanın veya <g1>Ağ bağdaştırıcısı</g1> altında bağdaştırıcısını seçin."
+  },
+  "e1131dd2d306f4bb": {
+   "source": "Download a file with up to 8 connections (<x1/>, 1 to 128), showing progress. <x2/> pauses it; <x3/> continues. <x4/> checks the finished file: hex MD5, SHA-1, SHA-256, SHA-512 or CRC32, optionally named (<x5/>). <x6/> picks the DNS: <x7/> (the default); a service and how to ask it, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS servers' addresses, <x13/>; or a DNS-over-HTTPS address. It never falls back to the system's DNS.",
+   "text": "İlerleme göstererek bir dosyayı en fazla 8 bağlantıyla (<x1/>, 1 ila 128) indirin. <x2/> duraklatır; <x3/> devam ettirir. <x4/> bitmiş dosyayı kontrol eder: onaltılık MD5, SHA-1, SHA-256, SHA-512 veya CRC32, isteğe bağlı olarak adlandırılmış (<x5/>). <x6/> DNS'i seçer: <x7/> (varsayılan); bir hizmet ve ona nasıl sorulacağı, <x8/>, <x9/>, <x10/>, <x11/>, <x12/>; DNS sunucularının adresleri, <x13/>; veya bir DNS-over-HTTPS adresi. Asla sistemin DNS'ine geri dönmez."
   }
  }
 }
