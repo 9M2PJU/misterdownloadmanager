@@ -13,6 +13,7 @@ Everything below ships together, in one release.
 
 ### Done
 
+- ✅ Tests and test tools stay on 127.0.0.1: no Windows Firewall questions while developing
 - ✅ Downloads through one network adapter (a VPN's), with a kill switch: nothing goes out
   another way when it disconnects ([#35](https://github.com/anefzaoui/misterdownloadmanager/issues/35))
 - ✅ Hide to the notification area: a download's progress window (its own button, or Minimize)
