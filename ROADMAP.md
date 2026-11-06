@@ -13,6 +13,9 @@ Everything below ships together, in one release.
 
 ### Done
 
+- ✅ Streams whose address doesn't end in .m3u8 or .mpd, served as plain text, are found too: by
+  the button over the video, the right-click menu and the media list, read only when asked
+  ([#171](https://github.com/anefzaoui/misterdownloadmanager/issues/171))
 - ✅ The extension in the [Chrome Web Store](https://chromewebstore.google.com/detail/mister-download-manager/ejoleppdfgjdndddcjoehopknmlglojp): **Add to Chrome** beside **Add to Firefox**
   on the website, in the help, the FAQ and the README; MDM's **Add Mister Download Manager to
   your browser** window opens the store in Chrome, Edge, Brave, Opera and Vivaldi, with the
@@ -174,8 +177,6 @@ Everything below ships together, in one release.
   MDM; no address is sent anywhere ([#140](https://github.com/anefzaoui/misterdownloadmanager/issues/140))
 - 🔄 Torrents: download in order, to watch a video while it downloads; the other torrents rarest
   first ([#39](https://github.com/anefzaoui/misterdownloadmanager/issues/39))
-- 🔄 A stream whose address doesn't end in `.m3u8` or `.mpd` is still recognised by its contents
-  ([#171](https://github.com/anefzaoui/misterdownloadmanager/issues/171))
 - 🔄 Firefox: reading the browser's proxy or VPN extension becomes a switch in the add-on, so the
   update asks for no new permission ([#42](https://github.com/anefzaoui/misterdownloadmanager/issues/42))
 - 🔄 MDM's browser window: the check mark before **Connected** shows in every language (an empty
