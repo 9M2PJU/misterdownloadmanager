@@ -42,6 +42,8 @@ Everything below ships together, in one release, as version 0.3.0.
 - ✅ Themes, the groundwork: every colour and size the controls are drawn with comes from one
   theme, and theme files can change them; the classic look is unchanged
   ([#45](https://github.com/anefzaoui/misterdownloadmanager/issues/45))
+- ✅ Dark mode: grey notes and error texts readable (4.5:1), Options' failed checks no longer dark
+  red on the dark dialog ([#45](https://github.com/anefzaoui/misterdownloadmanager/issues/45))
 - ✅ A minimized MDM keeps working: queues, the Scheduler, download limits, the kill switch and
   saving the list no longer wait for the window to be restored
 - ✅ Download video: every button fits its text in every language (German **ffmpeg installieren**

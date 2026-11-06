@@ -406,6 +406,11 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
   answered "Unsupported URL". Now, when one of them is used and no stream is known, the extension
   reads the start of what the player fetched (a few kilobytes, never on sight) and recognises an
   HLS playlist or a DASH manifest.
+- **Dark mode: grey notes and error texts are easier to read**
+  ([#45](https://github.com/anefzaoui/misterdownloadmanager/issues/45)): they now have the
+  contrast WCAG asks for (4.5:1) on every dark surface, Options' failed checks no longer use light
+  mode's dark red on the dark dialog, and an editable drop-down's arrow is tinted dark under the
+  pointer.
 - **A minimized MDM keeps working**: with the main window minimized (not to the notification
   area), queues didn't start their next file, the Scheduler's starts and stops didn't fire,
   download limits, the network adapter's kill switch, the clipboard monitor, the update check, the
