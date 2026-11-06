@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ A Linux test machine for every change, scripted: an Ubuntu 24.04 desktop that builds each
+  branch and drives MDM, Firefox and Chrome there (part of
+  [#164](https://github.com/anefzaoui/misterdownloadmanager/issues/164))
 - ✅ Firefox: reading the browser's proxy (#42) is an opt-in, a switch in the extension's popup, so
   the extension's update asks for no new permission; Chrome's extension leaves it out for now
 - ✅ Streams whose address doesn't end in .m3u8 or .mpd, served as plain text, are found too: by
