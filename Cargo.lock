@@ -4458,6 +4458,7 @@ dependencies = [
  "serde_json",
  "tempfile",
  "tokio",
+ "toml 1.1.8+spec-1.1.0",
  "tracing",
  "tray-icon",
  "unicode-segmentation",
@@ -4584,7 +4585,7 @@ dependencies = [
 
 [[package]]
 name = "mdm-geo"
-version = "0.2.4"
+version = "0.3.0"
 dependencies = [
  "lzma-rust2",
  "png 0.18.1",

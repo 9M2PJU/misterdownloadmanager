@@ -67,14 +67,11 @@ fn reach_word(r: Reach) -> &'static str {
 }
 
 fn reach_colour(r: Reach) -> Color32 {
-    let dark = crate::theme::dark();
-    match (r, dark) {
-        (Reach::Near, false) => Color32::from_rgb(0x10, 0x7C, 0x10),
-        (Reach::Near, true) => Color32::from_rgb(0x6C, 0xCB, 0x5F),
-        (Reach::Medium, false) => Color32::from_rgb(0x9D, 0x5D, 0x00),
-        (Reach::Medium, true) => Color32::from_rgb(0xF7, 0xB0, 0x40),
-        (Reach::Far, false) => Color32::from_rgb(0xC4, 0x2B, 0x1C),
-        (Reach::Far, true) => Color32::from_rgb(0xFF, 0x99, 0xA4),
+    let c = crate::theme::colors();
+    match r {
+        Reach::Near => c.reach_near,
+        Reach::Medium => c.reach_medium,
+        Reach::Far => c.reach_far,
     }
 }
 
@@ -219,7 +216,7 @@ pub fn line(ui: &Ui, x: f32, baseline: f32, right: f32, seen: Option<&Seen>, id:
         p.rect_stroke(
             rc,
             0.0,
-            egui::Stroke::new(1.0, Color32::from_black_alpha(40)),
+            egui::Stroke::new(1.0, crate::theme::colors().flag_edge),
             egui::StrokeKind::Inside,
         );
         shown = Some(rc);

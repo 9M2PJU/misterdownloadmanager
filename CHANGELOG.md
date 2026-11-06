@@ -310,6 +310,12 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
   address (a server without ranges was fixed earlier). Each now waits for the state it checks. The lab server
   can hold a connection slot for a test (`hold_slot`), and `settled()` now also means every
   slot is free.
+- **Themes, the groundwork** ([#45](https://github.com/anefzaoui/misterdownloadmanager/issues/45)):
+  every colour and size MDM's controls are drawn with (corner radii, borders, font sizes, the
+  list's row height, the icons' ink) now comes from one theme, by role. The classic look is that
+  theme, unchanged pixel for pixel. Theme files (TOML or JSON in the data folder's `themes`
+  folder) can already change any role; choosing one in the app, more built-in themes, pywal and
+  Base16 come next.
 - **A smaller download** ([#158](https://github.com/anefzaoui/misterdownloadmanager/issues/158)):
   the program is built for size, which takes the installer from 16.1 to 13.6 MB and the zips
   from 19.3 to 15.6 MB, with the same features and the same download speed.

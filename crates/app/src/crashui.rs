@@ -107,6 +107,7 @@ pub fn monitor_main(m: MonitorArgs) -> eframe::Result {
     plan.watched = false;
     let data = m.data.clone();
     crate::renderer::run("misterdownloadmanager-crash", &plan, options, move |cc| {
+        crate::theme::select(&settings.theme);
         crate::theme::apply(&cc.egui_ctx);
         crate::i18n::set_lang(settings.language.as_deref());
         crate::theme::language_fonts(&cc.egui_ctx);
@@ -297,7 +298,7 @@ impl eframe::App for ReportWindow {
             // As the app logs its windows (crash.rs), for the log and the tests.
             tracing::info!("window opened: crash-report");
             ui.ctx().send_viewport_cmd(egui::ViewportCommand::SetTheme(
-                crate::theme::system_theme(crate::theme::dark()),
+                crate::theme::system_theme(crate::theme::dark_surface()),
             ));
             self.caption_set = true;
         }
@@ -305,7 +306,7 @@ impl eframe::App for ReportWindow {
         #[cfg(windows)]
         crate::win32::caption_dark(
             crate::i18n::t("Mister Download Manager crash report"),
-            crate::theme::dark(),
+            crate::theme::dark_surface(),
         );
         while let Ok(e) = self.events.try_recv() {
             if matches!(e, Event::Recovered) {
