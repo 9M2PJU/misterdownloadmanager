@@ -22,6 +22,9 @@ Everything below ships together, in one release.
   manual install as the fallback
 - ✅ A minimized MDM keeps working: queues, the Scheduler, download limits, the kill switch and
   saving the list no longer wait for the window to be restored
+- ✅ The engine tests that failed now and then on a busy computer (a refused connection coming
+  back, the learned connection limit, a dead address) wait for what they check, not for time
+  ([#136](https://github.com/anefzaoui/misterdownloadmanager/issues/136))
 - ✅ HLS and DASH videos from the browser reach yt-dlp as their stream, by the button over the
   video, the right-click menu (it did nothing in Firefox) and the media list
   ([#155](https://github.com/anefzaoui/misterdownloadmanager/issues/155))
