@@ -22,6 +22,10 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Added
 
+- **The Firefox add-on is on addons.mozilla.org**: [Mister Download Manager](https://addons.mozilla.org/firefox/addon/mister-download-manager/),
+  installed with one click and kept up to date by Firefox (and by Zen and LibreWolf). MDM's
+  **Add Mister Download Manager to your browser** window opens it for them; the website, the
+  help and the README offer it first.
 - **Support MDM**: **Help → Support MDM** and a line in **About** open the creator's
   [GitHub Sponsors](https://github.com/sponsors/anefzaoui) page in the browser; the website, the
   README and the browser extension's popup link to it too. Only when asked: MDM stays free, with
