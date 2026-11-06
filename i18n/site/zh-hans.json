@@ -686,6 +686,10 @@
    "source": "From IDM",
    "text": "来自 IDM"
   },
+  "1105c4be357dbf30": {
+   "source": "<g1>Properties</g1> keeps what the last run saw, so a finished download still shows where it came from.",
+   "text": "<g1>属性</g1>保留了上次运行所看到的信息，因此已完成的下载仍会显示其来源。"
+  },
   "110d6b2bd87a92ac": {
    "source": "Works with what you already use",
    "text": "与您已有的工具配合使用"
@@ -737,6 +741,10 @@
   "1294135f300139c9": {
    "source": "The benchmark data could not be loaded.",
    "text": "无法加载基准数据。"
+  },
+  "129f913e421a0374": {
+   "source": "Torrents, videos and galleries have no single server of MDM's own (peers, or yt-dlp's and gallery-dl's), so their windows don't show one.",
+   "text": "种子、视频和图库没有 MDM 自己的单一服务器（对等点，或 yt-dlp 和 gallery-dl 的），因此它们的窗口不显示服务器。"
   },
   "12a228101626f4bc": {
    "source": "How MDM uses connections",
@@ -797,6 +805,10 @@
   "13f638ddac98e283": {
    "source": "Download Later",
    "text": "稍后下载"
+  },
+  "13fab708d8179610": {
+   "source": "<g1>A content delivery network</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai and others) serves a file from a server near you, not from the site owner's. The tooltip says so: the place is the network's server, not where the site is.",
+   "text": "<g1>内容分发网络</g1>（Cloudflare、Amazon CloudFront、Fastly、Akamai 等）从离您较近的服务器提供文件，而不是从网站所有者的服务器提供。工具提示会说明这一点：位置是网络服务器的位置，而不是网站的位置。"
   },
   "141ec6fe9135de0f": {
    "source": "Use Help → Report a problem in MDM: it opens the bug report form on GitHub with your version, system and language filled in. Or open the form yourself.…",
@@ -1001,6 +1013,10 @@
   "18da802709723cf6": {
    "source": "Ctrl+Space",
    "text": "Ctrl+空格"
+  },
+  "19156d7406477513": {
+   "source": "<g1>Server</g1> — where the server is: its country's flag and name, and how long a round trip to it takes. See <g2>Where the server is</g2>. It stays blank when the browser handed the download over with its name and size, since MDM didn't need to ask the server.",
+   "text": "<g1>服务器</g1> — 服务器的位置：其国家/地区旗帜和名称，以及往返所需时间。请参阅<g2>服务器位置</g2>。当浏览器将下载文件及其名称和大小移交给MDM时，此项会留空，因为MDM无需询问服务器。"
   },
   "1970ad20e03db6c3": {
    "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). macOS doesn't measure it yet. The monitor then writes a <g3>minidump</g3> of every thread from outside, through <x4/> and <x5/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
@@ -1422,6 +1438,10 @@
    "source": "<g1>Default download directory for \"…\" category</g1> — the category's folder. Type a path or click <g2>Browse</g2>.",
    "text": "<g1>“…”类别的默认下载目录</g1> — 该类别的文件夹。输入路径或点击<g2>浏览</g2>。"
   },
+  "21e0a24c92fe95eb": {
+   "source": "Hover over the line for the server's address and how the time was measured.",
+   "text": "将鼠标悬停在该行上，可查看服务器地址以及时间测量方式。"
+  },
   "22135141999ab3ab": {
    "source": "Find a download",
    "text": "查找下载"
@@ -1585,6 +1605,10 @@
   "25b4db9aa4024862": {
    "source": "The current speed.",
    "text": "当前速度。"
+  },
+  "25e1ffe092788c2a": {
+   "source": "<g1>Download File Info</g1>, the progress window and <g2>Properties</g2> show where a download's server is: its country's flag and name, then the time a round trip to it takes, such as <g3>about 24 ms (near)</g3>.",
+   "text": "<g1>下载文件信息</g1>、进度窗口和<g2>属性</g2>会显示下载文件的服务器位置：服务器所在国家的旗帜和名称，然后是往返所需的时间，例如<g3>约 24 毫秒（近）</g3>。"
   },
   "2606a30b44fb755e": {
    "source": "Select one or more downloads and press <g1>Delete</g1>, click <g2>Delete</g2> on the toolbar, or choose <g3>File → Remove</g3>. MDM asks first:",
@@ -1786,6 +1810,10 @@
    "source": "Feature by feature",
    "text": "功能对比"
   },
+  "2ab8acec08b25c9a": {
+   "source": "<g1>A server on your computer or your local network</g1> shows as such, with no flag.",
+   "text": "<g1>您计算机或本地网络上的服务器</g1>会显示为本地服务器，不带旗帜。"
+  },
   "2ac9c8a3b555e84c": {
    "source": "p (Mann-Whitney)",
    "text": "p (Mann-Whitney)"
@@ -1905,6 +1933,10 @@
   "2cc56bc5771aeae6": {
    "source": "<g1>The other links of one page</g1> form a package named after the page.",
    "text": "<g1>一个页面的其他链接</g1>形成一个以页面命名的包。"
+  },
+  "2cc84db987b16ce7": {
+   "source": "<g1>The country</g1> comes from a table of address ranges that comes with MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), looked up on your computer. MDM never sends the address anywhere to ask where it is. The table is updated with each release; an address that has moved since may show its old country.",
+   "text": "<g1>国家</g1>来自 MDM 附带的地址范围表（<g2>DB-IP 的 IP to Country Lite</g2>，CC BY 4.0），在您的计算机上查询。MDM 绝不会将地址发送到任何地方进行查询。该表随每个版本更新；自上次更新后地址已更改的，可能会显示旧的国家。"
   },
   "2ce984608b61ca9b": {
    "source": "<g1>Browse</g1> — open its folder in Explorer.",
@@ -2201,6 +2233,10 @@
   "3508dab985cc0335": {
    "source": "Free, open-source download manager for Windows, with macOS and Linux to try. The IDM layout you know, 5× faster in our benchmark: every connection at once, crash-safe resume, torrents, video from web pages, browser integration, 86 languages.",
    "text": "适用于 Windows 的免费开源下载管理器，macOS 和 Linux 版本可供试用。您熟悉的 IDM 布局，在我们的基准测试中速度快 5 倍：所有连接同时进行，防崩溃恢复，支持种子下载，可从网页下载视频，浏览器集成，支持 86 种语言。"
+  },
+  "3513f93cb0fa7d72": {
+   "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
+   "text": "<g1>远</g1>（红色）：超过 150 毫秒，通常是另一个大陆。远距离服务器通常较慢，增加连接数帮助最大。"
   },
   "3514fb404711d6ec": {
    "source": "Connections to this computer itself (<x1/>) aren't bound. A proxy on this computer carries the downloads, and where it sends them is up to it.",
@@ -3557,6 +3593,10 @@
   "5887d550311226da": {
    "source": "Open that menu (Windows and Linux)",
    "text": "打开该菜单（Windows和Linux）"
+  },
+  "588db309f4fc3eb6": {
+   "source": "<g1>Medium</g1> (amber): 60 to 150 ms, usually the same continent.",
+   "text": "<g1>中</g1>（琥珀色）：60 到 150 毫秒，通常是同一大陆。"
   },
   "58bec232807ab18d": {
    "source": "The progress window in detail →",
@@ -6246,6 +6286,10 @@
    "source": "<g1>Torrents</g1> are peer to peer: other people in a torrent's swarm see your IP address, as with every torrent client.",
    "text": "<g1>种子</g1>是点对点的：洪流群中的其他人会看到您的 IP 地址，所有洪流客户端都是如此。"
   },
+  "9b191ff0c3c9dbb1": {
+   "source": "How MDM knows:",
+   "text": "MDM 如何得知："
+  },
   "9b3dde1851a80204": {
    "source": "<g1>Match case</g1> tells capitals apart. <g2>Match whole string only</g2> finds only an exact, complete match.",
    "text": "<g1>区分大小写</g1> 会区分大小写字母。<g2>只匹配整个字符串</g2> 只查找精确、完整的匹配项。"
@@ -6433,6 +6477,10 @@
   "a04886db62535b92": {
    "source": "A translation longer than the English ends in <g1>...</g1> where it doesn't fit; point at it to read it whole.",
    "text": "如果翻译比英文长，不适合显示的部分会以<g1>...</g1>结尾；指向它即可阅读完整内容。"
+  },
+  "a05a0538e9ea2498": {
+   "source": "<g1>File Properties</g1> shows a download's type, status, size and folder, its address, your description, the page it came from (<g2>Referer</g2>), where its server is (<g3>country and round trip</g3>, as its last run saw them) and a login for the site. <g4>Last try</g4> and <g5>Result</g5> tell you how its last attempt went.",
+   "text": "<g1>文件属性</g1>显示下载的类型、状态、大小和文件夹，其地址、您的描述、来源页面（<g2>引用页</g2>）、服务器位置（<g3>国家和往返时间</g3>，以上次运行所见）以及网站登录信息。<g4>上次尝试</g4>和<g5>结果</g5>告诉您上次尝试的情况。"
   },
   "a06fa72ad54fa126": {
    "source": "Install MDM with the setup and keep Set up browser integration ticked. In Firefox, then open the add-on's page on addons.mozilla.org and click Add to Firefox. In Chrome, Edge, Brave, Opera and Vivaldi, load it by hand for now, while the Chrome Web Store reviews it: open the browser's extensions page, turn on Developer mode, choose Load unpacked and pick the extension\\chromium folder in MDM's folder. The tutorial walks through it.",
@@ -7414,6 +7462,10 @@
    "source": "<g1>A tour of the features</g1> on the website instead of a wall of screenshots.",
    "text": "网站上<g1>功能导览</g1>，取代了大量的屏幕截图。"
   },
+  "b826ee150172085c": {
+   "source": "Where the server is",
+   "text": "服务器位置"
+  },
   "b84ada2c25ba9d3b": {
    "source": "Install with the setup",
    "text": "通过安装程序安装"
@@ -7525,6 +7577,10 @@
   "bb2a946ec0764dee": {
    "source": "Hover over the download's <g1>Status</g1>, or open its progress window, to read yt-dlp's message.",
    "text": "将鼠标悬停在下载的<g1>状态</g1>上，或打开其进度窗口，以阅读 yt-dlp 的消息。"
+  },
+  "bb66b5a231ef607c": {
+   "source": "<g1>The time</g1> is measured from the download's own connections, as each one opens: MDM sends nothing extra to the server. It is an estimate (the time to open a connection, divided by its round trips: one for http, two for https), so it says <g2>about</g2>. The quickest connection counts.",
+   "text": "<g1>时间</g1>是从下载自身的连接中测量的，每个连接打开时都会测量：MDM 不会向服务器发送任何额外数据。这是一个估算值（打开连接所需的时间，除以其往返次数：HTTP 为一次，HTTPS 为两次），因此显示<g2>约</g2>。最快的连接会被计算在内。"
   },
   "bb8defdec6234c3c": {
    "source": "<g1><g2>Keyboard shortcuts</g2></g1> — every key the main window answers.",
@@ -8014,6 +8070,10 @@
    "source": "<g1>9</g1> of 10",
    "text": "10个中的<g1>9</g1>个"
   },
+  "c8faf12a4c3d4e99": {
+   "source": "<g1>Server</g1> — where the server is, and how near. See <g2>Where the server is</g2>.",
+   "text": "<g1>服务器</g1> — 服务器的位置和距离。请参阅<g2>服务器位置</g2>。"
+  },
   "c9044c08663d0af5": {
    "source": "A PDF, a song or a video that the browser would show or play itself goes to MDM too, when its type is in <g1>Options → File types</g1> (not on the excluded sites). To turn this off, untick <g2>Also take files the browser would open</g2> in <g3>Options → General → Keys...</g3>. This needs a Chromium browser (Chrome, Edge, Brave, Opera, Vivaldi) version 128 or later, or Firefox.",
    "text": "当 PDF、歌曲或视频的类型在 <g1>选项 → 文件类型</g1> 中（不在排除的网站上）时，浏览器会自行显示或播放的文件也会交给 MDM。要关闭此功能，请在 <g2>选项 → 常规 → 按键...</g2> 中取消勾选 <g3>也接管浏览器会打开的文件</g3>。这需要 Chromium 浏览器（Chrome、Edge、Brave、Opera、Vivaldi）128 或更高版本，或 Firefox。"
@@ -8221,6 +8281,10 @@
   "cf04b2764bc982a7": {
    "source": "Neat Download Manager",
    "text": "Neat Download Manager"
+  },
+  "cf28e1b873f9178c": {
+   "source": "<g1>Near</g1> (green): under 60 ms, usually the same country or the next one.",
+   "text": "<g1>近</g1>（绿色）：低于 60 毫秒，通常是同一国家或邻国。"
   },
   "cf3a9ec3dbd55233": {
    "source": "<g1>Delete</g1> — remove a category, your own or a built-in one (not General or Torrents). MDM asks what happens to its downloads: <g2>Move its downloads to General</g2>, or <g3>Remove its downloads from the list</g3> (a download that is running moves to General instead). Their files stay where they are either way. From then on, files of its types go to another category that has them, or to General.",
@@ -8645,6 +8709,10 @@
   "d9b76e3e6afd2fa9": {
    "source": "<g1><g2>Download a video from a page</g2></g1> — pick a quality and save a video.",
    "text": "<g1><g2>从页面下载视频</g2></g1> — 选择质量并保存视频。"
+  },
+  "d9dcf7778d51f367": {
+   "source": "<g1>Through a proxy</g1>, MDM only sees the proxy, so it says <g2>through a proxy</g2> (with the proxy's country when it knows it) instead of guessing the server's. A VPN that works at the system level can't be seen: the country is then the server's, but the time includes the VPN's detour.",
+   "text": "<g1>通过代理</g1>，MDM 只能看到代理，因此会显示<g2>通过代理</g2>（如果知道代理的国家，则会显示代理的国家），而不是猜测服务器的位置。系统级别的 VPN 无法被看到：此时国家是服务器的国家，但时间包括了 VPN 的绕行。"
   },
   "da12a252ee14babe": {
    "source": "To stop in the morning whatever is left, tick <g1>Stop download at</g1> and set a time, for example 7:00:00 AM.",

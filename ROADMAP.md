@@ -13,6 +13,10 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Where a download's server is: its country's flag and name and its round trip (near, medium or
+  far) in Download File Info, the progress window and Properties, from a table that comes with MDM
+  (no address is sent anywhere); a proxy or a CDN said as such
+  ([#140](https://github.com/anefzaoui/misterdownloadmanager/issues/140))
 - ✅ Torrents: Download in order, to watch a video while it downloads (each file's first and last
   pieces first, its own choice); other torrents now take the rarest pieces first
   ([#39](https://github.com/anefzaoui/misterdownloadmanager/issues/39))
@@ -196,8 +200,6 @@ Everything below ships together, in one release, as version 0.3.0.
   contrast; then style themes with their own control shapes, a drawn title bar on Windows and their
   own icons: Metro first, then Adwaita and Breeze, then Luna, Aero and Aqua with icons drawn for
   MDM. Theme files can be added by anyone, and Base16 and pywal schemes imported
-- 🔄 Where a download's server is: its country, flag and round trip, from a table that comes with
-  MDM; no address is sent anywhere ([#140](https://github.com/anefzaoui/misterdownloadmanager/issues/140))
 - 🔄 Linux supported like Windows, no longer experimental: every change is now checked on Ubuntu
   (GNOME) as well as Windows, then on KDE, Cinnamon and Xfce ([#164](https://github.com/anefzaoui/misterdownloadmanager/issues/164))
 - 🔄 Before the release: every screenshot taken again on Windows and Linux (smaller files, WebP),

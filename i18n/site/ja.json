@@ -682,6 +682,10 @@
    "source": "From IDM",
    "text": "IDMから"
   },
+  "1105c4be357dbf30": {
+   "source": "<g1>Properties</g1> keeps what the last run saw, so a finished download still shows where it came from.",
+   "text": "<g1>プロパティ</g1>には、最後に実行されたときに確認された情報が保持されるため、完了したダウンロードでもどこから来たかが表示されます。"
+  },
   "110d6b2bd87a92ac": {
    "source": "Works with what you already use",
    "text": "お使いの環境で動作"
@@ -733,6 +737,10 @@
   "1294135f300139c9": {
    "source": "The benchmark data could not be loaded.",
    "text": "ベンチマークデータを読み込めませんでした。"
+  },
+  "129f913e421a0374": {
+   "source": "Torrents, videos and galleries have no single server of MDM's own (peers, or yt-dlp's and gallery-dl's), so their windows don't show one.",
+   "text": "トレント、動画、ギャラリーには MDM 独自の単一サーバーがないため（ピア、または yt-dlp と gallery-dl のもの）、それらのウィンドウには表示されません。"
   },
   "12a228101626f4bc": {
    "source": "How MDM uses connections",
@@ -793,6 +801,10 @@
   "13f638ddac98e283": {
    "source": "Download Later",
    "text": "後でダウンロード"
+  },
+  "13fab708d8179610": {
+   "source": "<g1>A content delivery network</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai and others) serves a file from a server near you, not from the site owner's. The tooltip says so: the place is the network's server, not where the site is.",
+   "text": "<g1>コンテンツデリバリーネットワーク</g1>（Cloudflare、Amazon CloudFront、Fastly、Akamai など）は、サイト所有者のサーバーからではなく、お近くのサーバーからファイルを配信します。ツールチップにその旨が表示されます。場所はネットワークのサーバーであり、サイトの場所ではありません。"
   },
   "141ec6fe9135de0f": {
    "source": "Use Help → Report a problem in MDM: it opens the bug report form on GitHub with your version, system and language filled in. Or open the form yourself.…",
@@ -993,6 +1005,10 @@
   "18da802709723cf6": {
    "source": "Ctrl+Space",
    "text": "Ctrl+Space"
+  },
+  "19156d7406477513": {
+   "source": "<g1>Server</g1> — where the server is: its country's flag and name, and how long a round trip to it takes. See <g2>Where the server is</g2>. It stays blank when the browser handed the download over with its name and size, since MDM didn't need to ask the server.",
+   "text": "<g1>サーバー</g1> — サーバーの場所：国の旗と名前、およびラウンドトリップにかかる時間。<g2>サーバーの場所</g2>を参照してください。ブラウザがダウンロードを名前とサイズで渡した場合、MDMがサーバーに問い合わせる必要がなかったため、ここは空白のままになります。"
   },
   "1970ad20e03db6c3": {
    "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). macOS doesn't measure it yet. The monitor then writes a <g3>minidump</g3> of every thread from outside, through <x4/> and <x5/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
@@ -1406,6 +1422,10 @@
    "source": "<g1>Default download directory for \"…\" category</g1> — the category's folder. Type a path or click <g2>Browse</g2>.",
    "text": "<g1>「…」カテゴリの既定のダウンロードディレクトリ</g1> — カテゴリのフォルダーです。パスを入力するか、<g2>参照</g2>をクリックします。"
   },
+  "21e0a24c92fe95eb": {
+   "source": "Hover over the line for the server's address and how the time was measured.",
+   "text": "行にカーソルを合わせると、サーバーのアドレスと時間の測定方法が表示されます。"
+  },
   "22135141999ab3ab": {
    "source": "Find a download",
    "text": "ダウンロードを検索"
@@ -1569,6 +1589,10 @@
   "25b4db9aa4024862": {
    "source": "The current speed.",
    "text": "現在の速度。"
+  },
+  "25e1ffe092788c2a": {
+   "source": "<g1>Download File Info</g1>, the progress window and <g2>Properties</g2> show where a download's server is: its country's flag and name, then the time a round trip to it takes, such as <g3>about 24 ms (near)</g3>.",
+   "text": "<g1>ダウンロード ファイル情報</g1>、進捗ウィンドウ、および<g2>プロパティ</g2>には、ダウンロード元のサーバーの場所が表示されます。国旗と国名、そして往復にかかる時間（例: <g3>約 24 ミリ秒 (近い)</g3>）です。"
   },
   "2606a30b44fb755e": {
    "source": "Select one or more downloads and press <g1>Delete</g1>, click <g2>Delete</g2> on the toolbar, or choose <g3>File → Remove</g3>. MDM asks first:",
@@ -1766,6 +1790,10 @@
    "source": "Feature by feature",
    "text": "機能別"
   },
+  "2ab8acec08b25c9a": {
+   "source": "<g1>A server on your computer or your local network</g1> shows as such, with no flag.",
+   "text": "<g1>お使いのコンピューターまたはローカルネットワーク上のサーバー</g1>は、旗なしでそのように表示されます。"
+  },
   "2ac9c8a3b555e84c": {
    "source": "p (Mann-Whitney)",
    "text": "p (マン・ホイットニー)"
@@ -1885,6 +1913,10 @@
   "2cc56bc5771aeae6": {
    "source": "<g1>The other links of one page</g1> form a package named after the page.",
    "text": "<g1>1つのページの他のリンク</g1>は、そのページの名前でパッケージを形成します。"
+  },
+  "2cc84db987b16ce7": {
+   "source": "<g1>The country</g1> comes from a table of address ranges that comes with MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), looked up on your computer. MDM never sends the address anywhere to ask where it is. The table is updated with each release; an address that has moved since may show its old country.",
+   "text": "<g1>国</g1>は、MDM に付属するアドレス範囲のテーブル（<g2>DB-IP による IP to Country Lite</g2>、CC BY 4.0）から、お使いのコンピューター上で検索されます。MDM は、アドレスの場所を問い合わせるためにどこにも送信しません。テーブルはリリースごとに更新されます。移動したアドレスは、古い国を表示する場合があります。"
   },
   "2ce984608b61ca9b": {
    "source": "<g1>Browse</g1> — open its folder in Explorer.",
@@ -2181,6 +2213,10 @@
   "3508dab985cc0335": {
    "source": "Free, open-source download manager for Windows, with macOS and Linux to try. The IDM layout you know, 5× faster in our benchmark: every connection at once, crash-safe resume, torrents, video from web pages, browser integration, 86 languages.",
    "text": "Windows用の無料オープンソースダウンロードマネージャー。macOSとLinux版も試用できます。おなじみのIDMレイアウトで、当社のベンチマークでは5倍高速です。すべての接続を同時に処理し、クラッシュしても安全に再開でき、トレント、ウェブページからのビデオダウンロード、ブラウザ統合、86言語に対応しています。"
+  },
+  "3513f93cb0fa7d72": {
+   "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
+   "text": "<g1>遠い</g1>（赤）：150 ミリ秒以上。通常、別の大陸です。遠いサーバーは速度が遅いことが多く、接続数を増やすことで最も効果が得られます。"
   },
   "3514fb404711d6ec": {
    "source": "Connections to this computer itself (<x1/>) aren't bound. A proxy on this computer carries the downloads, and where it sends them is up to it.",
@@ -3525,6 +3561,10 @@
   "5887d550311226da": {
    "source": "Open that menu (Windows and Linux)",
    "text": "そのメニューを開く（WindowsおよびLinux）"
+  },
+  "588db309f4fc3eb6": {
+   "source": "<g1>Medium</g1> (amber): 60 to 150 ms, usually the same continent.",
+   "text": "<g1>中程度</g1>（琥珀色）：60～150 ミリ秒。通常、同じ大陸内です。"
   },
   "58bec232807ab18d": {
    "source": "The progress window in detail →",
@@ -6186,6 +6226,10 @@
    "source": "<g1>Torrents</g1> are peer to peer: other people in a torrent's swarm see your IP address, as with every torrent client.",
    "text": "<g1>トレント</g1>はピアツーピアです。他のトレントクライアントと同様に、トレントのスウォーム内の他のユーザーはあなたのIPアドレスを見ることができます。"
   },
+  "9b191ff0c3c9dbb1": {
+   "source": "How MDM knows:",
+   "text": "MDM が知る方法："
+  },
   "9b3dde1851a80204": {
    "source": "<g1>Match case</g1> tells capitals apart. <g2>Match whole string only</g2> finds only an exact, complete match.",
    "text": "<g1>大文字と小文字を区別する</g1>は、大文字と小文字を区別します。<g2>文字列全体のみ一致</g2>は、正確な完全一致のみを見つけます。"
@@ -6373,6 +6417,10 @@
   "a04886db62535b92": {
    "source": "A translation longer than the English ends in <g1>...</g1> where it doesn't fit; point at it to read it whole.",
    "text": "英語よりも長い翻訳は、収まらない場合<g1>...</g1>で終わります。全体を読むには、その部分をポイントしてください。"
+  },
+  "a05a0538e9ea2498": {
+   "source": "<g1>File Properties</g1> shows a download's type, status, size and folder, its address, your description, the page it came from (<g2>Referer</g2>), where its server is (<g3>country and round trip</g3>, as its last run saw them) and a login for the site. <g4>Last try</g4> and <g5>Result</g5> tell you how its last attempt went.",
+   "text": "<g1>ファイルのプロパティ</g1>には、ダウンロードの種類、ステータス、サイズ、フォルダー、アドレス、説明、ダウンロード元のページ（<g2>リファラー</g2>）、サーバーの場所（<g3>国と往復時間</g3>、最終実行時の情報）、サイトのログイン情報が表示されます。<g4>最終試行</g4>と<g5>結果</g5>は、最終試行がどのように行われたかを示します。"
   },
   "a09cf46e49e64bbb": {
    "source": "A sweep through every window for the small things that make a program feel finished: how each control looks and answers the mouse and the keyboard, dark mode everywhere, screen readers, and a long list of fixes found by reviewing all of it (issue #7 and more).",
@@ -7334,6 +7382,10 @@
    "source": "<g1>A tour of the features</g1> on the website instead of a wall of screenshots.",
    "text": "ウェブサイトに、スクリーンショットの羅列ではなく、<g1>機能のツアー</g1>が掲載されました。"
   },
+  "b826ee150172085c": {
+   "source": "Where the server is",
+   "text": "サーバーの場所"
+  },
   "b84ada2c25ba9d3b": {
    "source": "Install with the setup",
    "text": "セットアップによるインストール"
@@ -7441,6 +7493,10 @@
   "bb2a946ec0764dee": {
    "source": "Hover over the download's <g1>Status</g1>, or open its progress window, to read yt-dlp's message.",
    "text": "ダウンロードの<g1>状態</g1>にカーソルを合わせるか、進行状況ウィンドウを開いて、yt-dlp のメッセージを読みます。"
+  },
+  "bb66b5a231ef607c": {
+   "source": "<g1>The time</g1> is measured from the download's own connections, as each one opens: MDM sends nothing extra to the server. It is an estimate (the time to open a connection, divided by its round trips: one for http, two for https), so it says <g2>about</g2>. The quickest connection counts.",
+   "text": "<g1>時間</g1>は、ダウンロードの各接続が開くときに測定されます。MDM はサーバーに余分なものを送信しません。これは推定値（接続を開く時間 ÷ 往復回数：HTTP は 1 回、HTTPS は 2 回）であるため、<g2>約</g2>と表示されます。最も速い接続がカウントされます。"
   },
   "bb8defdec6234c3c": {
    "source": "<g1><g2>Keyboard shortcuts</g2></g1> — every key the main window answers.",
@@ -7926,6 +7982,10 @@
    "source": "<g1>9</g1> of 10",
    "text": "10件中<g1>9</g1>件"
   },
+  "c8faf12a4c3d4e99": {
+   "source": "<g1>Server</g1> — where the server is, and how near. See <g2>Where the server is</g2>.",
+   "text": "<g1>サーバー</g1> — サーバーの場所と距離。<g2>サーバーの場所</g2>をご覧ください。"
+  },
   "c9044c08663d0af5": {
    "source": "A PDF, a song or a video that the browser would show or play itself goes to MDM too, when its type is in <g1>Options → File types</g1> (not on the excluded sites). To turn this off, untick <g2>Also take files the browser would open</g2> in <g3>Options → General → Keys...</g3>. This needs a Chromium browser (Chrome, Edge, Brave, Opera, Vivaldi) version 128 or later, or Firefox.",
    "text": "ブラウザーが自身で表示または再生するPDF、曲、またはビデオも、その種類が<g1>オプション → ファイルの種類</g1>にある場合（除外されたサイトではない場合）、MDMに送られます。これをオフにするには、<g3>オプション → 一般 → キー...</g3>で<g2>ブラウザーが開くファイルも取得する</g2>のチェックを外します。これにはChromiumブラウザー（Chrome、Edge、Brave、Opera、Vivaldi）バージョン128以降、またはFirefoxが必要です。"
@@ -8133,6 +8193,10 @@
   "cf04b2764bc982a7": {
    "source": "Neat Download Manager",
    "text": "Neat Download Manager"
+  },
+  "cf28e1b873f9178c": {
+   "source": "<g1>Near</g1> (green): under 60 ms, usually the same country or the next one.",
+   "text": "<g1>近い</g1>（緑）：60 ミリ秒未満。通常、同じ国または隣接する国です。"
   },
   "cf3a9ec3dbd55233": {
    "source": "<g1>Delete</g1> — remove a category, your own or a built-in one (not General or Torrents). MDM asks what happens to its downloads: <g2>Move its downloads to General</g2>, or <g3>Remove its downloads from the list</g3> (a download that is running moves to General instead). Their files stay where they are either way. From then on, files of its types go to another category that has them, or to General.",
@@ -8557,6 +8621,10 @@
   "d9b76e3e6afd2fa9": {
    "source": "<g1><g2>Download a video from a page</g2></g1> — pick a quality and save a video.",
    "text": "<g1><g2>ページからビデオをダウンロード</g2></g1> — 品質を選択してビデオを保存します。"
+  },
+  "d9dcf7778d51f367": {
+   "source": "<g1>Through a proxy</g1>, MDM only sees the proxy, so it says <g2>through a proxy</g2> (with the proxy's country when it knows it) instead of guessing the server's. A VPN that works at the system level can't be seen: the country is then the server's, but the time includes the VPN's detour.",
+   "text": "<g1>プロキシ経由</g1>の場合、MDM はプロキシしか認識しないため、サーバーを推測する代わりに<g2>プロキシ経由</g2>と表示されます（プロキシの国がわかる場合はその国も表示）。システムレベルで機能する VPN は認識できません。その場合、国はサーバーのものですが、時間には VPN の迂回が含まれます。"
   },
   "da12a252ee14babe": {
    "source": "To stop in the morning whatever is left, tick <g1>Stop download at</g1> and set a time, for example 7:00:00 AM.",

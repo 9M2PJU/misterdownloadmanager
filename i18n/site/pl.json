@@ -682,6 +682,10 @@
    "source": "From IDM",
    "text": "Z IDM"
   },
+  "1105c4be357dbf30": {
+   "source": "<g1>Properties</g1> keeps what the last run saw, so a finished download still shows where it came from.",
+   "text": "<g1>Właściwości</g1> zachowują to, co widziała ostatnia sesja, więc zakończone pobieranie nadal pokazuje, skąd pochodziło."
+  },
   "110d6b2bd87a92ac": {
    "source": "Works with what you already use",
    "text": "Działa z tym, czego już używasz"
@@ -733,6 +737,10 @@
   "1294135f300139c9": {
    "source": "The benchmark data could not be loaded.",
    "text": "Nie udało się załadować danych porównawczych."
+  },
+  "129f913e421a0374": {
+   "source": "Torrents, videos and galleries have no single server of MDM's own (peers, or yt-dlp's and gallery-dl's), so their windows don't show one.",
+   "text": "Torrenty, filmy i galerie nie mają jednego własnego serwera MDM (peerów lub yt-dlp i gallery-dl), więc ich okna go nie pokazują."
   },
   "12a228101626f4bc": {
    "source": "How MDM uses connections",
@@ -793,6 +801,10 @@
   "13f638ddac98e283": {
    "source": "Download Later",
    "text": "Pobierz później"
+  },
+  "13fab708d8179610": {
+   "source": "<g1>A content delivery network</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai and others) serves a file from a server near you, not from the site owner's. The tooltip says so: the place is the network's server, not where the site is.",
+   "text": "<g1>Sieć dostarczania treści</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai i inne) dostarcza plik z serwera blisko Ciebie, a nie z serwera właściciela witryny. Etykietka informuje o tym: miejsce to serwer sieci, a nie miejsce, w którym znajduje się witryna."
   },
   "141ec6fe9135de0f": {
    "source": "Use Help → Report a problem in MDM: it opens the bug report form on GitHub with your version, system and language filled in. Or open the form yourself.…",
@@ -993,6 +1005,10 @@
   "18da802709723cf6": {
    "source": "Ctrl+Space",
    "text": "Ctrl+Spacja"
+  },
+  "19156d7406477513": {
+   "source": "<g1>Server</g1> — where the server is: its country's flag and name, and how long a round trip to it takes. See <g2>Where the server is</g2>. It stays blank when the browser handed the download over with its name and size, since MDM didn't need to ask the server.",
+   "text": "<g1>Serwer</g1> — lokalizacja serwera: flaga i nazwa kraju oraz czas potrzebny na wymianę danych. Zobacz <g2>Gdzie jest serwer</g2>. Pole pozostaje puste, gdy przeglądarka przekazała pobieranie z nazwą i rozmiarem, ponieważ MDM nie musiał pytać serwera."
   },
   "1970ad20e03db6c3": {
    "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). macOS doesn't measure it yet. The monitor then writes a <g3>minidump</g3> of every thread from outside, through <x4/> and <x5/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
@@ -1406,6 +1422,10 @@
    "source": "<g1>Default download directory for \"…\" category</g1> — the category's folder. Type a path or click <g2>Browse</g2>.",
    "text": "<g1>Domyślny katalog pobierania dla kategorii „…”</g1> — folder kategorii. Wpisz ścieżkę lub kliknij <g2>Przeglądaj</g2>."
   },
+  "21e0a24c92fe95eb": {
+   "source": "Hover over the line for the server's address and how the time was measured.",
+   "text": "Najedź kursorem na linię, aby zobaczyć adres serwera i sposób pomiaru czasu."
+  },
   "22135141999ab3ab": {
    "source": "Find a download",
    "text": "Znajdź pobieranie"
@@ -1569,6 +1589,10 @@
   "25b4db9aa4024862": {
    "source": "The current speed.",
    "text": "Aktualna prędkość."
+  },
+  "25e1ffe092788c2a": {
+   "source": "<g1>Download File Info</g1>, the progress window and <g2>Properties</g2> show where a download's server is: its country's flag and name, then the time a round trip to it takes, such as <g3>about 24 ms (near)</g3>.",
+   "text": "Okno postępu <g1>Informacje o pliku do pobrania</g1> oraz <g2>Właściwości</g2> pokazują, gdzie znajduje się serwer pobierania: flaga i nazwa kraju, a następnie czas podróży w obie strony do niego, np. <g3>około 24 ms (blisko)</g3>."
   },
   "2606a30b44fb755e": {
    "source": "Select one or more downloads and press <g1>Delete</g1>, click <g2>Delete</g2> on the toolbar, or choose <g3>File → Remove</g3>. MDM asks first:",
@@ -1766,6 +1790,10 @@
    "source": "Feature by feature",
    "text": "Funkcja po funkcji"
   },
+  "2ab8acec08b25c9a": {
+   "source": "<g1>A server on your computer or your local network</g1> shows as such, with no flag.",
+   "text": "<g1>Serwer na Twoim komputerze lub w sieci lokalnej</g1> jest wyświetlany jako taki, bez flagi."
+  },
   "2ac9c8a3b555e84c": {
    "source": "p (Mann-Whitney)",
    "text": "p (Manna-Whitneya)"
@@ -1885,6 +1913,10 @@
   "2cc56bc5771aeae6": {
    "source": "<g1>The other links of one page</g1> form a package named after the page.",
    "text": "<g1>Pozostałe łącza jednej strony</g1> tworzą pakiet nazwany tak jak strona."
+  },
+  "2cc84db987b16ce7": {
+   "source": "<g1>The country</g1> comes from a table of address ranges that comes with MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), looked up on your computer. MDM never sends the address anywhere to ask where it is. The table is updated with each release; an address that has moved since may show its old country.",
+   "text": "<g1>Kraj</g1> pochodzi z tabeli zakresów adresów dołączonej do MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), wyszukiwanej na Twoim komputerze. MDM nigdy nie wysyła adresu nigdzie, aby zapytać, gdzie się znajduje. Tabela jest aktualizowana z każdą wersją; adres, który od tego czasu się przeniósł, może pokazywać swój stary kraj."
   },
   "2ce984608b61ca9b": {
    "source": "<g1>Browse</g1> — open its folder in Explorer.",
@@ -2181,6 +2213,10 @@
   "3508dab985cc0335": {
    "source": "Free, open-source download manager for Windows, with macOS and Linux to try. The IDM layout you know, 5× faster in our benchmark: every connection at once, crash-safe resume, torrents, video from web pages, browser integration, 86 languages.",
    "text": "Darmowy, otwarty menedżer pobierania dla Windows, z eksperymentalnymi wersjami dla macOS i Linux. Układ IDM, który znasz, 5 razy szybszy w naszych testach: wszystkie połączenia jednocześnie, bezpieczne wznawianie po awarii, torrenty, wideo ze stron internetowych, integracja z przeglądarką, 86 języków."
+  },
+  "3513f93cb0fa7d72": {
+   "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
+   "text": "<g1>Daleko</g1> (czerwony): powyżej 150 ms, zazwyczaj inny kontynent. Daleki serwer jest często wolniejszy, a więcej połączeń pomaga mu najbardziej."
   },
   "3514fb404711d6ec": {
    "source": "Connections to this computer itself (<x1/>) aren't bound. A proxy on this computer carries the downloads, and where it sends them is up to it.",
@@ -3525,6 +3561,10 @@
   "5887d550311226da": {
    "source": "Open that menu (Windows and Linux)",
    "text": "Otwórz to menu (Windows i Linux)"
+  },
+  "588db309f4fc3eb6": {
+   "source": "<g1>Medium</g1> (amber): 60 to 150 ms, usually the same continent.",
+   "text": "<g1>Średnio</g1> (bursztynowy): od 60 do 150 ms, zazwyczaj ten sam kontynent."
   },
   "58bec232807ab18d": {
    "source": "The progress window in detail →",
@@ -6186,6 +6226,10 @@
    "source": "<g1>Torrents</g1> are peer to peer: other people in a torrent's swarm see your IP address, as with every torrent client.",
    "text": "<g1>Torrenty</g1> działają w trybie peer-to-peer: inne osoby w roju torrenta widzą Twój adres IP, podobnie jak w przypadku każdego klienta torrentowego."
   },
+  "9b191ff0c3c9dbb1": {
+   "source": "How MDM knows:",
+   "text": "Jak MDM to wie:"
+  },
   "9b3dde1851a80204": {
    "source": "<g1>Match case</g1> tells capitals apart. <g2>Match whole string only</g2> finds only an exact, complete match.",
    "text": "<g1>Uwzględnij wielkość liter</g1> rozróżnia wielkie i małe litery. <g2>Dopasuj tylko cały ciąg</g2> znajduje tylko dokładne, pełne dopasowanie."
@@ -6373,6 +6417,10 @@
   "a04886db62535b92": {
    "source": "A translation longer than the English ends in <g1>...</g1> where it doesn't fit; point at it to read it whole.",
    "text": "Tłumaczenie dłuższe niż angielskie kończy się na <g1>...</g1>, jeśli się nie mieści; najedź na nie, aby przeczytać je w całości."
+  },
+  "a05a0538e9ea2498": {
+   "source": "<g1>File Properties</g1> shows a download's type, status, size and folder, its address, your description, the page it came from (<g2>Referer</g2>), where its server is (<g3>country and round trip</g3>, as its last run saw them) and a login for the site. <g4>Last try</g4> and <g5>Result</g5> tell you how its last attempt went.",
+   "text": "<g1>Właściwości pliku</g1> pokazują typ, status, rozmiar i folder pobieranego pliku, jego adres, Twój opis, stronę, z której pochodzi (<g2>Referer</g2>), lokalizację serwera (<g3>kraj i czas podróży w obie strony</g3>, tak jak widział to ostatni raz) oraz dane logowania do witryny. <g4>Ostatnia próba</g4> i <g5>Wynik</g5> informują o przebiegu ostatniej próby."
   },
   "a09cf46e49e64bbb": {
    "source": "A sweep through every window for the small things that make a program feel finished: how each control looks and answers the mouse and the keyboard, dark mode everywhere, screen readers, and a long list of fixes found by reviewing all of it (issue #7 and more).",
@@ -7334,6 +7382,10 @@
    "source": "<g1>A tour of the features</g1> on the website instead of a wall of screenshots.",
    "text": "<g1>Przegląd funkcji</g1> na stronie internetowej zamiast ściany zrzutów ekranu."
   },
+  "b826ee150172085c": {
+   "source": "Where the server is",
+   "text": "Gdzie znajduje się serwer"
+  },
   "b84ada2c25ba9d3b": {
    "source": "Install with the setup",
    "text": "Instalacja za pomocą instalatora"
@@ -7441,6 +7493,10 @@
   "bb2a946ec0764dee": {
    "source": "Hover over the download's <g1>Status</g1>, or open its progress window, to read yt-dlp's message.",
    "text": "Najedź kursorem na <g1>Stan</g1> pobierania lub otwórz jego okno postępu, aby przeczytać wiadomość yt-dlp."
+  },
+  "bb66b5a231ef607c": {
+   "source": "<g1>The time</g1> is measured from the download's own connections, as each one opens: MDM sends nothing extra to the server. It is an estimate (the time to open a connection, divided by its round trips: one for http, two for https), so it says <g2>about</g2>. The quickest connection counts.",
+   "text": "<g1>Czas</g1> jest mierzony z własnych połączeń pobierania, w miarę otwierania każdego z nich: MDM nie wysyła niczego dodatkowego do serwera. Jest to szacunek (czas otwarcia połączenia, podzielony przez jego podróże w obie strony: jeden dla http, dwa dla https), dlatego mówi <g2>około</g2>. Liczy się najszybsze połączenie."
   },
   "bb8defdec6234c3c": {
    "source": "<g1><g2>Keyboard shortcuts</g2></g1> — every key the main window answers.",
@@ -7926,6 +7982,10 @@
    "source": "<g1>9</g1> of 10",
    "text": "<g1>9</g1> z 10"
   },
+  "c8faf12a4c3d4e99": {
+   "source": "<g1>Server</g1> — where the server is, and how near. See <g2>Where the server is</g2>.",
+   "text": "<g1>Serwer</g1> — gdzie znajduje się serwer i jak blisko. Zobacz <g2>Gdzie znajduje się serwer</g2>."
+  },
   "c9044c08663d0af5": {
    "source": "A PDF, a song or a video that the browser would show or play itself goes to MDM too, when its type is in <g1>Options → File types</g1> (not on the excluded sites). To turn this off, untick <g2>Also take files the browser would open</g2> in <g3>Options → General → Keys...</g3>. This needs a Chromium browser (Chrome, Edge, Brave, Opera, Vivaldi) version 128 or later, or Firefox.",
    "text": "Plik PDF, piosenka lub film, które przeglądarka wyświetliłaby lub odtworzyła samodzielnie, również trafiają do MDM, jeśli ich typ znajduje się w <g1>Opcje → Typy plików</g1> (nie na wykluczonych stronach). Aby to wyłączyć, odznacz <g2>Pobieraj również pliki, które przeglądarka otworzyłaby</g2> w <g3>Opcje → Ogólne → Klawisze...</g3>. Wymaga to przeglądarki opartej na Chromium (Chrome, Edge, Brave, Opera, Vivaldi) w wersji 128 lub nowszej, lub przeglądarki Firefox."
@@ -8133,6 +8193,10 @@
   "cf04b2764bc982a7": {
    "source": "Neat Download Manager",
    "text": "Neat Download Manager"
+  },
+  "cf28e1b873f9178c": {
+   "source": "<g1>Near</g1> (green): under 60 ms, usually the same country or the next one.",
+   "text": "<g1>Blisko</g1> (zielony): poniżej 60 ms, zazwyczaj ten sam kraj lub sąsiedni."
   },
   "cf3a9ec3dbd55233": {
    "source": "<g1>Delete</g1> — remove a category, your own or a built-in one (not General or Torrents). MDM asks what happens to its downloads: <g2>Move its downloads to General</g2>, or <g3>Remove its downloads from the list</g3> (a download that is running moves to General instead). Their files stay where they are either way. From then on, files of its types go to another category that has them, or to General.",
@@ -8557,6 +8621,10 @@
   "d9b76e3e6afd2fa9": {
    "source": "<g1><g2>Download a video from a page</g2></g1> — pick a quality and save a video.",
    "text": "<g1><g2>Pobierz wideo ze strony</g2></g1> — wybierz jakość i zapisz wideo."
+  },
+  "d9dcf7778d51f367": {
+   "source": "<g1>Through a proxy</g1>, MDM only sees the proxy, so it says <g2>through a proxy</g2> (with the proxy's country when it knows it) instead of guessing the server's. A VPN that works at the system level can't be seen: the country is then the server's, but the time includes the VPN's detour.",
+   "text": "<g1>Przez proxy</g1>, MDM widzi tylko proxy, więc mówi <g2>przez proxy</g2> (z krajem proxy, jeśli go zna) zamiast zgadywać serwer. VPN działający na poziomie systemu nie może być widziany: kraj jest wtedy krajem serwera, ale czas obejmuje objazd VPN."
   },
   "da12a252ee14babe": {
    "source": "To stop in the morning whatever is left, tick <g1>Stop download at</g1> and set a time, for example 7:00:00 AM.",

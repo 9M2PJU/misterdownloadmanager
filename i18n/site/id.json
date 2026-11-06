@@ -682,6 +682,10 @@
    "source": "From IDM",
    "text": "Dari IDM"
   },
+  "1105c4be357dbf30": {
+   "source": "<g1>Properties</g1> keeps what the last run saw, so a finished download still shows where it came from.",
+   "text": "<g1>Properti</g1> menyimpan apa yang terakhir dilihat, jadi unduhan yang selesai masih menunjukkan dari mana asalnya."
+  },
   "110d6b2bd87a92ac": {
    "source": "Works with what you already use",
    "text": "Bekerja dengan yang sudah Anda gunakan"
@@ -733,6 +737,10 @@
   "1294135f300139c9": {
    "source": "The benchmark data could not be loaded.",
    "text": "Data benchmark tidak dapat dimuat."
+  },
+  "129f913e421a0374": {
+   "source": "Torrents, videos and galleries have no single server of MDM's own (peers, or yt-dlp's and gallery-dl's), so their windows don't show one.",
+   "text": "Torrent, video, dan galeri tidak memiliki server MDM sendiri (peer, atau yt-dlp dan gallery-dl), jadi jendelanya tidak menampilkannya."
   },
   "12a228101626f4bc": {
    "source": "How MDM uses connections",
@@ -793,6 +801,10 @@
   "13f638ddac98e283": {
    "source": "Download Later",
    "text": "Unduh Nanti"
+  },
+  "13fab708d8179610": {
+   "source": "<g1>A content delivery network</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai and others) serves a file from a server near you, not from the site owner's. The tooltip says so: the place is the network's server, not where the site is.",
+   "text": "<g1>Jaringan pengiriman konten</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai, dan lainnya) menyajikan file dari server di dekat Anda, bukan dari pemilik situs. Tooltip mengatakannya: tempat itu adalah server jaringan, bukan tempat situs berada."
   },
   "141ec6fe9135de0f": {
    "source": "Use Help → Report a problem in MDM: it opens the bug report form on GitHub with your version, system and language filled in. Or open the form yourself.…",
@@ -993,6 +1005,10 @@
   "18da802709723cf6": {
    "source": "Ctrl+Space",
    "text": "Ctrl+Spasi"
+  },
+  "19156d7406477513": {
+   "source": "<g1>Server</g1> — where the server is: its country's flag and name, and how long a round trip to it takes. See <g2>Where the server is</g2>. It stays blank when the browser handed the download over with its name and size, since MDM didn't need to ask the server.",
+   "text": "<g1>Server</g1> — lokasi server: bendera dan nama negaranya, serta berapa lama waktu pulang-pergi ke server tersebut. Lihat <g2>Lokasi server</g2>. Kolom ini akan kosong jika peramban menyerahkan unduhan dengan nama dan ukurannya, karena MDM tidak perlu bertanya kepada server."
   },
   "1970ad20e03db6c3": {
    "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). macOS doesn't measure it yet. The monitor then writes a <g3>minidump</g3> of every thread from outside, through <x4/> and <x5/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
@@ -1406,6 +1422,10 @@
    "source": "<g1>Default download directory for \"…\" category</g1> — the category's folder. Type a path or click <g2>Browse</g2>.",
    "text": "<g1>Direktori unduhan default untuk kategori \"...\"</g1> — folder kategori. Ketik jalur atau klik <g2>Telusuri</g2>."
   },
+  "21e0a24c92fe95eb": {
+   "source": "Hover over the line for the server's address and how the time was measured.",
+   "text": "Arahkan kursor ke baris untuk melihat alamat server dan bagaimana waktu diukur."
+  },
   "22135141999ab3ab": {
    "source": "Find a download",
    "text": "Temukan unduhan"
@@ -1569,6 +1589,10 @@
   "25b4db9aa4024862": {
    "source": "The current speed.",
    "text": "Kecepatan saat ini."
+  },
+  "25e1ffe092788c2a": {
+   "source": "<g1>Download File Info</g1>, the progress window and <g2>Properties</g2> show where a download's server is: its country's flag and name, then the time a round trip to it takes, such as <g3>about 24 ms (near)</g3>.",
+   "text": "<g1>Info File Unduhan</g1>, jendela progres, dan <g2>Properti</g2> menunjukkan lokasi server unduhan: bendera dan nama negaranya, lalu waktu yang dibutuhkan untuk perjalanan pulang-pergi ke sana, seperti <g3>sekitar 24 ms (dekat)</g3>."
   },
   "2606a30b44fb755e": {
    "source": "Select one or more downloads and press <g1>Delete</g1>, click <g2>Delete</g2> on the toolbar, or choose <g3>File → Remove</g3>. MDM asks first:",
@@ -1766,6 +1790,10 @@
    "source": "Feature by feature",
    "text": "Fitur demi fitur"
   },
+  "2ab8acec08b25c9a": {
+   "source": "<g1>A server on your computer or your local network</g1> shows as such, with no flag.",
+   "text": "<g1>Server di komputer Anda atau jaringan lokal Anda</g1> ditampilkan seperti itu, tanpa bendera."
+  },
   "2ac9c8a3b555e84c": {
    "source": "p (Mann-Whitney)",
    "text": "p (Mann-Whitney)"
@@ -1885,6 +1913,10 @@
   "2cc56bc5771aeae6": {
    "source": "<g1>The other links of one page</g1> form a package named after the page.",
    "text": "<g1>Tautan lain dari satu halaman</g1> membentuk paket yang dinamai sesuai halaman."
+  },
+  "2cc84db987b16ce7": {
+   "source": "<g1>The country</g1> comes from a table of address ranges that comes with MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), looked up on your computer. MDM never sends the address anywhere to ask where it is. The table is updated with each release; an address that has moved since may show its old country.",
+   "text": "<g1>Negara</g1> berasal dari tabel rentang alamat yang disertakan dengan MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), yang dicari di komputer Anda. MDM tidak pernah mengirim alamat ke mana pun untuk menanyakan lokasinya. Tabel diperbarui dengan setiap rilis; alamat yang telah berpindah sejak saat itu mungkin menunjukkan negara lamanya."
   },
   "2ce984608b61ca9b": {
    "source": "<g1>Browse</g1> — open its folder in Explorer.",
@@ -2181,6 +2213,10 @@
   "3508dab985cc0335": {
    "source": "Free, open-source download manager for Windows, with macOS and Linux to try. The IDM layout you know, 5× faster in our benchmark: every connection at once, crash-safe resume, torrents, video from web pages, browser integration, 86 languages.",
    "text": "Manajer unduhan gratis dan sumber terbuka untuk Windows, dengan macOS dan Linux untuk dicoba. Tata letak IDM yang Anda kenal, 5× lebih cepat dalam tolok ukur kami: setiap koneksi sekaligus, melanjutkan unduhan yang aman dari kerusakan, torrent, video dari halaman web, integrasi peramban, 86 bahasa."
+  },
+  "3513f93cb0fa7d72": {
+   "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
+   "text": "<g1>Jauh</g1> (merah): di atas 150 ms, biasanya benua lain. Server yang jauh seringkali lebih lambat, dan lebih banyak koneksi paling membantu."
   },
   "3514fb404711d6ec": {
    "source": "Connections to this computer itself (<x1/>) aren't bound. A proxy on this computer carries the downloads, and where it sends them is up to it.",
@@ -3525,6 +3561,10 @@
   "5887d550311226da": {
    "source": "Open that menu (Windows and Linux)",
    "text": "Buka menu tersebut (Windows dan Linux)"
+  },
+  "588db309f4fc3eb6": {
+   "source": "<g1>Medium</g1> (amber): 60 to 150 ms, usually the same continent.",
+   "text": "<g1>Sedang</g1> (kuning): 60 hingga 150 ms, biasanya benua yang sama."
   },
   "58bec232807ab18d": {
    "source": "The progress window in detail →",
@@ -6186,6 +6226,10 @@
    "source": "<g1>Torrents</g1> are peer to peer: other people in a torrent's swarm see your IP address, as with every torrent client.",
    "text": "<g1>Torrent</g1> bersifat peer to peer: orang lain dalam swarm torrent melihat alamat IP Anda, seperti halnya dengan setiap klien torrent."
   },
+  "9b191ff0c3c9dbb1": {
+   "source": "How MDM knows:",
+   "text": "Bagaimana MDM tahu:"
+  },
   "9b3dde1851a80204": {
    "source": "<g1>Match case</g1> tells capitals apart. <g2>Match whole string only</g2> finds only an exact, complete match.",
    "text": "<g1>Cocokkan huruf besar/kecil</g1> membedakan huruf kapital. <g2>Hanya cocokkan seluruh string</g2> hanya menemukan kecocokan yang persis dan lengkap."
@@ -6373,6 +6417,10 @@
   "a04886db62535b92": {
    "source": "A translation longer than the English ends in <g1>...</g1> where it doesn't fit; point at it to read it whole.",
    "text": "Terjemahan yang lebih panjang dari bahasa Inggris akan berakhir dengan <g1>...</g1> jika tidak muat; arahkan kursor ke sana untuk membacanya secara keseluruhan."
+  },
+  "a05a0538e9ea2498": {
+   "source": "<g1>File Properties</g1> shows a download's type, status, size and folder, its address, your description, the page it came from (<g2>Referer</g2>), where its server is (<g3>country and round trip</g3>, as its last run saw them) and a login for the site. <g4>Last try</g4> and <g5>Result</g5> tell you how its last attempt went.",
+   "text": "<g1>Properti File</g1> menampilkan jenis unduhan, status, ukuran, dan foldernya, alamatnya, deskripsi Anda, halaman asalnya (<g2>Referer</g2>), lokasi servernya (<g3>negara dan waktu pulang pergi</g3>, seperti yang terlihat pada percobaan terakhir) dan login untuk situs tersebut. <g4>Percobaan terakhir</g4> dan <g5>Hasil</g5> memberi tahu Anda bagaimana percobaan terakhirnya berjalan."
   },
   "a09cf46e49e64bbb": {
    "source": "A sweep through every window for the small things that make a program feel finished: how each control looks and answers the mouse and the keyboard, dark mode everywhere, screen readers, and a long list of fixes found by reviewing all of it (issue #7 and more).",
@@ -7334,6 +7382,10 @@
    "source": "<g1>A tour of the features</g1> on the website instead of a wall of screenshots.",
    "text": "<g1>Tur fitur</g1> di situs web alih-alih deretan tangkapan layar."
   },
+  "b826ee150172085c": {
+   "source": "Where the server is",
+   "text": "Lokasi server"
+  },
   "b84ada2c25ba9d3b": {
    "source": "Install with the setup",
    "text": "Instal dengan pengaturan"
@@ -7441,6 +7493,10 @@
   "bb2a946ec0764dee": {
    "source": "Hover over the download's <g1>Status</g1>, or open its progress window, to read yt-dlp's message.",
    "text": "Arahkan kursor ke <g1>Status</g1> unduhan, atau buka jendela progresnya, untuk membaca pesan yt-dlp."
+  },
+  "bb66b5a231ef607c": {
+   "source": "<g1>The time</g1> is measured from the download's own connections, as each one opens: MDM sends nothing extra to the server. It is an estimate (the time to open a connection, divided by its round trips: one for http, two for https), so it says <g2>about</g2>. The quickest connection counts.",
+   "text": "<g1>Waktu</g1> diukur dari koneksi unduhan itu sendiri, saat masing-masing terbuka: MDM tidak mengirim apa pun tambahan ke server. Ini adalah perkiraan (waktu untuk membuka koneksi, dibagi dengan perjalanan pulang-perginya: satu untuk http, dua untuk https), jadi dikatakan <g2>sekitar</g2>. Koneksi tercepat yang dihitung."
   },
   "bb8defdec6234c3c": {
    "source": "<g1><g2>Keyboard shortcuts</g2></g1> — every key the main window answers.",
@@ -7926,6 +7982,10 @@
    "source": "<g1>9</g1> of 10",
    "text": "<g1>9</g1> dari 10"
   },
+  "c8faf12a4c3d4e99": {
+   "source": "<g1>Server</g1> — where the server is, and how near. See <g2>Where the server is</g2>.",
+   "text": "<g1>Server</g1> — lokasi server, dan seberapa dekat. Lihat <g2>Lokasi server</g2>."
+  },
   "c9044c08663d0af5": {
    "source": "A PDF, a song or a video that the browser would show or play itself goes to MDM too, when its type is in <g1>Options → File types</g1> (not on the excluded sites). To turn this off, untick <g2>Also take files the browser would open</g2> in <g3>Options → General → Keys...</g3>. This needs a Chromium browser (Chrome, Edge, Brave, Opera, Vivaldi) version 128 or later, or Firefox.",
    "text": "PDF, lagu, atau video yang akan ditampilkan atau diputar sendiri oleh browser juga masuk ke MDM, jika jenisnya ada di <g1>Opsi → Jenis file</g1> (tidak di situs yang dikecualikan). Untuk mematikan ini, hapus centang <g2>Juga ambil file yang akan dibuka browser</g2> di <g3>Opsi → Umum → Tombol...</g3>. Ini memerlukan browser Chromium (Chrome, Edge, Brave, Opera, Vivaldi) versi 128 atau yang lebih baru, atau Firefox."
@@ -8133,6 +8193,10 @@
   "cf04b2764bc982a7": {
    "source": "Neat Download Manager",
    "text": "Neat Download Manager"
+  },
+  "cf28e1b873f9178c": {
+   "source": "<g1>Near</g1> (green): under 60 ms, usually the same country or the next one.",
+   "text": "<g1>Dekat</g1> (hijau): di bawah 60 ms, biasanya negara yang sama atau negara tetangga."
   },
   "cf3a9ec3dbd55233": {
    "source": "<g1>Delete</g1> — remove a category, your own or a built-in one (not General or Torrents). MDM asks what happens to its downloads: <g2>Move its downloads to General</g2>, or <g3>Remove its downloads from the list</g3> (a download that is running moves to General instead). Their files stay where they are either way. From then on, files of its types go to another category that has them, or to General.",
@@ -8557,6 +8621,10 @@
   "d9b76e3e6afd2fa9": {
    "source": "<g1><g2>Download a video from a page</g2></g1> — pick a quality and save a video.",
    "text": "<g1><g2>Unduh video dari halaman</g2></g1> — pilih kualitas dan simpan video."
+  },
+  "d9dcf7778d51f367": {
+   "source": "<g1>Through a proxy</g1>, MDM only sees the proxy, so it says <g2>through a proxy</g2> (with the proxy's country when it knows it) instead of guessing the server's. A VPN that works at the system level can't be seen: the country is then the server's, but the time includes the VPN's detour.",
+   "text": "<g1>Melalui proxy</g1>, MDM hanya melihat proxy, jadi dikatakan <g2>melalui proxy</g2> (dengan negara proxy jika diketahui) daripada menebak server. VPN yang berfungsi di tingkat sistem tidak dapat dilihat: negara tersebut adalah negara server, tetapi waktu termasuk jalan memutar VPN."
   },
   "da12a252ee14babe": {
    "source": "To stop in the morning whatever is left, tick <g1>Stop download at</g1> and set a time, for example 7:00:00 AM.",

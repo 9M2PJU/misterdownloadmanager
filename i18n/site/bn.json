@@ -686,6 +686,10 @@
    "source": "From IDM",
    "text": "IDM থেকে"
   },
+  "1105c4be357dbf30": {
+   "source": "<g1>Properties</g1> keeps what the last run saw, so a finished download still shows where it came from.",
+   "text": "<g1>বৈশিষ্ট্য</g1> শেষ রান যা দেখেছিল তা রাখে, তাই একটি সম্পূর্ণ ডাউনলোড এখনও দেখায় এটি কোথা থেকে এসেছে।"
+  },
   "110d6b2bd87a92ac": {
    "source": "Works with what you already use",
    "text": "আপনার ব্যবহৃত জিনিসের সাথে কাজ করে"
@@ -737,6 +741,10 @@
   "1294135f300139c9": {
    "source": "The benchmark data could not be loaded.",
    "text": "বেঞ্চমার্ক ডেটা লোড করা যায়নি।"
+  },
+  "129f913e421a0374": {
+   "source": "Torrents, videos and galleries have no single server of MDM's own (peers, or yt-dlp's and gallery-dl's), so their windows don't show one.",
+   "text": "টরেন্ট, ভিডিও এবং গ্যালারির MDM-এর নিজস্ব কোনো একক সার্ভার নেই (পিয়ার, বা yt-dlp এবং gallery-dl-এর), তাই তাদের উইন্ডোগুলি একটি দেখায় না।"
   },
   "12a228101626f4bc": {
    "source": "How MDM uses connections",
@@ -797,6 +805,10 @@
   "13f638ddac98e283": {
    "source": "Download Later",
    "text": "পরে ডাউনলোড করুন"
+  },
+  "13fab708d8179610": {
+   "source": "<g1>A content delivery network</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai and others) serves a file from a server near you, not from the site owner's. The tooltip says so: the place is the network's server, not where the site is.",
+   "text": "<g1>একটি কন্টেন্ট ডেলিভারি নেটওয়ার্ক</g1> (Cloudflare, Amazon CloudFront, Fastly, Akamai এবং অন্যান্য) আপনার কাছাকাছি একটি সার্ভার থেকে ফাইল সরবরাহ করে, সাইট মালিকের সার্ভার থেকে নয়। টুলটিপটি তাই বলে: স্থানটি নেটওয়ার্কের সার্ভার, সাইটটি যেখানে অবস্থিত সেখানে নয়।"
   },
   "141ec6fe9135de0f": {
    "source": "Use Help → Report a problem in MDM: it opens the bug report form on GitHub with your version, system and language filled in. Or open the form yourself.…",
@@ -1001,6 +1013,10 @@
   "18da802709723cf6": {
    "source": "Ctrl+Space",
    "text": "Ctrl+Space"
+  },
+  "19156d7406477513": {
+   "source": "<g1>Server</g1> — where the server is: its country's flag and name, and how long a round trip to it takes. See <g2>Where the server is</g2>. It stays blank when the browser handed the download over with its name and size, since MDM didn't need to ask the server.",
+   "text": "<g1>সার্ভার</g1> — সার্ভারটি কোথায় আছে: এর দেশের পতাকা ও নাম এবং সেখানে যেতে কত সময় লাগে। <g2>সার্ভারটি কোথায় আছে</g2> দেখুন। ব্রাউজার যখন তার নাম ও আকার সহ ডাউনলোডটি হস্তান্তর করে, তখন এটি ফাঁকা থাকে, কারণ MDM-এর সার্ভারকে জিজ্ঞাসা করার প্রয়োজন হয়নি।"
   },
   "1970ad20e03db6c3": {
    "source": "<g1>Catching problems.</g1> When MDM crashes (a Windows exception, a signal on Linux, a Mach exception on macOS), panics, or freezes, it asks the monitor for a dump. A freeze is a frame of the window running more than 8 s, seen by a watchdog thread that ignores time spent asleep. The watchdog also measures how much processor time the window thread got meanwhile, and the report says what that means: it ran all along (a loop), it waited in a lock or on I/O (a deadlock), or it hardly ran in ordinary code, which is a computer too busy to run MDM or slow to load it from disk, most likely not MDM's bug (those share one signature, <x2/>). macOS doesn't measure it yet. The monitor then writes a <g3>minidump</g3> of every thread from outside, through <x4/> and <x5/>. A crashed process never writes its own dump, which is how Firefox, Crashpad and Sentry do it too.",
@@ -1422,6 +1438,10 @@
    "source": "<g1>Default download directory for \"…\" category</g1> — the category's folder. Type a path or click <g2>Browse</g2>.",
    "text": "<g1>\"…\" শ্রেণীর জন্য ডিফল্ট ডাউনলোড ডিরেক্টরি</g1> — শ্রেণীর ফোল্ডার। একটি পাথ টাইপ করুন অথবা <g2>ব্রাউজ করুন</g2> ক্লিক করুন।"
   },
+  "21e0a24c92fe95eb": {
+   "source": "Hover over the line for the server's address and how the time was measured.",
+   "text": "সার্ভারের ঠিকানা এবং সময় কীভাবে পরিমাপ করা হয়েছিল তা দেখতে লাইনের উপর হোভার করুন।"
+  },
   "22135141999ab3ab": {
    "source": "Find a download",
    "text": "একটি ডাউনলোড খুঁজুন"
@@ -1585,6 +1605,10 @@
   "25b4db9aa4024862": {
    "source": "The current speed.",
    "text": "বর্তমান গতি।"
+  },
+  "25e1ffe092788c2a": {
+   "source": "<g1>Download File Info</g1>, the progress window and <g2>Properties</g2> show where a download's server is: its country's flag and name, then the time a round trip to it takes, such as <g3>about 24 ms (near)</g3>.",
+   "text": "<g1>ফাইল তথ্য ডাউনলোড করুন</g1>, প্রগ্রেস উইন্ডো এবং <g2>বৈশিষ্ট্য</g2> দেখায় একটি ডাউনলোডের সার্ভার কোথায়: এর দেশের পতাকা এবং নাম, তারপর সেখানে একটি রাউন্ড ট্রিপের সময়, যেমন <g3>প্রায় 24 মি.সে. (কাছে)</g3>।"
   },
   "2606a30b44fb755e": {
    "source": "Select one or more downloads and press <g1>Delete</g1>, click <g2>Delete</g2> on the toolbar, or choose <g3>File → Remove</g3>. MDM asks first:",
@@ -1786,6 +1810,10 @@
    "source": "Feature by feature",
    "text": "বৈশিষ্ট্য অনুযায়ী"
   },
+  "2ab8acec08b25c9a": {
+   "source": "<g1>A server on your computer or your local network</g1> shows as such, with no flag.",
+   "text": "<g1>আপনার কম্পিউটার বা আপনার স্থানীয় নেটওয়ার্কে একটি সার্ভার</g1> এভাবেই দেখানো হয়, কোনো পতাকা ছাড়া।"
+  },
   "2ac9c8a3b555e84c": {
    "source": "p (Mann-Whitney)",
    "text": "p (ম্যান-হুইটনি)"
@@ -1905,6 +1933,10 @@
   "2cc56bc5771aeae6": {
    "source": "<g1>The other links of one page</g1> form a package named after the page.",
    "text": "<g1>একটি পেজের অন্যান্য লিঙ্ক</g1> পেজের নামে একটি প্যাকেজ তৈরি করে।"
+  },
+  "2cc84db987b16ce7": {
+   "source": "<g1>The country</g1> comes from a table of address ranges that comes with MDM (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), looked up on your computer. MDM never sends the address anywhere to ask where it is. The table is updated with each release; an address that has moved since may show its old country.",
+   "text": "<g1>দেশটি</g1> MDM-এর সাথে আসা ঠিকানা পরিসরের একটি সারণী থেকে আসে (<g2>IP to Country Lite by DB-IP</g2>, CC BY 4.0), যা আপনার কম্পিউটারে দেখা হয়। MDM ঠিকানাটি কোথায় তা জিজ্ঞাসা করার জন্য কোথাও পাঠায় না। সারণীটি প্রতিটি রিলিজের সাথে আপডেট করা হয়; একটি ঠিকানা যা স্থানান্তরিত হয়েছে তা তার পুরানো দেশ দেখাতে পারে।"
   },
   "2ce984608b61ca9b": {
    "source": "<g1>Browse</g1> — open its folder in Explorer.",
@@ -2201,6 +2233,10 @@
   "3508dab985cc0335": {
    "source": "Free, open-source download manager for Windows, with macOS and Linux to try. The IDM layout you know, 5× faster in our benchmark: every connection at once, crash-safe resume, torrents, video from web pages, browser integration, 86 languages.",
    "text": "Windows-এর জন্য একটি বিনামূল্যের, ওপেন-সোর্স ডাউনলোড ম্যানেজার, macOS এবং Linux-এর পরীক্ষামূলক সংস্করণও আছে। এটি IDM-এর পরিচিত বিন্যাস অনুসরণ করে, আমাদের বেঞ্চমার্কে 5 গুণ দ্রুত: একবারে সব সংযোগ, ক্র্যাশ-সেফ রিজুম, টরেন্ট, ওয়েবপেজ থেকে ভিডিও ডাউনলোড, ব্রাউজার ইন্টিগ্রেশন এবং 86টি ভাষা সমর্থন করে।"
+  },
+  "3513f93cb0fa7d72": {
+   "source": "<g1>Far</g1> (red): over 150 ms, usually another continent. A far server is often slower, and more connections help it most.",
+   "text": "<g1>দূরে</g1> (লাল): 150 মি.সে.-এর উপরে, সাধারণত অন্য মহাদেশ। একটি দূরের সার্ভার প্রায়শই ধীর হয় এবং বেশি সংযোগ এটিকে সবচেয়ে বেশি সাহায্য করে।"
   },
   "3514fb404711d6ec": {
    "source": "Connections to this computer itself (<x1/>) aren't bound. A proxy on this computer carries the downloads, and where it sends them is up to it.",
@@ -3557,6 +3593,10 @@
   "5887d550311226da": {
    "source": "Open that menu (Windows and Linux)",
    "text": "সেই মেনু খুলুন (Windows এবং Linux)"
+  },
+  "588db309f4fc3eb6": {
+   "source": "<g1>Medium</g1> (amber): 60 to 150 ms, usually the same continent.",
+   "text": "<g1>মাঝারি</g1> (আম্বার): 60 থেকে 150 মি.সে., সাধারণত একই মহাদেশ।"
   },
   "58bec232807ab18d": {
    "source": "The progress window in detail →",
@@ -6246,6 +6286,10 @@
    "source": "<g1>Torrents</g1> are peer to peer: other people in a torrent's swarm see your IP address, as with every torrent client.",
    "text": "<g1>টরেন্ট</g1> হল পিয়ার টু পিয়ার: একটি টরেন্টের সোয়ার্মে থাকা অন্য লোকেরা আপনার আইপি ঠিকানা দেখতে পায়, যেমনটি প্রতিটি টরেন্ট ক্লায়েন্টের ক্ষেত্রে হয়।"
   },
+  "9b191ff0c3c9dbb1": {
+   "source": "How MDM knows:",
+   "text": "MDM কীভাবে জানে:"
+  },
   "9b3dde1851a80204": {
    "source": "<g1>Match case</g1> tells capitals apart. <g2>Match whole string only</g2> finds only an exact, complete match.",
    "text": "<g1>কেস মিলান</g1> বড় হাতের অক্ষর আলাদা করে। <g2>শুধুমাত্র সম্পূর্ণ স্ট্রিং মিলান</g2> শুধুমাত্র একটি সঠিক, সম্পূর্ণ মিল খুঁজে বের করে।"
@@ -6433,6 +6477,10 @@
   "a04886db62535b92": {
    "source": "A translation longer than the English ends in <g1>...</g1> where it doesn't fit; point at it to read it whole.",
    "text": "ইংরেজি থেকে দীর্ঘতর অনুবাদ <g1>...</g1> দিয়ে শেষ হয় যেখানে এটি ফিট হয় না; পুরোটা পড়তে এটির উপর পয়েন্ট করুন।"
+  },
+  "a05a0538e9ea2498": {
+   "source": "<g1>File Properties</g1> shows a download's type, status, size and folder, its address, your description, the page it came from (<g2>Referer</g2>), where its server is (<g3>country and round trip</g3>, as its last run saw them) and a login for the site. <g4>Last try</g4> and <g5>Result</g5> tell you how its last attempt went.",
+   "text": "<g1>ফাইলের বৈশিষ্ট্য</g1> একটি ডাউনলোডের ধরন, অবস্থা, আকার এবং ফোল্ডার, এর ঠিকানা, আপনার বর্ণনা, এটি যে পৃষ্ঠা থেকে এসেছে (<g2>রেফারার</g2>), এর সার্ভার কোথায় আছে (<g3>দেশ এবং রাউন্ড ট্রিপ</g3>, যেমনটি শেষবার দেখা গেছে) এবং সাইটের জন্য একটি লগইন দেখায়। <g4>শেষ চেষ্টা</g4> এবং <g5>ফলাফল</g5> আপনাকে জানায় যে শেষ প্রচেষ্টাটি কেমন ছিল।"
   },
   "a06fa72ad54fa126": {
    "source": "Install MDM with the setup and keep Set up browser integration ticked. In Firefox, then open the add-on's page on addons.mozilla.org and click Add to Firefox. In Chrome, Edge, Brave, Opera and Vivaldi, load it by hand for now, while the Chrome Web Store reviews it: open the browser's extensions page, turn on Developer mode, choose Load unpacked and pick the extension\\chromium folder in MDM's folder. The tutorial walks through it.",
@@ -7414,6 +7462,10 @@
    "source": "<g1>A tour of the features</g1> on the website instead of a wall of screenshots.",
    "text": "স্ক্রিনশটের দেয়ালের পরিবর্তে ওয়েবসাইটে <g1>বৈশিষ্ট্যগুলির একটি ট্যুর</g1>।"
   },
+  "b826ee150172085c": {
+   "source": "Where the server is",
+   "text": "সার্ভারটি কোথায়"
+  },
   "b84ada2c25ba9d3b": {
    "source": "Install with the setup",
    "text": "সেটআপ দিয়ে ইনস্টল করুন"
@@ -7525,6 +7577,10 @@
   "bb2a946ec0764dee": {
    "source": "Hover over the download's <g1>Status</g1>, or open its progress window, to read yt-dlp's message.",
    "text": "ডাউনলোডের <g1>স্ট্যাটাস</g1> এর উপর হোভার করুন, অথবা yt-dlp এর বার্তা পড়তে এর অগ্রগতি উইন্ডো খুলুন।"
+  },
+  "bb66b5a231ef607c": {
+   "source": "<g1>The time</g1> is measured from the download's own connections, as each one opens: MDM sends nothing extra to the server. It is an estimate (the time to open a connection, divided by its round trips: one for http, two for https), so it says <g2>about</g2>. The quickest connection counts.",
+   "text": "<g1>সময়টি</g1> ডাউনলোডের নিজস্ব সংযোগগুলি থেকে পরিমাপ করা হয়, যখন প্রতিটি সংযোগ খোলে: MDM সার্ভারে অতিরিক্ত কিছু পাঠায় না। এটি একটি অনুমান (একটি সংযোগ খুলতে সময়, এর রাউন্ড ট্রিপ দ্বারা বিভক্ত: HTTP-এর জন্য একটি, HTTPS-এর জন্য দুটি), তাই এটি <g2>প্রায়</g2> বলে। দ্রুততম সংযোগটি গণনা করা হয়।"
   },
   "bb8defdec6234c3c": {
    "source": "<g1><g2>Keyboard shortcuts</g2></g1> — every key the main window answers.",
@@ -8014,6 +8070,10 @@
    "source": "<g1>9</g1> of 10",
    "text": "10 এর মধ্যে <g1>9</g1>"
   },
+  "c8faf12a4c3d4e99": {
+   "source": "<g1>Server</g1> — where the server is, and how near. See <g2>Where the server is</g2>.",
+   "text": "<g1>সার্ভার</g1> — সার্ভারটি কোথায় এবং কতটা কাছে। <g2>সার্ভারটি কোথায়</g2> দেখুন।"
+  },
   "c9044c08663d0af5": {
    "source": "A PDF, a song or a video that the browser would show or play itself goes to MDM too, when its type is in <g1>Options → File types</g1> (not on the excluded sites). To turn this off, untick <g2>Also take files the browser would open</g2> in <g3>Options → General → Keys...</g3>. This needs a Chromium browser (Chrome, Edge, Brave, Opera, Vivaldi) version 128 or later, or Firefox.",
    "text": "একটি PDF, একটি গান বা একটি ভিডিও যা ব্রাউজার নিজে দেখাবে বা চালাবে, সেটিও MDM-এ যায়, যখন এর প্রকার <g1>বিকল্প → ফাইলের প্রকার</g1>-এ থাকে (বাদ দেওয়া সাইটগুলিতে নয়)। এটি বন্ধ করতে, <g2>ব্রাউজার যে ফাইলগুলি খুলবে সেগুলিও নিন</g2> বিকল্পটি <g3>বিকল্প → সাধারণ → কী...</g3>-এ আনটিক করুন। এর জন্য Chromium ব্রাউজার (Chrome, Edge, Brave, Opera, Vivaldi) সংস্করণ 128 বা তার পরের সংস্করণ, অথবা Firefox প্রয়োজন।"
@@ -8221,6 +8281,10 @@
   "cf04b2764bc982a7": {
    "source": "Neat Download Manager",
    "text": "Neat Download Manager"
+  },
+  "cf28e1b873f9178c": {
+   "source": "<g1>Near</g1> (green): under 60 ms, usually the same country or the next one.",
+   "text": "<g1>কাছে</g1> (সবুজ): 60 মি.সে.-এর নিচে, সাধারণত একই দেশ বা পাশের দেশ।"
   },
   "cf3a9ec3dbd55233": {
    "source": "<g1>Delete</g1> — remove a category, your own or a built-in one (not General or Torrents). MDM asks what happens to its downloads: <g2>Move its downloads to General</g2>, or <g3>Remove its downloads from the list</g3> (a download that is running moves to General instead). Their files stay where they are either way. From then on, files of its types go to another category that has them, or to General.",
@@ -8645,6 +8709,10 @@
   "d9b76e3e6afd2fa9": {
    "source": "<g1><g2>Download a video from a page</g2></g1> — pick a quality and save a video.",
    "text": "<g1><g2>একটি পৃষ্ঠা থেকে একটি ভিডিও ডাউনলোড করুন</g2></g1> — একটি গুণমান চয়ন করুন এবং একটি ভিডিও সংরক্ষণ করুন।"
+  },
+  "d9dcf7778d51f367": {
+   "source": "<g1>Through a proxy</g1>, MDM only sees the proxy, so it says <g2>through a proxy</g2> (with the proxy's country when it knows it) instead of guessing the server's. A VPN that works at the system level can't be seen: the country is then the server's, but the time includes the VPN's detour.",
+   "text": "<g1>একটি প্রক্সির মাধ্যমে</g1>, MDM শুধুমাত্র প্রক্সিটি দেখতে পায়, তাই এটি সার্ভারের অনুমান করার পরিবর্তে <g2>একটি প্রক্সির মাধ্যমে</g2> (যখন এটি জানে তখন প্রক্সির দেশ সহ) বলে। একটি VPN যা সিস্টেম স্তরে কাজ করে তা দেখা যায় না: তখন দেশটি সার্ভারের হয়, তবে সময়টিতে VPN-এর পথ পরিবর্তন অন্তর্ভুক্ত থাকে।"
   },
   "da12a252ee14babe": {
    "source": "To stop in the morning whatever is left, tick <g1>Stop download at</g1> and set a time, for example 7:00:00 AM.",
