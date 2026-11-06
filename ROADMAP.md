@@ -27,6 +27,8 @@ Everything below ships together, in one release, as version 0.3.0.
   manual install as the fallback
 - ✅ A minimized MDM keeps working: queues, the Scheduler, download limits, the kill switch and
   saving the list no longer wait for the window to be restored
+- ✅ Download video: every button fits its text in every language (German **ffmpeg installieren**
+  was cut), right to left too ([#172](https://github.com/anefzaoui/misterdownloadmanager/issues/172))
 - ✅ The engine tests that failed now and then on a busy computer (a refused connection coming
   back, the learned connection limit, a dead address) wait for what they check, not for time
   ([#136](https://github.com/anefzaoui/misterdownloadmanager/issues/136))
@@ -211,8 +213,6 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Downloads and windows
 
-- 📋 Download video: the **Install ffmpeg** button fits its text in every language
-  ([#172](https://github.com/anefzaoui/misterdownloadmanager/issues/172))
 - 📋 The Scheduler wakes the computer from sleep to run a queue
   ([#142](https://github.com/anefzaoui/misterdownloadmanager/issues/142))
 - 📋 Debrid services, the rest: a per-download "directly instead" choice, "through the service" in
