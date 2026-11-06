@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Torrents: Download in order, to watch a video while it downloads (each file's first and last
+  pieces first, its own choice); other torrents now take the rarest pieces first
+  ([#39](https://github.com/anefzaoui/misterdownloadmanager/issues/39))
 - ✅ Every mark in the windows is drawn in every language (the browser window's ✔ Connected
   was an empty box, → on Linux), and the browser and video-helper windows put their logo at the
   start side in Arabic and Persian and fit a long German headline and subline
@@ -195,8 +198,6 @@ Everything below ships together, in one release, as version 0.3.0.
   MDM. Theme files can be added by anyone, and Base16 and pywal schemes imported
 - 🔄 Where a download's server is: its country, flag and round trip, from a table that comes with
   MDM; no address is sent anywhere ([#140](https://github.com/anefzaoui/misterdownloadmanager/issues/140))
-- 🔄 Torrents: download in order, to watch a video while it downloads; the other torrents rarest
-  first ([#39](https://github.com/anefzaoui/misterdownloadmanager/issues/39))
 - 🔄 Linux supported like Windows, no longer experimental: every change is now checked on Ubuntu
   (GNOME) as well as Windows, then on KDE, Cinnamon and Xfce ([#164](https://github.com/anefzaoui/misterdownloadmanager/issues/164))
 - 🔄 Before the release: every screenshot taken again on Windows and Linux (smaller files, WebP),
