@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Linux: the guide says what uninstalling leaves in each user's home folder (the browsers' host
+  files, the list and settings) and how to remove it; a package can't
+  ([#266](https://github.com/anefzaoui/misterdownloadmanager/issues/266))
 - ✅ Linux: menus and drop-down lists open under what was clicked on tiling compositors (sway)
   too, through XWayland, as on GNOME and KDE
   ([#267](https://github.com/anefzaoui/misterdownloadmanager/issues/267))
