@@ -13,6 +13,8 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Linux: Update now asks the package manager which package MDM is; a copy installed by
+  another package manager (pacman) is left to the system's updates, with a plain message
 - ✅ Linux: the guide says what uninstalling leaves in each user's home folder (the browsers' host
   files, the list and settings) and how to remove it; a package can't
   ([#266](https://github.com/anefzaoui/misterdownloadmanager/issues/266))
