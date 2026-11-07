@@ -6297,3 +6297,63 @@ unit	{n} MB/sec	{n} MB/ಸೆಕೆಂಡ್
 #. {size} = a file size such as "4.2 MB" (keep the braces as they are)
 #, machine
 	{size} free	{size} ಉಚಿತ
+#. text in the browser extension
+#. choice under Send downloads to: an MDM running on another computer of the network, such as a home server; keep the name Mister Download Manager as it is
+#, machine
+extension	Another Mister Download Manager (a server)	ಇನ್ನೊಂದು Mister Download Manager (ಸರ್ವರ್)
+#. text in the browser extension
+#. the name this browser gets in the other MDM's list of paired devices
+#, machine
+extension	Browser extension	ಬ್ರೌಸರ್ ವಿಸ್ತರಣೆ
+#. text in the browser extension
+#. the toolbar button's status while downloads go to another MDM
+#, machine
+extension	Downloads go to {address}	ಡೌನ್‌ಲೋಡ್‌ಗಳು {address} ಗೆ ಹೋಗುತ್ತವೆ
+#. text in the browser extension
+#. the address typed isn't an https:// address
+#, machine
+extension	Enter its https:// address.	ಅದರ https:// ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ.
+#. text in the browser extension
+#. pairing failed for another reason
+#, machine
+extension	It didn't work. Try again.	ಇದು ಕಾರ್ಯನಿರ್ವಹಿಸಲಿಲ್ಲ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.
+#. text in the browser extension
+#. pairing failed: the other MDM shows no pairing code; Pair a device is its button
+#, machine
+extension	It shows no code now: click Pair a device there first.	ಇದು ಈಗ ಯಾವುದೇ ಕೋಡ್ ಅನ್ನು ತೋರಿಸುವುದಿಲ್ಲ: ಮೊದಲು ಅಲ್ಲಿ ಸಾಧನವನ್ನು ಜೋಡಿಸಿ ಕ್ಲಿಕ್ ಮಾಡಿ.
+#. text in the browser extension
+#. pairing failed: the other MDM didn't answer
+#, machine
+extension	Not reached. Open its address once in this browser and accept its certificate, then try again.	ತಲುಪಿಲ್ಲ. ಈ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಅದರ ವಿಳಾಸವನ್ನು ಒಮ್ಮೆ ತೆರೆಯಿರಿ ಮತ್ತು ಅದರ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸ್ವೀಕರಿಸಿ, ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.
+#. text in the browser extension
+#. button: open the other MDM's address in a tab (to accept its certificate once)
+#, machine
+extension	Open it	ಅದನ್ನು ತೆರೆಯಿರಿ
+#. text in the browser extension
+#. help under the pairing boxes; Options, Remote and Pair a device are the app's window, tab and button; keep misterdownloadmanager-cli pair as it is
+#, machine
+extension	Open its address once and accept its certificate, then enter a code from its Options, Remote, Pair a device (or misterdownloadmanager-cli pair).	ಅದರ ವಿಳಾಸವನ್ನು ಒಮ್ಮೆ ತೆರೆಯಿರಿ ಮತ್ತು ಅದರ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸ್ವೀಕರಿಸಿ, ನಂತರ ಅದರ ಆಯ್ಕೆಗಳು, ರಿಮೋಟ್, ಸಾಧನವನ್ನು ಜೋಡಿಸಿ (ಅಥವಾ misterdownloadmanager-cli pair) ನಿಂದ ಕೋಡ್ ಅನ್ನು ನಮೂದಿಸಿ.
+#. text in the browser extension
+#. button: pair this browser with the other MDM using the code
+#, machine
+extension	Pair	ಜೋಡಿಸಿ
+#. text in the browser extension
+#. placeholder of the box for the 8-digit code the other MDM shows
+#, machine
+extension	Pairing code	ಜೋಡಿಸುವ ಕೋಡ್
+#. text in the browser extension
+#. heading in the toolbar button's popup, above the choice of where downloads go
+#, machine
+extension	Send downloads to	ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ಇಲ್ಲಿಗೆ ಕಳುಹಿಸಿ
+#. text in the browser extension
+#. choice under Send downloads to: the Mister Download Manager on this computer
+#, machine
+extension	This computer	ಈ ಕಂಪ್ಯೂಟರ್
+#. text in the browser extension
+#. pairing failed: codes tried too fast
+#, machine
+extension	Wait a moment, then try again.	ಒಂದು ಕ್ಷಣ ನಿರೀಕ್ಷಿಸಿ, ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.
+#. text in the browser extension
+#. pairing failed: the code was wrong
+#, machine
+extension	Wrong code.	ತಪ್ಪಾದ ಕೋಡ್.

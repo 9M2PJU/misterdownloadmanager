@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Run MDM on a server without a window (Docker, Unraid, any Linux machine), and send it
+  downloads from the phone or the browser extension
+  ([#157](https://github.com/anefzaoui/misterdownloadmanager/issues/157))
 - ✅ Better translations in every language: each language has a style guide and the terms its
   reviewers settled, and every machine translation of the program and the website was reviewed
   again against them
@@ -342,8 +345,6 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Network
 
-- 📋 Run MDM headless on a server (Docker, Unraid) and send it downloads from the browser
-  ([#157](https://github.com/anefzaoui/misterdownloadmanager/issues/157))
 
 ### Browser extension
 

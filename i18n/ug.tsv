@@ -6297,3 +6297,63 @@ unit	{n} MB/sec	{n} مى/سېك
 #. {size} = a file size such as "4.2 MB" (keep the braces as they are)
 #, machine
 	{size} free	{size} بوش
+#. text in the browser extension
+#. choice under Send downloads to: an MDM running on another computer of the network, such as a home server; keep the name Mister Download Manager as it is
+#, machine
+extension	Another Mister Download Manager (a server)	باشقا Mister Download Manager (مۇلازىمېتىر)
+#. text in the browser extension
+#. the name this browser gets in the other MDM's list of paired devices
+#, machine
+extension	Browser extension	توركۆرگۈ كېڭەيتمىسى
+#. text in the browser extension
+#. the toolbar button's status while downloads go to another MDM
+#, machine
+extension	Downloads go to {address}	چۈشۈرۈشلەر {address} غا بارىدۇ
+#. text in the browser extension
+#. the address typed isn't an https:// address
+#, machine
+extension	Enter its https:// address.	ئۇنىڭ https:// ئادرېسىنى كىرگۈزۈڭ.
+#. text in the browser extension
+#. pairing failed for another reason
+#, machine
+extension	It didn't work. Try again.	ئىشلىمىدى. قايتا سىناڭ.
+#. text in the browser extension
+#. pairing failed: the other MDM shows no pairing code; Pair a device is its button
+#, machine
+extension	It shows no code now: click Pair a device there first.	ھازىر كود كۆرسەتمىدى: ئالدى بىلەن ئۇ يەردىكى ئۈسكۈنە جۈپلەش نۇسخىسىنى چېكىڭ.
+#. text in the browser extension
+#. pairing failed: the other MDM didn't answer
+#, machine
+extension	Not reached. Open its address once in this browser and accept its certificate, then try again.	يېتىپ بارالمىدى. بۇ توركۆرگۈدە بىر قېتىم ئۇنىڭ ئادرېسىنى ئېچىپ، گۇۋاھنامىسىنى قوبۇل قىلىپ، ئاندىن قايتا سىناڭ.
+#. text in the browser extension
+#. button: open the other MDM's address in a tab (to accept its certificate once)
+#, machine
+extension	Open it	ئېچىڭ
+#. text in the browser extension
+#. help under the pairing boxes; Options, Remote and Pair a device are the app's window, tab and button; keep misterdownloadmanager-cli pair as it is
+#, machine
+extension	Open its address once and accept its certificate, then enter a code from its Options, Remote, Pair a device (or misterdownloadmanager-cli pair).	ئۇنىڭ ئادرېسىنى بىر قېتىم ئېچىپ، گۇۋاھنامىسىنى قوبۇل قىلىڭ، ئاندىن ئۇنىڭ تاللانمىلىرى، يىراقتىن، ئۈسكۈنە جۈپلەش (ياكى misterdownloadmanager-cli pair) دىن كود كىرگۈزۈڭ.
+#. text in the browser extension
+#. button: pair this browser with the other MDM using the code
+#, machine
+extension	Pair	جۈپلەش
+#. text in the browser extension
+#. placeholder of the box for the 8-digit code the other MDM shows
+#, machine
+extension	Pairing code	جۈپلەش كودى
+#. text in the browser extension
+#. heading in the toolbar button's popup, above the choice of where downloads go
+#, machine
+extension	Send downloads to	چۈشۈرۈشلەرنى ئەۋەتىش ئورنى
+#. text in the browser extension
+#. choice under Send downloads to: the Mister Download Manager on this computer
+#, machine
+extension	This computer	بۇ كومپيۇتېر
+#. text in the browser extension
+#. pairing failed: codes tried too fast
+#, machine
+extension	Wait a moment, then try again.	بىر ئاز ساقلاپ، ئاندىن قايتا سىناڭ.
+#. text in the browser extension
+#. pairing failed: the code was wrong
+#, machine
+extension	Wrong code.	خاتالىق كودى.
