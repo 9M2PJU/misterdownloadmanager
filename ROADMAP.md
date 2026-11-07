@@ -13,6 +13,10 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Started with the computer, MDM waits in the notification area instead of opening its window
+  in front, on Windows, Linux and macOS (minimized where no notification area shows its icon);
+  startup entries written before are updated, and the installer writes the new one
+  ([#226](https://github.com/anefzaoui/misterdownloadmanager/issues/226))
 - ✅ Open folder in Download complete no longer freezes the window on Linux when the file
   manager is slow to answer or never does: MDM asks in the background and opens the folder after
   5 seconds without an answer; every other program a window starts (Set it up, the Trash, an
