@@ -538,6 +538,10 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **The extension's popup: Open Mister Download Manager shows whole**
+  ([#164](https://github.com/anefzaoui/misterdownloadmanager/issues/164)): on Linux, whose fonts
+  are wider, and in longer languages, the button was cut to "Open Mister Do…". Each button is now
+  as wide as its text, and Options moves below it when both don't fit on one line.
 - **The crash report window's status line stays inside the window**
   ([#164](https://github.com/anefzaoui/misterdownloadmanager/issues/164)): the line above the
   check box ("The symbols couldn't be fetched: …", an issue's title, a translation) ran past the
