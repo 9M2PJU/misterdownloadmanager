@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Download File Info's Preview, Options → Proxy's Get System and the Scheduler's "when done"
+  drop-down fit their translated text (Russian and others), after #212
+  ([#192](https://github.com/anefzaoui/misterdownloadmanager/issues/192))
 - ✅ A menu of the menu bar shut with Escape opens again at the first click on its title (on
   Linux it took two; on Windows, Escape with the pointer on the title left the menu open)
 - ✅ Cookies for video sites: yt-dlp can read a browser's cookies on this computer (Firefox,
