@@ -13,6 +13,11 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Linux packages checked in clean Ubuntu 24.04, Debian 12 and Fedora 45 systems: install, the
+  command line, the window, the desktop entry and icon, browser integration and uninstall; the
+  .deb and .rpm now bring the keyboard library MDM's window needs under X11 and the CA
+  certificates downloads need, and require the glibc their programs were built for (part of
+  [#164](https://github.com/anefzaoui/misterdownloadmanager/issues/164))
 - ✅ Options → Proxy's Get System and the Scheduler's "when done" drop-down fit in the last
   languages that still cut them (Bulgarian, Armenian, Macedonian, Tamil; Greek, Malayalam, and
   six the translation review lengthened), and the Proxy
