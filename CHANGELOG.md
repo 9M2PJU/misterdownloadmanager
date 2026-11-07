@@ -504,6 +504,16 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **Buttons fit their text in every language, in every window**
+  ([#192](https://github.com/anefzaoui/misterdownloadmanager/issues/192)): many windows gave
+  their buttons a width made for English, so a longer translation was cut with "..." (German
+  **Später herunterla...** in Download File Info, **Hilfsprogramme...** in Download a gallery,
+  Russian **Открыть с помощью...** in Download complete, French **Nouvelle file d’attente** in the
+  Scheduler). Each button is now as wide as its translated text, and the buttons beside it move
+  along with the same gaps, the row keeping its end; a box or caption beside a widened button
+  ends before it. Where a window has no room left, the buttons wider than their text give some
+  back first. English is unchanged, and in Arabic and the other right-to-left languages the
+  buttons widen the mirrored way.
 - **Help opens the website's help pages, in your language**
   ([#227](https://github.com/anefzaoui/misterdownloadmanager/issues/227)): **Help contents**,
   **Tutorials**, **Scheduler and queues**, **Video downloads**, the **Help** buttons of Options and
