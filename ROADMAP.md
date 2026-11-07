@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ **View → Interface size**: every window larger, 100 % to 200 %, with Ctrl + / Ctrl − / Ctrl 0
+  as in a browser; a window larger than the screen scrolls. Sharper text on Windows (part of
+  [#262](https://github.com/anefzaoui/misterdownloadmanager/issues/262))
 - ✅ Linux: Update now asks the package manager which package MDM is; a copy installed by
   another package manager (pacman) is left to the system's updates, with a plain message
 - ✅ Linux: the guide says what uninstalling leaves in each user's home folder (the browsers' host
