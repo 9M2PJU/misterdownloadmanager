@@ -610,6 +610,11 @@ choose. And Linux, checked on a real desktop with every change.
 
 ### Fixed
 
+- **Linux: torrents work on a system without CA certificates too** (part of
+  [#264](https://github.com/anefzaoui/misterdownloadmanager/issues/264)): the torrent engine built
+  its own connection for the trackers, which can't be made without them, so no torrent or magnet
+  link started there. It now uses MDM's: peers, the DHT and `http://` trackers work, and an
+  `https://` tracker fails saying there are no certificates to check it with.
 - **Linux: uninstalling the .deb or .rpm leaves no browser files behind**
   ([#266](https://github.com/anefzaoui/misterdownloadmanager/issues/266)): MDM wrote the files
   that tell each browser where its helper is in every user's home folder, and `apt remove` or
