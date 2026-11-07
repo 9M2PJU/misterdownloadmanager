@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Linux: menus and drop-down lists open under what was clicked on tiling compositors (sway)
+  too, through XWayland, as on GNOME and KDE
+  ([#267](https://github.com/anefzaoui/misterdownloadmanager/issues/267))
 - ✅ Linux: a library the window needs that the system lacks (libxkbcommon-x11 and the other X11
   ones, from the tar.gz and the AppImage) is named at start, on the terminal and in a message box,
   with the command that installs it, instead of a crash; in a Wayland session the window opens
