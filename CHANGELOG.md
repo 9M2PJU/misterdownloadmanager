@@ -549,6 +549,15 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- **Get System and the Scheduler's "when done" drop-down fit in every language**
+  ([#192](https://github.com/anefzaoui/misterdownloadmanager/issues/192), after #247): Options →
+  Proxy's title takes two lines where one leaves Get System too little room (Bulgarian,
+  Armenian, Tamil), and where it ran over the page's icon or past the window's left edge
+  (Greek, Finnish, Catalan, Estonian, Latvian, Lithuanian, Malayalam, Serbian, Afrikaans). In
+  Greek and Malayalam, the Scheduler's "Turn off computer when done" and its choices have
+  shorter machine translations, so the drop-down fits beside the caption; in Belarusian, Welsh,
+  French, Russian, Tamil and Ukrainian, the longer ones the translation review brought (such as
+  Russian's Hibernate) are back to their earlier, shorter wording. English is unchanged.
 - **Galleries work with the gallery-dl a Linux distribution ships**
   ([#236](https://github.com/anefzaoui/misterdownloadmanager/issues/236)): with Ubuntu 24.04's
   gallery-dl 1.26.9 chosen in Helpers, every gallery failed at once ("unrecognized arguments:
