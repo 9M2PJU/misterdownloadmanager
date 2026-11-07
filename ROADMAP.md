@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Control MDM from a phone or another computer on the local network: **Options → Remote**, off
+  by default; a paired device adds links, magnets and torrents, sees the list and pauses, starts
+  and removes downloads ([#141](https://github.com/anefzaoui/misterdownloadmanager/issues/141))
 - ✅ Download File Info's Preview, Options → Proxy's Get System and the Scheduler's "when done"
   drop-down fit their translated text (Russian and others), after #212
   ([#192](https://github.com/anefzaoui/misterdownloadmanager/issues/192))
@@ -320,8 +323,6 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Network
 
-- 📋 Control MDM from a phone or another computer on the local network, off by default
-  ([#141](https://github.com/anefzaoui/misterdownloadmanager/issues/141))
 - 📋 Run MDM headless on a server (Docker, Unraid) and send it downloads from the browser
   ([#157](https://github.com/anefzaoui/misterdownloadmanager/issues/157))
 
