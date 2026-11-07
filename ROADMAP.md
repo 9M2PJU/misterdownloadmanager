@@ -13,6 +13,9 @@ Everything below ships together, in one release, as version 0.3.0.
 
 ### Done
 
+- ✅ Better translations in every language: each language has a style guide and the terms its
+  reviewers settled, and every machine translation of the program and the website was reviewed
+  again against them
 - ✅ Linux: browser integration reaches Brave Origin (and the Beta, Dev and Nightly versions of
   Brave, Chrome and Edge, and Vivaldi's snapshot); on macOS Brave is set up where it reads it,
   Chrome's folder. From the AppImage, the helper program the browsers start is copied out
