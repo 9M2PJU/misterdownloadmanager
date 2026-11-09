@@ -5,6 +5,10 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ## [Unreleased]
 
+### Changed
+
+- In English, the **Last Try Date** and **Added** columns follow the system's 12- or 24-hour clock: `Oct 28 9:44:12 PM 2026` when Windows uses a 12-hour clock, and **Added** starts wide enough for it ([#392](https://github.com/anefzaoui/misterdownloadmanager/issues/392)).
+
 ### Fixed
 
 - A download saved under a numbered name because another file already had its name (`master (1).mp4`) now shows that name in the list and opens its own file, instead of keeping the old name and opening the other file ([#442](https://github.com/anefzaoui/misterdownloadmanager/issues/442)). Two downloads waiting under one name no longer collide when they start: the later one takes the next free name, instead of failing with "already being downloaded" or continuing the other one's data.
