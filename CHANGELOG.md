@@ -41,6 +41,7 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 - Windows: no more crash when a screen is unplugged, turned off or rearranged while MDM runs ([#335](https://github.com/anefzaoui/misterdownloadmanager/issues/335)).
 ### Added
 
+- **Torrent → Files…**: the list of a torrent's files for any torrent, running, stopped or finished, with a box to choose each (also a Files… button in File Properties).
 - **Two columns for torrents in the download list** ([#357](https://github.com/anefzaoui/misterdownloadmanager/issues/357)): **Peers** (those a torrent has connected while it runs, seeders and leechers alike) and **Share ratio** (what it has sent against what it took), after **Transfer rate**. A layout saved before them gets them there.
 - The extension's **Media on this page** can name a file after its page: **Prefix media file names with the page title** puts the page's title before the file's own name. Off as installed.
 - **Far more file types taken from the browser by default** ([#382](https://github.com/anefzaoui/misterdownloadmanager/issues/382)): AI models and datasets (GGUF, SAFETENSORS, CKPT, PT, ONNX, PARQUET...), 3D and CAD (GLB, FBX, OBJ, STL, BLEND, STEP...), design and camera RAW files, ebooks, Office files, DAT, disk images and split archives. A list you never edited gains them; one you edited stays yours.
@@ -50,6 +51,8 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- A finished torrent that isn't being shared lets go of its files, so they can be moved or deleted while MDM runs.
+- A torrent says **Checking 42%** while its files are read and checked, and a Recheck no longer stops partway and stays there.
 - Video downloads: the progress no longer says 100 % while a video is still coming, when the site gives no total size, or between a video and its separate sound ([#344](https://github.com/anefzaoui/misterdownloadmanager/issues/344)). A video yt-dlp only knows by its address is named after the page, not a long hash ([#345](https://github.com/anefzaoui/misterdownloadmanager/issues/345)).
 - **A YouTube playlist in Add URL** ([#338](https://github.com/anefzaoui/misterdownloadmanager/issues/338)) opens the video window with its videos, instead of saving the page as a file named "playlist".
 - **Dailymotion's embedded player** ([#359](https://github.com/anefzaoui/misterdownloadmanager/issues/359)): its address is looked up as the video's own page, so the download button works on sites that embed one.
