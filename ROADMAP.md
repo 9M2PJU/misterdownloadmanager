@@ -13,6 +13,8 @@ Everything below ships together, in version 0.5.0.
 
 ### Done
 
+- ✅ yt-dlp and gallery-dl use the proxy set in Options → Proxy / Socks
+  ([#363](https://github.com/anefzaoui/misterdownloadmanager/issues/363))
 - ✅ The window keeps answering while reading the clipboard or removing a cancelled download's
   files from a slow disk ([#418](https://github.com/anefzaoui/misterdownloadmanager/issues/418),
   [#423](https://github.com/anefzaoui/misterdownloadmanager/issues/423))
