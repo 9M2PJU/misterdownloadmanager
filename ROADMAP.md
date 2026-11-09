@@ -13,6 +13,8 @@ Everything below ships together, in version 0.5.0.
 
 ### Done
 
+- ✅ Download video shows the size of a plain file (what the server says), not "size unknown"
+  (part of [#320](https://github.com/anefzaoui/misterdownloadmanager/issues/320))
 - ✅ Download video on pages whose player first loads a manifest's address answering something else
   (SVT Play): the real manifest goes to MDM, not that first answer
   ([#377](https://github.com/anefzaoui/misterdownloadmanager/issues/377))
