@@ -22,6 +22,7 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 - **YouTube's look-up failing with "Requested format is not available"** ([#352](https://github.com/anefzaoui/misterdownloadmanager/issues/352)): signed-in cookies make yt-dlp use only YouTube's players that need a JavaScript runtime, and without one no video is left. The page is now looked up again without the cookies, and lists its qualities.
 - **Download video offering only the sound, with no reason given** ([#351](https://github.com/anefzaoui/misterdownloadmanager/issues/351)): when a page's better videos need ffmpeg and it isn't installed, the window now says so.
 - Adding a link again after its finished file was moved or deleted starts a new download, instead of asking about a duplicate that isn't there ([#342](https://github.com/anefzaoui/misterdownloadmanager/issues/342)).
+- **Sharp, evenly spaced text on Windows:** letters no longer run together or drift apart. English and other Latin, Greek and Cyrillic text is drawn the way Windows draws its own classic controls, with each letter's shape and width fitted together; every other script uses hinting suited to anti-aliased rendering ([#323](https://github.com/anefzaoui/misterdownloadmanager/issues/323), [#334](https://github.com/anefzaoui/misterdownloadmanager/issues/334)).
 
 ## [0.5.1] - 2026-11-08
 
