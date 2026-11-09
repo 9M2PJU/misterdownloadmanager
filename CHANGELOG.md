@@ -11,6 +11,7 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- Crash reports: a crash monitor that can't open its connection no longer makes MDM wait five seconds at start or stays behind as a second process ([#458](https://github.com/anefzaoui/misterdownloadmanager/pull/458)).
 - Download File Info no longer stays open but out of sight, with every later download waiting behind it ([#440](https://github.com/anefzaoui/misterdownloadmanager/issues/440)). The next one after answering **Create folder** came up as an invisible window, and on Windows one hidden with a minimized main window is now shown again, as is the duplicate question
 - A file name sent by a site in plain UTF-8 now reaches MDM readable from Firefox and browsers built on it, such as Floorp, Waterfox and Zen: an Arabic name was saved as unreadable symbols ([#447](https://github.com/anefzaoui/misterdownloadmanager/issues/447)). A name written with percent signs in the same header is decoded as well. The add-on carries the fix
 - A download saved under a numbered name because another file already had its name (`master (1).mp4`) now shows that name in the list and opens its own file, instead of keeping the old name and opening the other file ([#442](https://github.com/anefzaoui/misterdownloadmanager/issues/442)). Two downloads waiting under one name no longer collide when they start: the later one takes the next free name, instead of failing with "already being downloaded" or continuing the other one's data.
