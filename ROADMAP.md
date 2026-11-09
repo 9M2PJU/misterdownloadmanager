@@ -13,6 +13,8 @@ Everything below ships together, in version 0.5.0.
 
 ### Done
 
+- ✅ A freeze that was over before its dump was taken is reported as a freeze, not a crash in the
+  watchdog (part of [#420](https://github.com/anefzaoui/misterdownloadmanager/issues/420))
 - ✅ File names and titles in any script show their letters: the system font for a script
   outside the interface language loads the first time it is needed, instead of boxes
   ([#405](https://github.com/anefzaoui/misterdownloadmanager/issues/405))
