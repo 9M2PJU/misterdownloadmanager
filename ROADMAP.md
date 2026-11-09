@@ -451,6 +451,8 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 Alt and F10 opening the menu bar with a control focused
+  ([#328](https://github.com/anefzaoui/misterdownloadmanager/issues/328)): fix in review
 - 🔄 Crash on Windows when a window opens while MDM falls back from Direct3D to OpenGL
   ([#337](https://github.com/anefzaoui/misterdownloadmanager/issues/337)): fix in review
 - 🔄 Crash on Windows when a screen goes away while MDM runs
