@@ -457,6 +457,8 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 A crash when removing the last feed in the RSS feeds window
+  ([#321](https://github.com/anefzaoui/misterdownloadmanager/issues/321)): fix in review
 - 🔄 **Open folder** on a torrent still downloading
   ([#354](https://github.com/anefzaoui/misterdownloadmanager/issues/354)): fix in review
 - 🔄 Alt and F10 opening the menu bar with a control focused
