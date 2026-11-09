@@ -13,6 +13,8 @@ Everything below ships together, in version 0.5.0.
 
 ### Done
 
+- ✅ **Move/Rename** works on several selected downloads at once: pick a folder and they all go there
+  ([#333](https://github.com/anefzaoui/misterdownloadmanager/issues/333))
 - ✅ Download video shows the size of a plain file (what the server says), not "size unknown"
   (part of [#320](https://github.com/anefzaoui/misterdownloadmanager/issues/320))
 - ✅ Download video on pages whose player first loads a manifest's address answering something else
