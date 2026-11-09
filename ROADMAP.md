@@ -466,6 +466,8 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 RSS feeds: the rule boxes losing the keyboard after each key
+  ([#353](https://github.com/anefzaoui/misterdownloadmanager/issues/353)): fix in review
 - 🔄 Video progress at 100 % while still downloading, and long encoded strings as file names
   ([#344](https://github.com/anefzaoui/misterdownloadmanager/issues/344),
   [#345](https://github.com/anefzaoui/misterdownloadmanager/issues/345)): fix in review
