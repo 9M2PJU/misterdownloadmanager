@@ -519,6 +519,8 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 Linux: Dark Mode support on window managers such as Hyprland and sway, which often have no
+  desktop portal to say dark or light ([#324](https://github.com/anefzaoui/misterdownloadmanager/issues/324)): fix in review
 - 🔄 A bright white line under the menu bar in dark mode
   ([#379](https://github.com/anefzaoui/misterdownloadmanager/issues/379)): fix in review
 - 🔄 Closing the main window follows a setting (on by default, MDM keeps running), and with no
