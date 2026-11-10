@@ -522,6 +522,10 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 A progress window's title bar buttons not answering
+  ([#540](https://github.com/anefzaoui/misterdownloadmanager/issues/540)): a window with a title of
+  256 characters or more got the system's title bar above MDM's own; that part is fixed, in review.
+  Still to find: whether the reporter's window was one of them
 - 🔄 macOS 15 and later: PingFang moved into the system's font assets, so Chinese text lost its
   font ([#541](https://github.com/anefzaoui/misterdownloadmanager/issues/541)): fix in review
 - 🔄 The video button still showing after it was switched off, or its site listed, in Options
