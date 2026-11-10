@@ -535,6 +535,9 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 The video button jumping between corners over YouTube's thumbnail previews, out of the
+  pointer's reach ([#560](https://github.com/anefzaoui/misterdownloadmanager/issues/560)): fix in
+  review
 - 🔄 A submenu staying open, its item lit beside the one under the pointer, while the pointer
   moved on through the menu ([#579](https://github.com/anefzaoui/misterdownloadmanager/issues/579)): fix in review
 - 🔄 Chromium browsers: another extension's file names and folders (Save In's) lost while MDM's
