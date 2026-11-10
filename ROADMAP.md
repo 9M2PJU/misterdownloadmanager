@@ -549,6 +549,8 @@ These ship in a later version, when they're ready.
   ([#321](https://github.com/anefzaoui/misterdownloadmanager/issues/321)): fix in review
 - 🔄 **Open folder** on a torrent still downloading
   ([#354](https://github.com/anefzaoui/misterdownloadmanager/issues/354)): fix in review
+- 🔄 Videos in the progress window: no percentage when the size isn't known, and the real file
+  size at the end: fix in review
 - 🔄 X (Twitter) videos from the media list named after the tab instead of a random file name
   ([#493](https://github.com/anefzaoui/misterdownloadmanager/issues/493)): fix in review
 - 🔄 **Open folder** on Windows always starting Explorer, even with another file manager set up
