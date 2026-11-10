@@ -5,6 +5,9 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ## [Unreleased]
 
+### Fixed
+
+- Dark mode no longer draws a bright white line under the menu bar, across the whole window, in the Classic and Native themes ([#379](https://github.com/anefzaoui/misterdownloadmanager/issues/379)).
 ### Added
 
 - Options → General → **Customize MDM Download panels in browsers**: Export... and Import... for the sites the download button stays off, a plain text file with one site a line ([#424](https://github.com/anefzaoui/misterdownloadmanager/issues/424)).
