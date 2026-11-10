@@ -11,6 +11,7 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- macOS: file names in Persian, Arabic, Urdu, Hebrew or Armenian show their letters in the download list and windows instead of boxes, whatever the interface language: these scripts now get the font for them that comes with macOS (Arial Unicode), the first time one is needed ([#533](https://github.com/anefzaoui/misterdownloadmanager/issues/533)).
 - A download's progress is saved from its first seconds again: since 0.5.2, when the disk was slow to write the resume state as the download started (no data had arrived yet), the first save of its progress waited nine times as long, up to a minute, so a short download cut off by a crash or a power cut in that time started over from the beginning (part of [#518](https://github.com/anefzaoui/misterdownloadmanager/issues/518)).
 - macOS: **Download File Info** opens in front of the browser that asked for it ([#484](https://github.com/anefzaoui/misterdownloadmanager/issues/484)).
 - The browser's **video button** over a hover-to-play preview (YouTube's thumbnails) no longer vanishes as the pointer goes to it: it stays where it was while the pointer is on it, a click downloads that video, and it fades once the pointer leaves ([#503](https://github.com/anefzaoui/misterdownloadmanager/issues/503)).

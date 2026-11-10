@@ -519,6 +519,9 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 macOS: Persian and other Arabic-script file names drawn as boxes in the download list
+  ([#533](https://github.com/anefzaoui/misterdownloadmanager/issues/533)): fix in review, to
+  confirm on a Mac
 - 🔄 macOS: Download File Info opening behind the browser that asked for it\n  ([#484](https://github.com/anefzaoui/misterdownloadmanager/issues/484)): fix in review
 - 🔄 The browser tests: the video button's focus case ran after the one that turns the button
   off for the test site, and timed out in a full run ([#480](https://github.com/anefzaoui/misterdownloadmanager/issues/480)): fix in review
