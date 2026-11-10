@@ -5,6 +5,10 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ## [Unreleased]
 
+### Added
+
+- Linux and macOS: a yt-dlp installed by the system (a package manager, Homebrew) is found and used when MDM has none of its own; **Helpers** can still switch to MDM's own copy, kept up to date ([#452](https://github.com/anefzaoui/misterdownloadmanager/issues/452)).
+
 ### Fixed
 
 - The video button fades again after a click on the player, in fullscreen too, and stays while you use the keyboard ([#480](https://github.com/anefzaoui/misterdownloadmanager/issues/480)).
