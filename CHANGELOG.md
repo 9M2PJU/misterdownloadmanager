@@ -11,6 +11,7 @@ Each release's notes on GitHub come from its section here (`## [X.Y.Z]`, see
 
 ### Fixed
 
+- Windows: video and gallery look-ups no longer fail with "[WinError 448] The path cannot be traversed because it contains an untrusted mount point" when a folder on PATH goes through a junction Windows won't let yt-dlp cross (one an app installed for itself, Codex's for example): yt-dlp, gallery-dl and the ffmpeg they start get that folder's real place instead, and no folder that can't be opened ([#508](https://github.com/anefzaoui/misterdownloadmanager/issues/508)).
 - **Download video** from Dailymotion's player embedded in another site: the look-up no longer sends that site as the Referer, which Dailymotion refused with 403, so its formats are found as with the video's own address ([#359](https://github.com/anefzaoui/misterdownloadmanager/issues/359)).
 - The video button fades again after a click on the player, in fullscreen too, and stays while you use the keyboard ([#480](https://github.com/anefzaoui/misterdownloadmanager/issues/480)).
 - The window no longer freezes when a video or a gallery finishes: marking its files as downloaded from the web, which can wait on the disk and the antivirus for a while with a big video, now happens beside the window ([#510](https://github.com/anefzaoui/misterdownloadmanager/issues/510)).

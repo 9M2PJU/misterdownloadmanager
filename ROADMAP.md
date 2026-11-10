@@ -520,6 +520,9 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 Video look-ups failing with "WinError 448 ... untrusted mount point" when a folder on PATH
+  goes through a junction Windows won't let yt-dlp cross
+  ([#508](https://github.com/anefzaoui/misterdownloadmanager/issues/508)): fix in review
 - 🔄 Dailymotion's embedded player from the browser's button: no formats, the embedding site's
   Referer refused ([#359](https://github.com/anefzaoui/misterdownloadmanager/issues/359)): fix in review
 - 🔄 The video button staying on screen after a click on the player, in fullscreen too\n  ([#480](https://github.com/anefzaoui/misterdownloadmanager/issues/480)): fix in review
