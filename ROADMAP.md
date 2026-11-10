@@ -522,6 +522,8 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 The video button still showing after it was switched off, or its site listed, in Options
+  ([#532](https://github.com/anefzaoui/misterdownloadmanager/issues/532)): fix in review
 - 🔄 macOS: Persian and other Arabic-script file names drawn as boxes in the download list
   ([#533](https://github.com/anefzaoui/misterdownloadmanager/issues/533)): fix in review, to
   confirm on a Mac
