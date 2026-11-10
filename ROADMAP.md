@@ -520,6 +520,10 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 The window not answering for a few seconds while Windows makes a snapshot of the disk
+  (a restore point or a backup) ([#513](https://github.com/anefzaoui/misterdownloadmanager/issues/513)):
+  the log and the RSS feeds are now written beside the window, as the list already was; fix in
+  review, to confirm on the reporter's computer
 - 🔄 Video look-ups failing with "WinError 448 ... untrusted mount point" when a folder on PATH
   goes through a junction Windows won't let yt-dlp cross
   ([#508](https://github.com/anefzaoui/misterdownloadmanager/issues/508)): fix in review
