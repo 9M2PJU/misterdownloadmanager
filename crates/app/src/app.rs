@@ -3503,6 +3503,12 @@ impl App {
         let tool = tools.as_deref().and_then(mdm_tools::installed);
         let ffmpeg = tools.as_deref().and_then(mdm_tools::ffmpeg::installed);
         let rate = self.settings.speed_limit();
+        // A stream in pieces (HLS, DASH): as many at once as a file's connections (#531).
+        let fragments = self
+            .items
+            .iter()
+            .find(|i| i.id == id)
+            .map_or(1, |i| self.settings.connections_for(&i.url));
         let Some(item) = self.item(id) else { return };
         let Some(spec) = item.video.clone() else {
             return;
@@ -3532,6 +3538,7 @@ impl App {
             &folder,
             &stem,
             rate,
+            fragments,
             ffmpeg.as_ref().map(|f| f.exe.as_path()),
             item.size,
             &crate::videodlg::from_browser(&item.context),
