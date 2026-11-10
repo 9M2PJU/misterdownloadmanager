@@ -535,6 +535,9 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 The window not answering while a file was dragged out of Download complete, for as long as
+  the program under the pointer took ([#561](https://github.com/anefzaoui/misterdownloadmanager/issues/561)): the drag now runs beside the window; fix
+  in review, to check with a real drag
 - 🔄 The video button jumping between corners over YouTube's thumbnail previews, out of the
   pointer's reach ([#560](https://github.com/anefzaoui/misterdownloadmanager/issues/560)): fix in
   review
