@@ -519,6 +519,7 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 macOS: Download File Info opening behind the browser that asked for it\n  ([#484](https://github.com/anefzaoui/misterdownloadmanager/issues/484)): fix in review
 - 🔄 The browser tests: the video button's focus case ran after the one that turns the button
   off for the test site, and timed out in a full run ([#480](https://github.com/anefzaoui/misterdownloadmanager/issues/480)): fix in review
 - 🔄 The video button vanishing over a hover-to-play preview (YouTube's thumbnails) before it
