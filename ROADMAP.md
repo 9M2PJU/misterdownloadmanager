@@ -501,6 +501,7 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Debrid accounts: signing in by code opens only the service's own page
 - ✅ A speed limit raised or turned off applies at once, to the connections already waiting
   under the old one too ([#621](https://github.com/anefzaoui/misterdownloadmanager/issues/621))
 - ✅ The build and release workflows: each job gets only the permissions it needs, and every
