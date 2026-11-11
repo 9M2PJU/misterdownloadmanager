@@ -561,6 +561,9 @@ These ship in a later version, when they're ready.
 
 ### Bugs being looked into
 
+- 🔄 Windows: a crash when the clipboard was read in two places at once (the clipboard monitor and
+  Add URL) ([#629](https://github.com/anefzaoui/misterdownloadmanager/issues/629)): every read and
+  write of the clipboard now goes one at a time; fix in review
 - 🔄 Categories without their own folder following General's folder (`Video`, `Music`, `Torrents`
   inside it), and Add torrent starting with the Torrents category's folder instead of flipping
   from General when metadata arrives ([#556](https://github.com/anefzaoui/misterdownloadmanager/issues/556),
