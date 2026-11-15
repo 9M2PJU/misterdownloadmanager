@@ -810,15 +810,15 @@
   let asking = null;
   let never = false;
   let placed = false;
-  // Hidden while the page is fullscreen, when chosen in the popup (off: it shows, as now).
-  let hideFullscreen = false;
+  // Hidden while the page is fullscreen, when chosen in the popup (on by default).
+  let hideFullscreen = true;
   try {
-    ext.storage.local.get({ hideVideoFullscreen: false }).then((v) => {
-      hideFullscreen = Boolean(v.hideVideoFullscreen);
+    ext.storage.local.get({ hideVideoFullscreen: true }).then((v) => {
+      hideFullscreen = v.hideVideoFullscreen !== false;
     }).catch(() => {});
     ext.storage.onChanged.addListener((changes, area) => {
       if (area === "local" && changes.hideVideoFullscreen) {
-        hideFullscreen = Boolean(changes.hideVideoFullscreen.newValue);
+        hideFullscreen = changes.hideVideoFullscreen.newValue !== false;
         // Either way at once: a video already in full screen follows the box as it is ticked.
         if (document.fullscreenElement && video) {
           if (hideFullscreen) hide(true);
@@ -827,7 +827,7 @@
       }
     });
   } catch {
-    // Without storage: shown, as now.
+    // Without storage: hidden, as by default.
   }
   const ASK_MS = 5000;
   const answered = () => allowed !== null && Date.now() - askedAt < ASK_MS;

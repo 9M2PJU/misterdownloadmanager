@@ -49,8 +49,8 @@
 // clicked, dragged, kept; "never on the site" in the last browser; the button's clicks go through
 // its menu's "Open in…" to the Download video window, as in csp, hls, streams, sniffed and
 // inplace), panelOptions (the button follows Options in an open tab: off, on, the site listed;
-// #532), videoFocus (mouse idle/fullscreen and keyboard focus, #480), fullscreen (one
-// button over a video in full screen, the page's or the player's, and after the extension was
+// #532), videoFocus (mouse idle and keyboard focus, hidden in fullscreen, #480, #670), fullscreen (hidden
+// in full screen by default, the page's or the player's, and after the extension was
 // updated while it showed, #336), reconnect (a tab opened while
 // the host couldn't start gets the button once it can, no reload; then MDM started by a click, and
 // reached after it quits and starts again, #474), start (MDM not running: the host starts it),
@@ -1185,7 +1185,7 @@ const rect = (session, sel) =>
     if (!e || (e.localName === "mdm-video-button" && e.style.display !== "block")) return null;
     const r = e.getBoundingClientRect(); return { l: r.left, t: r.top, r: r.right, b: r.bottom }; })()`);
 
-// #480: a mouse-focused player must still fade, including after entering fullscreen. Run
+// #480: a mouse-focused player must still fade; fullscreen hides the button by default. Run
 // against a local player so YouTube's network, sign-in and changing layout aren't involved.
 export async function videoFocus(session) {
   await session.navigate(`${LAB}/page?video=${encodeURIComponent("/gen/1M/clip.mp4")}`);
@@ -1220,11 +1220,10 @@ export async function videoFocus(session) {
   if (!(await session.evaluate('document.fullscreenElement?.id === "focus-player"'))) throw new Error("player did not enter fullscreen");
   const fs = await rect(session, "#video");
   await session.mouse((fs.l + fs.r) / 2, (fs.t + fs.b) / 2);
-  await until("the fullscreen video button", 5000, shown);
-  if (!(await session.evaluate('document.querySelector("mdm-video-button").parentNode === document.fullscreenElement'))) throw new Error("button is outside fullscreen player");
-  await idle();
-  if (await shown()) throw new Error("#480: mouse focus keeps the fullscreen video button visible after idle");
+  await sleep(600);
+  if (await shown()) throw new Error("#670: video button shows in fullscreen by default");
   await session.evaluate("document.exitFullscreen()");
+  await until("the video button after fullscreen", 5000, shown);
 
   // Tab into the player from a preceding control, without a pointer over the video.
   await session.evaluate(`(() => {
@@ -1258,7 +1257,7 @@ export async function videoFocus(session) {
   await until("the hovered video button", 5000, shown);
   await session.key("Tab");
   if (!(await session.evaluate('document.activeElement?.localName === "mdm-video-button"'))) throw new Error("Tab from a mouse-focused player skipped the video button");
-  return "mouse focus fades in normal view and fullscreen; keyboard focus stays, Tab enters and leaves, switching to the mouse fades again";
+  return "mouse focus fades in normal view, hidden in fullscreen; keyboard focus stays, Tab enters and leaves, switching to the mouse fades again";
 }
 
 // Point at the video (rectangle `v`) until the button shows; its rectangle, or null.
@@ -3686,6 +3685,13 @@ const CASES = {
         throw new Error(`${when}: ${n.shown} buttons shown, ${n.all} on the page (${where})`);
       }
     };
+    const none = async (when) => {
+      const v = await rect(s, "#video");
+      await s.mouse((v.l + v.r) / 2, (v.t + v.b) / 2);
+      await sleep(600);
+      const n = await count();
+      if (n.shown !== 0) throw new Error(`${when}: button shows in fullscreen by default (${JSON.stringify(n)})`);
+    };
     const enter = async (sel) => {
       // Firefox may refuse a request that comes right after leaving full screen: asked again.
       let r = "";
@@ -3706,17 +3712,16 @@ const CASES = {
     const done = [];
     await one("before full screen");
     await enter("html");
-    await one("the page in full screen");
+    await none("the page in full screen");
     await leave();
     await one("back from the page's full screen");
     await enter("#fs-player");
-    await one("the player in full screen");
+    await none("the player in full screen");
     await leave();
     await one("back from the player's full screen");
-    done.push("one button in and out of full screen (the page's, the player's)");
+    done.push("hidden in full screen by default (the page's, the player's)");
     if (firefox) {
-      // The extension updated while its button shows over the video in full screen.
-      await enter("html");
+      // The extension updated while its button showed out of full screen, then in full screen.
       const v = await rect(s, "#video");
       if (!(await hover(s, v))) throw new Error("no button before the update");
       // Shown a while (its look-up done, the copy idle), the pointer still moving over it.
@@ -3727,7 +3732,10 @@ const CASES = {
       await s.uninstall(s.extension);
       s.extension = await s.install(firefoxExtension);
       await sleep(1500);
-      // E2E_SHOTS: <browser>-fullscreen-update.png, the page in full screen with the button(s).
+      await one("after the extension was updated, out of full screen");
+      await enter("html");
+      await none("after the update, in full screen");
+      // E2E_SHOTS: <browser>-fullscreen-update.png, the page in full screen without the button.
       if (process.env.E2E_SHOTS) {
         const dir = path.resolve(process.env.E2E_SHOTS);
         fs.mkdirSync(dir, { recursive: true });
@@ -3737,10 +3745,9 @@ const CASES = {
         await sleep(400);
         await s.screenshot(path.join(dir, `${t.name}-fullscreen-update.png`));
       }
-      await one("after the extension was updated, in full screen");
       await leave();
       await one("after the update, out of full screen");
-      done.push("one after the extension was updated while it showed");
+      done.push("one after the extension was updated, hidden in full screen");
     }
     return done.join("; ");
   },
