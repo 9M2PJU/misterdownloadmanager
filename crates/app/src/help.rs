@@ -728,7 +728,68 @@ fn link_texts(line: &str) -> String {
 // ---------------------------------------------------------------------------------------------
 // About
 
-pub struct About;
+#[derive(Clone, Copy)]
+enum Role {
+    Creator,
+    Developer,
+    Contributor,
+}
+
+impl Role {
+    fn label(self) -> &'static str {
+        match self {
+            Self::Creator => crate::i18n::mark("Creator and maintainer"),
+            Self::Developer => crate::i18n::mark("Developer"),
+            Self::Contributor => crate::i18n::mark("Contributor"),
+        }
+    }
+}
+
+/// Everyone who contributed to MDM: (Display name, role, GitHub username).
+const CONTRIBUTORS: &[(&str, Role, &str)] = &[
+    ("Ahmed Nefzaoui", Role::Creator, "anefzaoui"),
+    ("9M2PJU", Role::Developer, "9M2PJU"),
+    ("AzureKnigh7", Role::Contributor, "AzureKnigh7"),
+    ("specailm5", Role::Contributor, "specailm5"),
+    ("osunday", Role::Contributor, "osunday"),
+    ("SwiftyPop", Role::Contributor, "SwiftyPop"),
+    ("mfat", Role::Contributor, "mfat"),
+    ("praveenkumar2K06", Role::Contributor, "praveenkumar2K06"),
+    ("shreeramncity", Role::Contributor, "shreeramncity"),
+    ("AwesomeIronman", Role::Contributor, "AwesomeIronman"),
+    ("Maldo-0750", Role::Contributor, "Maldo-0750"),
+    ("Twig6943", Role::Contributor, "Twig6943"),
+    ("ADIxxDEV", Role::Contributor, "ADIxxDEV"),
+    ("crse", Role::Contributor, "crse"),
+    ("dhrubo11", Role::Contributor, "dhrubo11"),
+    ("Drigva", Role::Contributor, "Drigva"),
+    ("EnderDobra", Role::Contributor, "EnderDobra"),
+    ("farjanatech", Role::Contributor, "farjanatech"),
+    ("gowzee", Role::Contributor, "gowzee"),
+    ("husnainahmedrana", Role::Contributor, "husnainahmedrana"),
+    ("justnxhom", Role::Contributor, "justnxhom"),
+    ("mayankmohan1992", Role::Contributor, "mayankmohan1992"),
+    ("Mpsp4321", Role::Contributor, "Mpsp4321"),
+    ("sadatdaniel", Role::Contributor, "sadatdaniel"),
+    ("SHURmanizer", Role::Contributor, "SHURmanizer"),
+    ("Uyaii", Role::Contributor, "Uyaii"),
+    ("Volcanify", Role::Contributor, "Volcanify"),
+    ("Zekidt", Role::Contributor, "Zekidt"),
+    ("Stark-0505", Role::Contributor, "Stark-0505"),
+    ("dr-strange15", Role::Contributor, "dr-strange15"),
+    ("Arif Rahman", Role::Contributor, "arifrhm"),
+    ("Fransiskus Putra", Role::Contributor, "LiemFrans"),
+    ("Mohsen Amini", Role::Contributor, "mohsenamini1081"),
+    ("Marwan Hamada", Role::Contributor, "marobotus"),
+    ("Yuhan Chen", Role::Contributor, "Emotion04"),
+    ("Rui Nelson", Role::Contributor, "RuiNelson"),
+    ("大眼仔旭", Role::Contributor, "wcxu21"),
+];
+
+#[derive(Default)]
+pub struct About {
+    rows: winui::RowList,
+}
 
 impl About {
     pub fn show(&mut self, ctx: &egui::Context) -> Outcome<()> {
@@ -738,7 +799,7 @@ impl About {
             ctx,
             "about",
             "About Mister Download Manager",
-            [420.0, 236.0 + extra],
+            [440.0, 360.0 + extra],
             false,
             winui::BG(),
             |ui, o| {
@@ -771,7 +832,7 @@ impl About {
                         "The download manager you already know, rebuilt to be faster. Free and open source under the GNU GPL, version 3 or later. Videos are found by yt-dlp; torrents run on librqbit.",
                     ),
                     ink,
-                    o.x + 404.0,
+                    o.x + 424.0,
                     13.0,
                 );
                 // The links in a row, 18 px apart; one that would pass the paragraph's right
@@ -779,7 +840,7 @@ impl About {
                 let (mut x, mut y) = (o.x + 80.0, o.y + 72.0 + 13.0 * lines as f32 + 14.0);
                 let mut place = |label: &str| {
                     let w = winui::text_width(&p, crate::i18n::t(label));
-                    if x > o.x + 80.0 && x + w > o.x + 404.0 {
+                    if x > o.x + 80.0 && x + w > o.x + 424.0 {
                         (x, y) = (o.x + 80.0, y + 16.0);
                     }
                     let at = (x, y);
@@ -808,7 +869,7 @@ impl About {
                     crate::launch::open(format!("{REPO}/blob/main/ATTRIBUTION.md"));
                 }
                 // Its own row under them: the creator's Sponsors page (Help → Support MDM).
-                y += 22.0;
+                y += 20.0;
                 if winui::link(
                     ui,
                     &p,
@@ -819,18 +880,94 @@ impl About {
                 ) {
                     support();
                 }
-                // The last row ends above OK (at 204 when it fits as planned).
-                crate::dialogs::grow_px(ui.ctx(), "about", y + 12.0 - (o.y + 194.0));
+
+                // Developers and contributors scrollable list
+                y += 20.0;
+                winui::text(
+                    &p,
+                    o.x + 80.0,
+                    y,
+                    crate::i18n::t("Developers and contributors:"),
+                    ink,
+                );
+                let list_y = y - o.y + 6.0;
+                let list_h = 96.0;
+                self.rows.name = crate::i18n::mark("Developers and contributors");
+                let ev = winui::row_list(
+                    ui,
+                    "contributors",
+                    winui::r(o, 80.0, list_y, 344.0, list_h),
+                    CONTRIBUTORS.len(),
+                    20.0,
+                    &mut self.rows,
+                    |ui, clip, i, row, look| {
+                        let (name, role, login) = CONTRIBUTORS[i];
+                        let role_trans = crate::i18n::t(role.label());
+                        look.name = format!("{name} ({role_trans})");
+                        let ink = look.ink;
+
+                        let link_label = format!("@{login}");
+                        let link_w = winui::text_width(clip, &link_label);
+                        let link_x = row.right() - link_w - 6.0;
+
+                        let display = format!("{name} · {role_trans}");
+                        winui::fit(
+                            ui,
+                            clip,
+                            row.left() + 6.0,
+                            row.top() + 14.0,
+                            &display,
+                            ink,
+                            link_x - 8.0,
+                            ("contrib-name", i),
+                        );
+
+                        if winui::link_raw(
+                            ui,
+                            clip,
+                            link_x,
+                            row.top() + 14.0,
+                            &link_label,
+                            &format!("contrib-link-{i}"),
+                        ) {
+                            crate::launch::open(format!("https://github.com/{login}"));
+                        }
+                    },
+                );
+
+                if let Some(i) = ev.entered.or(ev.double_clicked)
+                    && let Some((_, _, login)) = CONTRIBUTORS.get(i)
+                {
+                    crate::launch::open(format!("https://github.com/{login}"));
+                }
+
+                y = o.y + list_y + list_h + 14.0;
+                if winui::link(
+                    ui,
+                    &p,
+                    o.x + 80.0,
+                    y,
+                    "View all contributors on the website",
+                    "contrib-site",
+                ) {
+                    crate::launch::open_page(&format!("{SITE}/contributors.html"));
+                }
+
+                // The last row ends above OK
+                crate::dialogs::grow_px(ui.ctx(), "about", y + 12.0 - (o.y + 316.0));
                 let ok = winui::button(
                     ui,
-                    r(o, 336.0, 204.0 + extra, 73.0, 21.0),
+                    r(o, 351.0, 328.0 + extra, 73.0, 21.0),
                     "OK",
                     ButtonKind::Default,
                     false,
                     None,
                 )
                 .clicked();
-                if ok || winui::escape_pressed(ui) || winui::enter_pressed(ui) {
+                if ok
+                    || winui::escape_pressed(ui)
+                    || (winui::enter_pressed(ui) && ev.entered.is_none())
+                {
                     Outcome::Closed
                 } else {
                     Outcome::Open

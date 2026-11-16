@@ -840,6 +840,8 @@
 	Connections and Limits	Connections and Limits
 #. text in the Options window
 	Connections:	Connections:
+#. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
+	Contributor	Contributor
 #. text in countries.rs
 #. a country's name (where a download's server is)
 	Cook Islands	Cook Islands
@@ -880,6 +882,8 @@
 	Couldn't extract {name}: {why}	Couldn't extract {name}: {why}
 #. window title in a dialog box
 	Create folder	Create folder
+#. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
+	Creator and maintainer	Creator and maintainer
 #. text in countries.rs
 #. a country's name (where a download's server is)
 	Croatia	Croatia
@@ -967,6 +971,12 @@
 	Description or part of the description	Description or part of the description
 #. text in a download's Properties window
 	Description:	Description:
+#. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
+	Developer	Developer
+#. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
+	Developers and contributors	Developers and contributors
+#. text in the Help menu's windows (About, updates, shortcuts, Tell a friend)
+	Developers and contributors:	Developers and contributors:
 #. text in the Options window
 #. column title: a paired phone's or computer's name
 	Device	Device
@@ -4137,6 +4147,8 @@
 #. text in countries.rs
 #. a country's name (where a download's server is)
 	Vietnam	Vietnam
+#. link (opens a web page) in the Help menu's windows (About, updates, shortcuts, Tell a friend)
+	View all contributors on the website	View all contributors on the website
 #. text in countries.rs
 #. a country's name (where a download's server is)
 	Virgin Islands (British)	Virgin Islands (British)

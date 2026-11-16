@@ -1547,13 +1547,13 @@ pub fn row_list(
 }
 
 /// Text that opens or does something when clicked: link colour, underlined under the pointer.
-/// `label` is English (translated here).
-pub fn link(ui: &Ui, p: &Painter, x: f32, baseline: f32, label: &str, salt: &str) -> bool {
-    let rect = text(p, x, baseline, crate::i18n::t(label), LINK());
+/// `label` is shown as given, without translating.
+pub fn link_raw(ui: &Ui, p: &Painter, x: f32, baseline: f32, label: &str, salt: &str) -> bool {
+    let rect = text(p, x, baseline, label, LINK());
     let resp = ui
         .interact(rect, ui.scope_id().with(("link", salt)), Sense::click())
         .on_hover_cursor(egui::CursorIcon::PointingHand);
-    expose(&resp, egui::Role::Link, crate::i18n::t(label), true, None);
+    expose(&resp, egui::Role::Link, label, true, None);
     // A Tab stop shows that it has the keys.
     show_focus(ui, &resp, rect.expand(2.0));
     if resp.hovered() {
@@ -1564,6 +1564,12 @@ pub fn link(ui: &Ui, p: &Painter, x: f32, baseline: f32, label: &str, salt: &str
         );
     }
     resp.clicked()
+}
+
+/// Text that opens or does something when clicked: link colour, underlined under the pointer.
+/// `label` is English (translated here).
+pub fn link(ui: &Ui, p: &Painter, x: f32, baseline: f32, label: &str, salt: &str) -> bool {
+    link_raw(ui, p, x, baseline, crate::i18n::t(label), salt)
 }
 
 /// A note (`s`, translated already) from `x` to `right` on at most two lines `line_h` apart,

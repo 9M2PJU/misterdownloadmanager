@@ -7022,7 +7022,7 @@ impl App {
                     self.updates = Some(crate::help::Updates::check(&self.rt, ctx));
                 }
             }
-            Cmd::About => self.about = Some(crate::help::About),
+            Cmd::About => self.about = Some(crate::help::About::default()),
             Cmd::Support => crate::help::support(),
             Cmd::TellFriend => {
                 if self.tell_friend.is_none() {

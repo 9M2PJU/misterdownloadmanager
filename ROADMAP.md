@@ -562,6 +562,7 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ **About Mister Download Manager**: added a scrollable credits list of all main developers and contributors with clickable links to their GitHub profiles, and a link to view the complete roster on the website
 - ✅ **Offer to download links copied to the clipboard** no longer opens Download File Info again
   for a link still on the clipboard after a moment another program held it
   ([#1157](https://github.com/anefzaoui/misterdownloadmanager/issues/1157))
