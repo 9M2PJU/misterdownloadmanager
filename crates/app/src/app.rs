@@ -4559,13 +4559,10 @@ impl App {
         }
     }
 
-    /// Before a handoff's dialog: the main window stays where it is (hidden, minimized) and
-    /// only the dialog opens, as dialogs are windows of their own.
+    /// Before a handoff's dialog: the main window stays where it is (hidden, minimized, or
+    /// behind other windows) and only the dialog opens, as dialogs are windows of their own.
     fn show_for_dialog(&mut self, ctx: &egui::Context) {
-        let minimized = ctx.input(|i| i.viewport().minimized == Some(true));
-        if !self.hidden && !minimized {
-            self.show_window(ctx);
-        }
+        ctx.request_repaint();
     }
 
     /// What the shell says of the tray icon (Linux: there when a tray host is, asked each time:
@@ -15481,6 +15478,15 @@ mod start_disk_tests {
             Some(&a),
             "the finished file last"
         );
+    }
+
+    #[test]
+    fn show_for_dialog_leaves_main_window_hidden() {
+        let mut app = app_with(vec![]);
+        app.hidden = true;
+        let ctx = egui::Context::default();
+        app.show_for_dialog(&ctx);
+        assert!(app.hidden, "main window must stay hidden when dialog opens");
     }
 }
 
