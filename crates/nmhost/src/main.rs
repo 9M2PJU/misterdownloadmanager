@@ -1070,7 +1070,7 @@ fn deliver(cmd: &mdm_ipc::Command) -> Result<(), Undelivered> {
             .arg("-g")
             .arg(&bundle)
             .arg("--args")
-            .arg(mdm_ipc::STARTUP)
+            .arg(mdm_ipc::FROM_HOST)
             .spawn()
             .map_err(|e| {
                 Undelivered::NotRunning(format!("cannot start {}: {e}", bundle.display()))
@@ -1106,11 +1106,11 @@ fn deliver(cmd: &mdm_ipc::Command) -> Result<(), Undelivered> {
 /// Start the app outside the browser's reach: browsers end a host's whole process tree (on
 /// Windows a job object, elsewhere its process group) once it has answered, which would end an
 /// app this host started along with it (MDN, "Native messaging": closing the native app).
-/// Started in the notification area / minimized (#226); only the dialog opens.
+/// Started in the notification area / minimized (#226, #1333); only the dialog opens.
 fn start_detached(app: &std::path::Path) -> io::Result<std::process::Child> {
     use std::process::{Command, Stdio};
     let mut cmd = Command::new(app);
-    cmd.arg(mdm_ipc::STARTUP);
+    cmd.arg(mdm_ipc::FROM_HOST);
     // The browser's message pipes are this host's standard streams: never the app's.
     cmd.stdin(Stdio::null())
         .stdout(Stdio::null())

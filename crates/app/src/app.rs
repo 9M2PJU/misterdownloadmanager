@@ -2131,12 +2131,12 @@ impl App {
             tray_limiter: None,
             hotkey: None,
             tray_last_focused: None,
-            // Started with the session (#226): hidden from the first frame.
-            hidden: start == crate::Start::Session,
-            trim_when_hidden: (start == crate::Start::Session)
+            // Started with the session (#226) or from host (#1333): hidden from the first frame.
+            hidden: matches!(start, crate::Start::Session | crate::Start::Hidden),
+            trim_when_hidden: matches!(start, crate::Start::Session | crate::Start::Hidden)
                 .then(|| Instant::now() + next_trim(0)),
             trims_since_hidden: 0,
-            at_login: (start == crate::Start::Session).then(Instant::now),
+            at_login: matches!(start, crate::Start::Session).then(Instant::now),
             at_login_icon: None,
             at_login_checked: None,
             exiting: false,
@@ -14783,6 +14783,10 @@ mod start_disk_tests {
     const AT_ONCE: Duration = Duration::from_secs(5);
 
     fn app_with(items: Vec<Item>) -> std::mem::ManuallyDrop<App> {
+        app_with_start(items, crate::Start::Shown)
+    }
+
+    fn app_with_start(items: Vec<Item>, start: crate::Start) -> std::mem::ManuallyDrop<App> {
         let rt = Box::leak(Box::new(
             tokio::runtime::Builder::new_current_thread()
                 .enable_all()
@@ -14803,7 +14807,7 @@ mod start_disk_tests {
             rt.handle().clone(),
             commands,
             loaded,
-            crate::Start::Shown,
+            start,
         ))
     }
 
@@ -15487,6 +15491,23 @@ mod start_disk_tests {
         let ctx = egui::Context::default();
         app.show_for_dialog(&ctx);
         assert!(app.hidden, "main window must stay hidden when dialog opens");
+    }
+
+    #[test]
+    fn start_hidden_does_not_set_at_login() {
+        let app = app_with_start(vec![], crate::Start::Hidden);
+        assert!(app.hidden, "Start::Hidden must start hidden");
+        assert!(
+            app.at_login.is_none(),
+            "Start::Hidden must not set at_login (avoids LOGIN_GRACE when launched from browser)"
+        );
+
+        let app_session = app_with_start(vec![], crate::Start::Session);
+        assert!(app_session.hidden, "Start::Session must start hidden");
+        assert!(
+            app_session.at_login.is_some(),
+            "Start::Session must set at_login for login grace"
+        );
     }
 }
 
