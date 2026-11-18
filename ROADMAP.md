@@ -564,6 +564,9 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ Malay: 24 menu and column items reviewed by a native speaker (torrent columns, Linux display
+  systems, text rendering and graphics notes) (thanks to [@9M2PJU](https://github.com/9M2PJU))
+
 - ✅ Torrents connect over uTP (BitTorrent over UDP) beside TCP, on by default with a switch in
   Torrent settings: peers that take only uTP are reached, so torrents find as many peers as in
   other clients; off with a SOCKS5 proxy, held to a chosen network adapter
