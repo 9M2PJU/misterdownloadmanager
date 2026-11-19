@@ -116,8 +116,8 @@ pub struct Command {
     /// startup, or the installer's "Start when Windows starts", #226): MDM starts in the
     /// notification area, its window hidden. Changes nothing in a running app.
     pub startup: bool,
-    /// `/fromhost` or `/hidden` (beyond IDM, #1333): started by the browser native messaging
-    /// host or a background launcher: starts hidden without marking an OS session login.
+    /// `/fromhost` (beyond IDM, #1333): started by the browser native messaging host:
+    /// starts hidden without marking an OS session login.
     pub hidden: bool,
     /// `/show <window>` (beyond IDM): the running app opens one of its windows by name, for
     /// screenshots and scripted checks (tools/lab/docs-shots.ps1): `addurl`, `batch`, `find`,
@@ -766,7 +766,6 @@ pub const STARTUP: &str = "/startup";
 /// The argument passed when the browser native messaging host starts MDM (#1333): MDM starts
 /// in the notification area with its main window hidden, without marking an OS session login.
 pub const FROM_HOST: &str = "/fromhost";
-pub const HIDDEN: &str = "/hidden";
 
 /// Parse IDM's command line: `/d URL [/p dir] [/f name] [/a] [/n] [/q] [/s]` (case-insensitive;
 /// `-d` also accepted). Returns None when there is nothing to do.
@@ -786,7 +785,7 @@ pub fn parse_args(args: &[String]) -> Option<Command> {
             "q" | "h" => {}
             "exit" => cmd.exit = true,
             "startup" => cmd.startup = true,
-            "fromhost" | "hidden" => cmd.hidden = true,
+            "fromhost" => cmd.hidden = true,
             "show" => cmd.show = it.next().map(|w| w.to_ascii_lowercase()),
             // A bare magnet link or .torrent file (what Windows passes for an association).
             _ if a
@@ -852,11 +851,8 @@ mod tests {
         assert!(!parse_args(&a("/s")).unwrap().startup);
         // The browser host's argument (#1333): hidden start without startup session markers.
         assert!(parse_args(&[FROM_HOST.into()]).unwrap().hidden);
-        assert!(parse_args(&[HIDDEN.into()]).unwrap().hidden);
         assert!(parse_args(&a("--fromhost")).unwrap().hidden);
-        assert!(parse_args(&a("--hidden")).unwrap().hidden);
         assert!(!parse_args(&[FROM_HOST.into()]).unwrap().startup);
-        assert!(!parse_args(&[HIDDEN.into()]).unwrap().startup);
         assert!(parse_args(&[]).is_none());
     }
 
