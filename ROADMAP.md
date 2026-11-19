@@ -564,6 +564,16 @@ Bug fixes from the first days of 0.5.0, a Safari extension, and more file types.
 
 These ship in the next version.
 
+- ✅ A live stream that is recording is saved when it is stopped: the progress window says
+  **Recording...** with **Downloaded** and **Transfer rate** following the recording's size, its
+  pause button reads **Stop and save**, and Stop, Stop All, a queue's stop and the phone page's
+  pause end the recording and make it an MP4 (streams copied, nothing re-encoded), complete as when
+  a live stream ends by itself; the recording goes only once the MP4 is as long as it, else a
+  `.ts` file is kept (beside the MP4 if there is one). Resuming records
+  anew after setting the earlier recording aside as `<name> (recording 1).ts`, where it used to
+  record over it; a new speed limit no longer restarts a recording. Closing MDM while it records
+  and the command line still don't save it
+  ([#1450](https://github.com/anefzaoui/misterdownloadmanager/pull/1450))
 - ✅ Download video: a video's own file (Kwai's MP4) is offered and downloaded when its server
   doesn't say it is a video, instead of "No video this can download on that page"; the button's
   click downloads such a file at once
