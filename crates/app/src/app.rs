@@ -14962,12 +14962,11 @@ mod start_disk_tests {
     /// slow machine's first use of what is loaded once (the interface's catalogs).
     const AT_ONCE: Duration = Duration::from_secs(5);
 
-    fn app_with(items: Vec<Item>) -> std::mem::ManuallyDrop<App> {
+    pub(super) fn app_with(items: Vec<Item>) -> std::mem::ManuallyDrop<App> {
         app_with_start(items, crate::Start::Shown)
     }
 
     fn app_with_start(items: Vec<Item>, start: crate::Start) -> std::mem::ManuallyDrop<App> {
-    pub(super) fn app_with(items: Vec<Item>) -> std::mem::ManuallyDrop<App> {
         let rt = Box::leak(Box::new(
             tokio::runtime::Builder::new_current_thread()
                 .enable_all()
